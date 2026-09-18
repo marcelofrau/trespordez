@@ -4,7 +4,7 @@ title: Três por Dez
 ---
 <section class="post-list">
   {% for post in paginator.posts %}
-  <article class="post-card">
+  <article class="post-card{% unless post.image %} without-image{% endunless %}">
     {% if post.image %}<a href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title }}"></a>{% endif %}
     <div>
       <p class="post-taxonomy">{% for category in post.categories %}{{ site.data.categories[category].name | default: category }}{% unless forloop.last %} · {% endunless %}{% endfor %}</p>

@@ -13,8 +13,8 @@ wordpress_id: 966
 <p>Cada membro da nossa equipe traz uma perspectiva única, um olhar diferente sobre esse universo fascinante. Aqui você não encontrará apenas críticas encontrará conversas, reflexões e um verdadeiro amor pelo que fazemos.</p>
 <h2>Conheca a Equipe</h2>
 <ul>
-<li><strong><a href="/equipe/the-archivist">The Archivist</a></strong> — Um guardião de memórias digitais</li>
-<li><strong><a href="/equipe/cezar_aug">cezar_aug</a></strong> — <strong>descricao rapida do senhor aqui</strong></li>
+<li><strong><a href="{{ '/equipe/the-archivist' | relative_url }}">The Archivist</a></strong> — Um guardião de memórias digitais</li>
+<li><strong><a href="{{ '/equipe/cezar_aug' | relative_url }}">cezar_aug</a></strong> — <strong>descricao rapida do senhor aqui</strong></li>
 </ul>
 <h2>O Que Esperar Aqui</h2>
 <ul>

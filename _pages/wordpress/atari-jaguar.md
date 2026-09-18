@@ -52,300 +52,39 @@ wordpress_id: 1784
 <p>Falta de otimizações e hardware não tão potente faziam o console parecer que era outro mundo, quando na prática estava mais próximo dos seus concorrentes SNES e Genesis, porém eles queriam ser tão audaciosos que tentaram explorar um universo que estava muito longe de se atingir. Principalmente os jogos que tentavam alguma coisa em 3D com poligonos complexos e tudo mais. O hardware não dava conta e ainda por cima tinha muito pouca experiencia nesse segmento. Claro que isso serviu de lição para outros consoles quando foram explorar o universo 3D que demorou anos ainda pra ser aprimorado e de fato deslanchar.</p>
 <p>Na minha humilde opinião, se a Atari tivesse investido mais em softhouses pra fazer jogos não tão audaciosos e &quot;inovadores&quot; acho que o console teria uma biblioteca muito mais vasta e interessante. Porém isso também ia de contrapartida ao marketing agressivo que fizeram com o console então, é dificil saber o que realmente faria a diferença.</p>
 <h3>Videos relacionados</h3>
-
-    <iframe 
+<iframe 
         width="640" 
         height="360" 
         src="https://www.youtube.com/embed/CGEGon-Qc_Q" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen>
-    </iframe>
-
-
-    <iframe 
+    </iframe><iframe 
         width="640" 
         height="360" 
         src="https://www.youtube.com/embed/3LVcvkLCUtU" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen>
-    </iframe>
-
-  Sorry, your browser doesn&#039;t support embedded videos, <a href=\&quot;{{src}}\&quot;> download <\/a> and watch with your favorite video player! <\/video>&quot;}},&quot;inView&quot;:false,&quot;email_subject&quot;:&quot;Confira esta imagem incr\u00edvel!!&quot;,&quot;email_message&quot;:&quot;Aqui est\u00e1 o link para a imagem: %%image_link%% e este \u00e9 o link para a galeria: %%gallery_link%%&quot;,&quot;lightbox&quot;:&quot;fancybox&quot;,&quot;lightbox_devices&quot;:&quot;both&quot;}">
-		
-		
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1794" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="3581197-game5c0c7827948f0f27_screen0002" crop="" width="960" height="720" src="/assets/images/pages/atari-jaguar/001-3581197-game5c0c7827948f0f27-screen0002.png" srcset="/assets/images/pages/atari-jaguar/001-3581197-game5c0c7827948f0f27-screen0002.png 960w, https://trespordez.com.br/wp-content/uploads/2026/05/3581197-game5c0c7827948f0f27_screen0002-300x225.png 300w, https://trespordez.com.br/wp-content/uploads/2026/05/3581197-game5c0c7827948f0f27_screen0002-768x576.png 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1794" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="maxresdefault" crop="" width="1280" height="720" src="/assets/images/pages/atari-jaguar/002-maxresdefault.jpg" srcset="/assets/images/pages/atari-jaguar/002-maxresdefault.jpg 1280w, https://trespordez.com.br/wp-content/uploads/2026/05/maxresdefault-300x169.jpg 300w, https://trespordez.com.br/wp-content/uploads/2026/05/maxresdefault-1024x576.jpg 1024w, https://trespordez.com.br/wp-content/uploads/2026/05/maxresdefault-768x432.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1794" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="club_drive_atari_(usa)_9" crop="" width="650" height="510" src="/assets/images/pages/atari-jaguar/003-club-drive-atari-usa-9.png" srcset="/assets/images/pages/atari-jaguar/003-club-drive-atari-usa-9.png 650w, https://trespordez.com.br/wp-content/uploads/2026/05/club_drive_atari_usa_9-300x235.png 300w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1794" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="atari-karts-jaguar-screenshot-racing-on-the-beach-club-track" crop="" width="574" height="389" src="/assets/images/pages/atari-jaguar/004-atari-karts-jaguar-screenshot-racing-on-the-beach-club-track.webp" srcset="/assets/images/pages/atari-jaguar/004-atari-karts-jaguar-screenshot-racing-on-the-beach-club-track.webp 574w, https://trespordez.com.br/wp-content/uploads/2026/05/atari-karts-jaguar-screenshot-racing-on-the-beach-club-track-300x203.webp 300w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1794" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="9" crop="" width="259" height="194" src="/assets/images/pages/atari-jaguar/005-9.jpg"/>
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1794" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="hq720" crop="" width="686" height="386" src="/assets/images/pages/atari-jaguar/006-hq720.jpg" srcset="/assets/images/pages/atari-jaguar/006-hq720.jpg 686w, https://trespordez.com.br/wp-content/uploads/2026/05/hq720-300x169.jpg 300w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1794" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="987987o" crop="" width="267" height="189" src="/assets/images/pages/atari-jaguar/007-987987o.jpg"/>
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1794" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="pitfall-the-mayan-adventure-atari-jaguar-067" crop="" width="1252" height="812" src="/assets/images/pages/atari-jaguar/008-pitfall-the-mayan-adventure-atari-jaguar-067.png" srcset="/assets/images/pages/atari-jaguar/008-pitfall-the-mayan-adventure-atari-jaguar-067.png 1252w, https://trespordez.com.br/wp-content/uploads/2026/05/pitfall-the-mayan-adventure-atari-jaguar-067-300x195.png 300w, https://trespordez.com.br/wp-content/uploads/2026/05/pitfall-the-mayan-adventure-atari-jaguar-067-1024x664.png 1024w, https://trespordez.com.br/wp-content/uploads/2026/05/pitfall-the-mayan-adventure-atari-jaguar-067-768x498.png 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1794" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="3790438-theme-park-jag-screen" crop="" width="910" height="592" src="/assets/images/pages/atari-jaguar/009-3790438-theme-park-jag-screen.png" srcset="/assets/images/pages/atari-jaguar/009-3790438-theme-park-jag-screen.png 910w, https://trespordez.com.br/wp-content/uploads/2026/05/3790438-theme-park-jag-screen-300x195.png 300w, https://trespordez.com.br/wp-content/uploads/2026/05/3790438-theme-park-jag-screen-768x500.png 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1794" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="876897i68976" crop="" width="260" height="194" src="/assets/images/pages/atari-jaguar/010-876897i68976.jpg"/>
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1794" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="876876" crop="" width="640" height="480" src="/assets/images/pages/atari-jaguar/011-876876.jpg" srcset="/assets/images/pages/atari-jaguar/011-876876.jpg 640w, https://trespordez.com.br/wp-content/uploads/2026/05/876876-300x225.jpg 300w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1794" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="s_AtariKarts_6" crop="" width="640" height="433" src="/assets/images/pages/atari-jaguar/012-s-atarikarts-6.jpg" srcset="/assets/images/pages/atari-jaguar/012-s-atarikarts-6.jpg 640w, https://trespordez.com.br/wp-content/uploads/2026/05/s_AtariKarts_6-300x203.jpg 300w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1794" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="hqdefault" crop="" width="480" height="360" src="/assets/images/pages/atari-jaguar/013-hqdefault.jpg" srcset="/assets/images/pages/atari-jaguar/013-hqdefault.jpg 480w, https://trespordez.com.br/wp-content/uploads/2026/05/hqdefault-300x225.jpg 300w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1794" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="images" crop="" width="259" height="194" src="/assets/images/pages/atari-jaguar/014-images.jpg"/>
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1794" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="Rayman" crop="" width="640" height="480" src="/assets/images/pages/atari-jaguar/015-rayman.png" srcset="/assets/images/pages/atari-jaguar/015-rayman.png 640w, https://trespordez.com.br/wp-content/uploads/2026/05/Rayman-300x225.png 300w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1794" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="atari_karts_atari_(usa)_8" crop="" width="650" height="510" src="/assets/images/pages/atari-jaguar/016-atari-karts-atari-usa-8.png" srcset="/assets/images/pages/atari-jaguar/016-atari-karts-atari-usa-8.png 650w, https://trespordez.com.br/wp-content/uploads/2026/05/atari_karts_atari_usa_8-300x235.png 300w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1794" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="PrimalRage" crop="" width="640" height="480" src="/assets/images/pages/atari-jaguar/017-primalrage.png" srcset="/assets/images/pages/atari-jaguar/017-primalrage.png 640w, https://trespordez.com.br/wp-content/uploads/2026/05/PrimalRage-300x225.png 300w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1794" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="Worms" crop="" width="640" height="480" src="/assets/images/pages/atari-jaguar/018-worms.png" srcset="/assets/images/pages/atari-jaguar/018-worms.png 640w, https://trespordez.com.br/wp-content/uploads/2026/05/Worms-300x225.png 300w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1794" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="best-atari-jaguar-game-v0-r7wl2bf5ulnc1" crop="" width="1080" height="891" src="/assets/images/pages/atari-jaguar/019-best-atari-jaguar-game-v0-r7wl2bf5ulnc1.webp" srcset="/assets/images/pages/atari-jaguar/019-best-atari-jaguar-game-v0-r7wl2bf5ulnc1.webp 1080w, https://trespordez.com.br/wp-content/uploads/2026/05/best-atari-jaguar-game-v0-r7wl2bf5ulnc1-300x248.webp 300w, https://trespordez.com.br/wp-content/uploads/2026/05/best-atari-jaguar-game-v0-r7wl2bf5ulnc1-1024x845.webp 1024w, https://trespordez.com.br/wp-content/uploads/2026/05/best-atari-jaguar-game-v0-r7wl2bf5ulnc1-768x634.webp 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-	
-	
-	
-
-	
-
+    </iframe>			<img  alt="" title="3581197-game5c0c7827948f0f27_screen0002" crop="" width="960" height="720" src="{{ '/assets/images/pages/atari-jaguar/001-3581197-game5c0c7827948f0f27-screen0002.png' | relative_url }}" />
+			<img  alt="" title="maxresdefault" crop="" width="1280" height="720" src="{{ '/assets/images/pages/atari-jaguar/002-maxresdefault.jpg' | relative_url }}" />
+			<img  alt="" title="club_drive_atari_(usa)_9" crop="" width="650" height="510" src="{{ '/assets/images/pages/atari-jaguar/003-club-drive-atari-usa-9.png' | relative_url }}" />
+			<img  alt="" title="atari-karts-jaguar-screenshot-racing-on-the-beach-club-track" crop="" width="574" height="389" src="{{ '/assets/images/pages/atari-jaguar/004-atari-karts-jaguar-screenshot-racing-on-the-beach-club-track.webp' | relative_url }}" />
+			<img  alt="" title="9" crop="" width="259" height="194" src="{{ '/assets/images/pages/atari-jaguar/005-9.jpg' | relative_url }}"/>
+			<img  alt="" title="hq720" crop="" width="686" height="386" src="{{ '/assets/images/pages/atari-jaguar/006-hq720.jpg' | relative_url }}" />
+			<img  alt="" title="987987o" crop="" width="267" height="189" src="{{ '/assets/images/pages/atari-jaguar/007-987987o.jpg' | relative_url }}"/>
+			<img  alt="" title="pitfall-the-mayan-adventure-atari-jaguar-067" crop="" width="1252" height="812" src="{{ '/assets/images/pages/atari-jaguar/008-pitfall-the-mayan-adventure-atari-jaguar-067.png' | relative_url }}" />
+			<img  alt="" title="3790438-theme-park-jag-screen" crop="" width="910" height="592" src="{{ '/assets/images/pages/atari-jaguar/009-3790438-theme-park-jag-screen.png' | relative_url }}" />
+			<img  alt="" title="876897i68976" crop="" width="260" height="194" src="{{ '/assets/images/pages/atari-jaguar/010-876897i68976.jpg' | relative_url }}"/>
+			<img  alt="" title="876876" crop="" width="640" height="480" src="{{ '/assets/images/pages/atari-jaguar/011-876876.jpg' | relative_url }}" />
+			<img  alt="" title="s_AtariKarts_6" crop="" width="640" height="433" src="{{ '/assets/images/pages/atari-jaguar/012-s-atarikarts-6.jpg' | relative_url }}" />
+			<img  alt="" title="hqdefault" crop="" width="480" height="360" src="{{ '/assets/images/pages/atari-jaguar/013-hqdefault.jpg' | relative_url }}" />
+			<img  alt="" title="images" crop="" width="259" height="194" src="{{ '/assets/images/pages/atari-jaguar/014-images.jpg' | relative_url }}"/>
+			<img  alt="" title="Rayman" crop="" width="640" height="480" src="{{ '/assets/images/pages/atari-jaguar/015-rayman.png' | relative_url }}" />
+			<img  alt="" title="atari_karts_atari_(usa)_8" crop="" width="650" height="510" src="{{ '/assets/images/pages/atari-jaguar/016-atari-karts-atari-usa-8.png' | relative_url }}" />
+			<img  alt="" title="PrimalRage" crop="" width="640" height="480" src="{{ '/assets/images/pages/atari-jaguar/017-primalrage.png' | relative_url }}" />
+			<img  alt="" title="Worms" crop="" width="640" height="480" src="{{ '/assets/images/pages/atari-jaguar/018-worms.png' | relative_url }}" />
+			<img  alt="" title="best-atari-jaguar-game-v0-r7wl2bf5ulnc1" crop="" width="1080" height="891" src="{{ '/assets/images/pages/atari-jaguar/019-best-atari-jaguar-game-v0-r7wl2bf5ulnc1.webp' | relative_url }}" />
 <h2>Especificações Técnicas</h2>
 <h3>CPU</h3>
 <ul>

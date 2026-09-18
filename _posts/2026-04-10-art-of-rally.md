@@ -1,4 +1,6 @@
 ---
+image: /assets/images/posts/art-of-rally/001-images-92-2026-04-21-10.13.35-result.jpg
+image_alt: art of rally
 title: "Art of Rally"
 date: 2026-04-10 12:02:33 -03:00
 author: the-archivist
@@ -20,238 +22,22 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2025/11/a
 <p>Ao mesmo tempo, no comeco a curva de aprendizagem exige um pouco pois nao eh simplesmente um jogo normal, ele tenta te mostrar que realmente para fazer as curvas precisa ter concentracao, coragem e ousadia pra poder cortar as curvas com o maximo de desempenho sem perder o controle do carro.</p>
 <p>A física é impecável. Cada superfície exige adaptação, cada carro tem sua personalidade. A câmera isométrica, que inicialmente parece estranha, rapidamente vira parte essencial da experiência &#8211; ela te dá aquela visão estratégica perfeita para planejar as próximas curvas.</p>
 <p>A progressão é bem dosada, te fazendo evoluir pelas eras do rally enquanto desbloqueia novos eventos e máquinas lendárias. E cada carro tem uma dirigibilidade bem diferentem o que traz ainda mais desafio, inclusive fazendo voce escolher um favorito pra cada categoria, pois tem carros que acomodam mais o seu estilo de dirigir do que outros, e descobrir isso tambem eh parte da experiencia, descobrir o carro que voce mais gosta e o carro que te traz mais vontade de continuar dirigindo.</p>
-  Sorry, your browser doesn&#039;t support embedded videos, <a href=\&quot;{{src}}\&quot;> download <\/a> and watch with your favorite video player! <\/video>&quot;}},&quot;inView&quot;:false,&quot;email_subject&quot;:&quot;Confira esta imagem incr\u00edvel!!&quot;,&quot;email_message&quot;:&quot;Aqui est\u00e1 o link para a imagem: %%image_link%% e este \u00e9 o link para a galeria: %%gallery_link%%&quot;,&quot;lightbox&quot;:&quot;fancybox&quot;,&quot;lightbox_devices&quot;:&quot;both&quot;}">
-		
-		
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1491" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="images_92_2026-04-21_10.13.35_result" crop="" width="299" height="168" src="/assets/images/posts/art-of-rally/001-images-92-2026-04-21-10.13.35-result.jpg"/>
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1491" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="images_92_2026-04-21_10.13.22_result" crop="" width="300" height="168" src="/assets/images/posts/art-of-rally/002-images-92-2026-04-21-10.13.22-result.jpg"/>
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1491" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="images_92_2026-04-21_10.13.49_result" crop="" width="300" height="168" src="/assets/images/posts/art-of-rally/003-images-92-2026-04-21-10.13.49-result.jpg"/>
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1491" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="2_92407342-5d07-4d7b-853f-99788ad903c9_jpg_92_2026-04-21_10.14.18_result" crop="" width="1280" height="720" src="/assets/images/posts/art-of-rally/004-2-92407342-5d07-4d7b-853f-99788ad903c9-jpg-92-2026-04-21-10.14.18-result.jpg" srcset="/assets/images/posts/art-of-rally/004-2-92407342-5d07-4d7b-853f-99788ad903c9-jpg-92-2026-04-21-10.14.18-result.jpg 1280w, https://trespordez.com.br/wp-content/uploads/2026/04/2_92407342-5d07-4d7b-853f-99788ad903c9_jpg_92_2026-04-21_10.14.18_result-300x169.jpg 300w, https://trespordez.com.br/wp-content/uploads/2026/04/2_92407342-5d07-4d7b-853f-99788ad903c9_jpg_92_2026-04-21_10.14.18_result-1024x576.jpg 1024w, https://trespordez.com.br/wp-content/uploads/2026/04/2_92407342-5d07-4d7b-853f-99788ad903c9_jpg_92_2026-04-21_10.14.18_result-768x432.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1491" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="images_92_2026-04-21_10.13.27_result" crop="" width="300" height="168" src="/assets/images/posts/art-of-rally/005-images-92-2026-04-21-10.13.27-result.jpg"/>
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1491" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="images_92_2026-04-21_10.13.15_result" crop="" width="300" height="168" src="/assets/images/posts/art-of-rally/006-images-92-2026-04-21-10.13.15-result.jpg"/>
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1491" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="art-of-rally-game-pass_png_92_2026-04-21_10.13.59_result" crop="" width="1199" height="666" src="/assets/images/posts/art-of-rally/007-art-of-rally-game-pass-png-92-2026-04-21-10.13.59-result.jpg" srcset="/assets/images/posts/art-of-rally/007-art-of-rally-game-pass-png-92-2026-04-21-10.13.59-result.jpg 1199w, https://trespordez.com.br/wp-content/uploads/2026/04/art-of-rally-game-pass_png_92_2026-04-21_10.13.59_result-300x167.jpg 300w, https://trespordez.com.br/wp-content/uploads/2026/04/art-of-rally-game-pass_png_92_2026-04-21_10.13.59_result-1024x569.jpg 1024w, https://trespordez.com.br/wp-content/uploads/2026/04/art-of-rally-game-pass_png_92_2026-04-21_10.13.59_result-768x427.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1491" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="art-of-rally-review-701x386_jpg_92_2026-04-21_10.14.10_result" crop="" width="701" height="386" src="/assets/images/posts/art-of-rally/008-art-of-rally-review-701x386-jpg-92-2026-04-21-10.14.10-result.jpg" srcset="/assets/images/posts/art-of-rally/008-art-of-rally-review-701x386-jpg-92-2026-04-21-10.14.10-result.jpg 701w, https://trespordez.com.br/wp-content/uploads/2026/04/art-of-rally-review-701x386_jpg_92_2026-04-21_10.14.10_result-300x165.jpg 300w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1491" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="art-of-rally-dlc-1_jpg_92_2026-04-21_10.14.28_result" crop="" width="2560" height="1440" src="/assets/images/posts/art-of-rally/009-art-of-rally-dlc-1-jpg-92-2026-04-21-10.14.28-result.jpg" srcset="/assets/images/posts/art-of-rally/009-art-of-rally-dlc-1-jpg-92-2026-04-21-10.14.28-result.jpg 2560w, https://trespordez.com.br/wp-content/uploads/2026/04/art-of-rally-dlc-1_jpg_92_2026-04-21_10.14.28_result-300x169.jpg 300w, https://trespordez.com.br/wp-content/uploads/2026/04/art-of-rally-dlc-1_jpg_92_2026-04-21_10.14.28_result-1024x576.jpg 1024w, https://trespordez.com.br/wp-content/uploads/2026/04/art-of-rally-dlc-1_jpg_92_2026-04-21_10.14.28_result-768x432.jpg 768w, https://trespordez.com.br/wp-content/uploads/2026/04/art-of-rally-dlc-1_jpg_92_2026-04-21_10.14.28_result-1536x864.jpg 1536w, https://trespordez.com.br/wp-content/uploads/2026/04/art-of-rally-dlc-1_jpg_92_2026-04-21_10.14.28_result-2048x1152.jpg 2048w, https://trespordez.com.br/wp-content/uploads/2026/04/art-of-rally-dlc-1_jpg_92_2026-04-21_10.14.28_result-1280x720.jpg 1280w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1491" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="1366_2000.jpeg_92_2026-04-21_10.13.54_result" crop="" width="1366" height="781" src="/assets/images/posts/art-of-rally/010-1366-2000.jpeg-92-2026-04-21-10.13.54-result.jpg" srcset="/assets/images/posts/art-of-rally/010-1366-2000.jpeg-92-2026-04-21-10.13.54-result.jpg 1366w, https://trespordez.com.br/wp-content/uploads/2026/04/1366_2000.jpeg_92_2026-04-21_10.13.54_result-300x172.jpg 300w, https://trespordez.com.br/wp-content/uploads/2026/04/1366_2000.jpeg_92_2026-04-21_10.13.54_result-1024x585.jpg 1024w, https://trespordez.com.br/wp-content/uploads/2026/04/1366_2000.jpeg_92_2026-04-21_10.13.54_result-768x439.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1491" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="images_92_2026-04-21_10.13.42_result" crop="" width="300" height="168" src="/assets/images/posts/art-of-rally/011-images-92-2026-04-21-10.13.42-result.jpg"/>
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1491" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="maxresdefault_jpg_92_2026-04-21_10.13.05_result" crop="" width="1280" height="720" src="/assets/images/posts/art-of-rally/012-maxresdefault-jpg-92-2026-04-21-10.13.05-result.jpg" srcset="/assets/images/posts/art-of-rally/012-maxresdefault-jpg-92-2026-04-21-10.13.05-result.jpg 1280w, https://trespordez.com.br/wp-content/uploads/2026/04/maxresdefault_jpg_92_2026-04-21_10.13.05_result-300x169.jpg 300w, https://trespordez.com.br/wp-content/uploads/2026/04/maxresdefault_jpg_92_2026-04-21_10.13.05_result-1024x576.jpg 1024w, https://trespordez.com.br/wp-content/uploads/2026/04/maxresdefault_jpg_92_2026-04-21_10.13.05_result-768x432.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1491" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="images_92_2026-04-21_10.13.38_result" crop="" width="300" height="168" src="/assets/images/posts/art-of-rally/013-images-92-2026-04-21-10.13.38-result.jpg"/>
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1491" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="images_92_2026-04-21_10.13.30_result" crop="" width="318" height="159" src="/assets/images/posts/art-of-rally/014-images-92-2026-04-21-10.13.30-result.jpg" srcset="/assets/images/posts/art-of-rally/014-images-92-2026-04-21-10.13.30-result.jpg 318w, https://trespordez.com.br/wp-content/uploads/2026/04/images_92_2026-04-21_10.13.30_result-300x150.jpg 300w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1491" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="images_92_2026-04-21_10.14.03_result" crop="" width="300" height="168" src="/assets/images/posts/art-of-rally/015-images-92-2026-04-21-10.14.03-result.jpg"/>
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1491" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="1-yuj76gck4l4ugrtaoal6ug@2x.jpeg_92_2026-04-21_10.14.22_result" crop="" width="1400" height="788" src="/assets/images/posts/art-of-rally/016-1-yuj76gck4l4ugrtaoal6ug-2x.jpeg-92-2026-04-21-10.14.22-result.jpg" srcset="/assets/images/posts/art-of-rally/016-1-yuj76gck4l4ugrtaoal6ug-2x.jpeg-92-2026-04-21-10.14.22-result.jpg 1400w, https://trespordez.com.br/wp-content/uploads/2026/04/1-yuj76gck4l4ugrtaoal6ug@2x.jpeg_92_2026-04-21_10.14.22_result-300x169.jpg 300w, https://trespordez.com.br/wp-content/uploads/2026/04/1-yuj76gck4l4ugrtaoal6ug@2x.jpeg_92_2026-04-21_10.14.22_result-1024x576.jpg 1024w, https://trespordez.com.br/wp-content/uploads/2026/04/1-yuj76gck4l4ugrtaoal6ug@2x.jpeg_92_2026-04-21_10.14.22_result-768x432.jpg 768w, https://trespordez.com.br/wp-content/uploads/2026/04/1-yuj76gck4l4ugrtaoal6ug@2x.jpeg_92_2026-04-21_10.14.22_result-1280x720.jpg 1280w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-	
-	
-	
-
-	
-
+<img  alt="" crop="" width="299" height="168" src="{{ '/assets/images/posts/art-of-rally/001-images-92-2026-04-21-10.13.35-result.jpg' | relative_url }}"/>
+			<img  alt="" crop="" width="300" height="168" src="{{ '/assets/images/posts/art-of-rally/002-images-92-2026-04-21-10.13.22-result.jpg' | relative_url }}"/>
+			<img  alt="" crop="" width="300" height="168" src="{{ '/assets/images/posts/art-of-rally/003-images-92-2026-04-21-10.13.49-result.jpg' | relative_url }}"/>
+			<img  alt="" crop="" width="1280" height="720" src="{{ '/assets/images/posts/art-of-rally/004-2-92407342-5d07-4d7b-853f-99788ad903c9-jpg-92-2026-04-21-10.14.18-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="300" height="168" src="{{ '/assets/images/posts/art-of-rally/005-images-92-2026-04-21-10.13.27-result.jpg' | relative_url }}"/>
+			<img  alt="" crop="" width="300" height="168" src="{{ '/assets/images/posts/art-of-rally/006-images-92-2026-04-21-10.13.15-result.jpg' | relative_url }}"/>
+			<img  alt="" crop="" width="1199" height="666" src="{{ '/assets/images/posts/art-of-rally/007-art-of-rally-game-pass-png-92-2026-04-21-10.13.59-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="701" height="386" src="{{ '/assets/images/posts/art-of-rally/008-art-of-rally-review-701x386-jpg-92-2026-04-21-10.14.10-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="2560" height="1440" src="{{ '/assets/images/posts/art-of-rally/009-art-of-rally-dlc-1-jpg-92-2026-04-21-10.14.28-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="1366" height="781" src="{{ '/assets/images/posts/art-of-rally/010-1366-2000.jpeg-92-2026-04-21-10.13.54-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="300" height="168" src="{{ '/assets/images/posts/art-of-rally/011-images-92-2026-04-21-10.13.42-result.jpg' | relative_url }}"/>
+			<img  alt="" crop="" width="1280" height="720" src="{{ '/assets/images/posts/art-of-rally/012-maxresdefault-jpg-92-2026-04-21-10.13.05-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="300" height="168" src="{{ '/assets/images/posts/art-of-rally/013-images-92-2026-04-21-10.13.38-result.jpg' | relative_url }}"/>
+			<img  alt="" crop="" width="318" height="159" src="{{ '/assets/images/posts/art-of-rally/014-images-92-2026-04-21-10.13.30-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="300" height="168" src="{{ '/assets/images/posts/art-of-rally/015-images-92-2026-04-21-10.14.03-result.jpg' | relative_url }}"/>
+			<img  alt="" crop="" width="1400" height="788" src="{{ '/assets/images/posts/art-of-rally/016-1-yuj76gck4l4ugrtaoal6ug-2x.jpeg-92-2026-04-21-10.14.22-result.jpg' | relative_url }}" />
 <h2>Visual &#8211; Uma Pintura em Movimento</h2>
 <p>E aqui vem outra surpresa: chamar Art of Rally de &quot;low poly&quot; é quase uma injustiça. Sim, tecnicamente é minimalista, mas a quantidade de detalhes e o cuidado na construção de cada cenário transformam o jogo numa verdadeira pintura interativa. A paleta de cores é belíssima, cada região tem sua identidade visual marcante:</p>
 <ul>
@@ -313,51 +99,19 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2025/11/a
 </ul>
 <hr />
 <p><strong>Avaliação Final:</strong></p>
-
-
-
-  <table>
-    <thead>
-      <tr>
-        <td colspan="5">Art of Rally</td>
+<table><thead><tr><td colspan="5">Art of Rally</td>
+      </tr><tr><td colspan="5">Corrida / Rally</td>
       </tr>
-      <tr>
-        <td colspan="5">Corrida / Rally</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Graphics</td>
-        <td>Sound</td>
-        <td>Gameplay</td>
-        <td>Challenge</td>
-        <td>Overall</td>
-      </tr>
-      <tr>
-        <td>
-          <img decoding="async" src="/wp-content/uploads/2025/01/emoji_17_star-struck.png" />
-        </td>
-        <td>
-          <img decoding="async" src="/wp-content/uploads/2025/01/emoji_71_smiling-face-with-sunglasses.png" />
-        </td>
-        <td>
-          <img decoding="async" src="/wp-content/uploads/2025/01/emoji_24_face-savoring-food.png" />
-        </td>
-        <td>
-          <img decoding="async" src="/wp-content/uploads/2025/01/emoji_47_grimacing-face.png" />
-        </td>
-        <td>
-          <img decoding="async" src="/wp-content/uploads/2025/01/emoji_54_drooling-face.png" />
+    </thead><tbody><tr><td>Graphics</td><td>Sound</td><td>Gameplay</td><td>Challenge</td><td>Overall</td>
+      </tr><tr><td><img src="/wp-content/uploads/2025/01/emoji_17_star-struck.png" />
+        </td><td><img src="/wp-content/uploads/2025/01/emoji_71_smiling-face-with-sunglasses.png" />
+        </td><td><img src="/wp-content/uploads/2025/01/emoji_24_face-savoring-food.png" />
+        </td><td><img src="/wp-content/uploads/2025/01/emoji_47_grimacing-face.png" />
+        </td><td><img src="/wp-content/uploads/2025/01/emoji_54_drooling-face.png" />
         </td>
       </tr>
     </tbody>
-    <tfoot>
-      <tr>
-        <td>10/10</td>
-        <td>10/10</td>
-        <td>9/10</td>
-        <td>9/10</td>
-        <td>9/10</td>
+    <tfoot><tr><td>10/10</td><td>10/10</td><td>9/10</td><td>9/10</td><td>9/10</td>
       </tr>
     </tfoot>
   </table>

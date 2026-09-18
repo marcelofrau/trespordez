@@ -1,4 +1,6 @@
 ---
+image: /assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/001-pxl-20250924-140121267-result-result-result.jpg
+image_alt: picoboot o renascimento definitivo do meu gamecube
 title: "PicoBoot: O Renascimento Definitivo do meu GameCube"
 date: 2026-03-21 11:11:14 -03:00
 author: the-archivist
@@ -53,280 +55,25 @@ Para Quem é Este Mod?</p>
 <li>Pessoas que nunca pegaram em um ferro de solda.</li>
 <li>Puristas extremos que só jogam via disco original e não aceitam modificações internas</li>
 </ul>
-  Sorry, your browser doesn&#039;t support embedded videos, <a href=\&quot;{{src}}\&quot;> download <\/a> and watch with your favorite video player! <\/video>&quot;}},&quot;inView&quot;:false,&quot;email_subject&quot;:&quot;Confira esta imagem incr\u00edvel!!&quot;,&quot;email_message&quot;:&quot;Aqui est\u00e1 o link para a imagem: %%image_link%% e este \u00e9 o link para a galeria: %%gallery_link%%&quot;,&quot;lightbox&quot;:&quot;fancybox&quot;,&quot;lightbox_devices&quot;:&quot;both&quot;}">
-		
-		
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1518" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="pxl_20250924_140121267_result_result_result" crop="" width="771" height="1024" src="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/001-pxl-20250924-140121267-result-result-result.jpg" srcset="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/001-pxl-20250924-140121267-result-result-result.jpg 771w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_140121267_result_result_result-226x300.jpg 226w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_140121267_result_result_result-768x1020.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1518" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="pxl_20250924_205700546_result_result_result" crop="" width="1280" height="964" src="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/002-pxl-20250924-205700546-result-result-result.jpg" srcset="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/002-pxl-20250924-205700546-result-result-result.jpg 1280w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_205700546_result_result_result-300x226.jpg 300w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_205700546_result_result_result-1024x771.jpg 1024w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_205700546_result_result_result-768x578.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1518" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="pxl_20250924_205706117_result_result_result" crop="" width="771" height="1024" src="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/003-pxl-20250924-205706117-result-result-result.jpg" srcset="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/003-pxl-20250924-205706117-result-result-result.jpg 771w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_205706117_result_result_result-226x300.jpg 226w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_205706117_result_result_result-768x1020.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1518" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="pxl_20250924_205707822_result_result_result" crop="" width="771" height="1024" src="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/004-pxl-20250924-205707822-result-result-result.jpg" srcset="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/004-pxl-20250924-205707822-result-result-result.jpg 771w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_205707822_result_result_result-226x300.jpg 226w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_205707822_result_result_result-768x1020.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1518" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="pxl_20250924_211146499_result_result_result" crop="" width="771" height="1024" src="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/005-pxl-20250924-211146499-result-result-result.jpg" srcset="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/005-pxl-20250924-211146499-result-result-result.jpg 771w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_211146499_result_result_result-226x300.jpg 226w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_211146499_result_result_result-768x1020.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1518" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="pxl_20250924_211148464_result_result_result" crop="" width="771" height="1024" src="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/006-pxl-20250924-211148464-result-result-result.jpg" srcset="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/006-pxl-20250924-211148464-result-result-result.jpg 771w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_211148464_result_result_result-226x300.jpg 226w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_211148464_result_result_result-768x1020.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1518" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="pxl_20250924_211206241_result_result_result" crop="" width="771" height="1024" src="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/007-pxl-20250924-211206241-result-result-result.jpg" srcset="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/007-pxl-20250924-211206241-result-result-result.jpg 771w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_211206241_result_result_result-226x300.jpg 226w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_211206241_result_result_result-768x1020.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1518" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="pxl_20250924_213047573_result_result_result" crop="" width="771" height="1024" src="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/008-pxl-20250924-213047573-result-result-result.jpg" srcset="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/008-pxl-20250924-213047573-result-result-result.jpg 771w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_213047573_result_result_result-226x300.jpg 226w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_213047573_result_result_result-768x1020.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1518" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="pxl_20250924_213049974_result_result_result" crop="" width="771" height="1024" src="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/009-pxl-20250924-213049974-result-result-result.jpg" srcset="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/009-pxl-20250924-213049974-result-result-result.jpg 771w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_213049974_result_result_result-226x300.jpg 226w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_213049974_result_result_result-768x1020.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1518" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="pxl_20250924_213051547_result_result_result" crop="" width="771" height="1024" src="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/010-pxl-20250924-213051547-result-result-result.jpg" srcset="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/010-pxl-20250924-213051547-result-result-result.jpg 771w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_213051547_result_result_result-226x300.jpg 226w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_213051547_result_result_result-768x1020.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1518" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="pxl_20250924_213054208_result_result_result" crop="" width="771" height="1024" src="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/011-pxl-20250924-213054208-result-result-result.jpg" srcset="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/011-pxl-20250924-213054208-result-result-result.jpg 771w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_213054208_result_result_result-226x300.jpg 226w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_213054208_result_result_result-768x1020.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1518" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="pxl_20250924_213204836_result_result_result" crop="" width="771" height="1024" src="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/012-pxl-20250924-213204836-result-result-result.jpg" srcset="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/012-pxl-20250924-213204836-result-result-result.jpg 771w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_213204836_result_result_result-226x300.jpg 226w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_213204836_result_result_result-768x1020.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1518" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="pxl_20250924_213208039_result_result_result" crop="" width="771" height="1024" src="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/013-pxl-20250924-213208039-result-result-result.jpg" srcset="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/013-pxl-20250924-213208039-result-result-result.jpg 771w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_213208039_result_result_result-226x300.jpg 226w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_213208039_result_result_result-768x1020.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1518" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="pxl_20250924_213210546_result_result_result" crop="" width="771" height="1024" src="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/014-pxl-20250924-213210546-result-result-result.jpg" srcset="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/014-pxl-20250924-213210546-result-result-result.jpg 771w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_213210546_result_result_result-226x300.jpg 226w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_213210546_result_result_result-768x1020.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1518" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="pxl_20250924_214635726_result_result_result" crop="" width="771" height="1024" src="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/015-pxl-20250924-214635726-result-result-result.jpg" srcset="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/015-pxl-20250924-214635726-result-result-result.jpg 771w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_214635726_result_result_result-226x300.jpg 226w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_214635726_result_result_result-768x1020.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1518" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="pxl_20250924_215524012_result_result_result" crop="" width="1280" height="964" src="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/016-pxl-20250924-215524012-result-result-result.jpg" srcset="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/016-pxl-20250924-215524012-result-result-result.jpg 1280w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_215524012_result_result_result-300x226.jpg 300w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_215524012_result_result_result-1024x771.jpg 1024w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_215524012_result_result_result-768x578.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1518" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="pxl_20250924_215535903_result_result_result" crop="" width="1280" height="964" src="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/017-pxl-20250924-215535903-result-result-result.jpg" srcset="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/017-pxl-20250924-215535903-result-result-result.jpg 1280w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_215535903_result_result_result-300x226.jpg 300w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_215535903_result_result_result-1024x771.jpg 1024w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_215535903_result_result_result-768x578.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1518" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="pxl_20250924_215539118_result_result_result" crop="" width="1280" height="964" src="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/018-pxl-20250924-215539118-result-result-result.jpg" srcset="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/018-pxl-20250924-215539118-result-result-result.jpg 1280w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_215539118_result_result_result-300x226.jpg 300w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_215539118_result_result_result-1024x771.jpg 1024w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_215539118_result_result_result-768x578.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-
-	
-
-	
-
-				<a role="button" tabindex="0" rel="modula-1518" aria-label="Abrir imagem no lightbox"></a>
-			<img loading="lazy" decoding="async"  alt="" title="pxl_20250924_221000204_result_result_result" crop="" width="771" height="1024" src="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/019-pxl-20250924-221000204-result-result-result.jpg" srcset="/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/019-pxl-20250924-221000204-result-result-result.jpg 771w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_221000204_result_result_result-226x300.jpg 226w, https://trespordez.com.br/wp-content/uploads/2026/04/pxl_20250924_221000204_result_result_result-768x1020.jpg 768w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 16.67vw" />
-			
-				
-																			
-			
-
-	
-
-	
-	
-	
-
-	
-
+<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/001-pxl-20250924-140121267-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="1280" height="964" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/002-pxl-20250924-205700546-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/003-pxl-20250924-205706117-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/004-pxl-20250924-205707822-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/005-pxl-20250924-211146499-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/006-pxl-20250924-211148464-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/007-pxl-20250924-211206241-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/008-pxl-20250924-213047573-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/009-pxl-20250924-213049974-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/010-pxl-20250924-213051547-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/011-pxl-20250924-213054208-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/012-pxl-20250924-213204836-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/013-pxl-20250924-213208039-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/014-pxl-20250924-213210546-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/015-pxl-20250924-214635726-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="1280" height="964" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/016-pxl-20250924-215524012-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="1280" height="964" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/017-pxl-20250924-215535903-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="1280" height="964" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/018-pxl-20250924-215539118-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/019-pxl-20250924-221000204-result-result-result.jpg' | relative_url }}" />
 <h2>Documentação Oficial (A Bíblia do Mod)</h2>
 <ul>
 <li>GitHub do webhdx (PicoBoot): Este é o repositório oficial onde você encontra os esquemas de fiação atualizados e o firmware mais recente. <a href="https://github.com/webhdx/PicoBoot" title="Acesse aqui o GitHub do PicoBoot">Acesse aqui o GitHub do PicoBoot</a></li>

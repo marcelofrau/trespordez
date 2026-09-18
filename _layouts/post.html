@@ -7,7 +7,7 @@ layout: default
     <h1 class="p-name">{{ page.title }}</h1>
     <p class="post-meta">Por {% assign author = site.data.authors[page.author] %}{% if author %}<a href="{{ author.url | relative_url }}">{{ author.name }}</a>{% else %}{{ page.author }}{% endif %} em <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d/%m/%Y" }}</time></p>
   </header>
-  {% if page.image %}<img class="post-cover" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">{% endif %}
+  {% if page.image %}<figure class="post-cover"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}"></figure>{% endif %}
   <div class="post-content e-content">{{ content }}</div>
   {% if page.tags.size > 0 %}<p class="tags">Tags: {% for tag in page.tags %}<a href="{{ '/tag/' | append: tag | append: '/' | relative_url }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</p>{% endif %}
   {% include giscus.html %}

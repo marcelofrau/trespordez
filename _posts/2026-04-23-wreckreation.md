@@ -1,4 +1,6 @@
 ---
+image: /assets/images/posts/wreckreation/cover.jpg
+image_alt: wreckreation
 title: "Wreckreation"
 date: 2026-04-23 07:41:07 -03:00
 author: the-archivist
@@ -48,51 +50,19 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2026/04/1
 <p>Depois desse anuncio, muita gente entrou em contato com eles e eles abriram um Patreon pra segurar um pouco. E parece que deu uma ajuda pra eles se manterem, inclusive tem saído muito update com muitas boas melhorias no jogo.</p>
 <p>Mas ainda assim, não sabemos se eles vão conseguir se manter ou se infelizmente vão acabar fechando as portas e deixando a industria de games de vez. Eu espero que não, tenho a esperança que eles vão continuar, mas nunca se sabe o quão cruel o mundo dos negócios é, principalmente no mundo dos games</p>
 <p>Aqui o link da steam pra quem quer ver e experimentar: <a href="https:///store.steampowered.com/app/1594040/Wreckreation/" title="https:///store.steampowered.com/app/1594040/Wreckreation/">store.steampowered.com/app/1594040/Wreckreation/</a></p>
-
-
-
-  <table>
-    <thead>
-      <tr>
-        <td colspan="5">Wreckreation</td>
+<table><thead><tr><td colspan="5">Wreckreation</td>
+      </tr><tr><td colspan="5">Arcade Racing</td>
       </tr>
-      <tr>
-        <td colspan="5">Arcade Racing</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Graphics</td>
-        <td>Sound</td>
-        <td>Gameplay</td>
-        <td>Challenge</td>
-        <td>Overall</td>
-      </tr>
-      <tr>
-        <td>
-          <img decoding="async" src="/wp-content/uploads/2025/01/emoji_1_grinning-face.png" />
-        </td>
-        <td>
-          <img decoding="async" src="/wp-content/uploads/2025/01/emoji_20_smiling-face.png" />
-        </td>
-        <td>
-          <img decoding="async" src="/wp-content/uploads/2025/01/emoji_67_exploding-head.png" />
-        </td>
-        <td>
-          <img decoding="async" src="/wp-content/uploads/2025/01/emoji_84_face-holding-back-tears.png" />
-        </td>
-        <td>
-          <img decoding="async" src="/wp-content/uploads/2025/01/emoji_17_star-struck.png" />
+    </thead><tbody><tr><td>Graphics</td><td>Sound</td><td>Gameplay</td><td>Challenge</td><td>Overall</td>
+      </tr><tr><td><img src="/wp-content/uploads/2025/01/emoji_1_grinning-face.png" />
+        </td><td><img src="/wp-content/uploads/2025/01/emoji_20_smiling-face.png" />
+        </td><td><img src="/wp-content/uploads/2025/01/emoji_67_exploding-head.png" />
+        </td><td><img src="/wp-content/uploads/2025/01/emoji_84_face-holding-back-tears.png" />
+        </td><td><img src="/wp-content/uploads/2025/01/emoji_17_star-struck.png" />
         </td>
       </tr>
     </tbody>
-    <tfoot>
-      <tr>
-        <td>8/10</td>
-        <td>7/10</td>
-        <td>8/10</td>
-        <td>7/10</td>
-        <td>8/10</td>
+    <tfoot><tr><td>8/10</td><td>7/10</td><td>8/10</td><td>7/10</td><td>8/10</td>
       </tr>
     </tfoot>
   </table>

@@ -1,0 +1,24 @@
+<header class="site-header">
+  <div class="masthead wrap">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} - início">
+      <img src="{{ '/assets/images/site/logo.svg' | relative_url }}" alt="Três por Dez">
+    </a>
+    <p class="tagline">{{ site.tagline }}</p>
+  </div>
+  <nav class="main-nav" aria-label="Navegação principal">
+    <div class="wrap">
+      <ul>
+        {% for item in site.data.navigation %}
+          <li{% if item.children %} class="has-children"{% endif %}>
+            <a href="{{ item.url | relative_url }}">{{ item.label }}</a>
+            {% if item.children %}
+              <ul>
+                {% for child in item.children %}<li><a href="{{ child.url | relative_url }}">{{ child.label }}</a></li>{% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+</header>

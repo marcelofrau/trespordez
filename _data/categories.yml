@@ -1,0 +1,27 @@
+consoles:
+  name: Consoles
+  url: /category/consoles/
+emulators:
+  name: Emuladores
+  url: /category/emulators/
+gameplay:
+  name: Jogatina
+  url: /category/gameplay/
+moddding:
+  name: Modding
+  url: /category/consoles/moddding/
+news:
+  name: Noticias
+  url: /category/news/
+hiddengems:
+  name: Pérolas desconhecidas
+  url: /category/hiddengems/
+reviews:
+  name: Reviews
+  url: /category/reviews/
+retrogaming:
+  name: Retrogaming
+  url: /category/consoles/retrogaming/
+rpg:
+  name: RPG
+  url: /category/rpg/

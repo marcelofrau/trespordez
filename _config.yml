@@ -1,0 +1,51 @@
+title: Três por Dez
+tagline: Relembrando os tempos em que jogo bom vinha com cheiro de plástico e reflexo esverdeado
+description: Reviews, emulação, consoles, modding e retrogaming.
+url: "https://trespordez.com.br"
+baseurl: ""
+lang: pt-BR
+timezone: America/Sao_Paulo
+giscus:
+  enabled: false
+  repo: marcelofrau/trespordez
+permalink: /:year/:month/:title/
+paginate: 10
+paginate_path: /page:num/
+
+author:
+  name: Três por Dez
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - node_modules
+  - vendor
+  - scripts
+  - docs
+  - .agents
+  - AGENTS.md
+  - README.md
+  - CONTRIBUTING.md
+  - Gemfile
+  - Gemfile.lock

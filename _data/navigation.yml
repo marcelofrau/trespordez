@@ -1,0 +1,34 @@
+- label: Início
+  url: /
+- label: Blog
+  url: /
+  children:
+    - label: Notícias
+      url: /category/news/
+- label: Jogatina
+  url: /jogatina/
+  children:
+    - label: Streamings e Gameplays
+      url: /category/gameplay/
+    - label: Reviews
+      url: /category/reviews/
+    - label: Pérolas desconhecidas
+      url: /category/hiddengems/
+- label: Consoles
+  url: /category/consoles/
+  children:
+    - label: Modding
+      url: /category/consoles/moddding/
+    - label: Retrobright
+      url: /category/consoles/retrobright/
+    - label: Retrogaming
+      url: /category/consoles/retrogaming/
+- label: Emuladores
+  url: /emuladores/
+  children:
+    - label: Novidades na Emulação
+      url: /category/emulators/
+- label: Equipe
+  url: /equipe/
+- label: Softwares
+  url: /softwares/

@@ -33,7 +33,7 @@ jobs:
       - name: Build Jekyll QA site
         env:
           JEKYLL_ENV: qa
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" --url "https://marcelofrau.github.io"
+        run: bundle exec jekyll build --config _config.yml,_config.qa.yml
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site

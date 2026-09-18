@@ -44,6 +44,7 @@ exclude:
   - scripts
   - docs
   - .agents
+  - _config.qa.yml
   - AGENTS.md
   - README.md
   - CONTRIBUTING.md

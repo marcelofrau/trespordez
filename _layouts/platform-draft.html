@@ -1,0 +1,18 @@
+---
+layout: page
+---
+{{ content }}
+
+<section class="emulator-draft-note">
+  <h2>Catálogo inicial</h2>
+  <p>Esta página é um rascunho de referência. Lista inicial será ampliada com testes, observações de compatibilidade e recomendações editoriais.</p>
+</section>
+
+<table>
+  <thead><tr><th>Emulador</th><th>Perfil</th><th>Link</th></tr></thead>
+  <tbody>
+    {% for emulator in page.emulators %}
+    <tr><td><strong>{{ emulator.name }}</strong></td><td>{{ emulator.description }}</td><td><a href="{{ emulator.url }}" rel="external">Abrir</a></td></tr>
+    {% endfor %}
+  </tbody>
+</table>

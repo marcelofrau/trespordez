@@ -77,7 +77,7 @@ function normalizeReviewCards(content) {
 }
 
 function createGalleries(content) {
-  return content.replace(/(?:(?:<figure>)?\s*<img\b[^>]*src="\{\{ '\/assets\/images\/posts\/[^>]+>\s*(?:<\/figure>)?\s*){3,}/gi, (group) => {
+  return content.replace(/(?:(?:<figure>)?\s*<img\b[^>]*src="\{\{ '\/assets\/images\/(?:posts|pages)\/[^>]+>\s*(?:<\/figure>)?\s*){3,}/gi, (group) => {
     const images = [...group.matchAll(/<img\b[^>]*src="([^"]+)"[^>]*>/gi)];
     if (images.length < 3) return group;
     const items = images.map((match, index) => {

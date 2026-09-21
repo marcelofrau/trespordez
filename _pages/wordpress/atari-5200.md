@@ -2,6 +2,10 @@
 title: "Atari 5200"
 permalink: /emuladores/atari-5200/
 wordpress_id: 1549
+emulator: true
+image: /assets/images/pages/atari-5200/001-4dd3837b-9b67-4af6-b796-6178237764e8-png-92-2026-04-21-13.51.00.jpg
+image_alt: Atari 5200
+summary: Um ponto de partida para emular Atari 5200, com opções atuais e contexto histórico da plataforma.
 ---
 
 <table>
@@ -69,15 +73,14 @@ wordpress_id: 1549
 </li>
 </ul>
 <p>Vejo o Atari 5200 não como uma obra-prima de design, mas como uma peça crítica de hardware que demonstra a transição entre a era dos microcomputadores e os consoles de terceira geração. Ele não possui o refinamento técnico do NES, mas é um elo perdido essencial para entender por que a indústria precisou colapsar antes de se reinventar.</p>
-<p>Para rodar esses emuladores, você precisará da imagem da BIOS original (5200.rom). Sem esse arquivo de 2KB, o sistema não inicializa o kernel, impossibilitando a execução das ROMs.</p>
-<img  alt="" src="{{ '/assets/images/pages/atari-5200/001-4dd3837b-9b67-4af6-b796-6178237764e8-png-92-2026-04-21-13.51.00.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-5200/002-algorithm-racks-up-superhuman-scores-in-55-classic-atari-games-346025-960x540-jpg-92-2026-04-21-13.51.26.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-5200/003-atlantis-usa-240415-101135-png-92-2026-04-21-13.51.37.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-5200/004-dandy-png-92-2026-04-21-13.51.19.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-5200/005-frogger2-3-gif-92-2026-04-21-13.50.53.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-5200/006-images-92-2026-04-21-13.51.23.jpg' | relative_url }}"/>
-			<img  alt="" src="{{ '/assets/images/pages/atari-5200/007-images-92-2026-04-21-13.51.46.jpg' | relative_url }}"/>
-			<img  alt="" src="{{ '/assets/images/pages/atari-5200/008-obmdryjjnvpbqqpasaxae4-jpg-92-2026-04-21-13.51.05.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-5200/009-pele-atari-png-92-2026-04-21-13.51.59.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-5200/010-rvvaw53vri6bafiob5pg5m.jpeg-92-2026-04-21-13.51.11.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-5200/011-summergames-9-gif-92-2026-04-21-13.51.42.jpg' | relative_url }}" />
+<p>Para rodar esses emuladores, você precisará da imagem da BIOS original (5200.rom). Sem esse arquivo de 2KB, o sistema não inicializa o kernel, impossibilitando a execução das ROMs.</p><div class="post-gallery" aria-label="Galeria de screenshots"><a href="{{ '/assets/images/pages/atari-5200/001-4dd3837b-9b67-4af6-b796-6178237764e8-png-92-2026-04-21-13.51.00.jpg' | relative_url }}" aria-label="Abrir Screenshot 1"><img  alt="" src="{{ '/assets/images/pages/atari-5200/001-4dd3837b-9b67-4af6-b796-6178237764e8-png-92-2026-04-21-13.51.00.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-5200/002-algorithm-racks-up-superhuman-scores-in-55-classic-atari-games-346025-960x540-jpg-92-2026-04-21-13.51.26.jpg' | relative_url }}" aria-label="Abrir Screenshot 2"><img  alt="" src="{{ '/assets/images/pages/atari-5200/002-algorithm-racks-up-superhuman-scores-in-55-classic-atari-games-346025-960x540-jpg-92-2026-04-21-13.51.26.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-5200/003-atlantis-usa-240415-101135-png-92-2026-04-21-13.51.37.jpg' | relative_url }}" aria-label="Abrir Screenshot 3"><img  alt="" src="{{ '/assets/images/pages/atari-5200/003-atlantis-usa-240415-101135-png-92-2026-04-21-13.51.37.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-5200/004-dandy-png-92-2026-04-21-13.51.19.jpg' | relative_url }}" aria-label="Abrir Screenshot 4"><img  alt="" src="{{ '/assets/images/pages/atari-5200/004-dandy-png-92-2026-04-21-13.51.19.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-5200/005-frogger2-3-gif-92-2026-04-21-13.50.53.jpg' | relative_url }}" aria-label="Abrir Screenshot 5"><img  alt="" src="{{ '/assets/images/pages/atari-5200/005-frogger2-3-gif-92-2026-04-21-13.50.53.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-5200/006-images-92-2026-04-21-13.51.23.jpg' | relative_url }}" aria-label="Abrir Screenshot 6"><img  alt="" src="{{ '/assets/images/pages/atari-5200/006-images-92-2026-04-21-13.51.23.jpg' | relative_url }}"/></a>
+<a href="{{ '/assets/images/pages/atari-5200/007-images-92-2026-04-21-13.51.46.jpg' | relative_url }}" aria-label="Abrir Screenshot 7"><img  alt="" src="{{ '/assets/images/pages/atari-5200/007-images-92-2026-04-21-13.51.46.jpg' | relative_url }}"/></a>
+<a href="{{ '/assets/images/pages/atari-5200/008-obmdryjjnvpbqqpasaxae4-jpg-92-2026-04-21-13.51.05.jpg' | relative_url }}" aria-label="Abrir Screenshot 8"><img  alt="" src="{{ '/assets/images/pages/atari-5200/008-obmdryjjnvpbqqpasaxae4-jpg-92-2026-04-21-13.51.05.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-5200/009-pele-atari-png-92-2026-04-21-13.51.59.jpg' | relative_url }}" aria-label="Abrir Screenshot 9"><img  alt="" src="{{ '/assets/images/pages/atari-5200/009-pele-atari-png-92-2026-04-21-13.51.59.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-5200/010-rvvaw53vri6bafiob5pg5m.jpeg-92-2026-04-21-13.51.11.jpg' | relative_url }}" aria-label="Abrir Screenshot 10"><img  alt="" src="{{ '/assets/images/pages/atari-5200/010-rvvaw53vri6bafiob5pg5m.jpeg-92-2026-04-21-13.51.11.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-5200/011-summergames-9-gif-92-2026-04-21-13.51.42.jpg' | relative_url }}" aria-label="Abrir Screenshot 11"><img  alt="" src="{{ '/assets/images/pages/atari-5200/011-summergames-9-gif-92-2026-04-21-13.51.42.jpg' | relative_url }}" /></a></div>

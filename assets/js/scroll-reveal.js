@@ -3,7 +3,7 @@ const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 if (!reducedMotion.matches) {
   document.body.classList.add("motion-ready");
   // Delay until first paint so browsers have an initial state to animate from.
-  window.setTimeout(() => document.body.classList.add("page-loaded"), 120);
+  window.setTimeout(() => document.body.classList.add("page-loaded"), 220);
 }
 
 if (!reducedMotion.matches && "IntersectionObserver" in window) {

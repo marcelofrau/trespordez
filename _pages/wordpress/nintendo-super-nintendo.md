@@ -2,6 +2,10 @@
 title: "Nintendo &#8211; Super Nintendo"
 permalink: /emuladores/nintendo-super-nintendo/
 wordpress_id: 1075
+emulator: true
+image: /assets/images/pages/emuladores/017-snes-1.png
+image_alt: Super Nintendo
+summary: Guia inicial de emuladores de Super Nintendo, da performance clássica à precisão de hardware.
 ---
 
 <table>

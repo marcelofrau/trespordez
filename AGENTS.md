@@ -19,8 +19,10 @@ Static Jekyll blog. Source repo: `marcelofrau/trespordez`. Production URL: `http
 - Required front matter: `title`, `date`, `author`, `categories`, `tags`, `description`.
 - Add `image` and `image_alt` for a cover when source material exists.
 - Reuse keys from `_data/authors.yml` and `_data/categories.yml`; do not invent taxonomy without user approval.
+- Tags describe subjects: genre, platform, franchise, studio, hardware, or format. Use lowercase ASCII slugs. Add `indie` only when title, review metadata, or article content establishes independent development.
 - Write Portuguese matching existing informal editorial tone. Do not alter author meaning while converting migrated content.
 - Markdown first. Use HTML only for responsive video embeds, figures, or tables that Markdown cannot express.
+- Platform emulator drafts belong in `_pages/platforms/`. Mark them as initial catalogs until tested editorial recommendations exist; do not present a draft as a personal review.
 - Use `relative_url` in layouts/includes for every local URL. Root-absolute URLs break GitHub Pages QA.
 
 ## Images and Links

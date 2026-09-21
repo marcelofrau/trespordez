@@ -17,9 +17,15 @@ image_alt: "Descrição objetiva da imagem"
 
 `layout: post` is inherited. Existing URLs render as `/:year/:month/:title/`; `slug` must remain stable after publication.
 
+Use categories for primary editorial sections. Use tags for searchable subjects such as `indie`, `jrpg`, `platformer`, `nintendo`, `snes`, `racing`, studio, franchise, and hardware. Keep tags lowercase ASCII and only add tags supported by article content.
+
 ## Pages
 
 Place static pages under `_pages/`. Directory path becomes page URL. Example: `_pages/equipe.md` with `permalink: /equipe/`.
+
+## Emulator Platforms
+
+Existing rich platform pages remain under `_pages/wordpress/`. Initial catalogs for systems without migrated editorial content belong in `_pages/platforms/`, use `layout: platform-draft`, and contain only a clear draft notice plus official emulator links. Every platform card on `/emuladores/` must point to its page.
 
 ## Data
 

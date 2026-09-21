@@ -2,6 +2,10 @@
 title: "Atari 7800"
 permalink: /emuladores/atari-7800/
 wordpress_id: 1617
+emulator: true
+image: /assets/images/pages/atari-7800/001-toki-atari7800-02-300x254-png-92.jpg
+image_alt: Atari 7800
+summary: Referência inicial para compatibilidade, homebrew e preservação da biblioteca do Atari 7800.
 ---
 
 <table>
@@ -224,18 +228,17 @@ wordpress_id: 1617
 <td>1986 (US) / 1987 (EU)</td>
 </tr>
 </tbody>
-</table>
-<img  alt="" src="{{ '/assets/images/pages/atari-7800/001-toki-atari7800-02-300x254-png-92.jpg' | relative_url }}"/>
-			<img  alt="" src="{{ '/assets/images/pages/atari-7800/002-consola-atari-7800--electronica-234816-3-xxl.bmp-92.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-7800/003-61-xnv7x1wl-jpg-92.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-7800/004-pole-position-ii-png-92.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-7800/005-peter-20beardsleys-20soccer-201989grandslam-20entertainments-png-92.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-7800/006-choplifter-pro-3-jpg-92.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-7800/007-ninja-golf-atari-7800-1024x767-png-92.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-7800/008-basketbrawl-atari-7800-1024x767-png-92.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-7800/009-centipede-atari-7800-1024x767-png-92.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-7800/010-screenshot-2023-03-24-103440-jpg-92.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-7800/011-commando-atari-7800-1024x767-png-92.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-7800/012-image-79-1-38a3b41e-46e9-4c6b-b9f0-7b98b2b21443-jpg-92.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-7800/013-screenshot-2023-03-24-104545-jpg-92.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-7800/014-15-dig-dug-atari-7800-gameplay-jpg-92.jpg' | relative_url }}" />
+</table><div class="post-gallery" aria-label="Galeria de screenshots"><a href="{{ '/assets/images/pages/atari-7800/001-toki-atari7800-02-300x254-png-92.jpg' | relative_url }}" aria-label="Abrir Screenshot 1"><img  alt="" src="{{ '/assets/images/pages/atari-7800/001-toki-atari7800-02-300x254-png-92.jpg' | relative_url }}"/></a>
+<a href="{{ '/assets/images/pages/atari-7800/002-consola-atari-7800--electronica-234816-3-xxl.bmp-92.jpg' | relative_url }}" aria-label="Abrir Screenshot 2"><img  alt="" src="{{ '/assets/images/pages/atari-7800/002-consola-atari-7800--electronica-234816-3-xxl.bmp-92.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-7800/003-61-xnv7x1wl-jpg-92.jpg' | relative_url }}" aria-label="Abrir Screenshot 3"><img  alt="" src="{{ '/assets/images/pages/atari-7800/003-61-xnv7x1wl-jpg-92.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-7800/004-pole-position-ii-png-92.jpg' | relative_url }}" aria-label="Abrir Screenshot 4"><img  alt="" src="{{ '/assets/images/pages/atari-7800/004-pole-position-ii-png-92.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-7800/005-peter-20beardsleys-20soccer-201989grandslam-20entertainments-png-92.jpg' | relative_url }}" aria-label="Abrir Screenshot 5"><img  alt="" src="{{ '/assets/images/pages/atari-7800/005-peter-20beardsleys-20soccer-201989grandslam-20entertainments-png-92.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-7800/006-choplifter-pro-3-jpg-92.jpg' | relative_url }}" aria-label="Abrir Screenshot 6"><img  alt="" src="{{ '/assets/images/pages/atari-7800/006-choplifter-pro-3-jpg-92.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-7800/007-ninja-golf-atari-7800-1024x767-png-92.jpg' | relative_url }}" aria-label="Abrir Screenshot 7"><img  alt="" src="{{ '/assets/images/pages/atari-7800/007-ninja-golf-atari-7800-1024x767-png-92.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-7800/008-basketbrawl-atari-7800-1024x767-png-92.jpg' | relative_url }}" aria-label="Abrir Screenshot 8"><img  alt="" src="{{ '/assets/images/pages/atari-7800/008-basketbrawl-atari-7800-1024x767-png-92.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-7800/009-centipede-atari-7800-1024x767-png-92.jpg' | relative_url }}" aria-label="Abrir Screenshot 9"><img  alt="" src="{{ '/assets/images/pages/atari-7800/009-centipede-atari-7800-1024x767-png-92.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-7800/010-screenshot-2023-03-24-103440-jpg-92.jpg' | relative_url }}" aria-label="Abrir Screenshot 10"><img  alt="" src="{{ '/assets/images/pages/atari-7800/010-screenshot-2023-03-24-103440-jpg-92.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-7800/011-commando-atari-7800-1024x767-png-92.jpg' | relative_url }}" aria-label="Abrir Screenshot 11"><img  alt="" src="{{ '/assets/images/pages/atari-7800/011-commando-atari-7800-1024x767-png-92.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-7800/012-image-79-1-38a3b41e-46e9-4c6b-b9f0-7b98b2b21443-jpg-92.jpg' | relative_url }}" aria-label="Abrir Screenshot 12"><img  alt="" src="{{ '/assets/images/pages/atari-7800/012-image-79-1-38a3b41e-46e9-4c6b-b9f0-7b98b2b21443-jpg-92.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-7800/013-screenshot-2023-03-24-104545-jpg-92.jpg' | relative_url }}" aria-label="Abrir Screenshot 13"><img  alt="" src="{{ '/assets/images/pages/atari-7800/013-screenshot-2023-03-24-104545-jpg-92.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-7800/014-15-dig-dug-atari-7800-gameplay-jpg-92.jpg' | relative_url }}" aria-label="Abrir Screenshot 14"><img  alt="" src="{{ '/assets/images/pages/atari-7800/014-15-dig-dug-atari-7800-gameplay-jpg-92.jpg' | relative_url }}" /></a></div>

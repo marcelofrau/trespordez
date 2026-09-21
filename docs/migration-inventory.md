@@ -10,4 +10,5 @@ Local recovery source: `C:\Users\fraumar\Downloads\trespordez\07-09-2026`. Conta
 - About 966 body-media URLs, with WordPress-generated size variants. Import script deduplicates source URL downloads.
 - Content requires semantic cleanup: Elementor markup, Modula galleries, inline style/script fragments, 16 YouTube embeds, one Google Sheets iframe, score tables, and a few custom bracket tokens.
 - Comments intentionally excluded. Giscus starts new comment history.
+- Taxonomy normalization adds missing tags to older reviews, including genre, platform, franchise, and `indie` where source content explicitly supports it.
 - Titles with encoding damage need manual review: FXPAK Pro - SNES, Sonic 2006: De perto é ainda pior, Nintendo Switch 2 é Anunciado Oficialmente!, Atari 2600, Política de privacidade, Nintendo - Super Nintendo.

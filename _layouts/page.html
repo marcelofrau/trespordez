@@ -1,7 +1,16 @@
 ---
 layout: default
 ---
-<article class="page">
-  <header class="post-header"><h1>{{ page.title }}</h1></header>
+<article class="page{% if page.emulator %} emulator-page{% endif %}">
+  {% if page.emulator %}
+    {% assign platform = site.data.platforms | where: "url", page.url | first %}
+    <header class="emulator-hero">
+      {% assign hero_image = page.image | default: platform.image %}
+      {% if hero_image %}<img src="{{ hero_image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">{% endif %}
+      <div><p class="eyebrow">Guia de emulação</p><h1>{{ page.title }}</h1><p>{{ page.summary | default: "Catálogo inicial de emuladores, compatibilidade e referências para esta plataforma." }}</p></div>
+    </header>
+  {% else %}
+    <header class="post-header"><h1>{{ page.title }}</h1></header>
+  {% endif %}
   <div class="post-content">{{ content }}</div>
 </article>

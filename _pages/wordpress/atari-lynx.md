@@ -2,6 +2,10 @@
 title: "Atari Lynx"
 permalink: /emuladores/atari-lynx/
 wordpress_id: 1819
+emulator: true
+image: /assets/images/pages/atari-lynx/001-basketbrawl-atari-lynx-jpg-webp-85-www.google.com-2026-05-13-10.12.46.jpg
+image_alt: Atari Lynx
+summary: Opções para explorar a biblioteca portátil do Atari Lynx em plataformas atuais.
 ---
 
 <table>
@@ -56,26 +60,26 @@ wordpress_id: 1819
 <p>Hoje vejo mais como peça histórica do que trazer momentos de diversão por não fazer parte da minha infância e não ter nenhum jogo que tenha me interessado ainda, mas isso um dia pode mudar, já que nunca parei pra explorar muito a coleção de jogos do Lynx.</p>
 <p>Enfim, infelizmente não tenho muito mais o que comentar, mas vale deixar aqui minhas impressões e um pouco de história do meu lado. Quando eu explorar mais o console venho aqui atualizar e dar um parecer melhor.</p>
 <h3>Videos relacionados</h3>
-<iframe width="640" height="360" src="https://www.youtube.com/embed/POT89iF0ntY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><iframe width="640" height="360" src="https://www.youtube.com/embed/fdp4yn1B8x8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><iframe width="640" height="360" src="https://www.youtube.com/embed/3rN5bj3g76A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>			<img  alt="" src="{{ '/assets/images/pages/atari-lynx/001-basketbrawl-atari-lynx-jpg-webp-85-www.google.com-2026-05-13-10.12.46.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-lynx/002-maxresdefault-jpg-92.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-lynx/003-images-85-www.google.com-2026-05-13-10.14.04.jpg' | relative_url }}"/>
-			<img  alt="" src="{{ '/assets/images/pages/atari-lynx/004-double-dragon-usa-europe-230807-001209-png-85-www.google.com-2026-05-13-10.13.30.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-lynx/005-250px-lynx-zaku--28turtle-zone-29-gif-85-www.google.com-2026-05-13-10.12.33.jpg' | relative_url }}"/>
-			<img  alt="" src="{{ '/assets/images/pages/atari-lynx/006-images-85-www.google.com-2026-05-13-10.13.51.jpg' | relative_url }}"/>
-			<img  alt="" src="{{ '/assets/images/pages/atari-lynx/007-fb0cb1e2887671e9b67de641475e879b416b567c-png-85-www.google.com-2026-05-13-10.13.55.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-lynx/008-images-85-www.google.com-2026-05-13-10.13.09.jpg' | relative_url }}"/>
-			<img  alt="" src="{{ '/assets/images/pages/atari-lynx/009-images-85-www.google.com-2026-05-13-10.12.11.jpg' | relative_url }}"/>
-			<img  alt="" src="{{ '/assets/images/pages/atari-lynx/010-cmvzax1.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-lynx/011-e79d986d46d9b6c8733192fe963ffaef-jpg-85-www.google.com-2026-05-13-10.13.02.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-lynx/012-atari-lynx-buyers-guide-20080409001706769-jpg-85-www.google.com-2026-05-13-10.12.18.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-lynx/013-maxresdefault-jpg-85-www.google.com-2026-05-13-10.13.45.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-lynx/014-abp1-png-85-www.google.com-2026-05-13-10.12.54.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-lynx/015-double-dragon-usa-europe-230807-001209-png-92.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-lynx/016-hqdefault-jpg-92.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-lynx/017-uxmlag-vraljtrmhnfthlkzdnxw5gol2-gynvhfozlaidu8wsqbtjfxptqzq61bb17hswvbalwnyhaqwearuf527r6ji2p-2ul4vtezv-85-www.google.com-2026-05-13-10.12.39.jpg' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-lynx/018-images-85-www.google.com-2026-05-13-10.14.08.jpg' | relative_url }}"/>
-			<img  alt="" src="{{ '/assets/images/pages/atari-lynx/019-images-85-www.google.com-2026-05-13-10.13.33.jpg' | relative_url }}"/>
-			<img  alt="" src="{{ '/assets/images/pages/atari-lynx/020-maxres987987default-jpg-92.jpg' | relative_url }}" />
+<iframe width="640" height="360" src="https://www.youtube.com/embed/POT89iF0ntY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><iframe width="640" height="360" src="https://www.youtube.com/embed/fdp4yn1B8x8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><iframe width="640" height="360" src="https://www.youtube.com/embed/3rN5bj3g76A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="post-gallery" aria-label="Galeria de screenshots"><a href="{{ '/assets/images/pages/atari-lynx/001-basketbrawl-atari-lynx-jpg-webp-85-www.google.com-2026-05-13-10.12.46.jpg' | relative_url }}" aria-label="Abrir Screenshot 1"><img  alt="" src="{{ '/assets/images/pages/atari-lynx/001-basketbrawl-atari-lynx-jpg-webp-85-www.google.com-2026-05-13-10.12.46.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-lynx/002-maxresdefault-jpg-92.jpg' | relative_url }}" aria-label="Abrir Screenshot 2"><img  alt="" src="{{ '/assets/images/pages/atari-lynx/002-maxresdefault-jpg-92.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-lynx/003-images-85-www.google.com-2026-05-13-10.14.04.jpg' | relative_url }}" aria-label="Abrir Screenshot 3"><img  alt="" src="{{ '/assets/images/pages/atari-lynx/003-images-85-www.google.com-2026-05-13-10.14.04.jpg' | relative_url }}"/></a>
+<a href="{{ '/assets/images/pages/atari-lynx/004-double-dragon-usa-europe-230807-001209-png-85-www.google.com-2026-05-13-10.13.30.jpg' | relative_url }}" aria-label="Abrir Screenshot 4"><img  alt="" src="{{ '/assets/images/pages/atari-lynx/004-double-dragon-usa-europe-230807-001209-png-85-www.google.com-2026-05-13-10.13.30.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-lynx/005-250px-lynx-zaku--28turtle-zone-29-gif-85-www.google.com-2026-05-13-10.12.33.jpg' | relative_url }}" aria-label="Abrir Screenshot 5"><img  alt="" src="{{ '/assets/images/pages/atari-lynx/005-250px-lynx-zaku--28turtle-zone-29-gif-85-www.google.com-2026-05-13-10.12.33.jpg' | relative_url }}"/></a>
+<a href="{{ '/assets/images/pages/atari-lynx/006-images-85-www.google.com-2026-05-13-10.13.51.jpg' | relative_url }}" aria-label="Abrir Screenshot 6"><img  alt="" src="{{ '/assets/images/pages/atari-lynx/006-images-85-www.google.com-2026-05-13-10.13.51.jpg' | relative_url }}"/></a>
+<a href="{{ '/assets/images/pages/atari-lynx/007-fb0cb1e2887671e9b67de641475e879b416b567c-png-85-www.google.com-2026-05-13-10.13.55.jpg' | relative_url }}" aria-label="Abrir Screenshot 7"><img  alt="" src="{{ '/assets/images/pages/atari-lynx/007-fb0cb1e2887671e9b67de641475e879b416b567c-png-85-www.google.com-2026-05-13-10.13.55.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-lynx/008-images-85-www.google.com-2026-05-13-10.13.09.jpg' | relative_url }}" aria-label="Abrir Screenshot 8"><img  alt="" src="{{ '/assets/images/pages/atari-lynx/008-images-85-www.google.com-2026-05-13-10.13.09.jpg' | relative_url }}"/></a>
+<a href="{{ '/assets/images/pages/atari-lynx/009-images-85-www.google.com-2026-05-13-10.12.11.jpg' | relative_url }}" aria-label="Abrir Screenshot 9"><img  alt="" src="{{ '/assets/images/pages/atari-lynx/009-images-85-www.google.com-2026-05-13-10.12.11.jpg' | relative_url }}"/></a>
+<a href="{{ '/assets/images/pages/atari-lynx/010-cmvzax1.jpg' | relative_url }}" aria-label="Abrir Screenshot 10"><img  alt="" src="{{ '/assets/images/pages/atari-lynx/010-cmvzax1.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-lynx/011-e79d986d46d9b6c8733192fe963ffaef-jpg-85-www.google.com-2026-05-13-10.13.02.jpg' | relative_url }}" aria-label="Abrir Screenshot 11"><img  alt="" src="{{ '/assets/images/pages/atari-lynx/011-e79d986d46d9b6c8733192fe963ffaef-jpg-85-www.google.com-2026-05-13-10.13.02.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-lynx/012-atari-lynx-buyers-guide-20080409001706769-jpg-85-www.google.com-2026-05-13-10.12.18.jpg' | relative_url }}" aria-label="Abrir Screenshot 12"><img  alt="" src="{{ '/assets/images/pages/atari-lynx/012-atari-lynx-buyers-guide-20080409001706769-jpg-85-www.google.com-2026-05-13-10.12.18.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-lynx/013-maxresdefault-jpg-85-www.google.com-2026-05-13-10.13.45.jpg' | relative_url }}" aria-label="Abrir Screenshot 13"><img  alt="" src="{{ '/assets/images/pages/atari-lynx/013-maxresdefault-jpg-85-www.google.com-2026-05-13-10.13.45.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-lynx/014-abp1-png-85-www.google.com-2026-05-13-10.12.54.jpg' | relative_url }}" aria-label="Abrir Screenshot 14"><img  alt="" src="{{ '/assets/images/pages/atari-lynx/014-abp1-png-85-www.google.com-2026-05-13-10.12.54.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-lynx/015-double-dragon-usa-europe-230807-001209-png-92.jpg' | relative_url }}" aria-label="Abrir Screenshot 15"><img  alt="" src="{{ '/assets/images/pages/atari-lynx/015-double-dragon-usa-europe-230807-001209-png-92.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-lynx/016-hqdefault-jpg-92.jpg' | relative_url }}" aria-label="Abrir Screenshot 16"><img  alt="" src="{{ '/assets/images/pages/atari-lynx/016-hqdefault-jpg-92.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-lynx/017-uxmlag-vraljtrmhnfthlkzdnxw5gol2-gynvhfozlaidu8wsqbtjfxptqzq61bb17hswvbalwnyhaqwearuf527r6ji2p-2ul4vtezv-85-www.google.com-2026-05-13-10.12.39.jpg' | relative_url }}" aria-label="Abrir Screenshot 17"><img  alt="" src="{{ '/assets/images/pages/atari-lynx/017-uxmlag-vraljtrmhnfthlkzdnxw5gol2-gynvhfozlaidu8wsqbtjfxptqzq61bb17hswvbalwnyhaqwearuf527r6ji2p-2ul4vtezv-85-www.google.com-2026-05-13-10.12.39.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-lynx/018-images-85-www.google.com-2026-05-13-10.14.08.jpg' | relative_url }}" aria-label="Abrir Screenshot 18"><img  alt="" src="{{ '/assets/images/pages/atari-lynx/018-images-85-www.google.com-2026-05-13-10.14.08.jpg' | relative_url }}"/></a>
+<a href="{{ '/assets/images/pages/atari-lynx/019-images-85-www.google.com-2026-05-13-10.13.33.jpg' | relative_url }}" aria-label="Abrir Screenshot 19"><img  alt="" src="{{ '/assets/images/pages/atari-lynx/019-images-85-www.google.com-2026-05-13-10.13.33.jpg' | relative_url }}"/></a>
+<a href="{{ '/assets/images/pages/atari-lynx/020-maxres987987default-jpg-92.jpg' | relative_url }}" aria-label="Abrir Screenshot 20"><img  alt="" src="{{ '/assets/images/pages/atari-lynx/020-maxres987987default-jpg-92.jpg' | relative_url }}" /></a></div>
 <h2>Especificações Técnicas</h2>
 <h3>CPU</h3>
 <ul>

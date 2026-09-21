@@ -2,6 +2,10 @@
 title: "Atari &#8211; 2600"
 permalink: /emuladores/atari-2600/
 wordpress_id: 1298
+emulator: true
+image: /assets/images/pages/atari-2600/001-pitfall-ii-lost-caverns-1984-activision-1-1.png
+image_alt: Atari 2600
+summary: Emuladores recomendados, história e referências para reviver o primeiro grande fenômeno dos consoles caseiros.
 ---
 
 <table>
@@ -249,25 +253,24 @@ wordpress_id: 1298
 <td>1977 (US) / 1978 (EU)</td>
 </tr>
 </tbody>
-</table>
-<img  alt="" src="{{ '/assets/images/pages/atari-2600/001-pitfall-ii-lost-caverns-1984-activision-1-1.png' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-2600/002-commando-1988-activision-.png' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-2600/003-commando-raid-1982-us-games.png' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-2600/004-crash-dive-1983-20th-century-fox.png' | relative_url }}"/>
-			<img  alt="" src="{{ '/assets/images/pages/atari-2600/005-keystone-kapers-1983-activision-1-1.png' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-2600/006-battlezone-1983-atari-1-1.png' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-2600/007-combat-ii-1982-atari.png' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-2600/008-river-raid-1982-activision-1-1.png' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-2600/009-dragonstomper-1982-starpath.png' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-2600/010-lady-bug-2006-homebrew.png' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-2600/011-fantastic-voyage-1982-20th-century-fox-.png' | relative_url }}"/>
-			<img  alt="" src="{{ '/assets/images/pages/atari-2600/012-g.i.-joe-cobra-strike-1983-parker-bros-.png' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-2600/013-enduro-1983-activision-1-1.png' | relative_url }}"/>
-			<img  alt="" src="{{ '/assets/images/pages/atari-2600/014-yars-revenge-1981-atari-1-1.png' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-2600/015-barnstorming-1982-activision-.png' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-2600/016-river-raid-ii-1988-activision.png' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-2600/017-crackpots-1983-activision-.png' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-2600/018-adventure-1978-atari-1-1.png' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-2600/019-asteroids-1981-atari-a3-1.png' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-2600/020-pitfall-1982-activision-1-1.png' | relative_url }}" />
-			<img  alt="" src="{{ '/assets/images/pages/atari-2600/021-fire-fighter-1982-imagic.png' | relative_url }}" />
+</table><div class="post-gallery" aria-label="Galeria de screenshots"><a href="{{ '/assets/images/pages/atari-2600/001-pitfall-ii-lost-caverns-1984-activision-1-1.png' | relative_url }}" aria-label="Abrir Screenshot 1"><img  alt="" src="{{ '/assets/images/pages/atari-2600/001-pitfall-ii-lost-caverns-1984-activision-1-1.png' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-2600/002-commando-1988-activision-.png' | relative_url }}" aria-label="Abrir Screenshot 2"><img  alt="" src="{{ '/assets/images/pages/atari-2600/002-commando-1988-activision-.png' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-2600/003-commando-raid-1982-us-games.png' | relative_url }}" aria-label="Abrir Screenshot 3"><img  alt="" src="{{ '/assets/images/pages/atari-2600/003-commando-raid-1982-us-games.png' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-2600/004-crash-dive-1983-20th-century-fox.png' | relative_url }}" aria-label="Abrir Screenshot 4"><img  alt="" src="{{ '/assets/images/pages/atari-2600/004-crash-dive-1983-20th-century-fox.png' | relative_url }}"/></a>
+<a href="{{ '/assets/images/pages/atari-2600/005-keystone-kapers-1983-activision-1-1.png' | relative_url }}" aria-label="Abrir Screenshot 5"><img  alt="" src="{{ '/assets/images/pages/atari-2600/005-keystone-kapers-1983-activision-1-1.png' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-2600/006-battlezone-1983-atari-1-1.png' | relative_url }}" aria-label="Abrir Screenshot 6"><img  alt="" src="{{ '/assets/images/pages/atari-2600/006-battlezone-1983-atari-1-1.png' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-2600/007-combat-ii-1982-atari.png' | relative_url }}" aria-label="Abrir Screenshot 7"><img  alt="" src="{{ '/assets/images/pages/atari-2600/007-combat-ii-1982-atari.png' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-2600/008-river-raid-1982-activision-1-1.png' | relative_url }}" aria-label="Abrir Screenshot 8"><img  alt="" src="{{ '/assets/images/pages/atari-2600/008-river-raid-1982-activision-1-1.png' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-2600/009-dragonstomper-1982-starpath.png' | relative_url }}" aria-label="Abrir Screenshot 9"><img  alt="" src="{{ '/assets/images/pages/atari-2600/009-dragonstomper-1982-starpath.png' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-2600/010-lady-bug-2006-homebrew.png' | relative_url }}" aria-label="Abrir Screenshot 10"><img  alt="" src="{{ '/assets/images/pages/atari-2600/010-lady-bug-2006-homebrew.png' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-2600/011-fantastic-voyage-1982-20th-century-fox-.png' | relative_url }}" aria-label="Abrir Screenshot 11"><img  alt="" src="{{ '/assets/images/pages/atari-2600/011-fantastic-voyage-1982-20th-century-fox-.png' | relative_url }}"/></a>
+<a href="{{ '/assets/images/pages/atari-2600/012-g.i.-joe-cobra-strike-1983-parker-bros-.png' | relative_url }}" aria-label="Abrir Screenshot 12"><img  alt="" src="{{ '/assets/images/pages/atari-2600/012-g.i.-joe-cobra-strike-1983-parker-bros-.png' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-2600/013-enduro-1983-activision-1-1.png' | relative_url }}" aria-label="Abrir Screenshot 13"><img  alt="" src="{{ '/assets/images/pages/atari-2600/013-enduro-1983-activision-1-1.png' | relative_url }}"/></a>
+<a href="{{ '/assets/images/pages/atari-2600/014-yars-revenge-1981-atari-1-1.png' | relative_url }}" aria-label="Abrir Screenshot 14"><img  alt="" src="{{ '/assets/images/pages/atari-2600/014-yars-revenge-1981-atari-1-1.png' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-2600/015-barnstorming-1982-activision-.png' | relative_url }}" aria-label="Abrir Screenshot 15"><img  alt="" src="{{ '/assets/images/pages/atari-2600/015-barnstorming-1982-activision-.png' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-2600/016-river-raid-ii-1988-activision.png' | relative_url }}" aria-label="Abrir Screenshot 16"><img  alt="" src="{{ '/assets/images/pages/atari-2600/016-river-raid-ii-1988-activision.png' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-2600/017-crackpots-1983-activision-.png' | relative_url }}" aria-label="Abrir Screenshot 17"><img  alt="" src="{{ '/assets/images/pages/atari-2600/017-crackpots-1983-activision-.png' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-2600/018-adventure-1978-atari-1-1.png' | relative_url }}" aria-label="Abrir Screenshot 18"><img  alt="" src="{{ '/assets/images/pages/atari-2600/018-adventure-1978-atari-1-1.png' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-2600/019-asteroids-1981-atari-a3-1.png' | relative_url }}" aria-label="Abrir Screenshot 19"><img  alt="" src="{{ '/assets/images/pages/atari-2600/019-asteroids-1981-atari-a3-1.png' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-2600/020-pitfall-1982-activision-1-1.png' | relative_url }}" aria-label="Abrir Screenshot 20"><img  alt="" src="{{ '/assets/images/pages/atari-2600/020-pitfall-1982-activision-1-1.png' | relative_url }}" /></a>
+<a href="{{ '/assets/images/pages/atari-2600/021-fire-fighter-1982-imagic.png' | relative_url }}" aria-label="Abrir Screenshot 21"><img  alt="" src="{{ '/assets/images/pages/atari-2600/021-fire-fighter-1982-imagic.png' | relative_url }}" /></a></div>

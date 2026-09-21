@@ -20,83 +20,161 @@
   available: true
 - name: Master System
   image: /assets/images/pages/emuladores/006-mastersystem.png
+  url: /emuladores/master-system/
+  available: true
 - name: Mega Drive
   image: /assets/images/pages/emuladores/007-megadrive.png
+  url: /emuladores/mega-drive/
+  available: true
 - name: Sega CD
   image: /assets/images/pages/emuladores/008-segacd.png
+  url: /emuladores/sega-cd/
+  available: true
 - name: Sega 32X
   image: /assets/images/pages/emuladores/009-sega32x.png
+  url: /emuladores/sega-32x/
+  available: true
 - name: Saturn
   image: /assets/images/pages/emuladores/010-saturn-1.png
+  url: /emuladores/saturn/
+  available: true
 - name: Dreamcast
   image: /assets/images/pages/emuladores/011-dreamcast.png
+  url: /emuladores/dreamcast/
+  available: true
 - name: Game Gear
   image: /assets/images/pages/emuladores/012-gamegear.png
+  url: /emuladores/game-gear/
+  available: true
 - name: TurboGrafx-16
   image: /assets/images/pages/emuladores/013-tg16.png
+  url: /emuladores/turbografx-16/
+  available: true
 - name: PC Engine
   image: /assets/images/pages/emuladores/014-pcengine.png
+  url: /emuladores/pc-engine/
+  available: true
 - name: PC Engine CD
   image: /assets/images/pages/emuladores/015-pce-cd.png
+  url: /emuladores/pc-engine-cd/
+  available: true
 - name: Nintendo NES
   image: /assets/images/pages/emuladores/016-nes.png
+  url: /emuladores/nintendo-nes/
+  available: true
 - name: Super Nintendo
   image: /assets/images/pages/emuladores/017-snes-1.png
   url: /emuladores/nintendo-super-nintendo/
   available: true
 - name: Nintendo 64
   image: /assets/images/pages/emuladores/018-n64.png
+  url: /emuladores/nintendo-64/
+  available: true
 - name: GameCube
   image: /assets/images/pages/emuladores/019-gamecube-2.png
+  url: /emuladores/gamecube/
+  available: true
 - name: Wii
   image: /assets/images/pages/emuladores/020-wii.png
+  url: /emuladores/wii/
+  available: true
 - name: Wii U
   image: /assets/images/pages/emuladores/021-wiiu.png
+  url: /emuladores/wii-u/
+  available: true
 - name: Nintendo Switch
   image: /assets/images/pages/emuladores/022-switch.png
+  url: /emuladores/nintendo-switch/
+  available: true
 - name: Game Boy
   image: /assets/images/pages/emuladores/023-gb.png
+  url: /emuladores/game-boy/
+  available: true
 - name: Virtual Boy
   image: /assets/images/pages/emuladores/024-virtualboy.png
+  url: /emuladores/virtual-boy/
+  available: true
 - name: Game Boy Color
   image: /assets/images/pages/emuladores/025-gbc.png
+  url: /emuladores/game-boy-color/
+  available: true
 - name: Nintendo DS
   image: /assets/images/pages/emuladores/026-nds.png
+  url: /emuladores/nintendo-ds/
+  available: true
 - name: Game Boy Advance
   image: /assets/images/pages/emuladores/027-gba.png
+  url: /emuladores/game-boy-advance/
+  available: true
 - name: Arcade
   image: /assets/images/pages/emuladores/028-arcade-1.png
+  url: /emuladores/arcade/
+  available: true
 - name: Vectrex
   image: /assets/images/pages/emuladores/029-vectrex.png
+  url: /emuladores/vectrex/
+  available: true
 - name: Amiga
   image: /assets/images/pages/emuladores/030-amiga.png
+  url: /emuladores/amiga/
+  available: true
 - name: PlayStation
   image: /assets/images/pages/emuladores/031-psx.png
+  url: /emuladores/playstation/
+  available: true
 - name: PlayStation 2
   image: /assets/images/pages/emuladores/032-ps2.png
+  url: /emuladores/playstation-2/
+  available: true
 - name: PSP
   image: /assets/images/pages/emuladores/033-psp.png
+  url: /emuladores/psp/
+  available: true
 - name: PlayStation 3
   image: /assets/images/pages/emuladores/034-ps3.png
+  url: /emuladores/playstation-3/
+  available: true
 - name: PlayStation 4
   image: /assets/images/pages/emuladores/035-ps4.png
+  url: /emuladores/playstation-4/
+  available: true
 - name: Neo Geo Pocket
   image: /assets/images/pages/emuladores/036-ngpc.png
+  url: /emuladores/neo-geo-pocket/
+  available: true
 - name: Neo Geo
   image: /assets/images/pages/emuladores/037-neogeo.png
+  url: /emuladores/neo-geo/
+  available: true
 - name: Intellivision
   image: /assets/images/pages/emuladores/038-intellivision.png
+  url: /emuladores/intellivision/
+  available: true
 - name: ZX Spectrum
   image: /assets/images/pages/emuladores/039-zxspectrum.png
+  url: /emuladores/zx-spectrum/
+  available: true
 - name: Ports
   image: /assets/images/pages/emuladores/040-ports.png
+  url: /emuladores/ports/
+  available: true
 - name: MSX
   image: /assets/images/pages/emuladores/041-msx.png
+  url: /emuladores/msx/
+  available: true
 - name: PC
   image: /assets/images/pages/emuladores/042-pc.png
+  url: /emuladores/pc/
+  available: true
 - name: Windows 95
   image: /assets/images/pages/emuladores/043-win95.png
+  url: /emuladores/windows-95/
+  available: true
 - name: Xbox
   image: /assets/images/pages/emuladores/044-xbox.png
+  url: /emuladores/xbox/
+  available: true
 - name: Xbox 360
   image: /assets/images/pages/emuladores/045-xbox360.png
+  url: /emuladores/xbox-360/
+  available: true

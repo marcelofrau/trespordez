@@ -1,12 +1,13 @@
 ---
-title: "XB Homebrew Vault: central de comando para Xbox Dev Mode"
+title: "XB Homebrew Vault"
 date: 2026-09-21 08:00:00 -03:00
 author: the-archivist
 categories: [emulators, news]
 tags: [android, emulation-revival, homebrew, xbox, xbox-dev-mode]
-description: "Conheça o XB Homebrew Vault, aplicativo open source para navegar, instalar e administrar homebrew no Xbox Dev Mode pelo PC ou Android."
+description: "Central de comando open source para Xbox Dev Mode: catálogo, instalação sem fio, ferramentas e versão Android."
 image: /assets/images/posts/xb-homebrew-vault/cover.jpg
-image_alt: "XB Homebrew Vault em execução"
+image_alt: "XB Homebrew Vault"
+image_fit: contain
 image_position: center
 ---
 

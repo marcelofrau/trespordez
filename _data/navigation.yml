@@ -5,13 +5,18 @@
       url: /
     - label: Notícias
       url: /category/news/
-- label: Jogatina
-  url: /jogatina/
+- label: Reviews
   children:
-    - label: Streamings e Gameplays
-      url: /category/gameplay/
-    - label: Reviews
+    - label: Todos os reviews
       url: /category/reviews/
+    - label: RPG
+      url: /category/rpg/
+    - label: Platform
+      url: /category/reviews/platform/
+    - label: Racing
+      url: /category/reviews/racing/
+    - label: Gameplays
+      url: /category/gameplay/
     - label: Pérolas desconhecidas
       url: /category/hiddengems/
 - label: Consoles e Emuladores

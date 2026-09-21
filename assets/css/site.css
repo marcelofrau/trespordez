@@ -84,16 +84,22 @@ a:hover {
 }
 
 .tagline {
+    display: grid;
     max-width: 680px;
     margin: 9px 0 0;
     color: #fff;
     font-size: 15px;
     text-shadow: 0 2px 5px #000;
-    transition: opacity .6s ease;
 }
 
-.tagline.is-fading {
+.tagline .tagline-layer {
+    grid-area: 1/1;
     opacity: 0;
+    transition: opacity .5s ease;
+}
+
+.tagline .tagline-layer.show {
+    opacity: 1;
 }
 
 .main-nav {
@@ -1049,6 +1055,62 @@ a:hover {
     border-radius: 0 10px 10px 0;
     background: #fff2db;
     color: #543000;
+}
+
+.retrobright-effects {
+    margin: 0 0 28px;
+    padding: 26px;
+    background: #fff;
+    border: var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.retrobright-effects h2 {
+    margin: 4px 0 10px;
+    font: 800 30px var(--head);
+}
+
+.retrobright-effects>p {
+    max-width: 860px;
+}
+
+.retrobright-grid h3 {
+    margin: 0 0 8px;
+    font: 800 17px var(--head);
+}
+
+.retrobright-repair {
+    margin: 18px 0 0;
+    padding: 20px;
+    background: #fffdf1;
+    border: 2px solid #000;
+    border-radius: 12px;
+}
+
+.retrobright-repair h3 {
+    margin: 0 0 8px;
+    font: 800 21px var(--head);
+}
+
+.retrobright-repair>p {
+    max-width: 860px;
+}
+
+.retrobright-repair ol {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 13px;
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.retrobright-repair li {
+    padding: 16px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 10px;
 }
 
 .team-hero,

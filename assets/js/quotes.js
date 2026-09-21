@@ -12,39 +12,48 @@
   }
   if (!quotes || !quotes.length) return;
 
+  var lastIdx = -1;
+  function randomIndex() {
+    if (quotes.length === 1) return 0;
+    var idx;
+    do {
+      idx = Math.floor(Math.random() * quotes.length);
+    } while (idx === lastIdx);
+    lastIdx = idx;
+    return idx;
+  }
+  function quoteText(q) {
+    return q.source ? q.text + ' \u2014 ' + q.source : q.text;
+  }
+
   var marquee = document.querySelector('[data-quotes-marquee]');
   if (marquee) {
-    show();
+    var a = document.createElement('span');
+    var b = document.createElement('span');
+    a.className = 'tagline-layer';
+    b.className = 'tagline-layer';
+    marquee.innerHTML = '';
+    marquee.appendChild(a);
+    marquee.appendChild(b);
+
+    var layers = [a, b];
+    var shown = 0;
+
+    layers[0].textContent = quoteText(quotes[randomIndex()]);
+    layers[shown].classList.add('show');
 
     setInterval(function () {
-      marquee.classList.add('is-fading');
-      setTimeout(function () {
-        show();
-      }, 600);
-    }, 10000);
-
-    function show() {
-      var idx = randomIndex();
-      var q = quotes[idx];
-      marquee.textContent = q.source ? q.text + ' \u2014 ' + q.source : q.text;
-    }
-
-    function randomIndex() {
-      if (quotes.length === 1) return 0;
-      var current = marquee.textContent;
-      var idx;
-      var tries = 0;
-      do {
-        idx = Math.floor(Math.random() * quotes.length);
-        tries++;
-      } while (tries < 20 && quotes[idx].text === current.split(' \u2014 ')[0].trim());
-      return idx;
-    }
+      var next = shown ^ 1;
+      layers[next].textContent = quoteText(quotes[randomIndex()]);
+      layers[shown].classList.remove('show');
+      layers[next].classList.add('show');
+      shown = next;
+    }, 5000);
   }
 
   var card = document.querySelector('[data-quotes-card]');
   if (card) {
-    var q = quotes[Math.floor(Math.random() * quotes.length)];
+    var q = quotes[randomIndex()];
     var block = card.querySelector('blockquote');
     if (block) block.textContent = '"' + q.text + '"';
     var cap = card.querySelector('figcaption');

@@ -26,6 +26,8 @@ Static Jekyll blog. Source repo: `marcelofrau/trespordez`. Production URL: `http
 - Markdown first. Use HTML only for responsive video embeds, figures, or tables that Markdown cannot express.
 - Platform emulator drafts belong in `_pages/platforms/`. Mark them as initial catalogs until tested editorial recommendations exist; do not present a draft as a personal review.
 - Use `relative_url` in layouts/includes for every local URL. Root-absolute URLs break GitHub Pages QA.
+- Long screenshot sequences use `.post-gallery` and PhotoSwipe. Do not add many full-width screenshots to a post; preserve clickable, zoomable gallery behavior.
+- Review score cards use `.review-score` and `.score-item`; preserve score color and approved ReffPixels icon semantics.
 
 ## Images and Links
 
@@ -44,5 +46,15 @@ Static Jekyll blog. Source repo: `marcelofrau/trespordez`. Production URL: `http
 
 ## Comments
 
-- Giscus configuration is disabled until repository Discussions, category, and GitHub App are configured.
-- Do not expose Giscus IDs, access tokens, or Cloudflare secrets in repository files.
+- GitHub Discussions and Giscus are active. Category: `SiteComments`; mapping: stable `post-<slug>` term; theme: `light`.
+- Giscus IDs live in GitHub Actions Variables `GISCUS_REPO_ID` and `GISCUS_CATEGORY_ID`, then build generates ignored `_data/giscus.yml`.
+- IDs are public widget configuration, not credentials. Never commit access tokens, passwords, Cloudflare API tokens, or SSH private keys.
+
+## Current Site State
+
+- QA is live at `https://marcelofrau.github.io/trespordez/`; it is noindex.
+- Production remains WordPress until Cloudflare Pages and DNS cutover are explicitly approved.
+- `_pages/wordpress/` holds migrated rich pages. `_pages/platforms/` holds initial emulator catalogs; they are intentionally not personal recommendations.
+- `/emuladores/` is system index. Every platform card must link to a page.
+- `/emuladores/ports/` lists Video Game Esoterica reference pages; label entries as catalog/references, not reviews.
+- Read `docs/handoff.md` before substantial work.

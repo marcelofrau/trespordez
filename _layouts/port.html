@@ -1,8 +1,8 @@
 ---
 layout: page
 ---
-<section class="port-hero"><p class="eyebrow">{{ page.platform }}</p><h2>{{ page.title }}</h2><p>{{ page.summary }}</p><a href="{{ page.source_url }}" rel="external">Vídeo-fonte no Video Game Esoterica</a></section>
+<section class="port-hero"><p class="eyebrow">{{ page.platform }}</p><h2>{{ page.title }}</h2><p>{{ page.summary }}</p>{% if page.video_id %}<a href="{{ page.source_url }}" rel="external">Vídeo-fonte no Video Game Esoterica</a>{% elsif page.source_url %}<a href="{{ page.source_url }}" rel="external">Página do projeto</a>{% endif %}</section>
 
-<iframe src="https://www.youtube.com/embed/{{ page.video_id }}" title="{{ page.title }} no Video Game Esoterica" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% if page.video_id %}<iframe src="https://www.youtube.com/embed/{{ page.video_id }}" title="{{ page.title }} no Video Game Esoterica" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>{% endif %}
 
 <section class="emulator-draft-note"><h2>Catálogo inicial</h2><p>Projeto listado para acompanhamento. Verifique plataforma suportada, status de desenvolvimento, licença e fonte oficial antes de instalar.</p></section>

@@ -3,7 +3,7 @@ title: Ports e Recomps
 permalink: /emuladores/ports/
 ---
 
-<section class="software-hero"><p class="eyebrow">Catálogo inicial</p><h2>Ports, recomps e preservação</h2><p>Projetos recentes destacados pelo Video Game Esoterica. Cada entrada preserva o vídeo-fonte e links relevantes; não equivale a review pessoal.</p></section>
+<section class="software-hero"><p class="eyebrow">Catálogo inicial</p><h2>Ports, recomps e preservação</h2><p>Destaques do Video Game Esoterica e ferramentas da comunidade — ports, recomps e preservação. Cada entrada preserva a fonte original; não equivale a review pessoal.</p></section>
 
 <div class="ports-grid">
 {% assign ports = site.pages | where_exp: "item", "item.url contains '/emuladores/ports/'" %}

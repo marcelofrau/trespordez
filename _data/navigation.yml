@@ -1,8 +1,8 @@
 - label: Início
   url: /
-- label: Blog
-  url: /
   children:
+    - label: Blog
+      url: /
     - label: Notícias
       url: /category/news/
 - label: Jogatina

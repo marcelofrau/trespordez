@@ -1,11 +1,12 @@
 ---
 image: /assets/images/posts/sonic-2006-de-perto-e-ainda-pior/cover.png
 image_alt: sonic 2006 de perto e ainda pior
+image_position: left center
 title: "Sonic 2006: De perto é ainda pior"
 date: 2025-08-08 06:23:54 -03:00
 author: cezar-aug
 categories: [gameplay, retrogaming, reviews]
-tags: []
+tags: [platformer, retrogaming, sega, sonic, xbox-360]
 description: "De tempos em tempos, acho sempre importante consumir conteúdos de diferentes níveis para “calibrar” nossos gostos. Por exemplo, se você sempre escuta as mesmas 100 músicas mais ouvidas da sua playlist, em algum momento você vai deixar de gostar de algumas ou até mesmo enjoar. Por isso (E também pelo fato de jogos usados no [&hellip;]"
 wordpress_id: 1114
 wordpress_url: https://trespordez.com.br/2025/08/sonic-2006-de-perto-e-ainda-pior/

@@ -1,7 +1,7 @@
 ---
 image: /assets/images/posts/fxpak-pro-snes/cover.jpg
 image_alt: fxpak pro snes
-title: "FXPAK Pro &#8211; SNES"
+title: "FXPAK Pro - SNES"
 date: 2025-10-07 10:26:33 -03:00
 author: the-archivist
 categories: [moddding, retrogaming, reviews]

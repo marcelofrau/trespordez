@@ -19,7 +19,7 @@
       url: /category/gameplay/
     - label: Pérolas desconhecidas
       url: /category/hiddengems/
-- label: Consoles e Emuladores
+- label: Consoles
   children:
     - label: Consoles
       url: /category/consoles/
@@ -29,10 +29,14 @@
       url: /category/consoles/retrobright/
     - label: Retrogaming
       url: /category/consoles/retrogaming/
+- label: Emuladores
+  children:
     - label: Emuladores
       url: /emuladores/
     - label: Novidades na Emulação
       url: /category/emulators/
+    - label: Ports e Recomps
+      url: /emuladores/ports/
 - label: Equipe
   url: /equipe/
 - label: Softwares

@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: Jogos indie
+title: "Tag: indie"
 tag_key: indie
 permalink: /tag/indie/
 ---

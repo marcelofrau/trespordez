@@ -12,8 +12,6 @@ giscus:
   mapping: specific
   theme: light
 permalink: /:year/:month/:title/
-paginate: 10
-paginate_path: /page:num/
 
 author:
   name: Três por Dez

@@ -12,73 +12,76 @@ image_position: center
 
 <section class="software-hero">
   <p class="eyebrow">Projeto pessoal</p>
-  <h2>Seu Xbox Dev Mode, sem a dor de cabeça do Device Portal</h2>
-  <p>O <strong>XB Homebrew Vault</strong> nasceu da vontade de organizar emuladores, apps e ferramentas em um Xbox com Developer Mode sem abrir o navegador, caçar endereço IP, upload manual e páginas pouco amigáveis a cada instalação.</p>
+  <h2>O Xbox Dev Mode é muito melhor do que a experiência para instalar coisas nele</h2>
+  <p>O <strong>XB Homebrew Vault</strong> nasceu exatamente dessa irritação: o console tem uma cena de homebrew cada vez mais interessante, mas administrar tudo pelo Device Portal parece castigo para quem só queria instalar um port e jogar.</p>
 </section>
 
-O resultado é um aplicativo gratuito e open source que conversa com o Xbox na rede local. Ele centraliza catálogo, instalação, gerenciamento de pacotes e ferramentas de diagnóstico em uma interface pensada para quem quer usar o console, não brigar com a administração dele.
+Vou ser sincero: eu gosto muito da ideia do Xbox em Developer Mode. Um Series S pequeno, barato, silencioso e com uma arquitetura moderna tem tudo para virar uma máquina excelente de emulação, ports e experiências feitas pela comunidade. E virou. Tem RetroArch, PPSSPP, Flycast, XBSX2, jogos feitos para UWP, ports de PC, ferramentas, frontends e uma quantidade surpreendente de projetos que continuam aparecendo.
+
+O problema nunca foi falta de coisa para rodar. O problema era o caminho até ela.
+
+Para instalar um aplicativo normalmente você abre o portal web do Xbox, digita IP, usa credenciais, navega por telas que parecem feitas para uma equipe de TI de 2016, escolhe pacote, procura dependência, envia arquivo, espera, confere se o pacote entrou e recomeça tudo quando alguma coisa não conversa direito. Funciona. Mas é uma experiência horrível para quem está só tentando aproveitar o próprio console.
+
+Foi daí que saiu o XB Homebrew Vault: uma central para deixar esse processo menos burocrático e mais parecido com o que deveria ser desde o começo.
 
 <p class="post-actions"><a href="https://xbvault.pages.dev/" rel="external">Visitar XBVault</a><a href="https://github.com/marcelofrau/xb-homebrew-vault/releases/latest" rel="external">Baixar versão mais recente</a><a href="https://github.com/marcelofrau/xb-homebrew-vault" rel="external">Ver no GitHub</a></p>
 
-## O que ele resolve
+## A parte mais legal: o ecossistema existe
+
+Xbox Dev Mode não é só emulador. A comunidade foi construindo ports, jogos, ferramentas e experiências que aproveitam o fato de o console ser, no fim das contas, um PC compacto ligado na TV. Parte desse material vem de projetos independentes, parte são ports de engines conhecidas, parte são aplicativos feitos especificamente para o ambiente UWP/Xbox.
+
+O [Emulation Revival](https://emulationrevival.github.io/) é peça central nisso. O catálogo deles organiza uma quantidade enorme de emuladores, apps, ports e jogos que seriam difíceis de descobrir um por um. O XBVault consome esse catálogo e coloca busca, filtros, detalhes e instalação na frente de quem está usando o console.
+
+## O que o Vault faz na prática
 
 <div class="feature-grid">
-  <article><h3>Catálogo integrado</h3><p>Navega pelo catálogo do Emulation Revival com busca, filtros e detalhes de compatibilidade antes de instalar.</p></article>
-  <article><h3>Instalação sem cabo</h3><p>Baixa dependências, resolve pacotes e envia tudo sem fio para o Xbox via Device Portal.</p></article>
-  <article><h3>Pacotes próprios</h3><p>Assistente para arquivos <code>.appx</code>, <code>.msix</code> e <code>.zip</code>, locais ou por URL, incluindo verificação de dependências.</p></article>
-  <article><h3>Ferramentas de Dev Mode</h3><p>Captura de tela, informações do sistema, processos, rede e monitor de CPU, GPU e RAM em tempo real.</p></article>
-  <article><h3>Arquivos e diagnósticos</h3><p>Explorador SSH/SFTP, logs, transferência de arquivos e integração com XRay para inspeção e Lua REPL.</p></article>
-  <article><h3>USB preparado</h3><p>Assistente que detecta unidades e aplica permissões NTFS necessárias para mídia USB no Dev Mode.</p></article>
+  <article><h3>Catálogo de verdade</h3><p>Busca emuladores, ports, jogos e utilitários do Emulation Revival com filtros e informações antes de instalar.</p></article>
+  <article><h3>Instalação sem ritual</h3><p>Baixa o pacote, resolve dependências e envia sem fio para o Xbox. Sem alternar entre abas do navegador e painel do Device Portal.</p></article>
+  <article><h3>Seu próprio pacote</h3><p>Tem um <code>.appx</code>, <code>.msix</code> ou <code>.zip</code>? O assistente analisa arquivo local ou URL e ajuda a preparar instalação.</p></article>
+  <article><h3>O Xbox está fazendo o quê?</h3><p>Captura de tela, processos, rede, informações do sistema e gráfico de CPU, GPU e RAM em tempo real.</p></article>
+  <article><h3>Arquivo, log e diagnóstico</h3><p>Explorador SSH/SFTP, transferência de arquivos, logs e integração com XRay para inspeção e Lua REPL.</p></article>
+  <article><h3>USB sem gambiarra manual</h3><p>Assistente que encontra a unidade e aplica as permissões NTFS que o Dev Mode precisa para trabalhar com mídia USB.</p></article>
 </div>
 
-## Por que o catálogo do Emulation Revival importa
+<section class="xbvault-gallery-intro"><h2>Um pouco do que aparece na tela</h2><p>Catálogo, ferramentas e versão Android em três momentos diferentes do mesmo projeto. Clique em qualquer imagem para ampliar, navegar e dar zoom.</p></section>
 
-O catálogo é a ponte entre a comunidade e o console. XBVault usa os dados do [Emulation Revival](https://emulationrevival.github.io/) para apresentar emuladores, apps, ports e utilitários em uma interface única, sem substituir nem copiar o trabalho de curadoria deles.
+<div class="post-gallery xbvault-gallery" aria-label="Galeria de screenshots do XB Homebrew Vault">
+  <a href="{{ '/assets/images/posts/xb-homebrew-vault/browse.png' | relative_url }}" aria-label="Abrir catálogo do XB Homebrew Vault"><img src="{{ '/assets/images/posts/xb-homebrew-vault/browse.png' | relative_url }}" alt="Tela de catálogo do XB Homebrew Vault"></a>
+  <a href="{{ '/assets/images/posts/xb-homebrew-vault/tools.png' | relative_url }}" aria-label="Abrir ferramentas do XB Homebrew Vault"><img src="{{ '/assets/images/posts/xb-homebrew-vault/tools.png' | relative_url }}" alt="Ferramentas de diagnóstico do XB Homebrew Vault"></a>
+  <a href="{{ '/assets/images/posts/xb-homebrew-vault/android.png' | relative_url }}" aria-label="Abrir versão Android do XB Homebrew Vault"><img src="{{ '/assets/images/posts/xb-homebrew-vault/android.png' | relative_url }}" alt="Versão Android do XB Homebrew Vault"></a>
+</div>
 
-<figure>
-  <img src="{{ '/assets/images/posts/xb-homebrew-vault/browse.png' | relative_url }}" alt="Tela de catálogo do XB Homebrew Vault">
-  <figcaption>Catálogo, filtros e detalhes de cada item antes da instalação.</figcaption>
-</figure>
+## Quando a instalação não é o fim da história
 
-## Mais que instalar emulador
+Uma parte importante do projeto é não tratar o botão de instalar como ponto final. Depois de conectar ao Xbox, o aplicativo sabe se um pacote está ausente, instalado, atualizado ou se existe atualização disponível. A tela de detalhes muda junto com esse estado em vez de despejar botões genéricos e deixar a pessoa adivinhar o que fazer.
 
-O foco começou na instalação de homebrew, mas o projeto foi crescendo. Hoje ele também ajuda a acompanhar o estado dos pacotes instalados, detectar atualização, fazer reinstalação e desinstalação sem ficar alternando entre telas do Device Portal.
+Também existe espaço para quem gosta de mexer mais fundo. Ferramentas de desenvolvimento, gerenciamento de processos, captura, rede, explorador de arquivos e o Inspector/XRay fazem sentido quando um port resolve dar problema, quando um pacote precisa de investigação ou quando simplesmente bate a curiosidade de olhar o que está acontecendo dentro do console.
 
-<figure>
-  <img src="{{ '/assets/images/posts/xb-homebrew-vault/tools.png' | relative_url }}" alt="Ferramentas de diagnóstico do XB Homebrew Vault">
-  <figcaption>Painel de ferramentas: processos, rede, informações do sistema e desempenho.</figcaption>
-</figure>
+## Desktop para organizar, Android para não depender do desktop
 
-## Desktop e Android
+O XBVault é feito em .NET 10 e Avalonia UI. A mesma base atende desktop e Android, mas a proposta não é simplesmente esticar uma janela de PC para o celular.
 
-O aplicativo compartilha a mesma base em .NET e Avalonia UI, mas atende dois jeitos de usar a coisa:
-
-| Plataforma | O que esperar |
+| Plataforma | Como entra na história |
 | --- | --- |
-| Windows, macOS e Linux | Aplicativo desktop completo, builds self-contained e sem instalação obrigatória. |
-| Android ARM64 | Interface pensada para tela vertical, conexão por QR code, catálogo, sideload, explorador de arquivos, logs, notificações e ferramentas no celular. |
+| Windows, macOS e Linux | Builds self-contained para administrar biblioteca, instalar pacotes, explorar arquivos e acompanhar ferramentas com mais espaço. |
+| Android ARM64 | Versão vertical para conectar por QR code, navegar no catálogo, fazer sideload, conferir arquivos, logs, trabalhos e notificações sem precisar ligar o PC. |
 
-<figure>
-  <img src="{{ '/assets/images/posts/xb-homebrew-vault/android.png' | relative_url }}" alt="Versão Android do XB Homebrew Vault">
-  <figcaption>XBVault no Android: o Xbox Dev Mode também cabe no bolso.</figcaption>
-</figure>
+## O que chegou na v2.0.7
 
-## Versão atual: v2.0.7
+A versão atual não é uma atualização só de aparência. Ela mexeu em pontos chatos que aparecem justamente no uso diário: conexão que testava mas não mudava o estado do aplicativo, tela de detalhes que ficava desatualizada depois de conectar, ações de reinstalar ou remover que nem sempre encontravam o pacote certo e verificações pós-instalação que podiam acusar falha depois de uma instalação já aceita pelo Xbox.
 
-A versão mais recente consolidou o fluxo de detalhes: ações agora mudam conforme conexão e estado do pacote. Sem Xbox conectado, o app pede conexão; pacote ausente mostra instalar; pacote atualizado mostra reinstalar ou remover; pacote defasado mostra atualização.
+Agora o fluxo de detalhe acompanha a situação real: sem conexão, mostra como conectar; pacote ausente, instala; pacote já instalado, oferece reinstalar ou remover; versão defasada, mostra atualização. No Android, os assistentes também passaram a se adaptar quando o teclado virtual abre, porque preencher IP, URL ou credencial numa tela apertada não deveria ser uma luta.
 
-Também entraram correções importantes no fluxo de conexão, atualização de detalhes abertos, reinstalação/desinstalação, verificação pós-instalação e adaptação dos assistentes Android quando teclado virtual aparece. O release mantém builds para Windows x64 e ARM64, Linux x64 e ARM64, macOS Intel e Apple Silicon, além de APK Android ARM64.
+O release v2.0.7 tem builds para Windows x64 e ARM64, Linux x64 e ARM64, macOS Intel e Apple Silicon, além do APK Android ARM64. Os arquivos são publicados com SHA-256 e links de análise no VirusTotal para quem prefere conferir o que baixa.
 
-Para quem gosta de conferir antes de executar, cada release publica checksums SHA-256 e resultados de análise no VirusTotal.
-
-## Começando
+## Como começar sem drama
 
 1. Ative o Developer Mode no Xbox One ou Series S\|X.
 2. Deixe Xbox e computador ou celular na mesma rede.
 3. Baixe a versão adequada em [Releases](https://github.com/marcelofrau/xb-homebrew-vault/releases/latest).
 4. Informe IP e credenciais do Dev Mode no assistente inicial.
-5. Navegue pelo catálogo, escolha um item e instale.
+5. Conecte, navegue pelo catálogo e instale o que quiser testar.
 
-O projeto é distribuído sob GPL-3.0 e continua evoluindo em público. Bugs, sugestões e contribuições podem ser acompanhados no [GitHub](https://github.com/marcelofrau/xb-homebrew-vault).
+O XB Homebrew Vault é GPL-3.0, open source e continua evoluindo em público. Bugs, ideias e contribuições ficam no [GitHub](https://github.com/marcelofrau/xb-homebrew-vault).
 
-> XB Homebrew Vault não é afiliado à Microsoft, Xbox ou Emulation Revival. Use homebrew e dumps próprios dentro das leis aplicáveis na sua região.
+> XB Homebrew Vault não é afiliado à Microsoft, Xbox ou Emulation Revival. Use homebrew e software próprio dentro das leis aplicáveis na sua região.

@@ -10,7 +10,7 @@ giscus:
   repo: marcelofrau/trespordez
   category: SiteComments
   mapping: specific
-  theme: catppuccin_latte
+  theme: light
 permalink: /:year/:month/:title/
 paginate: 10
 paginate_path: /page:num/

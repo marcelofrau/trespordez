@@ -790,7 +790,8 @@ a:hover {
 }
 
 .eyebrow {
-    color: #91e5a3;
+    /*color: #91e5a3;*/
+    color: #8c58c2;
     font: 700 13px var(--head);
     letter-spacing: .08em;
     text-transform: uppercase;
@@ -927,6 +928,8 @@ a:hover {
     margin: 0;
     border: none;
     border-radius: 12px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .profile-hero .team-avatar {

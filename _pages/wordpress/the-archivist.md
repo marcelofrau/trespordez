@@ -32,7 +32,7 @@ wordpress_id: 1386
   <h2>Coisas que ajudam a explicar o arquivo.</h2>
   <div class="favorites-grid">
     <article><h3>Jogos</h3><ul><li>Chrono Trigger</li><li>Expedition 33</li><li>Donkey Kong Country 2</li><li>Super Mario 64</li><li>Hyper Light Drifter</li><li>Minecraft e Hytale</li><li>Forza Horizon 4</li><li>Burnout 3 e Revenge</li><li>Final Fantasy VI</li><li>Grandia</li></ul></article>
-    <article><h3>Séries</h3><ul><li>Fringe</li><li>Dark Matter</li><li>Chernobyl</li><li>Wheel of Time</li><li>The Penguin</li><li>Rings of Power</li><li>Andor</li><li>Dark</li></ul></article>
+    <article><h3>Séries</h3><ul><li>Fringe</li><li>Dark Matter</li><li>Silo</li><li>Chernobyl</li><li>Wheel of Time</li><li>The Penguin</li><li>Rings of Power</li><li>Andor</li><li>Dark</li></ul></article>
     <article><h3>Animes</h3><ul><li>Fullmetal Alchemist Brotherhood</li><li>Steins;Gate</li><li>Initial D</li><li>Death Note</li><li>Get Backers</li><li>Naruto</li><li>Abenobashi</li><li>Samurai X</li><li>InuYasha</li><li>Lain</li></ul></article>
     <article><h3>Filmes e música</h3><ul><li>Star Wars: trilogia original</li><li>Senhor dos Anéis e O Hobbit</li><li>Corpo Fechado e A Vila</li><li>Indie rock, punk, folk e lo-fi</li><li>Beatles, Broken Bells e The Kooks</li><li>The Strokes, The Killers e The Black Keys</li></ul></article>
   </div>

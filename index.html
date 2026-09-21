@@ -10,7 +10,7 @@ title: Três por Dez
       <p class="post-taxonomy">{% for category in post.categories %}{% assign item = site.data.categories[category] %}{% if item %}<a class="badge badge-{{ item.color }}" href="{{ item.url | relative_url }}">{{ item.name }}</a>{% else %}<span class="badge badge-neutral">{{ category }}</span>{% endif %}{% endfor %}</p>
       <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
       <p class="post-meta">{{ post.date | date: "%d/%m/%Y" }}</p>
-      <p>{{ post.excerpt | strip_html | truncate: 240 }}</p>
+      <p>{{ post.excerpt | strip_html | truncate: 380 }}</p>
       <a class="read-more" href="{{ post.url | relative_url }}">Ler artigo</a>
     </div>
   </article>

@@ -6,7 +6,7 @@ layout: default
   {% assign posts = site.posts | where_exp: "post", "post.categories contains page.category_key" %}
   {% for post in posts %}
     <article class="post-card{% unless post.image %} without-image{% endunless %}">
-      {% if post.image %}<a href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title }}">{% endif %}</a>
+      {% if post.image %}<a href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title }}" style="object-position: {{ post.image_position | default: 'center 24%' }}">{% endif %}</a>
       <div><p class="post-taxonomy">{% for category in post.categories %}{% assign item = site.data.categories[category] %}{% if item %}<a class="badge badge-{{ item.color }}" href="{{ item.url | relative_url }}">{{ item.name }}</a>{% else %}<span class="badge badge-neutral">{{ category }}</span>{% endif %}{% endfor %}</p><h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2><p class="post-meta">{{ post.date | date: "%d/%m/%Y" }}</p><p>{{ post.excerpt | strip_html | truncate: 380 }}</p></div>
     </article>
   {% else %}<p>Ainda não há artigos nesta categoria.</p>{% endfor %}

@@ -2281,6 +2281,16 @@ a:hover {
     height: 471px;
 }
 
+.music-player--tracks iframe {
+    aspect-ratio: auto;
+    height: 120px;
+    border-bottom: 1px solid #000;
+}
+
+.music-player--tracks iframe:last-of-type {
+    border-bottom: 0;
+}
+
 .music-player figcaption {
     padding: 10px 14px;
     font: 600 13px/1.45 var(--body);

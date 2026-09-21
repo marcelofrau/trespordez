@@ -25,8 +25,8 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2023/11/1
 <p>A quantidade de personagens que se juntam na sua party é fantástica e a ideia de como eles entram na sua mente é muito criativa e original.</p>
 
 <p>De toda forma, eu recomendo jogar pois a ação do jogo é sensacional e o passo rápido te deixa  bem acordado e ágil pra poder enfrentar os desafios do jogo.</p>
-<section class="review-score" aria-label="Avaliação de Indivisible"><h2>Indivisible</h2><p>Plataforma JRPG/Ação/Indie</p><div class="score-item"><span class="score-label">Gráficos</span><span class="score-emoji" aria-hidden="true">🎮</span><span class="score-value">8/10</span></div>
-<div class="score-item"><span class="score-label">Som</span><span class="score-emoji" aria-hidden="true">🎮</span><span class="score-value">5/10</span></div>
-<div class="score-item"><span class="score-label">Gameplay</span><span class="score-emoji" aria-hidden="true">🎮</span><span class="score-value">8/10</span></div>
-<div class="score-item"><span class="score-label">Desafio</span><span class="score-emoji" aria-hidden="true">😤</span><span class="score-value">9/10</span></div>
-<div class="score-item"><span class="score-label">Geral</span><span class="score-emoji" aria-hidden="true">😀</span><span class="score-value">8/10</span></div></section>
+<section class="review-score" aria-label="Avaliação de Indivisible"><h2>Indivisible</h2><p>Plataforma JRPG/Ação/Indie</p><div class="score-item" style="--score-color:#972fff"><span class="score-label">Gráficos</span><img class="score-icon" src="{{ '/assets/images/ui/review/slight-smile.png' | relative_url }}" alt=""><span class="score-value">8/10</span></div>
+<div class="score-item" style="--score-color:#fa4946"><span class="score-label">Som</span><img class="score-icon" src="{{ '/assets/images/ui/review/slight-smile.png' | relative_url }}" alt=""><span class="score-value">5/10</span></div>
+<div class="score-item" style="--score-color:#972fff"><span class="score-label">Gameplay</span><img class="score-icon" src="{{ '/assets/images/ui/review/slight-smile.png' | relative_url }}" alt=""><span class="score-value">8/10</span></div>
+<div class="score-item" style="--score-color:#03c2c9"><span class="score-label">Desafio</span><img class="score-icon" src="{{ '/assets/images/ui/review/slight-smile.png' | relative_url }}" alt=""><span class="score-value">9/10</span></div>
+<div class="score-item" style="--score-color:#972fff"><span class="score-label">Geral</span><img class="score-icon" src="{{ '/assets/images/ui/review/grinning.png' | relative_url }}" alt=""><span class="score-value">8/10</span></div></section>

@@ -27,3 +27,7 @@ Place static pages under `_pages/`. Directory path becomes page URL. Example: `_
 - `_data/categories.yml`: category key, display name, canonical historical URL.
 - `_data/navigation.yml`: header menu.
 - `_data/socials.yml`: external channels.
+
+## Review Scores
+
+Imported and new reviews use `.review-score` with five `.score-item` entries. Every item needs a label, score, purpose-specific ReffPixels icon, and a score color. Use approved icon copies in `assets/images/ui/review/`; never publish raw `_library` assets.

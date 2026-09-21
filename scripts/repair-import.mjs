@@ -49,7 +49,31 @@ function clean(content) {
     .replace(/\n\s*<span>\s*<\/span>\s*/gi, "\n")
     .replace(/<iframe\s+([\s\S]*?)>\s*<\/iframe>/gi, (_match, attributes) => `<iframe ${attributes.replace(/\s+/g, " ").trim()}></iframe>`)
     .replace(/\n{3,}/g, "\n\n");
-  return createGalleries(convertScoreTables(withoutRuntimeMarkup));
+  return normalizeReviewCards(createGalleries(convertScoreTables(withoutRuntimeMarkup)));
+}
+
+const scoreIcons = {
+  "😀": "grinning.png", "🙂": "smiling.png", "🤩": "star-struck.png", "🤯": "exploding.png",
+  "🥹": "tears.png", "😎": "sunglasses.png", "😋": "savoring.png", "😬": "grimacing.png",
+  "🤤": "drooling.png", "🎮": "slight-smile.png",
+};
+
+function scoreColor(value) {
+  const score = Number.parseInt(value, 10);
+  if (score >= 10) return "#01ff91";
+  if (score >= 9) return "#03c2c9";
+  if (score >= 8) return "#972fff";
+  if (score >= 7) return "#ff9719";
+  return "#fa4946";
+}
+
+function normalizeReviewCards(content) {
+  return content.replace(/<div class="score-item"(?: style="[^"]*")?>([\s\S]*?)<\/div>/gi, (_item, body) => {
+    const face = body.match(/<span class="score-emoji"[^>]*>([^<]+)<\/span>/)?.[1]?.trim() ?? "🎮";
+    const score = body.match(/<span class="score-value">([^<]+)<\/span>/)?.[1] ?? "0";
+    const icon = scoreIcons[face] ?? "slight-smile.png";
+    return `<div class="score-item" style="--score-color:${scoreColor(score)}">${body.replace(/<span class="score-emoji"[^>]*>[^<]+<\/span>/, `<img class="score-icon" src="{{ '/assets/images/ui/review/${icon}' | relative_url }}" alt="">`)}</div>`;
+  });
 }
 
 function createGalleries(content) {

@@ -41,11 +41,11 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2025/01/W
 <p>Watch Dogs é, sem dúvida, uma experiência que vale a pena. Mesmo jogando anos após o lançamento, senti o impacto de tudo o que ele tinha a oferecer. A imersão, os controles e a narrativa se destacam como os grandes pontos fortes. Se você ainda não jogou, recomendo dar uma chance. É um jogo que mostra como a inovação pode criar experiências memoráveis — e que, mesmo com o passar do tempo, ainda mantém seu charme.</p>
 
 <p><a href="https://www.igdb.com/games/watch-dogs">https://www.igdb.com/games/watch-dogs</a></p>
-<section class="review-score" aria-label="Avaliação de Watchdogs"><h2>Watchdogs</h2><p>Shooter/Adventure/Open World</p><div class="score-item"><span class="score-label">Graphics</span><span class="score-emoji" aria-hidden="true">🤩</span><span class="score-value">10</span></div>
-<div class="score-item"><span class="score-label">Sound</span><span class="score-emoji" aria-hidden="true">🙂</span><span class="score-value">6</span></div>
-<div class="score-item"><span class="score-label">Gameplay</span><span class="score-emoji" aria-hidden="true">🙂</span><span class="score-value">9</span></div>
-<div class="score-item"><span class="score-label">Challenge</span><span class="score-emoji" aria-hidden="true">🙂</span><span class="score-value">8</span></div>
-<div class="score-item"><span class="score-label">Overall</span><span class="score-emoji" aria-hidden="true">🤩</span><span class="score-value">9</span></div></section><figure>
+<section class="review-score" aria-label="Avaliação de Watchdogs"><h2>Watchdogs</h2><p>Shooter/Adventure/Open World</p><div class="score-item" style="--score-color:#01ff91"><span class="score-label">Graphics</span><img class="score-icon" src="{{ '/assets/images/ui/review/star-struck.png' | relative_url }}" alt=""><span class="score-value">10</span></div>
+<div class="score-item" style="--score-color:#fa4946"><span class="score-label">Sound</span><img class="score-icon" src="{{ '/assets/images/ui/review/smiling.png' | relative_url }}" alt=""><span class="score-value">6</span></div>
+<div class="score-item" style="--score-color:#03c2c9"><span class="score-label">Gameplay</span><img class="score-icon" src="{{ '/assets/images/ui/review/smiling.png' | relative_url }}" alt=""><span class="score-value">9</span></div>
+<div class="score-item" style="--score-color:#972fff"><span class="score-label">Challenge</span><img class="score-icon" src="{{ '/assets/images/ui/review/smiling.png' | relative_url }}" alt=""><span class="score-value">8</span></div>
+<div class="score-item" style="--score-color:#03c2c9"><span class="score-label">Overall</span><img class="score-icon" src="{{ '/assets/images/ui/review/star-struck.png' | relative_url }}" alt=""><span class="score-value">9</span></div></section><figure>
 <iframe title="Watch Dogs: Launch Trailer" width="640" height="360" src="https://www.youtube.com/embed/PFko4Kut39s?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </figure>
 

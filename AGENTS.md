@@ -29,6 +29,8 @@ Static Jekyll blog. Source repo: `marcelofrau/trespordez`. Production URL: `http
 - Use lowercase ASCII names with hyphens. Keep source attribution in post front matter or nearby Markdown when required.
 - Do not hotlink `wp-content` assets. Import local copy before production cutover.
 - Preserve existing external links. Never use copyrighted game art beyond assets already owned or published by Três por Dez without approval.
+- `_library/` is local source material and must remain ignored. Copy only assets approved for website use into `assets/`.
+- ReffPixels Pixel Art Emoji is approved by author for this website. Use only curated copies under `assets/images/ui/review/`; retain attribution in `docs/asset-credits.md`.
 
 ## Validation
 

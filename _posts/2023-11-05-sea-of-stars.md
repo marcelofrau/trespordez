@@ -31,9 +31,9 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2023/11/p
 <p>Maravilhoso. </p>
 
 <p>Obrigado Sabotage. </p>
-<section class="review-score" aria-label="Avaliação de Sea of Stars"><h2>Sea of Stars</h2><p>JRPG/Indie</p><div class="score-item"><span class="score-label">Gráficos</span><span class="score-emoji" aria-hidden="true">😎</span><span class="score-value">10/10</span></div>
-<div class="score-item"><span class="score-label">Som</span><span class="score-emoji" aria-hidden="true">🎮</span><span class="score-value">10/10</span></div>
-<div class="score-item"><span class="score-label">Gameplay</span><span class="score-emoji" aria-hidden="true">😀</span><span class="score-value">9/10</span></div>
-<div class="score-item"><span class="score-label">Desafio</span><span class="score-emoji" aria-hidden="true">🎮</span><span class="score-value">8/10</span></div>
-<div class="score-item"><span class="score-label">Geral</span><span class="score-emoji" aria-hidden="true">😎</span><span class="score-value">9/10</span></div></section>
+<section class="review-score" aria-label="Avaliação de Sea of Stars"><h2>Sea of Stars</h2><p>JRPG/Indie</p><div class="score-item" style="--score-color:#01ff91"><span class="score-label">Gráficos</span><img class="score-icon" src="{{ '/assets/images/ui/review/sunglasses.png' | relative_url }}" alt=""><span class="score-value">10/10</span></div>
+<div class="score-item" style="--score-color:#01ff91"><span class="score-label">Som</span><img class="score-icon" src="{{ '/assets/images/ui/review/slight-smile.png' | relative_url }}" alt=""><span class="score-value">10/10</span></div>
+<div class="score-item" style="--score-color:#03c2c9"><span class="score-label">Gameplay</span><img class="score-icon" src="{{ '/assets/images/ui/review/grinning.png' | relative_url }}" alt=""><span class="score-value">9/10</span></div>
+<div class="score-item" style="--score-color:#972fff"><span class="score-label">Desafio</span><img class="score-icon" src="{{ '/assets/images/ui/review/slight-smile.png' | relative_url }}" alt=""><span class="score-value">8/10</span></div>
+<div class="score-item" style="--score-color:#03c2c9"><span class="score-label">Geral</span><img class="score-icon" src="{{ '/assets/images/ui/review/sunglasses.png' | relative_url }}" alt=""><span class="score-value">9/10</span></div></section>
 

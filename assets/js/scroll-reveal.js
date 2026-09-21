@@ -2,7 +2,8 @@ const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 if (!reducedMotion.matches) {
   document.body.classList.add("motion-ready");
-  window.addEventListener("load", () => requestAnimationFrame(() => document.body.classList.add("page-loaded")), { once: true });
+  // Delay until first paint so browsers have an initial state to animate from.
+  window.setTimeout(() => document.body.classList.add("page-loaded"), 120);
 }
 
 if (!reducedMotion.matches && "IntersectionObserver" in window) {
@@ -14,7 +15,7 @@ if (!reducedMotion.matches && "IntersectionObserver" in window) {
   const observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
-      entry.target.classList.add("is-revealed");
+      window.setTimeout(() => entry.target.classList.add("is-revealed"), 90);
       observer.unobserve(entry.target);
     }
   }, { threshold: 0.12, rootMargin: "0px 0px -45px" });

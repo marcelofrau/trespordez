@@ -36,7 +36,7 @@ O resultado é um aplicativo gratuito e open source que conversa com o Xbox na r
 O catálogo é a ponte entre a comunidade e o console. XBVault usa os dados do [Emulation Revival](https://emulationrevival.github.io/) para apresentar emuladores, apps, ports e utilitários em uma interface única, sem substituir nem copiar o trabalho de curadoria deles.
 
 <figure>
-  <img src="/assets/images/posts/xb-homebrew-vault/browse.png" alt="Tela de catálogo do XB Homebrew Vault">
+  <img src="{{ '/assets/images/posts/xb-homebrew-vault/browse.png' | relative_url }}" alt="Tela de catálogo do XB Homebrew Vault">
   <figcaption>Catálogo, filtros e detalhes de cada item antes da instalação.</figcaption>
 </figure>
 
@@ -45,7 +45,7 @@ O catálogo é a ponte entre a comunidade e o console. XBVault usa os dados do [
 O foco começou na instalação de homebrew, mas o projeto foi crescendo. Hoje ele também ajuda a acompanhar o estado dos pacotes instalados, detectar atualização, fazer reinstalação e desinstalação sem ficar alternando entre telas do Device Portal.
 
 <figure>
-  <img src="/assets/images/posts/xb-homebrew-vault/tools.png" alt="Ferramentas de diagnóstico do XB Homebrew Vault">
+  <img src="{{ '/assets/images/posts/xb-homebrew-vault/tools.png' | relative_url }}" alt="Ferramentas de diagnóstico do XB Homebrew Vault">
   <figcaption>Painel de ferramentas: processos, rede, informações do sistema e desempenho.</figcaption>
 </figure>
 
@@ -59,7 +59,7 @@ O aplicativo compartilha a mesma base em .NET e Avalonia UI, mas atende dois jei
 | Android ARM64 | Interface pensada para tela vertical, conexão por QR code, catálogo, sideload, explorador de arquivos, logs, notificações e ferramentas no celular. |
 
 <figure>
-  <img src="/assets/images/posts/xb-homebrew-vault/android.png" alt="Versão Android do XB Homebrew Vault">
+  <img src="{{ '/assets/images/posts/xb-homebrew-vault/android.png' | relative_url }}" alt="Versão Android do XB Homebrew Vault">
   <figcaption>XBVault no Android: o Xbox Dev Mode também cabe no bolso.</figcaption>
 </figure>
 
@@ -73,7 +73,7 @@ Para quem gosta de conferir antes de executar, cada release publica checksums SH
 
 ## Começando
 
-1. Ative o Developer Mode no Xbox One ou Series S|X.
+1. Ative o Developer Mode no Xbox One ou Series S\|X.
 2. Deixe Xbox e computador ou celular na mesma rede.
 3. Baixe a versão adequada em [Releases](https://github.com/marcelofrau/xb-homebrew-vault/releases/latest).
 4. Informe IP e credenciais do Dev Mode no assistente inicial.

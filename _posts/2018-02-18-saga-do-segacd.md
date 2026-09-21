@@ -1,5 +1,5 @@
 ---
-image: /assets/images/posts/saga-do-segacd/001-segacd1.webp
+image: /assets/images/posts/saga-do-segacd/cover.webp
 image_alt: saga do segacd
 title: "Saga do SegaCD"
 date: 2018-02-18 19:17:00 -03:00

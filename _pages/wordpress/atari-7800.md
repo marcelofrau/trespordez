@@ -225,17 +225,17 @@ wordpress_id: 1617
 </tr>
 </tbody>
 </table>
-<img  alt="" height="254" src="{{ '/assets/images/pages/atari-7800/001-toki-atari7800-02-300x254-png-92.jpg' | relative_url }}"/>
-			<img  alt="" height="719" src="{{ '/assets/images/pages/atari-7800/002-consola-atari-7800--electronica-234816-3-xxl.bmp-92.jpg' | relative_url }}" />
-			<img  alt="" height="1045" src="{{ '/assets/images/pages/atari-7800/003-61-xnv7x1wl-jpg-92.jpg' | relative_url }}" />
-			<img  alt="" height="200" src="{{ '/assets/images/pages/atari-7800/004-pole-position-ii-png-92.jpg' | relative_url }}" />
-			<img  alt="" height="544" src="{{ '/assets/images/pages/atari-7800/005-peter-20beardsleys-20soccer-201989grandslam-20entertainments-png-92.jpg' | relative_url }}" />
-			<img  alt="" height="1000" src="{{ '/assets/images/pages/atari-7800/006-choplifter-pro-3-jpg-92.jpg' | relative_url }}" />
-			<img  alt="" height="767" src="{{ '/assets/images/pages/atari-7800/007-ninja-golf-atari-7800-1024x767-png-92.jpg' | relative_url }}" />
-			<img  alt="" height="767" src="{{ '/assets/images/pages/atari-7800/008-basketbrawl-atari-7800-1024x767-png-92.jpg' | relative_url }}" />
-			<img  alt="" height="767" src="{{ '/assets/images/pages/atari-7800/009-centipede-atari-7800-1024x767-png-92.jpg' | relative_url }}" />
-			<img  alt="" height="1000" src="{{ '/assets/images/pages/atari-7800/010-screenshot-2023-03-24-103440-jpg-92.jpg' | relative_url }}" />
-			<img  alt="" height="767" src="{{ '/assets/images/pages/atari-7800/011-commando-atari-7800-1024x767-png-92.jpg' | relative_url }}" />
-			<img  alt="" height="1128" src="{{ '/assets/images/pages/atari-7800/012-image-79-1-38a3b41e-46e9-4c6b-b9f0-7b98b2b21443-jpg-92.jpg' | relative_url }}" />
-			<img  alt="" height="1000" src="{{ '/assets/images/pages/atari-7800/013-screenshot-2023-03-24-104545-jpg-92.jpg' | relative_url }}" />
-			<img  alt="" height="676" src="{{ '/assets/images/pages/atari-7800/014-15-dig-dug-atari-7800-gameplay-jpg-92.jpg' | relative_url }}" />
+<img  alt="" src="{{ '/assets/images/pages/atari-7800/001-toki-atari7800-02-300x254-png-92.jpg' | relative_url }}"/>
+			<img  alt="" src="{{ '/assets/images/pages/atari-7800/002-consola-atari-7800--electronica-234816-3-xxl.bmp-92.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-7800/003-61-xnv7x1wl-jpg-92.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-7800/004-pole-position-ii-png-92.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-7800/005-peter-20beardsleys-20soccer-201989grandslam-20entertainments-png-92.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-7800/006-choplifter-pro-3-jpg-92.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-7800/007-ninja-golf-atari-7800-1024x767-png-92.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-7800/008-basketbrawl-atari-7800-1024x767-png-92.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-7800/009-centipede-atari-7800-1024x767-png-92.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-7800/010-screenshot-2023-03-24-103440-jpg-92.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-7800/011-commando-atari-7800-1024x767-png-92.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-7800/012-image-79-1-38a3b41e-46e9-4c6b-b9f0-7b98b2b21443-jpg-92.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-7800/013-screenshot-2023-03-24-104545-jpg-92.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-7800/014-15-dig-dug-atari-7800-gameplay-jpg-92.jpg' | relative_url }}" />

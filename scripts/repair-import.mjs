@@ -126,10 +126,12 @@ async function restoreLegacyScore(content) {
 for (const file of await markdownFiles(join(root, "_posts"))) {
   let content = await restoreLegacyScore(clean(await readFile(file, "utf8")));
   const slug = file.split(/[\\/]/).pop().replace(/^\d{4}-\d{2}-\d{2}-/, "").replace(/\.md$/, "");
-  if (!/^image:/m.test(content)) {
-    const image = await downloadCover(content, slug) ?? await firstImage(join(root, "assets", "images", "posts", slug));
-    if (image) {
-      const path = image.startsWith("/") ? image : `/assets/images/posts/${slug}/${image}`;
+  const image = await downloadCover(content, slug) ?? (!/^image:/m.test(content) ? await firstImage(join(root, "assets", "images", "posts", slug)) : null);
+  if (image) {
+    const path = image.startsWith("/") ? image : `/assets/images/posts/${slug}/${image}`;
+    if (/^image:/m.test(content)) {
+      content = content.replace(/^image:.*$/m, `image: ${path}`);
+    } else {
       content = content.replace(/^(---\r?\n)/, `$1image: ${path}\nimage_alt: ${slug.replace(/-/g, " ")}\n`);
     }
   }

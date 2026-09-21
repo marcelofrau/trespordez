@@ -70,14 +70,14 @@ wordpress_id: 1549
 </ul>
 <p>Vejo o Atari 5200 não como uma obra-prima de design, mas como uma peça crítica de hardware que demonstra a transição entre a era dos microcomputadores e os consoles de terceira geração. Ele não possui o refinamento técnico do NES, mas é um elo perdido essencial para entender por que a indústria precisou colapsar antes de se reinventar.</p>
 <p>Para rodar esses emuladores, você precisará da imagem da BIOS original (5200.rom). Sem esse arquivo de 2KB, o sistema não inicializa o kernel, impossibilitando a execução das ROMs.</p>
-<img  alt="" height="240" src="{{ '/assets/images/pages/atari-5200/001-4dd3837b-9b67-4af6-b796-6178237764e8-png-92-2026-04-21-13.51.00.jpg' | relative_url }}" />
-			<img  alt="" height="540" src="{{ '/assets/images/pages/atari-5200/002-algorithm-racks-up-superhuman-scores-in-55-classic-atari-games-346025-960x540-jpg-92-2026-04-21-13.51.26.jpg' | relative_url }}" />
-			<img  alt="" height="449" src="{{ '/assets/images/pages/atari-5200/003-atlantis-usa-240415-101135-png-92-2026-04-21-13.51.37.jpg' | relative_url }}" />
-			<img  alt="" height="240" src="{{ '/assets/images/pages/atari-5200/004-dandy-png-92-2026-04-21-13.51.19.jpg' | relative_url }}" />
-			<img  alt="" height="240" src="{{ '/assets/images/pages/atari-5200/005-frogger2-3-gif-92-2026-04-21-13.50.53.jpg' | relative_url }}" />
-			<img  alt="" height="194" src="{{ '/assets/images/pages/atari-5200/006-images-92-2026-04-21-13.51.23.jpg' | relative_url }}"/>
-			<img  alt="" height="188" src="{{ '/assets/images/pages/atari-5200/007-images-92-2026-04-21-13.51.46.jpg' | relative_url }}"/>
-			<img  alt="" height="1080" src="{{ '/assets/images/pages/atari-5200/008-obmdryjjnvpbqqpasaxae4-jpg-92-2026-04-21-13.51.05.jpg' | relative_url }}" />
-			<img  alt="" height="270" src="{{ '/assets/images/pages/atari-5200/009-pele-atari-png-92-2026-04-21-13.51.59.jpg' | relative_url }}" />
-			<img  alt="" height="1080" src="{{ '/assets/images/pages/atari-5200/010-rvvaw53vri6bafiob5pg5m.jpeg-92-2026-04-21-13.51.11.jpg' | relative_url }}" />
-			<img  alt="" height="240" src="{{ '/assets/images/pages/atari-5200/011-summergames-9-gif-92-2026-04-21-13.51.42.jpg' | relative_url }}" />
+<img  alt="" src="{{ '/assets/images/pages/atari-5200/001-4dd3837b-9b67-4af6-b796-6178237764e8-png-92-2026-04-21-13.51.00.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-5200/002-algorithm-racks-up-superhuman-scores-in-55-classic-atari-games-346025-960x540-jpg-92-2026-04-21-13.51.26.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-5200/003-atlantis-usa-240415-101135-png-92-2026-04-21-13.51.37.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-5200/004-dandy-png-92-2026-04-21-13.51.19.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-5200/005-frogger2-3-gif-92-2026-04-21-13.50.53.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-5200/006-images-92-2026-04-21-13.51.23.jpg' | relative_url }}"/>
+			<img  alt="" src="{{ '/assets/images/pages/atari-5200/007-images-92-2026-04-21-13.51.46.jpg' | relative_url }}"/>
+			<img  alt="" src="{{ '/assets/images/pages/atari-5200/008-obmdryjjnvpbqqpasaxae4-jpg-92-2026-04-21-13.51.05.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-5200/009-pele-atari-png-92-2026-04-21-13.51.59.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-5200/010-rvvaw53vri6bafiob5pg5m.jpeg-92-2026-04-21-13.51.11.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-5200/011-summergames-9-gif-92-2026-04-21-13.51.42.jpg' | relative_url }}" />

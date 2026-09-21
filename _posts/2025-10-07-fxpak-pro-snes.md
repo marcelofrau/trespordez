@@ -1,5 +1,5 @@
 ---
-image: /assets/images/posts/fxpak-pro-snes/001-1-1.png
+image: /assets/images/posts/fxpak-pro-snes/cover.jpg
 image_alt: fxpak pro snes
 title: "FXPAK Pro &#8211; SNES"
 date: 2025-10-07 10:26:33 -03:00

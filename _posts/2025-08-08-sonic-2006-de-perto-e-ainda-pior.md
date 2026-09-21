@@ -1,5 +1,5 @@
 ---
-image: /assets/images/posts/sonic-2006-de-perto-e-ainda-pior/001-mqdefault.jpg
+image: /assets/images/posts/sonic-2006-de-perto-e-ainda-pior/cover.png
 image_alt: sonic 2006 de perto e ainda pior
 title: "Sonic 2006: De perto é ainda pior"
 date: 2025-08-08 06:23:54 -03:00

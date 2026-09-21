@@ -52,25 +52,25 @@ wordpress_id: 1784
 <p>Falta de otimizações e hardware não tão potente faziam o console parecer que era outro mundo, quando na prática estava mais próximo dos seus concorrentes SNES e Genesis, porém eles queriam ser tão audaciosos que tentaram explorar um universo que estava muito longe de se atingir. Principalmente os jogos que tentavam alguma coisa em 3D com poligonos complexos e tudo mais. O hardware não dava conta e ainda por cima tinha muito pouca experiencia nesse segmento. Claro que isso serviu de lição para outros consoles quando foram explorar o universo 3D que demorou anos ainda pra ser aprimorado e de fato deslanchar.</p>
 <p>Na minha humilde opinião, se a Atari tivesse investido mais em softhouses pra fazer jogos não tão audaciosos e &quot;inovadores&quot; acho que o console teria uma biblioteca muito mais vasta e interessante. Porém isso também ia de contrapartida ao marketing agressivo que fizeram com o console então, é dificil saber o que realmente faria a diferença.</p>
 <h3>Videos relacionados</h3>
-<iframe width="640" height="360" src="https://www.youtube.com/embed/CGEGon-Qc_Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><iframe width="640" height="360" src="https://www.youtube.com/embed/3LVcvkLCUtU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>			<img  alt="" height="720" src="{{ '/assets/images/pages/atari-jaguar/001-3581197-game5c0c7827948f0f27-screen0002.png' | relative_url }}" />
-			<img  alt="" height="720" src="{{ '/assets/images/pages/atari-jaguar/002-maxresdefault.jpg' | relative_url }}" />
-			<img  alt="" height="510" src="{{ '/assets/images/pages/atari-jaguar/003-club-drive-atari-usa-9.png' | relative_url }}" />
-			<img  alt="" height="389" src="{{ '/assets/images/pages/atari-jaguar/004-atari-karts-jaguar-screenshot-racing-on-the-beach-club-track.webp' | relative_url }}" />
-			<img  alt="" height="194" src="{{ '/assets/images/pages/atari-jaguar/005-9.jpg' | relative_url }}"/>
-			<img  alt="" height="386" src="{{ '/assets/images/pages/atari-jaguar/006-hq720.jpg' | relative_url }}" />
-			<img  alt="" height="189" src="{{ '/assets/images/pages/atari-jaguar/007-987987o.jpg' | relative_url }}"/>
-			<img  alt="" height="812" src="{{ '/assets/images/pages/atari-jaguar/008-pitfall-the-mayan-adventure-atari-jaguar-067.png' | relative_url }}" />
-			<img  alt="" height="592" src="{{ '/assets/images/pages/atari-jaguar/009-3790438-theme-park-jag-screen.png' | relative_url }}" />
-			<img  alt="" height="194" src="{{ '/assets/images/pages/atari-jaguar/010-876897i68976.jpg' | relative_url }}"/>
-			<img  alt="" height="480" src="{{ '/assets/images/pages/atari-jaguar/011-876876.jpg' | relative_url }}" />
-			<img  alt="" height="433" src="{{ '/assets/images/pages/atari-jaguar/012-s-atarikarts-6.jpg' | relative_url }}" />
-			<img  alt="" height="360" src="{{ '/assets/images/pages/atari-jaguar/013-hqdefault.jpg' | relative_url }}" />
-			<img  alt="" height="194" src="{{ '/assets/images/pages/atari-jaguar/014-images.jpg' | relative_url }}"/>
-			<img  alt="" height="480" src="{{ '/assets/images/pages/atari-jaguar/015-rayman.png' | relative_url }}" />
-			<img  alt="" height="510" src="{{ '/assets/images/pages/atari-jaguar/016-atari-karts-atari-usa-8.png' | relative_url }}" />
-			<img  alt="" height="480" src="{{ '/assets/images/pages/atari-jaguar/017-primalrage.png' | relative_url }}" />
-			<img  alt="" height="480" src="{{ '/assets/images/pages/atari-jaguar/018-worms.png' | relative_url }}" />
-			<img  alt="" height="891" src="{{ '/assets/images/pages/atari-jaguar/019-best-atari-jaguar-game-v0-r7wl2bf5ulnc1.webp' | relative_url }}" />
+<iframe width="640" height="360" src="https://www.youtube.com/embed/CGEGon-Qc_Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><iframe width="640" height="360" src="https://www.youtube.com/embed/3LVcvkLCUtU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>			<img  alt="" src="{{ '/assets/images/pages/atari-jaguar/001-3581197-game5c0c7827948f0f27-screen0002.png' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-jaguar/002-maxresdefault.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-jaguar/003-club-drive-atari-usa-9.png' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-jaguar/004-atari-karts-jaguar-screenshot-racing-on-the-beach-club-track.webp' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-jaguar/005-9.jpg' | relative_url }}"/>
+			<img  alt="" src="{{ '/assets/images/pages/atari-jaguar/006-hq720.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-jaguar/007-987987o.jpg' | relative_url }}"/>
+			<img  alt="" src="{{ '/assets/images/pages/atari-jaguar/008-pitfall-the-mayan-adventure-atari-jaguar-067.png' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-jaguar/009-3790438-theme-park-jag-screen.png' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-jaguar/010-876897i68976.jpg' | relative_url }}"/>
+			<img  alt="" src="{{ '/assets/images/pages/atari-jaguar/011-876876.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-jaguar/012-s-atarikarts-6.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-jaguar/013-hqdefault.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-jaguar/014-images.jpg' | relative_url }}"/>
+			<img  alt="" src="{{ '/assets/images/pages/atari-jaguar/015-rayman.png' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-jaguar/016-atari-karts-atari-usa-8.png' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-jaguar/017-primalrage.png' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-jaguar/018-worms.png' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/pages/atari-jaguar/019-best-atari-jaguar-game-v0-r7wl2bf5ulnc1.webp' | relative_url }}" />
 <h2>Especificações Técnicas</h2>
 <h3>CPU</h3>
 <ul>

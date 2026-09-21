@@ -1,5 +1,5 @@
 ---
-image: /assets/images/posts/art-of-rally/001-images-92-2026-04-21-10.13.35-result.jpg
+image: /assets/images/posts/art-of-rally/cover.jpg
 image_alt: art of rally
 title: "Art of Rally"
 date: 2026-04-10 12:02:33 -03:00
@@ -22,22 +22,22 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2025/11/a
 <p>Ao mesmo tempo, no comeco a curva de aprendizagem exige um pouco pois nao eh simplesmente um jogo normal, ele tenta te mostrar que realmente para fazer as curvas precisa ter concentracao, coragem e ousadia pra poder cortar as curvas com o maximo de desempenho sem perder o controle do carro.</p>
 <p>A física é impecável. Cada superfície exige adaptação, cada carro tem sua personalidade. A câmera isométrica, que inicialmente parece estranha, rapidamente vira parte essencial da experiência &#8211; ela te dá aquela visão estratégica perfeita para planejar as próximas curvas.</p>
 <p>A progressão é bem dosada, te fazendo evoluir pelas eras do rally enquanto desbloqueia novos eventos e máquinas lendárias. E cada carro tem uma dirigibilidade bem diferentem o que traz ainda mais desafio, inclusive fazendo voce escolher um favorito pra cada categoria, pois tem carros que acomodam mais o seu estilo de dirigir do que outros, e descobrir isso tambem eh parte da experiencia, descobrir o carro que voce mais gosta e o carro que te traz mais vontade de continuar dirigindo.</p>
-<img  alt="" height="168" src="{{ '/assets/images/posts/art-of-rally/001-images-92-2026-04-21-10.13.35-result.jpg' | relative_url }}"/>
-			<img  alt="" height="168" src="{{ '/assets/images/posts/art-of-rally/002-images-92-2026-04-21-10.13.22-result.jpg' | relative_url }}"/>
-			<img  alt="" height="168" src="{{ '/assets/images/posts/art-of-rally/003-images-92-2026-04-21-10.13.49-result.jpg' | relative_url }}"/>
-			<img  alt="" height="720" src="{{ '/assets/images/posts/art-of-rally/004-2-92407342-5d07-4d7b-853f-99788ad903c9-jpg-92-2026-04-21-10.14.18-result.jpg' | relative_url }}" />
-			<img  alt="" height="168" src="{{ '/assets/images/posts/art-of-rally/005-images-92-2026-04-21-10.13.27-result.jpg' | relative_url }}"/>
-			<img  alt="" height="168" src="{{ '/assets/images/posts/art-of-rally/006-images-92-2026-04-21-10.13.15-result.jpg' | relative_url }}"/>
-			<img  alt="" height="666" src="{{ '/assets/images/posts/art-of-rally/007-art-of-rally-game-pass-png-92-2026-04-21-10.13.59-result.jpg' | relative_url }}" />
-			<img  alt="" height="386" src="{{ '/assets/images/posts/art-of-rally/008-art-of-rally-review-701x386-jpg-92-2026-04-21-10.14.10-result.jpg' | relative_url }}" />
-			<img  alt="" height="1440" src="{{ '/assets/images/posts/art-of-rally/009-art-of-rally-dlc-1-jpg-92-2026-04-21-10.14.28-result.jpg' | relative_url }}" />
-			<img  alt="" height="781" src="{{ '/assets/images/posts/art-of-rally/010-1366-2000.jpeg-92-2026-04-21-10.13.54-result.jpg' | relative_url }}" />
-			<img  alt="" height="168" src="{{ '/assets/images/posts/art-of-rally/011-images-92-2026-04-21-10.13.42-result.jpg' | relative_url }}"/>
-			<img  alt="" height="720" src="{{ '/assets/images/posts/art-of-rally/012-maxresdefault-jpg-92-2026-04-21-10.13.05-result.jpg' | relative_url }}" />
-			<img  alt="" height="168" src="{{ '/assets/images/posts/art-of-rally/013-images-92-2026-04-21-10.13.38-result.jpg' | relative_url }}"/>
-			<img  alt="" height="159" src="{{ '/assets/images/posts/art-of-rally/014-images-92-2026-04-21-10.13.30-result.jpg' | relative_url }}" />
-			<img  alt="" height="168" src="{{ '/assets/images/posts/art-of-rally/015-images-92-2026-04-21-10.14.03-result.jpg' | relative_url }}"/>
-			<img  alt="" height="788" src="{{ '/assets/images/posts/art-of-rally/016-1-yuj76gck4l4ugrtaoal6ug-2x.jpeg-92-2026-04-21-10.14.22-result.jpg' | relative_url }}" />
+<img  alt="" src="{{ '/assets/images/posts/art-of-rally/001-images-92-2026-04-21-10.13.35-result.jpg' | relative_url }}"/>
+			<img  alt="" src="{{ '/assets/images/posts/art-of-rally/002-images-92-2026-04-21-10.13.22-result.jpg' | relative_url }}"/>
+			<img  alt="" src="{{ '/assets/images/posts/art-of-rally/003-images-92-2026-04-21-10.13.49-result.jpg' | relative_url }}"/>
+			<img  alt="" src="{{ '/assets/images/posts/art-of-rally/004-2-92407342-5d07-4d7b-853f-99788ad903c9-jpg-92-2026-04-21-10.14.18-result.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/posts/art-of-rally/005-images-92-2026-04-21-10.13.27-result.jpg' | relative_url }}"/>
+			<img  alt="" src="{{ '/assets/images/posts/art-of-rally/006-images-92-2026-04-21-10.13.15-result.jpg' | relative_url }}"/>
+			<img  alt="" src="{{ '/assets/images/posts/art-of-rally/007-art-of-rally-game-pass-png-92-2026-04-21-10.13.59-result.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/posts/art-of-rally/008-art-of-rally-review-701x386-jpg-92-2026-04-21-10.14.10-result.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/posts/art-of-rally/009-art-of-rally-dlc-1-jpg-92-2026-04-21-10.14.28-result.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/posts/art-of-rally/010-1366-2000.jpeg-92-2026-04-21-10.13.54-result.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/posts/art-of-rally/011-images-92-2026-04-21-10.13.42-result.jpg' | relative_url }}"/>
+			<img  alt="" src="{{ '/assets/images/posts/art-of-rally/012-maxresdefault-jpg-92-2026-04-21-10.13.05-result.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/posts/art-of-rally/013-images-92-2026-04-21-10.13.38-result.jpg' | relative_url }}"/>
+			<img  alt="" src="{{ '/assets/images/posts/art-of-rally/014-images-92-2026-04-21-10.13.30-result.jpg' | relative_url }}" />
+			<img  alt="" src="{{ '/assets/images/posts/art-of-rally/015-images-92-2026-04-21-10.14.03-result.jpg' | relative_url }}"/>
+			<img  alt="" src="{{ '/assets/images/posts/art-of-rally/016-1-yuj76gck4l4ugrtaoal6ug-2x.jpeg-92-2026-04-21-10.14.22-result.jpg' | relative_url }}" />
 <h2>Visual &#8211; Uma Pintura em Movimento</h2>
 <p>E aqui vem outra surpresa: chamar Art of Rally de &quot;low poly&quot; é quase uma injustiça. Sim, tecnicamente é minimalista, mas a quantidade de detalhes e o cuidado na construção de cada cenário transformam o jogo numa verdadeira pintura interativa. A paleta de cores é belíssima, cada região tem sua identidade visual marcante:</p>
 <ul>

@@ -1,6 +1,6 @@
 ---
 title: "XB Homebrew Vault: central de comando para Xbox Dev Mode"
-date: 2026-09-21 11:00:00 -03:00
+date: 2026-09-21 08:00:00 -03:00
 author: the-archivist
 categories: [emulators, news]
 tags: [android, emulation-revival, homebrew, xbox, xbox-dev-mode]

@@ -32,7 +32,13 @@ wordpress_id: 966
 </section>
 
 <section class="team-values">
-  <article><i class="fa-solid fa-floppy-disk" aria-hidden="true"></i><h2>Preservar</h2><p>Hardware velho, software esquecido e histórias que ainda têm valor.</p></article>
-  <article><i class="fa-solid fa-gamepad" aria-hidden="true"></i><h2>Jogar</h2><p>Sem obrigação de seguir hype, backlog ou nota de agregador.</p></article>
-  <article><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i><h2>Mexer</h2><p>Entender como funciona também faz parte da diversão.</p></article>
+  <article><i class="fa-solid fa-floppy-disk" aria-hidden="true"></i><h2>Preservar</h2><p>Hardware morto, fitas vencidas e demos esquecidas: nada disso sobra no mercado, mas sobra na memória. Entre emulador configurado, cartucho destravado e save recuperado, a gente garante que a história — boa ou ruim — continue existindo.</p></article>
+  <article><i class="fa-solid fa-gamepad" aria-hidden="true"></i><h2>Jogar</h2><p>Sem pressa de nota de agregador, hype de lançamento ou backlog pesando na consciência. Jogo bom é o que você ainda lembra depois dos créditos — e às vezes ele tem vinte anos e roda até hoje numa máquina que ninguém mais liga. A gente joga o que dá vontade, quando dá.</p></article>
+  <article><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i><h2>Mexer</h2><p>Desmontar é só o começo. Trocar fonte, destravar BIOS, salvar um emulador da lista negra e ver a imagem subir na tela faz parte do jogo tanto quanto apertar Start. Entender como a máquina pensa é metade da diversão — a outra metade é apertar o botão de novo.</p></article>
+</section>
+
+<section class="quote-card" data-quotes-card>
+  <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+  <blockquote></blockquote>
+  <figcaption></figcaption>
 </section>

@@ -13,6 +13,8 @@
   <script src="{{ '/assets/js/context-menu.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
   <script src="{{ '/assets/js/navigation.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
   <script src="{{ '/assets/js/scroll-reveal.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+  <script id="site-quotes" type="application/json">{{ site.data.quotes | jsonify }}</script>
+  <script src="{{ '/assets/js/quotes.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
   {% if page.url == '/' %}<script src="{{ '/assets/js/home-feed.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>{% endif %}
 </body>
 </html>

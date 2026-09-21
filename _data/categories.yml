@@ -1,27 +1,44 @@
 consoles:
   name: Consoles
   url: /category/consoles/
+  color: blue
 emulators:
   name: Emuladores
   url: /category/emulators/
+  color: violet
 gameplay:
   name: Jogatina
   url: /category/gameplay/
+  color: orange
 moddding:
   name: Modding
   url: /category/consoles/moddding/
+  color: red
 news:
   name: Noticias
   url: /category/news/
+  color: cyan
 hiddengems:
   name: Pérolas desconhecidas
   url: /category/hiddengems/
+  color: yellow
 reviews:
   name: Reviews
   url: /category/reviews/
+  color: green
 retrogaming:
   name: Retrogaming
   url: /category/consoles/retrogaming/
+  color: pink
 rpg:
   name: RPG
   url: /category/rpg/
+  color: purple
+platform:
+  name: Platform
+  url: /category/reviews/platform/
+  color: blue
+racing:
+  name: Racing
+  url: /category/reviews/racing/
+  color: orange

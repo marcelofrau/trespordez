@@ -6,7 +6,7 @@ layout: default
   {% assign posts = site.posts | where_exp: "post", "post.tags contains page.tag_key" %}
   {% for post in posts %}
     <article class="post-card{% unless post.image %} without-image{% endunless %}">
-      {% if post.image %}<a href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title }}" style="object-fit: {{ post.image_fit | default: 'cover' }}; object-position: {{ post.image_position | default: 'center 24%' }}"></a>{% endif %}
+      {% if post.image %}<a href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title }}"{% if post.image_fit == 'contain' %} class="is-contain"{% endif %} style="object-fit: {{ post.image_fit | default: 'cover' }}; object-position: {{ post.image_position | default: 'center 24%' }}"></a>{% endif %}
       <div>
         <p class="post-taxonomy">{% for category in post.categories %}{% assign item = site.data.categories[category] %}{% if item %}<a class="badge badge-{{ item.color }}" href="{{ item.url | relative_url }}">{{ item.name }}</a>{% endif %}{% endfor %}{% if post.tags contains 'indie' %}<a class="badge badge-indigo" href="{{ '/tag/indie/' | relative_url }}">Indie</a>{% endif %}</p>
         <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>

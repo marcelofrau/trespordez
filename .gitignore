@@ -6,3 +6,4 @@ node_modules/
 .env
 _migration-source/
 _library/
+_data/giscus.yml

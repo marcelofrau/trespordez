@@ -1,18 +1,18 @@
-{% if site.giscus.enabled %}
+{% if site.giscus.enabled and site.data.giscus.repo_id and site.data.giscus.category_id %}
 <section class="comments" aria-label="Comentários">
   <h2>Comentários</h2>
   <script src="https://giscus.app/client.js"
           data-repo="{{ site.giscus.repo }}"
-          data-repo-id="{{ site.giscus.repo_id }}"
+          data-repo-id="{{ site.data.giscus.repo_id }}"
           data-category="{{ site.giscus.category }}"
-          data-category-id="{{ site.giscus.category_id }}"
-          data-mapping="specific"
+          data-category-id="{{ site.data.giscus.category_id }}"
+          data-mapping="{{ site.giscus.mapping }}"
           data-term="post-{{ page.slug | default: page.title | slugify }}"
           data-strict="1"
           data-reactions-enabled="1"
           data-emit-metadata="0"
           data-input-position="top"
-          data-theme="preferred_color_scheme"
+          data-theme="{{ site.giscus.theme }}"
           data-lang="pt"
           crossorigin="anonymous"
           async></script>

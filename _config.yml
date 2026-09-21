@@ -6,8 +6,11 @@ baseurl: ""
 lang: pt-BR
 timezone: America/Sao_Paulo
 giscus:
-  enabled: false
+  enabled: true
   repo: marcelofrau/trespordez
+  category: SiteComments
+  mapping: specific
+  theme: catppuccin_latte
 permalink: /:year/:month/:title/
 paginate: 10
 paginate_path: /page:num/

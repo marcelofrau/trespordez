@@ -33,7 +33,9 @@ jobs:
       - name: Build Jekyll QA site
         env:
           JEKYLL_ENV: qa
-        run: bundle exec jekyll build --config _config.yml,_config.qa.yml
+          GISCUS_REPO_ID: ${{ vars.GISCUS_REPO_ID }}
+          GISCUS_CATEGORY_ID: ${{ vars.GISCUS_CATEGORY_ID }}
+        run: node scripts/prepare-giscus.mjs && bundle exec jekyll build --config _config.yml,_config.qa.yml
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site

@@ -49,7 +49,20 @@ function clean(content) {
     .replace(/\n\s*<span>\s*<\/span>\s*/gi, "\n")
     .replace(/<iframe\s+([\s\S]*?)>\s*<\/iframe>/gi, (_match, attributes) => `<iframe ${attributes.replace(/\s+/g, " ").trim()}></iframe>`)
     .replace(/\n{3,}/g, "\n\n");
-  return convertScoreTables(withoutRuntimeMarkup);
+  return createGalleries(convertScoreTables(withoutRuntimeMarkup));
+}
+
+function createGalleries(content) {
+  return content.replace(/(?:(?:<figure>)?\s*<img\b[^>]*src="\{\{ '\/assets\/images\/posts\/[^>]+>\s*(?:<\/figure>)?\s*){3,}/gi, (group) => {
+    const images = [...group.matchAll(/<img\b[^>]*src="([^"]+)"[^>]*>/gi)];
+    if (images.length < 3) return group;
+    const items = images.map((match, index) => {
+      const tag = match[0].replace(/\s+(?:width|height)="[^"]*"/gi, "");
+      const alt = tag.match(/\salt="([^"]*)"/i)?.[1] || `Screenshot ${index + 1}`;
+      return `<a href="${match[1]}" aria-label="Abrir ${alt}">${tag}</a>`;
+    }).join("\n");
+    return `<div class="post-gallery" aria-label="Galeria de screenshots">${items}</div>\n`;
+  });
 }
 
 function textContent(value) {

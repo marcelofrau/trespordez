@@ -7,7 +7,7 @@ title: Três por Dez
   <article class="post-card{% unless post.image %} without-image{% endunless %}{% if forloop.index > 10 %} is-hidden{% endif %}"{% if forloop.index > 10 %} hidden{% endif %}>
     {% if post.image %}<a href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title }}" style="object-fit: {{ post.image_fit | default: 'cover' }}; object-position: {{ post.image_position | default: 'center 24%' }}"></a>{% endif %}
     <div>
-      <p class="post-taxonomy">{% for category in post.categories %}{% assign item = site.data.categories[category] %}{% if item %}<a class="badge badge-{{ item.color }}" href="{{ item.url | relative_url }}">{{ item.name }}</a>{% else %}<span class="badge badge-neutral">{{ category }}</span>{% endif %}{% endfor %}</p>
+      <p class="post-taxonomy">{% for category in post.categories %}{% assign item = site.data.categories[category] %}{% if item %}<a class="badge badge-{{ item.color }}" href="{{ item.url | relative_url }}">{{ item.name }}</a>{% else %}<span class="badge badge-neutral">{{ category }}</span>{% endif %}{% endfor %}{% if post.tags contains 'indie' %}<a class="badge badge-indigo" href="{{ '/tag/indie/' | relative_url }}">Indie</a>{% endif %}</p>
       <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
       <p class="post-meta">{{ post.date | date: "%d/%m/%Y" }}</p>
       <p>{{ post.excerpt | strip_html | truncate: 380 }}</p>

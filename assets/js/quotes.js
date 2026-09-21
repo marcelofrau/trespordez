@@ -14,24 +14,32 @@
 
   var marquee = document.querySelector('[data-quotes-marquee]');
   if (marquee) {
-    var idx = Math.floor(Math.random() * quotes.length);
-
-    var show = function () {
-      var q = quotes[idx % quotes.length];
-      marquee.textContent = q.text;
-      marquee.classList.add('is-entering');
-      marquee.classList.remove('is-entering');
-    };
-
     show();
 
     setInterval(function () {
       marquee.classList.add('is-fading');
       setTimeout(function () {
-        idx = (idx + 1) % quotes.length;
         show();
       }, 600);
     }, 10000);
+
+    function show() {
+      var idx = randomIndex();
+      var q = quotes[idx];
+      marquee.textContent = q.source ? q.text + ' \u2014 ' + q.source : q.text;
+    }
+
+    function randomIndex() {
+      if (quotes.length === 1) return 0;
+      var current = marquee.textContent;
+      var idx;
+      var tries = 0;
+      do {
+        idx = Math.floor(Math.random() * quotes.length);
+        tries++;
+      } while (tries < 20 && quotes[idx].text === current.split(' \u2014 ')[0].trim());
+      return idx;
+    }
   }
 
   var card = document.querySelector('[data-quotes-card]');

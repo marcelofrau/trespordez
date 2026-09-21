@@ -15,10 +15,10 @@ if (!reducedMotion.matches && "IntersectionObserver" in window) {
   const observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
-      window.setTimeout(() => entry.target.classList.add("is-revealed"), 90);
+      window.setTimeout(() => entry.target.classList.add("is-revealed"), 35);
       observer.unobserve(entry.target);
     }
-  }, { threshold: 0.12, rootMargin: "0px 0px -45px" });
+  }, { threshold: 0.05, rootMargin: "0px 0px 140px 0px" });
 
   document.querySelectorAll(".post-card:not([hidden]), .sidebar section, .post-header, .post-cover, .post-content, .review-score").forEach(reveal);
 

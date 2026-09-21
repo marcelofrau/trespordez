@@ -11,6 +11,7 @@ if (button) {
         window.setTimeout(() => card.classList.remove("is-hidden"), index * 75);
       });
     });
+    document.dispatchEvent(new CustomEvent("postsrevealed", { detail: next }));
     if (!cards.some((card) => card.hidden)) button.parentElement.remove();
   });
 }

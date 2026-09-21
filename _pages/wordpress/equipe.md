@@ -4,24 +4,35 @@ permalink: /equipe/
 wordpress_id: 966
 ---
 
-<h1>🎮 A Equipe do Trespordez</h1>
-<blockquote>
-<p><em>A casa dos entusiastas do Tres Por Dez. Celebramos os jogos que nos formaram e as experiências que mantêm vivo o espírito da cultura gamer.</em></p>
-</blockquote>
-<h2>Quem Somos</h2>
-<p>O <strong>Tres Por Dez</strong> não é apenas um site de reviews. É um espaço onde paixão por jogos encontra nostalgia, amor por jogos e entusiasmo, onde cada análise carrega a marca pessoal de quem escreve. Somos um coletivo de arquivistas digitais, curadores de experiências e contadores de histórias que vivem e respiram videogames.</p>
-<p>Cada membro da nossa equipe traz uma perspectiva única, um olhar diferente sobre esse universo fascinante. Aqui você não encontrará apenas críticas encontrará conversas, reflexões e um verdadeiro amor pelo que fazemos.</p>
-<h2>Conheca a Equipe</h2>
-<ul>
-<li><strong><a href="{{ '/equipe/the-archivist' | relative_url }}">The Archivist</a></strong> — Um guardião de memórias digitais</li>
-<li><strong><a href="{{ '/equipe/cezar_aug' | relative_url }}">cezar_aug</a></strong> — <strong>descricao rapida do senhor aqui</strong></li>
-</ul>
-<h2>O Que Esperar Aqui</h2>
-<ul>
-<li>🎨 <strong>Coleções</strong> — wallpapers, cursores, temas e outros artefatos visuais</li>
-<li>🎵 <strong>Trilhas Sonoras e Música</strong> — as canções que marcam e inspiram</li>
-<li>💾 <strong>Gostos Pessoais</strong> — aquilo que realmente importa para cada um</li>
-<li>📚 <strong>Descobertas e Interesses</strong> — além de games, o universo de cada membro</li>
-<li>💬 <strong>Contato</strong> — formas de conversar e se conectar</li>
-</ul>
-<p>Bem-vindo a nossa humilde casa. 🎮✨</p>
+<section class="team-hero">
+  <p class="eyebrow">Quem escreve por aqui</p>
+  <h2>Uma coleção de memórias, fios, pixels e opiniões.</h2>
+  <p>O Três por Dez é um espaço para falar de jogos que marcaram época, máquinas que continuam funcionando contra todas as probabilidades e descobertas que mereciam mais conversa.</p>
+</section>
+
+<section class="team-grid">
+  <a class="team-card team-archivist" href="{{ '/equipe/the-archivist/' | relative_url }}">
+    <span class="team-monogram">TA</span>
+    <div>
+      <p class="eyebrow">Fundador e arquivista</p>
+      <h2>The Archivist</h2>
+      <p>Emulação, modding, preservação, ferramentas e jogos que ficam na cabeça depois dos créditos.</p>
+      <span class="team-cta">Conhecer o perfil <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+    </div>
+  </a>
+  <a class="team-card team-cezar" href="{{ '/equipe/cezar_aug/' | relative_url }}">
+    <span class="team-monogram">CA</span>
+    <div>
+      <p class="eyebrow">Autor e colaborador</p>
+      <h2>cezar_aug</h2>
+      <p>Reviews, observações sem filtro e uma perspectiva própria sobre jogos novos e velhos.</p>
+      <span class="team-cta">Conhecer o perfil <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+    </div>
+  </a>
+</section>
+
+<section class="team-values">
+  <article><i class="fa-solid fa-floppy-disk" aria-hidden="true"></i><h2>Preservar</h2><p>Hardware velho, software esquecido e histórias que ainda têm valor.</p></article>
+  <article><i class="fa-solid fa-gamepad" aria-hidden="true"></i><h2>Jogar</h2><p>Sem obrigação de seguir hype, backlog ou nota de agregador.</p></article>
+  <article><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i><h2>Mexer</h2><p>Entender como funciona também faz parte da diversão.</p></article>
+</section>

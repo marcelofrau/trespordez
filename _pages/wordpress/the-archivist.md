@@ -4,85 +4,42 @@ permalink: /equipe/the-archivist/
 wordpress_id: 1386
 ---
 
-<p>Sou uma pessoa muito curiosa e técnica, que gosta de entender como as coisas funcionam de verdade seja software, hardware ou até os universos das séries, filmes e dos jogos que consumo.</p>
-<p>Tenho um lado bem prático, focado em arquitetura, automação e performance, e ao mesmo tempo um lado nostálgico e criativo, ligado ao retro-gaming, à emulação e a uma estética mais “old school”.</p>
-<p>Costumo ir fundo nos problemas, testar hipóteses e desconfiar de soluções superficiais, sempre buscando explicações sólidas, mas também valorizo conforto, clareza e coisas bem feitas no dia a dia. Desde criar um novo script pra facilitar meu dia ou ver uma boa série para relaxar no fim do dia, ou jogar um belo jogo que vai explodir minha mente, seja de história, desafio ou até mesmo gameplay.</p>
-<h2>Origem</h2>
-<p>Sou do interior de São Paulo, tive minha infancia, adolescencia e meu periodo de jovem adulto crescendo na mesma região. Conheci os videogames muito cedo, quando tinha nem 5 anos, mas na epoca, o que tinhamos, principalmente no Brasil com a reserva de mercado era acesso ao Atari, e Phantom System (o Nintendinho da Gradiente) e foi esse o meu começo. Depois disso foi só seguir a paixão, passando por cada console, cada geração de video games, sejam alguns um pouco mais distantes por amigos e conhecidos e outros que passarm batido por uma epoca mas depois retomei a todo vapor pra aproveitar cada segundo e momento com um jogo ou console esquecido no tempo.</p>
-<p>O mesmo pra mim se aplica pra series, filmes e etc. Pra você acredita, Star Wars por exemplo, eu fui descobrir mesmo no final da decada de 90, quando eu já estava na minha adolescencia, e na verdade os efeitos antigos, nao me desanimaram, mas pelo contrário me fizeram entender e buscar mais a respeito de como faziam efeitos tão maravilhosos sem recorrer a computação grafica que nem existia na época direito.</p>
-<p>Esse sou, eu e de onde vim.</p>
-<p>Hoje. na minha quarta decada de vida, moro na Espanha, com minha familia e aproveito cada momento, seja em um passeio de fim de semana, ou me enfurnando na minha caverna jogando um jogo desconhecido ou obscuro.</p>
-<h2>Gostos pessoais</h2>
-<p>Queria compartilhar um pouquinho das coisas que eu gosto pra vocês, acho que mostrando um pouco disso, consigo expor melhor minha personalidade e quem eu sou. Aproveite</p>
-<h3>Jogos favoritos</h3>
-<ul>
-<li>Chrono Trigger</li>
-<li>Expedition 33</li>
-<li>Donkey Kong Country 2 (e todos da serie)</li>
-<li>Super Mario 64</li>
-<li>Hyperlight Drifter</li>
-<li>Minecraft</li>
-<li>Hytale</li>
-<li>Forza Horizon 4</li>
-<li>Burnout 3</li>
-<li>Burnout Revenge</li>
-<li>Final Fantasy 6</li>
-<li>Grandia</li>
-</ul>
-<h3>Series favoritas</h3>
-<ul>
-<li>Fringe</li>
-<li>Dark Matter</li>
-<li>Chernobyl</li>
-<li>Wheel of time</li>
-<li>Penguim</li>
-<li>Rings of Power</li>
-<li>Andor</li>
-<li>Dark</li>
-</ul>
-<h3>Animes Favoritos</h3>
-<ul>
-<li>Full Metal Alchemist Brotherhood</li>
-<li>Steins;Gate</li>
-<li>Initial D</li>
-<li>Death Note</li>
-<li>Get Backers</li>
-<li>Naruto</li>
-<li>Abenobashi Mahou Shouten Gai</li>
-<li>Samurai X</li>
-<li>Inu Yasha</li>
-<li>Lain</li>
-</ul>
-<h3>Filmes favoritos</h3>
-<ul>
-<li>Star Wars a primeira trilogia</li>
-<li>Senhor dos Anéis</li>
-<li>O Hobbit</li>
-<li>Corpo Fechado</li>
-<li>A Vila</li>
-</ul>
-<h3>Músicas favoritas</h3>
-<h4>Generos favoritos</h4>
-<ul>
-<li>Indie rock</li>
-<li>Punk Rock</li>
-<li>Folk</li>
-<li>Alternative</li>
-<li>Lo-Fi</li>
-<li>Chiptunes</li>
-<li>MPB</li>
-</ul>
-<h4>Artistas e bandas favoritas</h4>
-<ul>
-<li>Beatles</li>
-<li>Broken Bells</li>
-<li>The Kooks</li>
-<li>The Strokes</li>
-<li>The Killers</li>
-<li>We are Scientists</li>
-<li>The Black Keys</li>
-<li>TV On the radio</li>
-</ul>
-<h3>Wallpapers favoritos</h3>
-<h2>Backlog pessoal</h2>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTPVf0fVS0TjLJb_-mBUSvI5FRMMxR6ipTci_75jmZLSwDNRMEFx_rZjViIG_JdZANPVyiVVGq6EAAz/pubhtml?widget=true&headers=false"></iframe>
+<section class="profile-hero">
+  <span class="team-monogram">TA</span>
+  <div>
+    <p class="eyebrow">The Archivist</p>
+    <h2>Curioso por hardware velho, software novo e tudo que existe no meio.</h2>
+    <p>Arquitetura, automação, performance, retrogaming, emulação e aquela vontade de entender como as coisas funcionam de verdade.</p>
+  </div>
+</section>
+
+<section class="profile-copy">
+  <p>Sou uma pessoa muito curiosa e técnica. Gosto de entender como as coisas funcionam de verdade, seja software, hardware ou os universos das séries, filmes e jogos que consumo.</p>
+  <p>Tenho um lado prático, focado em arquitetura, automação e performance, e outro nostálgico e criativo, ligado ao retrogaming, à emulação e a uma estética mais old school. Costumo ir fundo nos problemas, testar hipóteses e desconfiar de soluções superficiais, mas também valorizo conforto, clareza e coisas bem feitas no dia a dia.</p>
+  <p>Isso pode significar criar um script para facilitar uma tarefa, ver uma boa série no fim do dia ou jogar algo que exploda minha mente pela história, desafio ou gameplay.</p>
+</section>
+
+<section class="profile-section">
+  <p class="eyebrow">Origem</p>
+  <h2>Do interior de São Paulo para a Espanha, sem largar o controle.</h2>
+  <p>Sou do interior de São Paulo e cresci na mesma região durante infância, adolescência e início da vida adulta. Conheci videogames cedo, com Atari e Phantom System, o Nintendinho da Gradiente, ainda no contexto da reserva de mercado brasileira. Depois foi só seguir a paixão por consoles, gerações e jogos que às vezes passaram batido na época, mas voltaram com força anos depois.</p>
+  <p>Essa curiosidade também vale para séries e filmes. Star Wars, por exemplo, chegou de verdade para mim no fim dos anos 90. Os efeitos antigos não me afastaram: fizeram querer entender como conseguiam fazer tanta coisa sem a computação gráfica atual.</p>
+  <p>Hoje, na quarta década de vida, moro na Espanha com minha família. Entre um passeio de fim de semana e outro, ainda tem espaço para me enfurnar na caverna e descobrir algum jogo obscuro que ficou perdido no tempo.</p>
+</section>
+
+<section class="profile-section">
+  <p class="eyebrow">Favoritos</p>
+  <h2>Coisas que ajudam a explicar o arquivo.</h2>
+  <div class="favorites-grid">
+    <article><h3>Jogos</h3><ul><li>Chrono Trigger</li><li>Expedition 33</li><li>Donkey Kong Country 2</li><li>Super Mario 64</li><li>Hyper Light Drifter</li><li>Minecraft e Hytale</li><li>Forza Horizon 4</li><li>Burnout 3 e Revenge</li><li>Final Fantasy VI</li><li>Grandia</li></ul></article>
+    <article><h3>Séries</h3><ul><li>Fringe</li><li>Dark Matter</li><li>Chernobyl</li><li>Wheel of Time</li><li>The Penguin</li><li>Rings of Power</li><li>Andor</li><li>Dark</li></ul></article>
+    <article><h3>Animes</h3><ul><li>Fullmetal Alchemist Brotherhood</li><li>Steins;Gate</li><li>Initial D</li><li>Death Note</li><li>Get Backers</li><li>Naruto</li><li>Abenobashi</li><li>Samurai X</li><li>InuYasha</li><li>Lain</li></ul></article>
+    <article><h3>Filmes e música</h3><ul><li>Star Wars: trilogia original</li><li>Senhor dos Anéis e O Hobbit</li><li>Corpo Fechado e A Vila</li><li>Indie rock, punk, folk e lo-fi</li><li>Beatles, Broken Bells e The Kooks</li><li>The Strokes, The Killers e The Black Keys</li></ul></article>
+  </div>
+</section>
+
+<section class="profile-backlog">
+  <p class="eyebrow">Backlog pessoal</p>
+  <h2>O que ainda está esperando a vez.</h2>
+  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTPVf0fVS0TjLJb_-mBUSvI5FRMMxR6ipTci_75jmZLSwDNRMEFx_rZjViIG_JdZANPVyiVVGq6EAAz/pubhtml?widget=true&headers=false" title="Backlog pessoal do The Archivist"></iframe>
+</section>

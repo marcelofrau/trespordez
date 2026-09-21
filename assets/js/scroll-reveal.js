@@ -1,5 +1,10 @@
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+if (!reducedMotion.matches) {
+  document.body.classList.add("motion-ready");
+  window.addEventListener("load", () => requestAnimationFrame(() => document.body.classList.add("page-loaded")), { once: true });
+}
+
 if (!reducedMotion.matches && "IntersectionObserver" in window) {
   const reveal = (element) => {
     element.classList.add("reveal-pending");

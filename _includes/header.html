@@ -11,7 +11,7 @@
         {% for item in site.data.navigation %}
           <li{% if item.children %} class="has-children"{% endif %}>
             {% if item.children %}
-              <button class="nav-toggle" type="button" aria-expanded="false">{{ item.label }}<span aria-hidden="true">+</span></button>
+              <button class="nav-toggle" type="button" aria-expanded="false">{{ item.label }}<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
               <ul>
                 {% for child in item.children %}<li><a href="{{ child.url | relative_url }}">{{ child.label }}</a></li>{% endfor %}
               </ul>

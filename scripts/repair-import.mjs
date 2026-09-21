@@ -35,7 +35,7 @@ async function downloadCover(content, slug) {
 }
 
 function clean(content) {
-  return content
+  const withoutRuntimeMarkup = content
     .replace(/\n\s*Sorry, your browser[\s\S]*?(?=\n\s*<(?:p|h[1-6]|ul|ol|table|figure|iframe|img)|\n\s*$)/gi, "\n")
     .replace(/\n\s*\{&quot;[\s\S]*?(?=\n\s*<(?:p|h[1-6]|ul|ol|table|figure|iframe|img)|\n\s*$)/gi, "\n")
     .replace(/^\s{4,}.*(?:Sorry, your browser|&quot;|modula|modula_gallery|creative-gallery).*$(\r?\n)?/gmi, "")
@@ -49,10 +49,82 @@ function clean(content) {
     .replace(/\n\s*<span>\s*<\/span>\s*/gi, "\n")
     .replace(/<iframe\s+([\s\S]*?)>\s*<\/iframe>/gi, (_match, attributes) => `<iframe ${attributes.replace(/\s+/g, " ").trim()}></iframe>`)
     .replace(/\n{3,}/g, "\n\n");
+  return convertScoreTables(withoutRuntimeMarkup);
+}
+
+function textContent(value) {
+  return value.replace(/<[^>]+>/g, "").replace(/&(?:#\d+|#x[\da-f]+|amp|quot);/gi, "").replace(/\s+/g, " ").trim();
+}
+
+function emoji(value) {
+  const source = value.toLowerCase();
+  if (source.includes("star-struck")) return "🤩";
+  if (source.includes("exploding-head")) return "🤯";
+  if (source.includes("holding-back-tears")) return "🥹";
+  if (source.includes("grinning")) return "😀";
+  if (source.includes("smiling")) return "🙂";
+  if (source.includes("savoring")) return "😋";
+  if (source.includes("grimacing")) return "😬";
+  if (source.includes("drooling")) return "🤤";
+  return "🎮";
+}
+
+function legacyEmoji(value) {
+  const source = value.toLowerCase();
+  if (source.includes("curtindo")) return "😎";
+  if (source.includes("feliz")) return "😀";
+  if (source.includes("anjo")) return "😇";
+  if (source.includes("morto")) return "💀";
+  if (source.includes("caveira")) return "☠️";
+  if (source.includes("oculos")) return "😎";
+  if (source.includes("louco")) return "🤪";
+  if (source.includes("dificil")) return "😤";
+  return "🎮";
+}
+
+function cells(row) {
+  return [...row.matchAll(/<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/gi)].map((match) => match[1]);
+}
+
+function convertScoreTables(content) {
+  return content.replace(/<table>\s*<thead>([\s\S]*?)<\/thead>\s*<tbody>([\s\S]*?)<\/tbody>\s*<tfoot>([\s\S]*?)<\/tfoot>\s*<\/table>/gi, (table, header, body, footer) => {
+    const headerRows = [...header.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/gi)].map((match) => cells(match[1]));
+    const bodyRows = [...body.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/gi)].map((match) => cells(match[1]));
+    const footerRows = [...footer.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/gi)].map((match) => cells(match[1]));
+    const labels = bodyRows[0]?.map(textContent);
+    const faces = bodyRows[1];
+    const values = footerRows[0]?.map(textContent);
+    if (!labels || !faces || !values || labels.length !== values.length || labels.length < 3) return table;
+    const title = textContent(headerRows[0]?.[0] ?? "Avaliação");
+    const subtitle = textContent(headerRows[1]?.[0] ?? "");
+    const items = labels.map((label, index) => `<div class="score-item"><span class="score-label">${label}</span><span class="score-emoji" aria-hidden="true">${emoji(faces[index])}</span><span class="score-value">${values[index]}</span></div>`).join("\n");
+    return `<section class="review-score" aria-label="Avaliação de ${title}"><h2>${title}</h2>${subtitle ? `<p>${subtitle}</p>` : ""}${items}</section>`;
+  });
+}
+
+async function restoreLegacyScore(content) {
+  const invalidScore = /<section class="review-score" aria-label="Avaliação de ">[\s\S]*?<\/section>/i;
+  if (!invalidScore.test(content)) return content;
+  const id = content.match(/^wordpress_id:\s*(\d+)$/m)?.[1];
+  if (!id) return content.replace(invalidScore, "");
+  const response = await fetch(`https://trespordez.com.br/wp-json/wp/v2/posts/${id}`);
+  if (!response.ok) return content.replace(invalidScore, "");
+  const source = (await response.json()).content.rendered;
+  const title = source.match(/'name':\s*"([^"]+)"/)?.[1];
+  const subtitle = source.match(/'description':\s*"([^"]+)"/)?.[1];
+  const keys = [["graphics", "Gráficos"], ["sound", "Som"], ["gameplay", "Gameplay"], ["challenge", "Desafio"], ["general", "Geral"]];
+  const values = keys.map(([key, label]) => {
+    const match = source.match(new RegExp(`'${key}':\\s*\\[expressoes\\.([\\w-]+),\\s*cores\\.[\\w-]+,\\s*(\\d+)`, "i"));
+    return match ? { label, face: legacyEmoji(match[1]), score: `${match[2]}/10` } : null;
+  });
+  if (!title || !subtitle || values.some((value) => !value)) return content.replace(invalidScore, "");
+  const items = values.map((value) => `<div class="score-item"><span class="score-label">${value.label}</span><span class="score-emoji" aria-hidden="true">${value.face}</span><span class="score-value">${value.score}</span></div>`).join("\n");
+  const score = `<section class="review-score" aria-label="Avaliação de ${title}"><h2>${title}</h2><p>${subtitle}</p>${items}</section>`;
+  return content.replace(invalidScore, score);
 }
 
 for (const file of await markdownFiles(join(root, "_posts"))) {
-  let content = clean(await readFile(file, "utf8"));
+  let content = await restoreLegacyScore(clean(await readFile(file, "utf8")));
   const slug = file.split(/[\\/]/).pop().replace(/^\d{4}-\d{2}-\d{2}-/, "").replace(/\.md$/, "");
   if (!/^image:/m.test(content)) {
     const image = await downloadCover(content, slug) ?? await firstImage(join(root, "assets", "images", "posts", slug));

@@ -1,18 +1,23 @@
 - name: Atari 2600
   image: /assets/images/pages/emuladores/001-atari2600-1.png
   url: /emuladores/atari-2600/
+  available: true
 - name: Atari 5200
   image: /assets/images/pages/emuladores/002-atari5200.png
   url: /emuladores/atari-5200/
+  available: true
 - name: Atari 7800
   image: /assets/images/pages/emuladores/003-atari7800.png
   url: /emuladores/atari-7800/
+  available: true
 - name: Atari Jaguar
   image: /assets/images/pages/emuladores/004-jaguar-2.png
   url: /emuladores/atari-jaguar/
+  available: true
 - name: Atari Lynx
   image: /assets/images/pages/emuladores/005-atarilynx.png
   url: /emuladores/atari-lynx/
+  available: true
 - name: Master System
   image: /assets/images/pages/emuladores/006-mastersystem.png
 - name: Mega Drive
@@ -38,6 +43,7 @@
 - name: Super Nintendo
   image: /assets/images/pages/emuladores/017-snes-1.png
   url: /emuladores/nintendo-super-nintendo/
+  available: true
 - name: Nintendo 64
   image: /assets/images/pages/emuladores/018-n64.png
 - name: GameCube

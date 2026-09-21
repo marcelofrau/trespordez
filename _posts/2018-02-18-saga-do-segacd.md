@@ -27,19 +27,19 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2025/01/s
 <p><!-- /wp:paragraph --></p>
 <p>Uma nova unidade de lente foi encomendada, e chegou após algumas semanas. Essas unidades ainda são produzidas devido à compatibilidade com outros leitores de CD, mas a possibilidade de interrupção futura na produção motivou a compra de uma lente extra para reposição.</p>								
 <figure>
-<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd_06.jpg'><img height="150" src="{{ '/assets/images/posts/saga-do-segacd/002-segacd-06-150x150.jpg' | relative_url }}" alt="" aria-describedby="gallery-1-1050" /></a>
+<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd_06.jpg'><img src="{{ '/assets/images/posts/saga-do-segacd/002-segacd-06-150x150.jpg' | relative_url }}" alt="" /></a>
 <figcaption>
 				sega cd ligando com leitor velho
 				</figcaption></figure><figure>
-<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd_07.jpg'><img height="150" src="{{ '/assets/images/posts/saga-do-segacd/003-segacd-07-150x150.jpg' | relative_url }}" alt="" aria-describedby="gallery-1-1051" /></a>
+<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd_07.jpg'><img src="{{ '/assets/images/posts/saga-do-segacd/003-segacd-07-150x150.jpg' | relative_url }}" alt="" /></a>
 <figcaption>
 				tela eterna de loading do cd e nada de carregar
 				</figcaption></figure><figure>
-<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd_02.jpg'><img height="150" src="{{ '/assets/images/posts/saga-do-segacd/004-segacd-02-150x150.jpg' | relative_url }}" alt="" aria-describedby="gallery-1-1046" /></a>
+<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd_02.jpg'><img src="{{ '/assets/images/posts/saga-do-segacd/004-segacd-02-150x150.jpg' | relative_url }}" alt="" /></a>
 <figcaption>
 				lente nova comprada no aliexpress
 				</figcaption></figure><figure>
-<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd_05.jpg'><img height="150" src="{{ '/assets/images/posts/saga-do-segacd/005-segacd-05-150x150.jpg' | relative_url }}" alt="" aria-describedby="gallery-1-1049" /></a>
+<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd_05.jpg'><img src="{{ '/assets/images/posts/saga-do-segacd/005-segacd-05-150x150.jpg' | relative_url }}" alt="" /></a>
 <figcaption>
 				outra foto da lente em cima do segacd desmontado
 				</figcaption></figure>
@@ -50,15 +50,15 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2025/01/s
 <p>Além disso, foi necessário ajustar a resistência da nova lente para que ela correspondesse à da lente original. Após essas alterações e a instalação final, o SegaCD voltou a funcionar perfeitamente.</p>
 <p><!-- /wp:paragraph --></p>								
 <figure>
-<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd_13.jpg'><img height="150" src="{{ '/assets/images/posts/saga-do-segacd/006-segacd-13-150x150.jpg' | relative_url }}" alt="" aria-describedby="gallery-2-1057" /></a>
+<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd_13.jpg'><img src="{{ '/assets/images/posts/saga-do-segacd/006-segacd-13-150x150.jpg' | relative_url }}" alt="" /></a>
 <figcaption>
 				lente nova ainda com a solda protegendo o leitor
 				</figcaption></figure><figure>
-<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd.jpg'><img height="150" src="{{ '/assets/images/posts/saga-do-segacd/007-segacd-150x150.jpg' | relative_url }}" alt="" aria-describedby="gallery-2-1045" /></a>
+<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd.jpg'><img src="{{ '/assets/images/posts/saga-do-segacd/007-segacd-150x150.jpg' | relative_url }}" alt="" /></a>
 <figcaption>
 				solda desfeita para o leitor funcionar
 				</figcaption></figure><figure>
-<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd_04.jpg'><img height="150" src="{{ '/assets/images/posts/saga-do-segacd/008-segacd-04-150x150.jpg' | relative_url }}" alt="" aria-describedby="gallery-2-1048" /></a>
+<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd_04.jpg'><img src="{{ '/assets/images/posts/saga-do-segacd/008-segacd-04-150x150.jpg' | relative_url }}" alt="" /></a>
 <figcaption>
 				leitor montado no segacd
 				</figcaption></figure>
@@ -84,13 +84,13 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2025/01/s
 <p dir="auto"> </p>
 <p dir="auto"> </p>
 <figure>
-<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd_08.jpg'><img height="150" src="{{ '/assets/images/posts/saga-do-segacd/009-segacd-08-150x150.jpg' | relative_url }}" alt="" /></a>
+<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd_08.jpg'><img src="{{ '/assets/images/posts/saga-do-segacd/009-segacd-08-150x150.jpg' | relative_url }}" alt="" /></a>
 			</figure><figure>
-<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd_09.jpg'><img height="150" src="{{ '/assets/images/posts/saga-do-segacd/010-segacd-09-150x150.jpg' | relative_url }}" alt="" /></a>
+<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd_09.jpg'><img src="{{ '/assets/images/posts/saga-do-segacd/010-segacd-09-150x150.jpg' | relative_url }}" alt="" /></a>
 			</figure><figure>
-<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd_12.jpg'><img height="150" src="{{ '/assets/images/posts/saga-do-segacd/011-segacd-12-150x150.jpg' | relative_url }}" alt="" /></a>
+<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd_12.jpg'><img src="{{ '/assets/images/posts/saga-do-segacd/011-segacd-12-150x150.jpg' | relative_url }}" alt="" /></a>
 			</figure><figure>
-<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd_11.jpg'><img height="150" src="{{ '/assets/images/posts/saga-do-segacd/012-segacd-11-150x150.jpg' | relative_url }}" alt="" /></a>
+<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd_11.jpg'><img src="{{ '/assets/images/posts/saga-do-segacd/012-segacd-11-150x150.jpg' | relative_url }}" alt="" /></a>
 			</figure><figure>
-<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd_10.jpg'><img height="150" src="{{ '/assets/images/posts/saga-do-segacd/013-segacd-10-150x150.jpg' | relative_url }}" alt="" /></a>
+<a href='https://trespordez.com.br/wp-content/uploads/2025/01/segacd_10.jpg'><img src="{{ '/assets/images/posts/saga-do-segacd/013-segacd-10-150x150.jpg' | relative_url }}" alt="" /></a>
 			</figure>

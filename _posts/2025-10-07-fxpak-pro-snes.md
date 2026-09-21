@@ -22,7 +22,7 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2025/10/f
 
 <p>Depois de muito acompanhar o projeto do SD2SNES, vi que ele se tornou algo realmente maduro. Com o tempo e várias revisões, o uso de um <strong>FPGA</strong> permitiu “recriar” os circuitos dos chips especiais dos cartuchos, tornando possível rodar 100% da biblioteca do SNES — com exceção de um único jogo: <em>Far East of Eden Zero</em>.</p>
 
-<figure><img height="304" src="{{ '/assets/images/posts/fxpak-pro-snes/001-1-1.png' | relative_url }}" alt="" /></figure>
+<figure><img src="{{ '/assets/images/posts/fxpak-pro-snes/001-1-1.png' | relative_url }}" alt="" /></figure>
 
 <h2>Mas o que é um FPGA?</h2>
 
@@ -60,7 +60,7 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2025/10/f
 
 <p>Outro prazer foi jogar títulos que nunca saíram no Ocidente, como <em>Tales of Phantasia</em> e <em>Star Ocean</em>, em versões traduzidas.<br>Sem contar os milhares de hacks de <em>Super Mario World</em>, com novas fases e modos de jogo. Aqui, o céu é o limite.</p>
 
-<figure><img height="575" src="{{ '/assets/images/posts/fxpak-pro-snes/002-6-1024x575.jpg' | relative_url }}" alt="" /></figure>
+<figure><img src="{{ '/assets/images/posts/fxpak-pro-snes/002-6-1024x575.jpg' | relative_url }}" alt="" /></figure>
 
 <h1>Cheats</h1>
 
@@ -79,13 +79,13 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2025/10/f
 <p>Também é possível jogar ROMs de <strong>Game Boy clássico</strong> diretamente, simulando o <strong>Super Game Boy</strong>.<br>Funciona perfeitamente, inclusive com jogos que têm bordas e cores especiais. É mais um bônus incrível.</p>
 
 <figure>
-<figure><img height="892" src="{{ '/assets/images/posts/fxpak-pro-snes/003-donkey-kong-super-game-boy-070-4144444792.png' | relative_url }}" alt="" /></figure>
+<figure><img src="{{ '/assets/images/posts/fxpak-pro-snes/003-donkey-kong-super-game-boy-070-4144444792.png' | relative_url }}" alt="" /></figure>
 
-<figure><img height="1024" src="{{ '/assets/images/posts/fxpak-pro-snes/004-gb-576x1024.jpg' | relative_url }}" alt="" /></figure>
+<figure><img src="{{ '/assets/images/posts/fxpak-pro-snes/004-gb-576x1024.jpg' | relative_url }}" alt="" /></figure>
 
-<figure><img height="576" src="{{ '/assets/images/posts/fxpak-pro-snes/005-sgbfxpakthumbnail-2303215702-1024x576.jpg' | relative_url }}" alt="" /></figure>
+<figure><img src="{{ '/assets/images/posts/fxpak-pro-snes/005-sgbfxpakthumbnail-2303215702-1024x576.jpg' | relative_url }}" alt="" /></figure>
 
-<figure><img height="600" src="{{ '/assets/images/posts/fxpak-pro-snes/006-super-game-boy-snes.900x-3428360272.jpg' | relative_url }}" alt="" /></figure>
+<figure><img src="{{ '/assets/images/posts/fxpak-pro-snes/006-super-game-boy-snes.900x-3428360272.jpg' | relative_url }}" alt="" /></figure>
 </figure>
 
 <hr/>
@@ -99,13 +99,13 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2025/10/f
 <p>Como mencionei, meu SNES americano apresentava chiados.<br>Após testar o mod USB-C (que desativa a regulação interna e usa uma fonte moderna externa), o problema melhorou, mas não sumiu.<br>O criador do mod sugeriu o recap, e realmente — depois da troca de todos os capacitores, o console ficou perfeito.<br>Foi minha primeira experiência com componentes SMD, mas com as dicas do <strong>Adrian’s Digital Basement</strong> e outros canais, deu tudo certo.</p>
 
 <figure>
-<figure><img height="1024" src="{{ '/assets/images/posts/fxpak-pro-snes/007-recap-576x1024.jpg' | relative_url }}" alt="" /></figure>
+<figure><img src="{{ '/assets/images/posts/fxpak-pro-snes/007-recap-576x1024.jpg' | relative_url }}" alt="" /></figure>
 
-<figure><img height="1024" src="{{ '/assets/images/posts/fxpak-pro-snes/008-2-576x1024.jpg' | relative_url }}" alt="" /></figure>
+<figure><img src="{{ '/assets/images/posts/fxpak-pro-snes/008-2-576x1024.jpg' | relative_url }}" alt="" /></figure>
 
-<figure><img height="1024" src="{{ '/assets/images/posts/fxpak-pro-snes/009-3-576x1024.jpg' | relative_url }}" alt="" /></figure>
+<figure><img src="{{ '/assets/images/posts/fxpak-pro-snes/009-3-576x1024.jpg' | relative_url }}" alt="" /></figure>
 
-<figure><img height="899" src="{{ '/assets/images/posts/fxpak-pro-snes/010-5-edited.jpg' | relative_url }}" alt="" /></figure>
+<figure><img src="{{ '/assets/images/posts/fxpak-pro-snes/010-5-edited.jpg' | relative_url }}" alt="" /></figure>
 </figure>
 
 <hr/>
@@ -131,21 +131,21 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2025/10/f
 <p>É possível personalizar o menu do SD2SNES com temas, cores e imagens.<br>Fiz o meu próprio tema em poucos minutos usando a ferramenta oficial no site:<br>👉 <a href="https://sd2snes.de/themes/" target="_new" rel="noopener">https://sd2snes.de/themes/</a></p>
 
 <figure>
-<figure><img height="448" src="{{ '/assets/images/posts/fxpak-pro-snes/011-sd2snes-metroid-menu-2162771721-1.jpg' | relative_url }}" alt="" /></figure>
+<figure><img src="{{ '/assets/images/posts/fxpak-pro-snes/011-sd2snes-metroid-menu-2162771721-1.jpg' | relative_url }}" alt="" /></figure>
 
-<figure><img height="437" src="{{ '/assets/images/posts/fxpak-pro-snes/012-sd2snes-641638078-1.jpg' | relative_url }}" alt="" /></figure>
+<figure><img src="{{ '/assets/images/posts/fxpak-pro-snes/012-sd2snes-641638078-1.jpg' | relative_url }}" alt="" /></figure>
 
-<figure><img height="448" src="{{ '/assets/images/posts/fxpak-pro-snes/013-sfcsd2snes-1.png' | relative_url }}" alt="" /></figure>
+<figure><img src="{{ '/assets/images/posts/fxpak-pro-snes/013-sfcsd2snes-1.png' | relative_url }}" alt="" /></figure>
 
-<figure><img height="448" src="{{ '/assets/images/posts/fxpak-pro-snes/014-smas.png' | relative_url }}" alt="" /></figure>
+<figure><img src="{{ '/assets/images/posts/fxpak-pro-snes/014-smas.png' | relative_url }}" alt="" /></figure>
 
-<figure><img height="448" src="{{ '/assets/images/posts/fxpak-pro-snes/015-snesclassiceu.png' | relative_url }}" alt="" /></figure>
+<figure><img src="{{ '/assets/images/posts/fxpak-pro-snes/015-snesclassiceu.png' | relative_url }}" alt="" /></figure>
 
-<figure><img height="448" src="{{ '/assets/images/posts/fxpak-pro-snes/016-som.png' | relative_url }}" alt="" /></figure>
+<figure><img src="{{ '/assets/images/posts/fxpak-pro-snes/016-som.png' | relative_url }}" alt="" /></figure>
 
-<figure><img height="448" src="{{ '/assets/images/posts/fxpak-pro-snes/017-stars.png' | relative_url }}" alt="" /></figure>
+<figure><img src="{{ '/assets/images/posts/fxpak-pro-snes/017-stars.png' | relative_url }}" alt="" /></figure>
 
-<figure><img height="448" src="{{ '/assets/images/posts/fxpak-pro-snes/018-us1.png' | relative_url }}" alt="" /></figure>
+<figure><img src="{{ '/assets/images/posts/fxpak-pro-snes/018-us1.png' | relative_url }}" alt="" /></figure>
 </figure>
 
 <h1>Conclusão</h1>

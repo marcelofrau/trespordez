@@ -250,24 +250,24 @@ wordpress_id: 1298
 </tr>
 </tbody>
 </table>
-<img  alt="" crop="" width="304" height="198" src="{{ '/assets/images/pages/atari-2600/001-pitfall-ii-lost-caverns-1984-activision-1-1.png' | relative_url }}" />
-			<img  alt="" crop="" width="304" height="183" src="{{ '/assets/images/pages/atari-2600/002-commando-1988-activision-.png' | relative_url }}" />
-			<img  alt="" crop="" width="320" height="210" src="{{ '/assets/images/pages/atari-2600/003-commando-raid-1982-us-games.png' | relative_url }}" />
-			<img  alt="" crop="" width="288" height="201" src="{{ '/assets/images/pages/atari-2600/004-crash-dive-1983-20th-century-fox.png' | relative_url }}"/>
-			<img  alt="" crop="" width="304" height="195" src="{{ '/assets/images/pages/atari-2600/005-keystone-kapers-1983-activision-1-1.png' | relative_url }}" />
-			<img  alt="" crop="" width="304" height="200" src="{{ '/assets/images/pages/atari-2600/006-battlezone-1983-atari-1-1.png' | relative_url }}" />
-			<img  alt="" crop="" width="320" height="210" src="{{ '/assets/images/pages/atari-2600/007-combat-ii-1982-atari.png' | relative_url }}" />
-			<img  alt="" crop="" width="304" height="201" src="{{ '/assets/images/pages/atari-2600/008-river-raid-1982-activision-1-1.png' | relative_url }}" />
-			<img  alt="" crop="" width="320" height="240" src="{{ '/assets/images/pages/atari-2600/009-dragonstomper-1982-starpath.png' | relative_url }}" />
-			<img  alt="" crop="" width="640" height="480" src="{{ '/assets/images/pages/atari-2600/010-lady-bug-2006-homebrew.png' | relative_url }}" />
-			<img  alt="" crop="" width="288" height="193" src="{{ '/assets/images/pages/atari-2600/011-fantastic-voyage-1982-20th-century-fox-.png' | relative_url }}"/>
-			<img  alt="" crop="" width="640" height="480" src="{{ '/assets/images/pages/atari-2600/012-g.i.-joe-cobra-strike-1983-parker-bros-.png' | relative_url }}" />
-			<img  alt="" crop="" width="280" height="214" src="{{ '/assets/images/pages/atari-2600/013-enduro-1983-activision-1-1.png' | relative_url }}"/>
-			<img  alt="" crop="" width="320" height="200" src="{{ '/assets/images/pages/atari-2600/014-yars-revenge-1981-atari-1-1.png' | relative_url }}" />
-			<img  alt="" crop="" width="304" height="210" src="{{ '/assets/images/pages/atari-2600/015-barnstorming-1982-activision-.png' | relative_url }}" />
-			<img  alt="" crop="" width="304" height="192" src="{{ '/assets/images/pages/atari-2600/016-river-raid-ii-1988-activision.png' | relative_url }}" />
-			<img  alt="" crop="" width="304" height="192" src="{{ '/assets/images/pages/atari-2600/017-crackpots-1983-activision-.png' | relative_url }}" />
-			<img  alt="" crop="" width="320" height="212" src="{{ '/assets/images/pages/atari-2600/018-adventure-1978-atari-1-1.png' | relative_url }}" />
-			<img  alt="" crop="" width="320" height="192" src="{{ '/assets/images/pages/atari-2600/019-asteroids-1981-atari-a3-1.png' | relative_url }}" />
-			<img  alt="" crop="" width="304" height="201" src="{{ '/assets/images/pages/atari-2600/020-pitfall-1982-activision-1-1.png' | relative_url }}" />
-			<img  alt="" crop="" width="320" height="210" src="{{ '/assets/images/pages/atari-2600/021-fire-fighter-1982-imagic.png' | relative_url }}" />
+<img  alt="" height="198" src="{{ '/assets/images/pages/atari-2600/001-pitfall-ii-lost-caverns-1984-activision-1-1.png' | relative_url }}" />
+			<img  alt="" height="183" src="{{ '/assets/images/pages/atari-2600/002-commando-1988-activision-.png' | relative_url }}" />
+			<img  alt="" height="210" src="{{ '/assets/images/pages/atari-2600/003-commando-raid-1982-us-games.png' | relative_url }}" />
+			<img  alt="" height="201" src="{{ '/assets/images/pages/atari-2600/004-crash-dive-1983-20th-century-fox.png' | relative_url }}"/>
+			<img  alt="" height="195" src="{{ '/assets/images/pages/atari-2600/005-keystone-kapers-1983-activision-1-1.png' | relative_url }}" />
+			<img  alt="" height="200" src="{{ '/assets/images/pages/atari-2600/006-battlezone-1983-atari-1-1.png' | relative_url }}" />
+			<img  alt="" height="210" src="{{ '/assets/images/pages/atari-2600/007-combat-ii-1982-atari.png' | relative_url }}" />
+			<img  alt="" height="201" src="{{ '/assets/images/pages/atari-2600/008-river-raid-1982-activision-1-1.png' | relative_url }}" />
+			<img  alt="" height="240" src="{{ '/assets/images/pages/atari-2600/009-dragonstomper-1982-starpath.png' | relative_url }}" />
+			<img  alt="" height="480" src="{{ '/assets/images/pages/atari-2600/010-lady-bug-2006-homebrew.png' | relative_url }}" />
+			<img  alt="" height="193" src="{{ '/assets/images/pages/atari-2600/011-fantastic-voyage-1982-20th-century-fox-.png' | relative_url }}"/>
+			<img  alt="" height="480" src="{{ '/assets/images/pages/atari-2600/012-g.i.-joe-cobra-strike-1983-parker-bros-.png' | relative_url }}" />
+			<img  alt="" height="214" src="{{ '/assets/images/pages/atari-2600/013-enduro-1983-activision-1-1.png' | relative_url }}"/>
+			<img  alt="" height="200" src="{{ '/assets/images/pages/atari-2600/014-yars-revenge-1981-atari-1-1.png' | relative_url }}" />
+			<img  alt="" height="210" src="{{ '/assets/images/pages/atari-2600/015-barnstorming-1982-activision-.png' | relative_url }}" />
+			<img  alt="" height="192" src="{{ '/assets/images/pages/atari-2600/016-river-raid-ii-1988-activision.png' | relative_url }}" />
+			<img  alt="" height="192" src="{{ '/assets/images/pages/atari-2600/017-crackpots-1983-activision-.png' | relative_url }}" />
+			<img  alt="" height="212" src="{{ '/assets/images/pages/atari-2600/018-adventure-1978-atari-1-1.png' | relative_url }}" />
+			<img  alt="" height="192" src="{{ '/assets/images/pages/atari-2600/019-asteroids-1981-atari-a3-1.png' | relative_url }}" />
+			<img  alt="" height="201" src="{{ '/assets/images/pages/atari-2600/020-pitfall-1982-activision-1-1.png' | relative_url }}" />
+			<img  alt="" height="210" src="{{ '/assets/images/pages/atari-2600/021-fire-fighter-1982-imagic.png' | relative_url }}" />

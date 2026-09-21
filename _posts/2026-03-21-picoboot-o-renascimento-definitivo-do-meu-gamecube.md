@@ -55,25 +55,25 @@ Para Quem é Este Mod?</p>
 <li>Pessoas que nunca pegaram em um ferro de solda.</li>
 <li>Puristas extremos que só jogam via disco original e não aceitam modificações internas</li>
 </ul>
-<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/001-pxl-20250924-140121267-result-result-result.jpg' | relative_url }}" />
-			<img  alt="" crop="" width="1280" height="964" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/002-pxl-20250924-205700546-result-result-result.jpg' | relative_url }}" />
-			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/003-pxl-20250924-205706117-result-result-result.jpg' | relative_url }}" />
-			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/004-pxl-20250924-205707822-result-result-result.jpg' | relative_url }}" />
-			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/005-pxl-20250924-211146499-result-result-result.jpg' | relative_url }}" />
-			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/006-pxl-20250924-211148464-result-result-result.jpg' | relative_url }}" />
-			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/007-pxl-20250924-211206241-result-result-result.jpg' | relative_url }}" />
-			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/008-pxl-20250924-213047573-result-result-result.jpg' | relative_url }}" />
-			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/009-pxl-20250924-213049974-result-result-result.jpg' | relative_url }}" />
-			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/010-pxl-20250924-213051547-result-result-result.jpg' | relative_url }}" />
-			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/011-pxl-20250924-213054208-result-result-result.jpg' | relative_url }}" />
-			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/012-pxl-20250924-213204836-result-result-result.jpg' | relative_url }}" />
-			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/013-pxl-20250924-213208039-result-result-result.jpg' | relative_url }}" />
-			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/014-pxl-20250924-213210546-result-result-result.jpg' | relative_url }}" />
-			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/015-pxl-20250924-214635726-result-result-result.jpg' | relative_url }}" />
-			<img  alt="" crop="" width="1280" height="964" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/016-pxl-20250924-215524012-result-result-result.jpg' | relative_url }}" />
-			<img  alt="" crop="" width="1280" height="964" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/017-pxl-20250924-215535903-result-result-result.jpg' | relative_url }}" />
-			<img  alt="" crop="" width="1280" height="964" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/018-pxl-20250924-215539118-result-result-result.jpg' | relative_url }}" />
-			<img  alt="" crop="" width="771" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/019-pxl-20250924-221000204-result-result-result.jpg' | relative_url }}" />
+<img  alt="" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/001-pxl-20250924-140121267-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" height="964" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/002-pxl-20250924-205700546-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/003-pxl-20250924-205706117-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/004-pxl-20250924-205707822-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/005-pxl-20250924-211146499-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/006-pxl-20250924-211148464-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/007-pxl-20250924-211206241-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/008-pxl-20250924-213047573-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/009-pxl-20250924-213049974-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/010-pxl-20250924-213051547-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/011-pxl-20250924-213054208-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/012-pxl-20250924-213204836-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/013-pxl-20250924-213208039-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/014-pxl-20250924-213210546-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/015-pxl-20250924-214635726-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" height="964" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/016-pxl-20250924-215524012-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" height="964" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/017-pxl-20250924-215535903-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" height="964" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/018-pxl-20250924-215539118-result-result-result.jpg' | relative_url }}" />
+			<img  alt="" height="1024" src="{{ '/assets/images/posts/picoboot-o-renascimento-definitivo-do-meu-gamecube/019-pxl-20250924-221000204-result-result-result.jpg' | relative_url }}" />
 <h2>Documentação Oficial (A Bíblia do Mod)</h2>
 <ul>
 <li>GitHub do webhdx (PicoBoot): Este é o repositório oficial onde você encontra os esquemas de fiação atualizados e o firmware mais recente. <a href="https://github.com/webhdx/PicoBoot" title="Acesse aqui o GitHub do PicoBoot">Acesse aqui o GitHub do PicoBoot</a></li>

@@ -31,39 +31,9 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2023/11/p
 <p>Maravilhoso. </p>
 
 <p>Obrigado Sabotage. </p>
-<table>
-<thead>
-<tr>
-<td colspan="5">&#8212;</td>
-</tr>
-<tr>
-<td colspan="5">Genero/Plataforma</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Graficos</td>
-<td>Som</td>
-<td>Gameplay</td>
-<td>Desafio</td>
-<td>Geral</td>
-</tr>
-<tr>
-<td><img src="images/anjo.png" /></td>
-<td><img src="images/morto.png" /></td>
-<td><img src="images/caveira.png" /></td>
-<td><img src="images/feliz-elementar.png" /></td>
-<td><img src="images/louco-feliz-prazer.png" /></td>
-</tr>
-</tbody>
-<tfoot>
-<tr>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-<td>4</td>
-<td>5</td>
-</tr>
-</tfoot>
-</table>
+<section class="review-score" aria-label="Avaliação de Sea of Stars"><h2>Sea of Stars</h2><p>JRPG/Indie</p><div class="score-item"><span class="score-label">Gráficos</span><span class="score-emoji" aria-hidden="true">😎</span><span class="score-value">10/10</span></div>
+<div class="score-item"><span class="score-label">Som</span><span class="score-emoji" aria-hidden="true">🎮</span><span class="score-value">10/10</span></div>
+<div class="score-item"><span class="score-label">Gameplay</span><span class="score-emoji" aria-hidden="true">😀</span><span class="score-value">9/10</span></div>
+<div class="score-item"><span class="score-label">Desafio</span><span class="score-emoji" aria-hidden="true">🎮</span><span class="score-value">8/10</span></div>
+<div class="score-item"><span class="score-label">Geral</span><span class="score-emoji" aria-hidden="true">😎</span><span class="score-value">9/10</span></div></section>
 

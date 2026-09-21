@@ -7,7 +7,7 @@ permalink: /emuladores/
 
 <div class="platform-grid">
 {% for platform in site.data.platforms %}
-  <figure class="platform-card">
+  <figure class="platform-card{% unless platform.available %} is-unavailable{% endunless %}">
     {% if platform.url %}<a href="{{ platform.url | relative_url }}">{% endif %}
     <img src="{{ platform.image | relative_url }}" alt="{{ platform.name }}">
     <figcaption>{{ platform.name }}</figcaption>

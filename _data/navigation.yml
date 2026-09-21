@@ -14,18 +14,18 @@
       url: /category/reviews/
     - label: Pérolas desconhecidas
       url: /category/hiddengems/
-- label: Consoles
-  url: /category/consoles/
+- label: Consoles e Emuladores
   children:
+    - label: Consoles
+      url: /category/consoles/
     - label: Modding
       url: /category/consoles/moddding/
     - label: Retrobright
       url: /category/consoles/retrobright/
     - label: Retrogaming
       url: /category/consoles/retrogaming/
-- label: Emuladores
-  url: /emuladores/
-  children:
+    - label: Emuladores
+      url: /emuladores/
     - label: Novidades na Emulação
       url: /category/emulators/
 - label: Equipe

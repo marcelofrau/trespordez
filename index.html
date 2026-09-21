@@ -3,8 +3,8 @@ layout: default
 title: Três por Dez
 ---
 <section class="post-list">
-  {% for post in paginator.posts %}
-  <article class="post-card{% unless post.image %} without-image{% endunless %}">
+  {% for post in site.posts %}
+  <article class="post-card{% unless post.image %} without-image{% endunless %}{% if forloop.index > 10 %} is-hidden{% endif %}"{% if forloop.index > 10 %} hidden{% endif %}>
     {% if post.image %}<a href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title }}"></a>{% endif %}
     <div>
       <p class="post-taxonomy">{% for category in post.categories %}{% assign item = site.data.categories[category] %}{% if item %}<a class="badge badge-{{ item.color }}" href="{{ item.url | relative_url }}">{{ item.name }}</a>{% else %}<span class="badge badge-neutral">{{ category }}</span>{% endif %}{% endfor %}</p>
@@ -16,4 +16,4 @@ title: Três por Dez
   </article>
   {% endfor %}
 </section>
-{% if paginator.total_pages > 1 %}<nav class="pagination" aria-label="Paginação">{% if paginator.previous_page %}<a href="{{ paginator.previous_page_path | relative_url }}">Mais recentes</a>{% endif %}{% if paginator.next_page %}<a href="{{ paginator.next_page_path | relative_url }}">Mais antigos</a>{% endif %}</nav>{% endif %}
+{% if site.posts.size > 10 %}<div class="load-more"><button type="button" data-load-more>Carregar posts mais antigos</button></div>{% endif %}

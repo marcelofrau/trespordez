@@ -6,38 +6,40 @@ permalink: /softwares/
 <section class="software-hero">
   <p class="eyebrow">Caixa de ferramentas</p>
   <h2>Softwares que salvam tempo</h2>
-  <p>Curadoria para emulação, catálogo, mídia e manutenção do PC. Links apontam para fontes oficiais ou páginas dos projetos.</p>
+  <p>Coisas que a gente usa de verdade no dia a dia de emulação, catálogo e manutenção — começando pelos projetos da casa. Links apontam para fontes oficiais ou páginas dos projetos.</p>
 </section>
 
-<section class="software-section"><h2>Arquivos e mídia</h2><div class="software-grid">
-<a href="https://www.bytesin.com/software/FATsorter/" class="software-card"><strong>FatSorter</strong><span>Utilitário FAT</span><small>Windows</small></a>
-<a href="https://www.mylenium.de/portfolio/fastdelete/" class="software-card"><strong>FastDelete</strong><span>Deleção rápida</span><small>Windows</small></a>
-<a href="https://www.codesector.com/teracopy" class="software-card"><strong>TeraCopy</strong><span>Cópia de arquivos</span><small>Windows · macOS</small></a>
-<a href="https://onecommander.com/" class="software-card"><strong>OneCommander</strong><span>Gerenciador de arquivos</span><small>Windows</small></a>
-<a href="https://peazip.github.io/" class="software-card"><strong>PeaZip</strong><span>Compactador</span><small>Windows · Linux · macOS</small></a>
-<a href="https://www.7-zip.org/" class="software-card"><strong>7-Zip</strong><span>Compactador</span><small>Windows · Linux</small></a>
-<a href="https://www.makemkv.com/" class="software-card"><strong>MakeMKV</strong><span>Extração de discos</span><small>Windows · Linux · macOS</small></a>
-<a href="https://www.freac.org/" class="software-card"><strong>fre:ac</strong><span>Conversor de áudio</span><small>Windows · Linux · macOS</small></a>
+<section class="software-section software-own"><h2><i class="fa-solid fa-house-laptop" aria-hidden="true"></i> Nossos softwares</h2><div class="software-grid">
+<a href="https://github.com/marcelofrau/xb-homebrew-vault" class="software-card"><i class="fa-brands fa-xbox" aria-hidden="true"></i><strong>XB Homebrew Vault</strong><span>Central pra navegar, instalar e cuidar de homebrew no Xbox Dev Mode, do PC ou do celular. Catálogo do Emulation Revival, instalação sem fio e ferramentas de diagnóstico.</span><small>Windows · macOS · Linux · Android · <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> ver projeto</small></a>
+<a href="{{ '/2026/09/xb-homebrew-vault/' | relative_url }}" class="software-card"><i class="fa-solid fa-newspaper" aria-hidden="true"></i><strong>XBVault no Três por Dez</strong><span>O post contando a história do projeto, como começar e o que mudou na v2.0.7. Leitura boa antes de instalar.</span><small>Artigo · <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> ler post</small></a>
+<a href="https://github.com/tres-por-dez/gamelistify/" class="software-card"><i class="fa-solid fa-list-check" aria-hidden="true"></i><strong>Gamelistify</strong><span>Editor de gamelists.xml pra deixar a biblioteca do EmulationStation/RetroPie organizada sem editar XML na mão.</span><small>Windows · Linux · <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> ver projeto</small></a>
 </div></section>
 
-<section class="software-section"><h2>Emulação e cartões</h2><div class="software-grid">
-<a href="https://www.sdcard.org/downloads/formatter/" class="software-card"><strong>SD Card Formatter</strong><span>Formatação de cartões</span><small>Windows · macOS</small></a>
-<a href="http://ridgecrop.co.uk/index.htm?guiformat.htm" class="software-card"><strong>guiformat</strong><span>Formatação FAT32</span><small>Windows</small></a>
-<a href="https://www.mamedev.org/" class="software-card"><strong>chdman</strong><span>Conversão CHD</span><small>Windows · Linux · macOS</small></a>
-<a href="https://dosbox-x.com/" class="software-card"><strong>DOSBox-X</strong><span>Emulação DOS e Win9x</span><small>Windows · Linux · macOS</small></a>
-<a href="https://etcher.balena.io/" class="software-card"><strong>Balena Etcher</strong><span>Gravação de imagens</span><small>Windows · Linux · macOS</small></a>
-<a href="https://www.ventoy.net/" class="software-card"><strong>Ventoy</strong><span>Multi-boot em pendrive</span><small>Windows · Linux</small></a>
+<section class="software-section"><h2><i class="fa-solid fa-folder-open" aria-hidden="true"></i> Arquivos e mídia</h2><div class="software-grid">
+<a href="https://www.bytesin.com/software/FATsorter/" class="software-card"><i class="fa-solid fa-arrow-down-a-z" aria-hidden="true"></i><strong>FatSorter</strong><span>Ordena arquivos em pendrive e cartão FAT. Essencial quando o som do carro ou o console lista tudo fora de ordem.</span><small>Windows</small></a>
+<a href="https://www.mylenium.de/portfolio/fastdelete/" class="software-card"><i class="fa-solid fa-trash-can" aria-hidden="true"></i><strong>FastDelete</strong><span>Apaga pastas gigantescas — tipo coleção de ROMs que você desistiu de organizar — sem o Explorer engasgar.</span><small>Windows</small></a>
+<a href="https://www.codesector.com/teracopy" class="software-card"><i class="fa-solid fa-copy" aria-hidden="true"></i><strong>TeraCopy</strong><span>Copia coleções grandes com verificação e pausa. Bem melhor que arrastar 200 GB e rezar.</span><small>Windows · macOS</small></a>
+<a href="https://onecommander.com/" class="software-card"><i class="fa-solid fa-folder-tree" aria-hidden="true"></i><strong>OneCommander</strong><span>Gerenciador de arquivos com abas e visual moderno. Bom pra comparar pastas de ROMs e BIOS.</span><small>Windows</small></a>
+<a href="https://peazip.github.io/" class="software-card"><i class="fa-solid fa-file-zipper" aria-hidden="true"></i><strong>PeaZip</strong><span>Abre praticamente qualquer compactado que aparece em pack de ROM ou backup antigo.</span><small>Windows · Linux · macOS</small></a>
+<a href="https://www.7-zip.org/" class="software-card"><i class="fa-solid fa-box-archive" aria-hidden="true"></i><strong>7-Zip</strong><span>O clássico. Leve, grátis e resolve 99% dos zips, rars e 7z do dia a dia retrogamer.</span><small>Windows · Linux</small></a>
+<a href="https://www.makemkv.com/" class="software-card"><i class="fa-solid fa-film" aria-hidden="true"></i><strong>MakeMKV</strong><span>Extrai DVD e Blu-ray pra MKV. Útil pra digitalizar a coleção física e preservar.</span><small>Windows · Linux · macOS</small></a>
+<a href="https://www.freac.org/" class="software-card"><i class="fa-solid fa-music" aria-hidden="true"></i><strong>fre:ac</strong><span>Converte CD de áudio e arquivos entre formatos. Bom pra rip de trilha de jogo antigo.</span><small>Windows · Linux · macOS</small></a>
 </div></section>
 
-<section class="software-section"><h2>Diagnóstico e desenvolvimento</h2><div class="software-grid">
-<a href="https://code.visualstudio.com/" class="software-card"><strong>Visual Studio Code</strong><span>Editor de código</span><small>Windows · Linux · macOS</small></a>
-<a href="https://www.cpuid.com/softwares/cpu-z.html" class="software-card"><strong>CPU-Z</strong><span>Diagnóstico de hardware</span><small>Windows</small></a>
-<a href="https://www.techpowerup.com/gpuz/" class="software-card"><strong>GPU-Z</strong><span>Diagnóstico de GPU</span><small>Windows</small></a>
-<a href="https://crystalmark.info/en/software/crystaldiskinfo/" class="software-card"><strong>CrystalDiskInfo</strong><span>Saúde de discos</span><small>Windows</small></a>
-<a href="https://www.hwinfo.com/" class="software-card"><strong>HWiNFO</strong><span>Monitoramento de sistema</span><small>Windows</small></a>
-<a href="https://rufus.ie/" class="software-card"><strong>Rufus</strong><span>Pendrive bootável</span><small>Windows</small></a>
+<section class="software-section"><h2><i class="fa-solid fa-gamepad" aria-hidden="true"></i> Emulação e cartões</h2><div class="software-grid">
+<a href="https://www.sdcard.org/downloads/formatter/" class="software-card"><i class="fa-solid fa-sd-card" aria-hidden="true"></i><strong>SD Card Formatter</strong><span>A forma certa de formatar cartão SD antes de usar em flashcart, Raspberry Pi ou handheld.</span><small>Windows · macOS</small></a>
+<a href="http://ridgecrop.co.uk/index.htm?guiformat.htm" class="software-card"><i class="fa-solid fa-floppy-disk" aria-hidden="true"></i><strong>guiformat</strong><span>Formata em FAT32 aqueles cartões e pendrives grandes que o Windows insiste em não deixar.</span><small>Windows</small></a>
+<a href="https://www.mamedev.org/" class="software-card"><i class="fa-solid fa-compact-disc" aria-hidden="true"></i><strong>chdman</strong><span>Converte ISOs de PS1, Dreamcast e afins pra CHD, que ocupa bem menos espaço. Parte do MAME.</span><small>Windows · Linux · macOS</small></a>
+<a href="https://dosbox-x.com/" class="software-card"><i class="fa-solid fa-terminal" aria-hidden="true"></i><strong>DOSBox-X</strong><span>DOSBox turbinado, com suporte a Win9x. Pra rodar aquele jogo de PC dos anos 90 do jeito certo.</span><small>Windows · Linux · macOS</small></a>
+<a href="https://etcher.balena.io/" class="software-card"><i class="fa-solid fa-download" aria-hidden="true"></i><strong>Balena Etcher</strong><span>Grava imagem em SD e pendrive com três cliques. Padrão pra preparar RetroPie, Batocera e afins.</span><small>Windows · Linux · macOS</small></a>
+<a href="https://www.ventoy.net/" class="software-card"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><strong>Ventoy</strong><span>Transforma um pendrive num menu de ISOs: é só copiar as imagens pra dentro e dar boot.</span><small>Windows · Linux</small></a>
 </div></section>
 
-<section class="software-section software-own"><h2>Feitos por nós</h2><div class="software-grid">
-<a href="https://github.com/tres-por-dez/gamelistify/" class="software-card"><strong>Gamelistify</strong><span>Editor de gamelists.xml</span><small>Windows · Linux</small></a>
+<section class="software-section"><h2><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Diagnóstico e desenvolvimento</h2><div class="software-grid">
+<a href="https://code.visualstudio.com/" class="software-card"><i class="fa-solid fa-code" aria-hidden="true"></i><strong>Visual Studio Code</strong><span>Editor pra mexer em config de emulador, script e — no nosso caso — o próprio site.</span><small>Windows · Linux · macOS</small></a>
+<a href="https://www.cpuid.com/softwares/cpu-z.html" class="software-card"><i class="fa-solid fa-microchip" aria-hidden="true"></i><strong>CPU-Z</strong><span>Mostra o que o processador realmente é e como tá rodando. Bom antes de culpar o emulador pela lentidão.</span><small>Windows</small></a>
+<a href="https://www.techpowerup.com/gpuz/" class="software-card"><i class="fa-solid fa-display" aria-hidden="true"></i><strong>GPU-Z</strong><span>Raio-x da placa de vídeo. Ajuda a entender se o gargalo é GPU ou configuração errada.</span><small>Windows</small></a>
+<a href="https://crystalmark.info/en/software/crystaldiskinfo/" class="software-card"><i class="fa-solid fa-hard-drive" aria-hidden="true"></i><strong>CrystalDiskInfo</strong><span>Lê a saúde do HD/SSD. Se a coleção de ROMs tá num disco morrendo, melhor saber antes.</span><small>Windows</small></a>
+<a href="https://www.hwinfo.com/" class="software-card"><i class="fa-solid fa-gauge-high" aria-hidden="true"></i><strong>HWiNFO</strong><span>Monitora temperatura, consumo e clock em tempo real. Essencial em teste de overclock e emulador pesado.</span><small>Windows</small></a>
+<a href="https://rufus.ie/" class="software-card"><i class="fa-brands fa-usb" aria-hidden="true"></i><strong>Rufus</strong><span>Cria pendrive bootável rapidinho. O parceiro clássico do Ventoy quando precisa de instalação de verdade.</span><small>Windows</small></a>
 </div></section>

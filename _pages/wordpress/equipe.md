@@ -12,7 +12,7 @@ wordpress_id: 966
 
 <section class="team-grid">
   <a class="team-card team-archivist" href="{{ '/equipe/the-archivist/' | relative_url }}">
-    <span class="team-monogram">TA</span>
+    <span class="team-avatar"><img src="{{ '/assets/images/authors/the-archivist.jpg' | relative_url }}" alt="The Archivist"></span>
     <div>
       <p class="eyebrow">Fundador e arquivista</p>
       <h2>The Archivist</h2>
@@ -21,7 +21,7 @@ wordpress_id: 966
     </div>
   </a>
   <a class="team-card team-cezar" href="{{ '/equipe/cezar_aug/' | relative_url }}">
-    <span class="team-monogram">CA</span>
+    <span class="team-avatar"><img src="{{ '/assets/images/authors/cezar-aug.jpg' | relative_url }}" alt="cezar_aug"></span>
     <div>
       <p class="eyebrow">Autor e colaborador</p>
       <h2>cezar_aug</h2>

@@ -5,7 +5,7 @@ wordpress_id: 1386
 ---
 
 <section class="profile-hero">
-  <span class="team-monogram">TA</span>
+  <span class="team-avatar"><img src="{{ '/assets/images/authors/the-archivist.jpg' | relative_url }}" alt="The Archivist"></span>
   <div>
     <p class="eyebrow">The Archivist</p>
     <h2>Curioso por hardware velho, software novo e tudo que existe no meio.</h2>

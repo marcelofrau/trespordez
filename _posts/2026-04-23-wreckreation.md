@@ -5,7 +5,7 @@ title: "Wreckreation"
 date: 2026-04-23 07:41:07 -03:00
 author: the-archivist
 categories: [gameplay, racing, reviews]
-tags: [arcade-racer, racing, sandbox, speed, stunt]
+tags: [arcade-racer, indie, racing, sandbox, speed, stunt]
 description: "Como tinha falado no Art of Rally, eu sempre gostei de jogos de corrida né, jogos como Sega Rally, Top Gear Rally e outros fazem parte da minha história e definem o principio de meu gosto por jogos de carros. Mas um outro lado fora o mundo do Rally também sempre me atraiu, eu sempre [&hellip;]"
 wordpress_id: 1568
 wordpress_url: https://trespordez.com.br/2026/04/wreckreation/

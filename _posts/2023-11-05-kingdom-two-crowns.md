@@ -5,7 +5,7 @@ title: "Kingdom Two Crowns"
 date: 2023-11-05 22:18:47 -03:00
 author: the-archivist
 categories: [reviews]
-tags: []
+tags: [indie, roguelike, strategy, tower-defense]
 description: "Nem sei por onde começar. Este jogo (e suas versões anteriores) tomou tantas horas de meu tempo e cada minuto apesar de parecer um jogo relaxante, vai te levar a louruca montando a melhor estratégia pra poder acabar com os monstros que aparecem pela madrugada. O jogo começa simples, você, em seu cavalo, acha umas [&hellip;]"
 wordpress_id: 302
 wordpress_url: https://trespordez.com.br/2023/11/kingdom-two-crowns/

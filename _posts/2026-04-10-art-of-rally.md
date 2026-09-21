@@ -5,7 +5,7 @@ title: "Art of Rally"
 date: 2026-04-10 12:02:33 -03:00
 author: the-archivist
 categories: [gameplay, reviews]
-tags: []
+tags: [indie, racing, rally, retrogaming]
 description: "Eu sempre gostei muito de carros, desde minha infancia, eu sempre gostava de ver e assistir corridas e principalmente de jogar jogos de corrida. Lembro quando eu consegui meu primeiro PC, alias, algo que na epoca era algo da familia toda, que ficava no escritorio onde todos usavam. Desde aquela epoca lembro de jogar jogos [&hellip;]"
 wordpress_id: 1397
 wordpress_url: https://trespordez.com.br/2026/04/art-of-rally/

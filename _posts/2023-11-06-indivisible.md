@@ -5,7 +5,7 @@ title: "Indivisible"
 date: 2023-11-06 12:47:52 -03:00
 author: the-archivist
 categories: [reviews]
-tags: []
+tags: [action, indie, jrpg, platformer]
 description: "Sem nem esperar nada, eis que eu vejo na lista dos jogos do gamepass (infelizmente não está mais lá), e me deparo com Indivisible. A primeira vista parecia um jogo de plataforma a lá RPG, como Paper Mario, Child of Light e entre outros. Mas nos primeiros minutos do jogo, você pode observar que existe [&hellip;]"
 wordpress_id: 325
 wordpress_url: https://trespordez.com.br/2023/11/indivisible/

@@ -13,12 +13,15 @@ description: "Resumo único para busca e redes sociais."
 image: /assets/images/posts/exemplo/capa.jpg
 image_alt: "Descrição objetiva da imagem"
 image_position: "center 24%"
+image_fit: cover
 ---
 ```
 
 `layout: post` is inherited. Existing URLs render as `/:year/:month/:title/`; `slug` must remain stable after publication.
 
 Cards default to `image_position: "center 24%"` so game logos near top remain visible. Override per post when a cover needs a different crop, for example `center 50%` or `center 70%`.
+
+Use `image_fit: contain` for a horizontal cover whose logo would otherwise be cut by the card aspect ratio. It preserves full artwork with neutral letterboxing.
 
 Use categories for primary editorial sections. Use tags for searchable subjects such as `indie`, `jrpg`, `platformer`, `nintendo`, `snes`, `racing`, studio, franchise, and hardware. Keep tags lowercase ASCII and only add tags supported by article content.
 

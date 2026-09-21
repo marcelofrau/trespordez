@@ -5,7 +5,7 @@ title: "Somerville"
 date: 2023-11-06 12:47:40 -03:00
 author: the-archivist
 categories: [reviews]
-tags: []
+tags: [adventure, horror, indie, sci-fi]
 description: "Mais um jogo de Dino Patti. E era de se esperar uma obra prima depois dos grandiosos e bem avaliados Limbo e Inside. E mais uma vez, ele conseguiu melhorar ainda mais a qualidade de seus jogos. Com o primeiro Limbo sendo o marco e um dos pioneiros no ramo de indie games, e aqui [&hellip;]"
 wordpress_id: 306
 wordpress_url: https://trespordez.com.br/2023/11/somerville/

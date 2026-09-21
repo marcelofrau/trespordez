@@ -1,4 +1,4 @@
-:root { --ink:#212121; --muted:#5c5c5c; --paper:#fff; --page:#eff2f7; --line:#dedede; --accent:#ffcc00; --dark:#0f1012; --wrap:1440px; --border:3px solid #000; --radius:15px; --shadow:7px 7px 0 #000; --head:"Outfit",Arial,sans-serif; --body:"Rubik",Arial,sans-serif; }
+:root { --ink:#212121; --muted:#5c5c5c; --paper:#fff; --page:#eff2f7; --line:#dedede; --accent:#ffcc00; --dark:#0f1012; --wrap:1440px; --border:3px solid #000; --radius:15px; --shadow:7px 7px 0 #000; --head:"Chakra Petch",Arial,sans-serif; --body:"Manrope",Arial,sans-serif; }
 * { box-sizing:border-box; }
 html { background:var(--page); }
 body { margin:0; color:var(--ink); background:var(--page); font:16px/1.78 var(--body); }

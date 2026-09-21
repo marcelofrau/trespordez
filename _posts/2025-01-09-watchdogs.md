@@ -5,7 +5,7 @@ title: "Watchdogs"
 date: 2025-01-09 13:28:58 -03:00
 author: the-archivist
 categories: [reviews]
-tags: []
+tags: [action-adventure, open-world, shooter, ubisoft]
 description: "Minha Experiência com Watch Dogs: Valeu a Pena Esperar? Watch Dogs esteve na minha lista de desejos por anos. Desde o icônico anúncio na E3, o jogo prometia revolucionar os gráficos da época, trazendo um mundo aberto incrivelmente dinâmico e interativo. A ideia de poder hackear quase tudo à sua volta, combinado com reações orgânicas [&hellip;]"
 wordpress_id: 494
 wordpress_url: https://trespordez.com.br/2025/01/watchdogs/
@@ -48,4 +48,3 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2025/01/W
 <div class="score-item" style="--score-color:#03c2c9"><span class="score-label">Overall</span><img class="score-icon" src="{{ '/assets/images/ui/review/star-struck.png' | relative_url }}" alt=""><span class="score-value">9</span></div></section><figure>
 <iframe title="Watch Dogs: Launch Trailer" width="640" height="360" src="https://www.youtube.com/embed/PFko4Kut39s?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </figure>
-

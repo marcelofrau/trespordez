@@ -5,7 +5,7 @@ title: "FXPAK Pro &#8211; SNES"
 date: 2025-10-07 10:26:33 -03:00
 author: the-archivist
 categories: [moddding, retrogaming, reviews]
-tags: []
+tags: [flashcart, hardware, retrogaming, snes]
 description: "Acompanhando o desenvolvimento Depois de anos pesquisando e olhando minha lista de desejos, sempre via o SD2SNES lá, mas nunca tive coragem de desembolsar 100 euros num cartucho de SNES — o tão esperado item que me permitiria jogar 100% dos jogos no meu querido console que tenho desde criança. Lembro quando o SD2SNES ainda [&hellip;]"
 wordpress_id: 1214
 wordpress_url: https://trespordez.com.br/2025/10/fxpak-pro-snes/
@@ -144,4 +144,3 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2025/10/f
 <p>Deixo aqui o link exatamente do que eu comprei e usei pra fazer o review nessa pagina. Se quiserem posso postar videos e entrar mais a fundo e detalhar como funciona e quais recursos estao disponiveis.</p>
 
 <p><a href="https://s.click.aliexpress.com/e/_c3Su8OND" target="_blank" rel="noopener"><img src="//ae01.alicdn.com/kf/Sf471b0c09a214ac8a55e7b5a1ee2f65fK.png_140x140.png">Veja no aliexpress o FX Pak Pro</a></p>
-

@@ -5,7 +5,7 @@ title: "Planet of Lana"
 date: 2024-01-10 11:04:54 -03:00
 author: the-archivist
 categories: [reviews]
-tags: []
+tags: [indie, platformer, puzzle, sci-fi]
 description: "Estava navegando nos jogos disponíveis no gamepass, me deparei com “Planet of Lana”, vi o trailer, achei bonitinho, interessante, botei o jogo pra instalar e sem dar muita importância, deixei o jogo de lado, focando em outros que achava que seriam mais importantes. Passou o tempo, esqueci do jogo, e na semana passada, resolvi experimentar. [&hellip;]"
 wordpress_id: 461
 wordpress_url: https://trespordez.com.br/2024/01/planet-of-lana/

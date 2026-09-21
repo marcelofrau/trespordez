@@ -5,7 +5,7 @@ title: "Sea of Stars"
 date: 2023-11-05 13:37:09 -03:00
 author: the-archivist
 categories: [reviews]
-tags: []
+tags: [indie, jrpg, pixel-art, rpg]
 description: "Esse é um jogo em especial que eu gostaria de compartilhar. Cada minuto jogado vale. Se trata de uma história de aventura, de magia e traição, de amizades e maravilhas e sobretudo sobre heroísmo.Sea of Stars, como os próprios desenvolvedores descreveram, é uma carta de amor aos jogos de JRPG, inspirando-se em clássicos como Chrono [&hellip;]"
 wordpress_id: 84
 wordpress_url: https://trespordez.com.br/2023/11/sea-of-stars/
@@ -36,4 +36,3 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2023/11/p
 <div class="score-item" style="--score-color:#03c2c9"><span class="score-label">Gameplay</span><img class="score-icon" src="{{ '/assets/images/ui/review/grinning.png' | relative_url }}" alt=""><span class="score-value">9/10</span></div>
 <div class="score-item" style="--score-color:#972fff"><span class="score-label">Desafio</span><img class="score-icon" src="{{ '/assets/images/ui/review/slight-smile.png' | relative_url }}" alt=""><span class="score-value">8/10</span></div>
 <div class="score-item" style="--score-color:#03c2c9"><span class="score-label">Geral</span><img class="score-icon" src="{{ '/assets/images/ui/review/sunglasses.png' | relative_url }}" alt=""><span class="score-value">9/10</span></div></section>
-

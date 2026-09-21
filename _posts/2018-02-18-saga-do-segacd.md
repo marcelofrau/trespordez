@@ -5,7 +5,7 @@ title: "Saga do SegaCD"
 date: 2018-02-18 19:17:00 -03:00
 author: the-archivist
 categories: [moddding]
-tags: []
+tags: [hardware, megadrive, retrogaming, sega-cd]
 description: "Com a chegada de uma boa e velha TV de tubo, uma Sony Trinitron de 20 polegadas, surgiu a ideia de reviver uma coleção de jogos antigos. Consoles que estavam guardados foram retirados do sótão e colocados em funcionamento, trazendo de volta a magia dos clássicos. A coleção ganhou um novo impulso com a aquisição [&hellip;]"
 wordpress_id: 1036
 wordpress_url: https://trespordez.com.br/2018/02/saga-do-segacd/

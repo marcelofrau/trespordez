@@ -5,7 +5,7 @@ title: "Nintendo Switch 2 é Anunciado Oficialmente!"
 date: 2025-01-16 20:51:01 -03:00
 author: the-archivist
 categories: [news]
-tags: []
+tags: [console, nintendo, switch, switch-2]
 description: "Gamers, preparem-se! A Nintendo anunciou oficialmente o Nintendo Switch 2, a próxima geração do seu amado console híbrido. Essa revelação tão aguardada traz uma onda de empolgação, com a confirmação de que o novo console será compatível com os jogos do Nintendo Switch 1. Sim, sua biblioteca de clássicos continuará acessível nesse novo e poderoso [&hellip;]"
 wordpress_id: 1061
 wordpress_url: https://trespordez.com.br/2025/01/switch-2-anunciado/

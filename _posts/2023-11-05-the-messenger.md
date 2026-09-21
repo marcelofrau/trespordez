@@ -5,7 +5,7 @@ title: "The Messenger"
 date: 2023-11-05 21:45:43 -03:00
 author: the-archivist
 categories: [reviews]
-tags: []
+tags: [indie, metroidvania, pixel-art, platformer]
 description: "Um jogo ousado e maravilhoso que nos oferece uma experiência nos levando de volta às raízes dos clássicos como Ninja Gaiden, enquanto infunde uma vitalidade moderna que é genuinamente surpreendente. Seu estilo Metroidvania casado com Ninja Gaiden faz o jogo se tornar algo ainda mais nostálgico do que parece. A equipe da Sabotage fez uma [&hellip;]"
 wordpress_id: 253
 wordpress_url: https://trespordez.com.br/2023/11/the-messenger/

@@ -5,7 +5,7 @@ title: "Grim Fandango Remastered"
 date: 2023-11-10 18:36:16 -03:00
 author: the-archivist
 categories: [retrogaming, reviews]
-tags: []
+tags: [adventure, lucasarts, point-and-click, remaster]
 description: "Grim Fandango, uma das ultimas obras da Lucas Arts, na época onde grandes jogos e grandes point&click adventures eram lançados com uma qualidade tremenda como obras primas. Um dos sucessores dos famosos jogos Scumm, usava uma engine pouco mais robusta que Scumm (conhecida como Grim-e) mas infelizmente pouco usada, provavelmente devido aos jogos do gênero [&hellip;]"
 wordpress_id: 386
 wordpress_url: https://trespordez.com.br/2023/11/grim-fandango-remastered/

@@ -19,6 +19,7 @@ Static Jekyll blog. Source repo: `marcelofrau/trespordez`. Production URL: `http
 - Required front matter: `title`, `date`, `author`, `categories`, `tags`, `description`.
 - Add `image` and `image_alt` for a cover when source material exists.
 - Set `image_position` when needed to keep game logo/title visible in card crops; default is `center 24%`.
+- Use `image_fit: contain` for covers where `cover` would cut the title/logo; prefer legible title art over filling the card.
 - Reuse keys from `_data/authors.yml` and `_data/categories.yml`; do not invent taxonomy without user approval.
 - Tags describe subjects: genre, platform, franchise, studio, hardware, or format. Use lowercase ASCII slugs. Add `indie` only when title, review metadata, or article content establishes independent development.
 - Write Portuguese matching existing informal editorial tone. Do not alter author meaning while converting migrated content.

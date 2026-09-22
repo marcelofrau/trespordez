@@ -438,12 +438,14 @@ class Backloggery:
         data = self._post("delete_game.php", payload)
         ok = bool(data.get("status"))
         if ok and verify:
+            start = time.monotonic()
             for _ in range(12):
-                time.sleep(1.25)
+                time.sleep(2.5)
                 if not any(e.game_inst_id == entry.game_inst_id for e in self.get_library()):
                     ok = True
                     break
                 ok = False
+            logging.info("delete verify: %s em %.1fs", entry.game_inst_id, time.monotonic() - start)
         logging.info("delete_game %r (inst %s) -> %s", entry.title, entry.game_inst_id, "ok" if ok else f"ERRO {data}")
         if self.audit:
             self.audit.write("delete", ok, title=entry.title, inst_id=entry.game_inst_id)

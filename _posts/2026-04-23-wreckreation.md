@@ -35,12 +35,23 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2026/04/1
 <p>A trilha sonora, agora mais um pouco nos moldes dos Forza Horizon, vem com o tradicional sistema de diversas radios. Mas eu fiquei impressionado com os generos de musica e radios diferentes que tem aqui, e não sei, mas eu adorei cada uma das radios, tem pra todo gosto e as musicas apesar de de bandas independentes ou pouco conhecidas, sao maravilhosas. Tem Indie Rock, tem Punk Rock, tem Lo-Fi, tem Classica, tem musica brasileira, mano eu achei muito boa e casou perfeitamente no jogo.</p>
 <p>Cada carro vem com uma radio pre-definida, claro que você pode trocar, mas quando você troca de carro, a radio muda fazendo você variar um pouco na trilha sonora. Mano e a trilha de cinema dramatica, ela tras um ar muito divertido.</p>
 
-<div class="post-gallery" aria-label="Galeria de screenshots de Wreckreation">
+<div class="post-gallery" aria-label="Galeria de screenshots de {1}">
 <a href="{{ '/assets/images/posts/wreckreation/01-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 1"><img alt="Gameplay de Wreckreation" src="{{ '/assets/images/posts/wreckreation/01-screenshot.jpg' | relative_url }}" /></a>
 <a href="{{ '/assets/images/posts/wreckreation/02-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 2"><img alt="Gameplay de Wreckreation" src="{{ '/assets/images/posts/wreckreation/02-screenshot.jpg' | relative_url }}" /></a>
 <a href="{{ '/assets/images/posts/wreckreation/03-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 3"><img alt="Gameplay de Wreckreation" src="{{ '/assets/images/posts/wreckreation/03-screenshot.jpg' | relative_url }}" /></a>
 <a href="{{ '/assets/images/posts/wreckreation/04-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 4"><img alt="Gameplay de Wreckreation" src="{{ '/assets/images/posts/wreckreation/04-screenshot.jpg' | relative_url }}" /></a>
 <a href="{{ '/assets/images/posts/wreckreation/05-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 5"><img alt="Gameplay de Wreckreation" src="{{ '/assets/images/posts/wreckreation/05-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/wreckreation/06-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 6"><img alt="Gameplay de Wreckreation" src="{{ '/assets/images/posts/wreckreation/06-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/wreckreation/07-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 7"><img alt="Gameplay de Wreckreation" src="{{ '/assets/images/posts/wreckreation/07-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/wreckreation/08-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 8"><img alt="Gameplay de Wreckreation" src="{{ '/assets/images/posts/wreckreation/08-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/wreckreation/09-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 9"><img alt="Gameplay de Wreckreation" src="{{ '/assets/images/posts/wreckreation/09-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/wreckreation/10-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 10"><img alt="Gameplay de Wreckreation" src="{{ '/assets/images/posts/wreckreation/10-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/wreckreation/11-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 11"><img alt="Gameplay de Wreckreation" src="{{ '/assets/images/posts/wreckreation/11-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/wreckreation/12-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 12"><img alt="Gameplay de Wreckreation" src="{{ '/assets/images/posts/wreckreation/12-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/wreckreation/13-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 13"><img alt="Gameplay de Wreckreation" src="{{ '/assets/images/posts/wreckreation/13-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/wreckreation/14-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 14"><img alt="Gameplay de Wreckreation" src="{{ '/assets/images/posts/wreckreation/14-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/wreckreation/15-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 15"><img alt="Gameplay de Wreckreation" src="{{ '/assets/images/posts/wreckreation/15-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/wreckreation/16-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 16"><img alt="Gameplay de Wreckreation" src="{{ '/assets/images/posts/wreckreation/16-screenshot.jpg' | relative_url }}" /></a>
 </div>
 
 <h2>O que eu gostei</h2>
@@ -61,6 +72,8 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2026/04/1
 <p>Depois desse anuncio, muita gente entrou em contato com eles e eles abriram um Patreon pra segurar um pouco. E parece que deu uma ajuda pra eles se manterem, inclusive tem saído muito update com muitas boas melhorias no jogo.</p>
 <p>Mas ainda assim, não sabemos se eles vão conseguir se manter ou se infelizmente vão acabar fechando as portas e deixando a industria de games de vez. Eu espero que não, tenho a esperança que eles vão continuar, mas nunca se sabe o quão cruel o mundo dos negócios é, principalmente no mundo dos games</p>
 <p>Aqui o link da steam pra quem quer ver e experimentar: <a href="https:///store.steampowered.com/app/1594040/Wreckreation/" title="https:///store.steampowered.com/app/1594040/Wreckreation/">store.steampowered.com/app/1594040/Wreckreation/</a></p>
+<p>IGDB: <a href="https://www.igdb.com/games/wreckreation">https://www.igdb.com/games/wreckreation</a></p>
+
 <section class="review-score" aria-label="Avaliação de Wreckreation"><h2>Wreckreation</h2><p>Arcade Racing</p><div class="score-item" style="--score-color:#972fff"><span class="score-label">Graphics</span><img class="score-icon" src="{{ '/assets/images/ui/review/grinning.png' | relative_url }}" alt=""><span class="score-value">8/10</span></div>
 <div class="score-item" style="--score-color:#ff9719"><span class="score-label">Sound</span><img class="score-icon" src="{{ '/assets/images/ui/review/smiling.png' | relative_url }}" alt=""><span class="score-value">7/10</span></div>
 <div class="score-item" style="--score-color:#972fff"><span class="score-label">Gameplay</span><img class="score-icon" src="{{ '/assets/images/ui/review/exploding.png' | relative_url }}" alt=""><span class="score-value">8/10</span></div>

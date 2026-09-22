@@ -26,6 +26,8 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2025/07/w
 <p>A trilha sonora de então é uma obra-prima à parte. Mantendo-se fiel à temática do retrogaming, ela assume um ritmo rápido que segue você em todas as fases, mantendo-o desafiado e empolgado a cada avanço. A música não é apenas um pano de fundo, mas um elemento vital que aprimora a jogabilidade e a atmosfera.</p>
 
 <p>“The Messenger” é outro título da Sabotage que merece cada minuto jogado. É uma experiência que combina a nostalgia dos clássicos com uma revitalização moderna, proporcionando uma jornada verdadeiramente inesquecível. Recomendo entusiasticamente este jogo a todos que apreciam uma aventura desafiadora e repleta de personalidade.</p>
+<p>IGDB: <a href="https://www.igdb.com/games/the-messenger">https://www.igdb.com/games/the-messenger</a></p>
+
 <section class="review-score" aria-label="Avaliação de The Messenger"><h2>The Messenger</h2><p>Metroidvania/Plataforma/Indie</p><div class="score-item" style="--score-color:#ff9719"><span class="score-label">Gráficos</span><img class="score-icon" src="{{ '/assets/images/ui/review/grinning.png' | relative_url }}" alt=""><span class="score-value">7/10</span></div>
 <div class="score-item" style="--score-color:#03c2c9"><span class="score-label">Som</span><img class="score-icon" src="{{ '/assets/images/ui/review/sunglasses.png' | relative_url }}" alt=""><span class="score-value">9/10</span></div>
 <div class="score-item" style="--score-color:#01ff91"><span class="score-label">Gameplay</span><img class="score-icon" src="{{ '/assets/images/ui/review/slight-smile.png' | relative_url }}" alt=""><span class="score-value">10/10</span></div>

@@ -34,14 +34,26 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2023/11/p
 <p>Maravilhoso. </p>
 
 <p>Obrigado Sabotage. </p>
-<div class="post-gallery" aria-label="Galeria de screenshots de Sea of Stars">
+<div class="post-gallery" aria-label="Galeria de screenshots de {1}">
 <a href="{{ '/assets/images/posts/sea-of-stars/01-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 1"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/01-screenshot.jpg' | relative_url }}" /></a>
 <a href="{{ '/assets/images/posts/sea-of-stars/02-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 2"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/02-screenshot.jpg' | relative_url }}" /></a>
 <a href="{{ '/assets/images/posts/sea-of-stars/03-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 3"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/03-screenshot.jpg' | relative_url }}" /></a>
 <a href="{{ '/assets/images/posts/sea-of-stars/04-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 4"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/04-screenshot.jpg' | relative_url }}" /></a>
 <a href="{{ '/assets/images/posts/sea-of-stars/05-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 5"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/05-screenshot.jpg' | relative_url }}" /></a>
 <a href="{{ '/assets/images/posts/sea-of-stars/06-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 6"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/06-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/sea-of-stars/07-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 7"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/07-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/sea-of-stars/08-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 8"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/08-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/sea-of-stars/09-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 9"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/09-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/sea-of-stars/10-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 10"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/10-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/sea-of-stars/11-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 11"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/11-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/sea-of-stars/12-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 12"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/12-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/sea-of-stars/13-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 13"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/13-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/sea-of-stars/14-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 14"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/14-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/sea-of-stars/15-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 15"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/15-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/sea-of-stars/16-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 16"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/16-screenshot.jpg' | relative_url }}" /></a>
 </div>
+
+<p>IGDB: <a href="https://www.igdb.com/games/sea-of-stars">https://www.igdb.com/games/sea-of-stars</a></p>
 
 <section class="review-score" aria-label="Avaliação de Sea of Stars"><h2>Sea of Stars</h2><p>JRPG/Indie</p><div class="score-item" style="--score-color:#01ff91"><span class="score-label">Gráficos</span><img class="score-icon" src="{{ '/assets/images/ui/review/sunglasses.png' | relative_url }}" alt=""><span class="score-value">10/10</span></div>
 <div class="score-item" style="--score-color:#01ff91"><span class="score-label">Som</span><img class="score-icon" src="{{ '/assets/images/ui/review/slight-smile.png' | relative_url }}" alt=""><span class="score-value">10/10</span></div>

@@ -30,6 +30,8 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2023/11/1
 <p>Não tem como falar mais do jogo sem dar spoilers, pois o mesmo é baseado em exploração, experimentação e conquista de território.</p>
 
 <p>Pixelart feito com maestria, sem contar nos lindos efeitos de parallax. Este jogo é uma obra de arte.</p>
+<p>IGDB: <a href="https://www.igdb.com/games/kingdom-two-crowns">https://www.igdb.com/games/kingdom-two-crowns</a></p>
+
 <section class="review-score" aria-label="Avaliação de Kingdom Two Crowns"><h2>Kingdom Two Crowns</h2><p>Tower Defence/RogueLike/Indie</p><div class="score-item" style="--score-color:#01ff91"><span class="score-label">Gráficos</span><img class="score-icon" src="{{ '/assets/images/ui/review/sunglasses.png' | relative_url }}" alt=""><span class="score-value">10/10</span></div>
 <div class="score-item" style="--score-color:#972fff"><span class="score-label">Som</span><img class="score-icon" src="{{ '/assets/images/ui/review/grinning.png' | relative_url }}" alt=""><span class="score-value">8/10</span></div>
 <div class="score-item" style="--score-color:#01ff91"><span class="score-label">Gameplay</span><img class="score-icon" src="{{ '/assets/images/ui/review/slight-smile.png' | relative_url }}" alt=""><span class="score-value">10/10</span></div>

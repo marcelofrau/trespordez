@@ -101,6 +101,8 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2025/11/a
 </ul>
 <hr />
 <p><strong>Avaliação Final:</strong></p>
+<p>IGDB: <a href="https://www.igdb.com/games/art-of-rally">https://www.igdb.com/games/art-of-rally</a></p>
+
 <section class="review-score" aria-label="Avaliação de Art of Rally"><h2>Art of Rally</h2><p>Corrida / Rally</p><div class="score-item" style="--score-color:#01ff91"><span class="score-label">Graphics</span><img class="score-icon" src="{{ '/assets/images/ui/review/star-struck.png' | relative_url }}" alt=""><span class="score-value">10/10</span></div>
 <div class="score-item" style="--score-color:#01ff91"><span class="score-label">Sound</span><img class="score-icon" src="{{ '/assets/images/ui/review/smiling.png' | relative_url }}" alt=""><span class="score-value">10/10</span></div>
 <div class="score-item" style="--score-color:#03c2c9"><span class="score-label">Gameplay</span><img class="score-icon" src="{{ '/assets/images/ui/review/savoring.png' | relative_url }}" alt=""><span class="score-value">9/10</span></div>

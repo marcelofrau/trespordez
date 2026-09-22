@@ -4,17 +4,7 @@
 
 Escolha por causa de privacidade e custo: grátis, sem cookies, sem banner de consentimento, dados fora do Google. A página já usa embed `data-cf-beacon` em `_layouts/default.html` se `_data/analytics.yml` tiver token.
 
-Ativação no Cloudflare:
-
-1. Dashboard Cloudflare > Analytics & Logs > Web Analytics > Add a site.
-2. Escolha o domínio `trespordez.pages.dev`; copie o token do beacon.
-3. Crie `_data/analytics.yml` (arquivo é ignorado pelo git — token não vai pro repositório):
-
-```yaml
-cloudflare_beacon: "SEU_TOKEN"
-```
-
-4. Commit sem o arquivo; o deploy gera o beacon na página.
+O token do beacon é configuração pública por design — todo visitante enxerga o valor no HTML, então ele pode ir pro repositório sem risco (não é credencial, igual ao ID do giscus). O arquivo `_data/analytics.yml` já está versionado com o token ativo.
 
 ## SEO
 

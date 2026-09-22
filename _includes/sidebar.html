@@ -4,10 +4,6 @@
     <ul>{% for post in site.posts limit: 5 %}<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>{% endfor %}</ul>
   </section>
   <section>
-    <h2>Arquivos</h2>
-    <ul>{% assign months = site.posts | group_by_exp: "post", "post.date | date: '%Y-%m'" %}{% for month in months %}<li><a href="{{ '/arquivo/' | append: month.name | append: '/' | relative_url }}">{{ month.items.first.date | date: '%B %Y' }}</a></li>{% endfor %}</ul>
-  </section>
-  <section>
     <h2>Categorias</h2>
     <ul>{% for category in site.data.categories %}<li><a href="{{ category[1].url | relative_url }}">{{ category[1].name }}</a></li>{% endfor %}</ul>
   </section>

@@ -51,8 +51,8 @@ function toYaml(sections) {
     `# Rode \`node scripts/backlog-export.mjs\` para regenerar a partir do banco.`,
   ];
   for (const section of SECTIONS) {
-    yaml.push(`${section}:`);
-    yaml.push(emitItems(sections[section]));
+    const items = emitItems(sections[section]);
+    yaml.push(items === "[]" ? `${section}: []` : `${section}:\n${items}`);
   }
   yaml.push("");
   return yaml.join("\n");

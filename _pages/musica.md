@@ -51,6 +51,15 @@ permalink: /musica/
 </section>
 
 <section class="music-section">
+  <p class="eyebrow">Turbo do DS</p>
+  <h2><i class="fa-solid fa-gauge-high" aria-hidden="true"></i> Sonic Rush</h2>
+  <p>OST do Sonic Rush no Nintendo DS, composta pelo Hideki Naganuma: house, funk e breakbeat com energia de coins que caem do céu. A trilha que provou que portátil também sabe fazer a sala inteira virar pista de dança.</p>
+  <div class="music-players">
+    <figure class="music-player"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLqzVNX9DhzKHqsPNBqGzPA_2edjLSia_m" title="Sonic Rush OST - playlist no YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><figcaption>A playlist completa da OST do Sonic Rush.<small> Aperta play e o DS vira sistema de som.</small></figcaption></figure>
+  </div>
+</section>
+
+<section class="music-section">
   <p class="eyebrow">Lareira e dungeon</p>
   <h2><i class="fa-solid fa-dragon" aria-hidden="true"></i> RPG e OST</h2>
   <p>Ambience de masmorra, taverna e boas noites de jogatina de RPG. Clássico da madrugada com wind chime e violão.</p>

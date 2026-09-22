@@ -1,5 +1,12 @@
 # Asset Credits
 
+## Grid.js
+
+Grid.js by Ali (afshin) Payandeh, MIT License, used on backlog catalog pages.
+
+- Source and license: https://github.com/grid-js/gridjs (MIT).
+- Published subset: `assets/js/lib/gridjs.umd.js` and `assets/css/lib/mermaid.min.css`.
+
 ## Review Icons
 
 Pixel Art Emoji by ReffPixels (Pablo Rodriguez), used in review score cards.

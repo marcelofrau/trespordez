@@ -41,5 +41,6 @@ wordpress_id: 1386
 <section class="profile-backlog">
   <p class="eyebrow">Backlog pessoal</p>
   <h2>O que ainda está esperando a vez.</h2>
-  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTPVf0fVS0TjLJb_-mBUSvI5FRMMxR6ipTci_75jmZLSwDNRMEFx_rZjViIG_JdZANPVyiVVGq6EAAz/pubhtml?widget=true&headers=false" title="Backlog pessoal do The Archivist"></iframe>
+  <p>Todo o backlog — fila, zerados, abandonados e o catálogo de desejos — agora mora em uma página própria, com busca e filtro por plataforma.</p>
+  <p><a class="backlog-chip" href="{{ '/backlog/the-archivist/' | relative_url }}">Abrir backlog do The Archivist</a></p>
 </section>

@@ -43,5 +43,11 @@
   url: /softwares/
 - label: Música
   url: /musica/
+- label: Backlog
+  children:
+    - label: Backlog
+      url: /backlog/
+    - label: The Archivist
+      url: /backlog/the-archivist/
 - label: Links
   url: /links/

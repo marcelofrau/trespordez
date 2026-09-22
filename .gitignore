@@ -9,3 +9,4 @@ _library/
 _data/giscus.yml
 _data/backlog/*.yml
 logs/
+__pycache__/

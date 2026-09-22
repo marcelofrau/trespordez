@@ -1,0 +1,6 @@
+# Fonte: Google Sheets público — regenerado por scripts/backlog-sync.mjs.
+# Rode `node scripts/backlog-sync.mjs` para atualizar a partir da planilha.
+backlog: []
+played: []
+dropped: []
+catalog: []

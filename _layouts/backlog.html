@@ -6,11 +6,11 @@ layout: default
 {% assign player_data = site.data.backlog[page.player] %}
 
 <article class="page backlog-wrap">
-  <header class="backlog-hero">
+  <header class="backlog-hero backlog-hero--player">
     <section class="profile-hero">
       <span class="team-avatar"><img src="{{ site.data.authors[page.player].avatar | relative_url }}" alt="{{ site.data.authors[page.player].name }}"></span>
       <div>
-        <p class="eyebrow">Backlog pessoal</p>
+        <p class="eyebrow"><i class="fa-solid fa-chess-king"></i> Backlog pessoal</p>
         <h2>O que {{ site.data.authors[page.player].name }} ainda vai jogar.</h2>
         <p>A fila de espera, o que já saiu da lista e o catálogo completo de desejos — organizado por plataforma.</p>
       </div>
@@ -24,50 +24,108 @@ layout: default
   </header>
 
   {% if player_data.backlog.size > 0 %}
-  <section class="backlog-section" id="backlog-fila">
-    <p class="eyebrow">Em espera</p>
-    <h2>Fila de espera</h2>
-    {% assign platforms = player_data.backlog | map: "platform" | uniq | sort %}
-    {% for platform in platforms %}
-      {% assign items = player_data.backlog | where: "platform", platform %}
-      <h3 class="backlog-platform"><span class="badge badge-violet">{{ platform }}</span>&nbsp;<span>{{ items.size }}</span></h3>
-      <table class="backlog-table">
-        <thead>
-          <tr><th>Jogo</th><th class="backlog-emoji-col">Status</th><th class="backlog-emoji-col">Mood</th></tr>
-        </thead>
-        <tbody>
-          {% for item in items %}
-          <tr>
-            <td>{{ item.name }}</td>
-            <td class="backlog-emoji-col">{{ item.status | default: "–" }}</td>
-            <td class="backlog-emoji-col">{{ item.mood | default: "–" }}</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+
+  {% capture featured_cards %}
+    {% assign count = 0 %}
+    {% for item in player_data.backlog %}
+      {% assign has_review = false %}
+      {% assign review_url = nil %}
+      {% for post in site.posts %}
+        {% assign post_title = post.title | downcase | strip %}
+        {% if post_title.size > 3 %}
+          {% assign item_name = item.name | downcase | strip %}
+          {% if item_name contains post_title %}
+            {% assign has_review = true %}
+            {% assign review_url = post.url %}
+            {% break %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      {% if has_review and count < 5 %}
+        {% capture card %}
+          <a class="backlog-feature-card has-review" href="{{ review_url | relative_url }}">
+            <span class="backlog-feature-status">{{ item.status | default: "⚪" }}</span>
+            <div class="backlog-feature-body">
+              <p class="backlog-feature-platform">{{ item.platform }}</p>
+              <h3>{{ item.name }}</h3>
+              <p class="backlog-feature-mood">{% if item.mood %}{{ item.mood }} <span>na fila</span>{% else %}Aguardando a vez{% endif %}</p>
+            </div>
+            <span class="backlog-feature-review"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+        {% endcapture %}
+        {{ card }}
+        {% assign count = count | plus: 1 %}
+      {% endif %}
     {% endfor %}
+    {% if count < 5 %}
+      {% assign shown = "" | split: "," %}
+      {% for item in player_data.backlog %}
+        {% if count >= 5 %}{% break %}{% endif %}
+        {% assign item_name = item.name | downcase | strip %}
+        {% assign is_reviewed = false %}
+        {% for post in site.posts %}
+          {% assign post_title = post.title | downcase | strip %}
+          {% if post_title.size > 3 and item_name contains post_title %}
+            {% assign is_reviewed = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        {% if is_reviewed %}{% else %}
+          {% if shown contains item_name %}{% else %}
+            {% capture card %}
+              <div class="backlog-feature-card">
+                <span class="backlog-feature-status">{{ item.status | default: "⚪" }}</span>
+                <div class="backlog-feature-body">
+                  <p class="backlog-feature-platform">{{ item.platform }}</p>
+                  <h3>{{ item.name }}</h3>
+                  <p class="backlog-feature-mood">{% if item.mood %}{{ item.mood }} <span>na fila</span>{% else %}Aguardando a vez{% endif %}</p>
+                </div>
+              </div>
+            {% endcapture %}
+            {{ card }}
+            {% assign shown = shown | push: item_name %}
+            {% assign count = count | plus: 1 %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endcapture %}
+
+  <section class="backlog-section backlog-feature" id="backlog-fila">
+    <p class="eyebrow"><i class="fa-solid fa-hourglass-half"></i> Em espera</p>
+    <h2>Fila de espera <small>em destaque</small></h2>
+    <div class="backlog-feature-grid">{{ featured_cards }}</div>
+    <div class="backlog-flist-head">
+      <h3><i class="fa-solid fa-list-ul"></i> Lista completa</h3>
+      <p>Pesquise, filtre por plataforma e navegue pela fila inteira.</p>
+    </div>
+    <div class="backlog-catalog-filters" role="group" aria-label="Filtrar fila por plataforma" id="backlog-queue-filters">
+      <button type="button" class="backlog-chip is-active" data-platform="*">Todas</button>
+    </div>
+    <div id="backlog-queue-grid"></div>
+    <script type="application/json" id="backlog-queue-data">{{ player_data.backlog | jsonify }}</script>
   </section>
   {% endif %}
 
   {% if player_data.played.size > 0 %}
   <section class="backlog-section" id="backlog-zerados">
-    <p class="eyebrow">Já saíram da lista</p>
+    <p class="eyebrow"><i class="fa-solid fa-trophy"></i> Já saíram da lista</p>
     <h2>Zerados e avaliados</h2>
     {% assign played = player_data.played | sort: "name" %}
     <table class="backlog-table backlog-ratings">
       <thead>
-        <tr><th>Jogo</th><th>Plataforma</th><th>Graf.</th><th>Som</th><th>Gameplay</th><th>Desafio</th><th>Geral</th><th class="backlog-emoji-col">Humor</th></tr>
+        <tr><th><i class="fa-solid fa-gamepad"></i> Jogo</th><th>Plataforma</th><th>Graf.</th><th>Som</th><th>Gameplay</th><th>Desafio</th><th><i class="fa-solid fa-star"></i> Geral</th><th class="backlog-emoji-col">Humor</th></tr>
       </thead>
       <tbody>
         {% for item in played %}
         <tr>
           <td>{{ item.name }}</td>
           <td>{{ item.platform }}</td>
-          <td class="backlog-score">{{ item.graf | default: "–" }}</td>
-          <td class="backlog-score">{{ item.som | default: "–" }}</td>
-          <td class="backlog-score">{{ item.gameplay | default: "–" }}</td>
-          <td class="backlog-score">{{ item.desafio | default: "–" }}</td>
-          <td class="backlog-score backlog-score-final">{{ item.geral | default: "–" }}</td>
+          <td class="backlog-score"><span class="score-{{ item.graf | default: 'na' | slugify }}">{{ item.graf | default: "–" }}</span></td>
+          <td class="backlog-score"><span class="score-{{ item.som | default: 'na' | slugify }}">{{ item.som | default: "–" }}</span></td>
+          <td class="backlog-score"><span class="score-{{ item.gameplay | default: 'na' | slugify }}">{{ item.gameplay | default: "–" }}</span></td>
+          <td class="backlog-score"><span class="score-{{ item.desafio | default: 'na' | slugify }}">{{ item.desafio | default: "–" }}</span></td>
+          <td class="backlog-score backlog-score-final"><span class="score-{{ item.geral | default: 'na' | slugify }}">{{ item.geral | default: "–" }}</span></td>
           <td class="backlog-emoji-col">{{ item.humor | default: "–" }}</td>
         </tr>
         {% endfor %}
@@ -78,10 +136,10 @@ layout: default
 
   {% if player_data.dropped.size > 0 %}
   <section class="backlog-section" id="backlog-abandonados">
-    <p class="eyebrow">Não rolou</p>
+    <p class="eyebrow"><i class="fa-solid fa-skull"></i> Não rolou</p>
     <h2>Abandonados</h2>
     <table class="backlog-table">
-      <thead><tr><th>Jogo</th><th>Plataforma</th><th>Motivo</th><th class="backlog-emoji-col">Humor</th></tr></thead>
+      <thead><tr><th><i class="fa-solid fa-gamepad"></i> Jogo</th><th>Plataforma</th><th>Motivo</th><th class="backlog-emoji-col">Humor</th></tr></thead>
       <tbody>
         {% for item in player_data.dropped %}
         <tr><td>{{ item.name }}</td><td>{{ item.platform }}</td><td>{{ item.reason | default: "–" }}</td><td class="backlog-emoji-col">{{ item.humor | default: "–" }}</td></tr>
@@ -93,7 +151,7 @@ layout: default
 
   {% if player_data.catalog.size > 0 %}
   <section class="backlog-section backlog-catalog" id="backlog-catalogo">
-    <p class="eyebrow">Coleção de desejos</p>
+    <p class="eyebrow"><i class="fa-solid fa-box-open"></i> Coleção de desejos</p>
     <h2>Catálogo completo</h2>
     <div class="backlog-catalog-filters" role="group" aria-label="Filtrar por plataforma">
       <button type="button" class="backlog-chip is-active" data-platform="*">Todas</button>
@@ -104,7 +162,7 @@ layout: default
   {% endif %}
 </article>
 
-{% if player_data.catalog.size > 0 %}
+{% if player_data.catalog.size > 0 or player_data.backlog.size > 0 %}
 <script src="{{ '/assets/js/lib/gridjs.umd.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 <script src="{{ '/assets/js/backlog.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 {% endif %}

@@ -7,7 +7,7 @@ layout: page
 <section class="backlog-hero">
   <div>
     <p class="eyebrow">Lista de desejos do time</p>
-    <h2>Cada um com a sua fila de espera.</h2>
+    <h2><i class="fa-solid fa-chess-king"></i> Cada um com a sua fila de espera.</h2>
     <p>O que cada jogador da casa ainda quer zerar, e o que já saiu da lista — organizado por plataforma e sempre sendo atualizado.</p>
   </div>
 </section>
@@ -18,7 +18,7 @@ layout: page
     {% assign data = player_key[1] %}
     {% assign author = site.data.authors[key] %}
     <a class="backlog-player-card" href="{{ '/backlog/' | append: key | append: '/' | relative_url }}">
-      <span class="team-avatar"><img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}"></span>
+      <span class="team-avatar"><img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" loading="lazy"></span>
       <div>
         <h3>{{ author.name }}</h3>
         <ul class="backlog-stats">

@@ -2626,10 +2626,10 @@ a:hover {
 
 .backlog-player-card {
     display: grid;
-    grid-template-columns: 76px 1fr;
-    gap: 16px;
+    grid-template-columns: 152px 1fr;
+    gap: 20px;
     align-items: center;
-    padding: 18px;
+    padding: 20px;
     background: #111318;
     border: 2px solid #22262e;
     border-radius: 14px;
@@ -2644,15 +2644,15 @@ a:hover {
 }
 
 .backlog-player-card .team-avatar {
-    width: 76px;
-    height: 76px;
+    width: 152px;
+    height: 152px;
     border-color: #22262e;
-    border-radius: 12px;
-    box-shadow: 3px 3px 0 #000;
+    border-radius: 14px;
+    box-shadow: 4px 4px 0 #000;
 }
 
 .backlog-player-card h3 {
-    margin: 0 0 10px;
+    margin: 0 0 14px;
     color: #fff;
     font: 800 20px var(--head);
 }
@@ -2804,9 +2804,9 @@ a:hover {
 }
 
 .backlog-stats {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -2817,8 +2817,8 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 56px;
-    padding: 7px 9px;
+    min-width: 0;
+    padding: 9px 6px;
     background: #1d212a;
     border: 2px solid #2b3140;
     border-radius: 10px;
@@ -3045,7 +3045,7 @@ a:hover {
 
 @media (max-width: 640px) {
   .backlog-player-card {
-    grid-template-columns: 64px 1fr;
+    grid-template-columns: 114px 1fr;
     gap: 14px;
   }
   .backlog-section,
@@ -3054,8 +3054,11 @@ a:hover {
   }
   .backlog-player-card .team-avatar,
   .backlog-player-card .team-avatar img {
-    width: 64px;
-    height: 64px;
+    width: 114px;
+    height: 114px;
+  }
+  .backlog-stats {
+    grid-template-columns: repeat(2, 1fr);
   }
   .backlog-feature-grid {
     grid-template-columns: 1fr;

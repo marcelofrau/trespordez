@@ -13,10 +13,11 @@ layout: page
 </section>
 
 <section class="backlog-hero-list">
-  {% for player_key in site.data.backlog %}
-    {% assign key = player_key[0] %}
-    {% assign data = player_key[1] %}
-    {% assign author = site.data.authors[key] %}
+  {% for author_pair in site.data.authors %}
+    {% assign key = author_pair[0] %}
+    {% assign author = author_pair[1] %}
+    {% assign data = site.data.backlog[key] %}
+    {% unless data %}{% continue %}{% endunless %}
     <a class="backlog-player-card" href="{{ '/backlog/' | append: key | append: '/' | relative_url }}">
       <span class="team-avatar"><img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" loading="lazy"></span>
       <div>

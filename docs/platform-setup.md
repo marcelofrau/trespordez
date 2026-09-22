@@ -5,7 +5,7 @@
 1. Log into personal Cloudflare account; do not use corporate account.
 2. Workers & Pages > Create application > Pages > Connect to Git.
 3. Select `marcelofrau/trespordez`, branch `main`.
-4. Build command: `node scripts/prepare-giscus.mjs && bundle exec jekyll build`; output directory: `_site`.
+4. Build command: `node scripts/backlog-export.mjs && node scripts/prepare-giscus.mjs && bundle exec jekyll build`; output directory: `_site`. Needs `NODE_VERSION=24` (env var) so `node:sqlite` (used by the backlog export) is available.
 5. Production Giscus variables are set on Cloudflare.
 6. Default Cloudflare Pages domain is `trespordez.pages.dev`; legacy `trespordez.com.br` is being decommissioned (no custom domain).
 7. Test historical URLs, Giscus, RSS, sitemap, media assets and external links before deploying.

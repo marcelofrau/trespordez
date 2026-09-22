@@ -40,7 +40,9 @@ Static Jekyll blog. Source repo: `marcelofrau/trespordez`. Deployed on Cloudflar
 
 ## Validation
 
-- Run `bundle exec jekyll build` when Ruby is available.
+- Backlog source of truth is `data/trespordez.sqlite` (`scripts/backlog-lib.mjs` schema). YML players under `_data/backlog/*.yml` are build artifacts — regenerate with `node scripts/backlog-export.mjs`, never edit by hand.
+- Sync from Google Sheets writes to the sqlite: `node scripts/backlog-sync.mjs` (pull + export).
+- Run `node scripts/backlog-export.mjs` (sqlite → `_data/backlog/*.yml`) then `bundle exec jekyll build` when Ruby is available.
 - Run `node scripts/validate-site.mjs` before publishing.
 - CI is required green before deployment. Fix failures; do not bypass checks.
 

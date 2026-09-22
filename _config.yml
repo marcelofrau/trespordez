@@ -44,6 +44,7 @@ exclude:
   - vendor
   - scripts
   - docs
+  - data
   - .agents
   - _config.qa.yml
   - AGENTS.md

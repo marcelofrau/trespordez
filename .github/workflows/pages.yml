@@ -24,6 +24,8 @@ jobs:
           node-version: 24
       - name: Validate content
         run: node scripts/validate-site.mjs
+      - name: Export sqlite data
+        run: node scripts/backlog-export.mjs
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3"

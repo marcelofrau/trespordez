@@ -7,6 +7,7 @@ author: the-archivist
 categories: [moddding]
 tags: [hardware, megadrive, retrogaming, sega-cd]
 description: "Com a chegada de uma boa e velha TV de tubo, uma Sony Trinitron de 20 polegadas, surgiu a ideia de reviver uma coleção de jogos antigos. Consoles que estavam guardados foram retirados do sótão e colocados em funcionamento, trazendo de volta a magia dos clássicos. A coleção ganhou um novo impulso com a aquisição [&hellip;]"
+excerpt: "Com a chegada de uma TV de tubo Sony Trinitron, consoles guardados no sótão voltaram à vida — e junto veio o desafio de fazer meu SegaCD rodar Lunar: The Silver Star de novo. Uma saga de reparo, lente nova e paciência."
 wordpress_id: 1036
 wordpress_url: https://trespordez.com.br/2018/02/saga-do-segacd/
 wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2025/01/segacd1.webp

@@ -81,6 +81,28 @@ export function replaceSection(db, playerKey, section, items) {
   return items.length;
 }
 
+export function appendItems(db, playerKey, section, items) {
+  const { m } = db
+    .prepare("SELECT COALESCE(MAX(pos), -1) AS m FROM backlog_items WHERE player_key=? AND section=?")
+    .get(playerKey, section);
+  const ins = db.prepare(
+    `INSERT INTO backlog_items
+       (player_key, section, pos, name, platform, status, mood, humor, reason,
+        graf, som, gameplay, desafio, geral, post_slug)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+  );
+  items.forEach((item, i) => {
+    ins.run(
+      playerKey, section, m + 1 + i,
+      item.name ?? null, item.platform ?? null, item.status ?? null,
+      item.mood ?? null, item.humor ?? null, item.reason ?? null,
+      item.graf ?? null, item.som ?? null, item.gameplay ?? null,
+      item.desafio ?? null, item.geral ?? null, item.post_slug ?? null
+    );
+  });
+  return items.length;
+}
+
 export function countItems(db, playerKey, section) {
   const row = db
     .prepare("SELECT COUNT(*) AS n FROM backlog_items WHERE player_key=? AND section=?")

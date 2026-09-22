@@ -108,29 +108,14 @@ layout: default
   {% endif %}
 
   {% if player_data.played.size > 0 %}
-  <section class="backlog-section" id="backlog-zerados">
+  <section class="backlog-section backlog-ratings" id="backlog-zerados">
     <p class="eyebrow"><i class="fa-solid fa-trophy"></i> Já saíram da lista</p>
     <h2>Zerados e avaliados</h2>
-    {% assign played = player_data.played | sort: "name" %}
-    <table class="backlog-table backlog-ratings">
-      <thead>
-        <tr><th><i class="fa-solid fa-gamepad"></i> Jogo</th><th>Plataforma</th><th>Graf.</th><th>Som</th><th>Gameplay</th><th>Desafio</th><th><i class="fa-solid fa-star"></i> Geral</th><th class="backlog-emoji-col">Humor</th></tr>
-      </thead>
-      <tbody>
-        {% for item in played %}
-        <tr>
-          <td>{{ item.name }}</td>
-          <td>{{ item.platform }}</td>
-          <td class="backlog-score"><span class="score-{{ item.graf | default: 'na' | slugify }}">{{ item.graf | default: "–" }}</span></td>
-          <td class="backlog-score"><span class="score-{{ item.som | default: 'na' | slugify }}">{{ item.som | default: "–" }}</span></td>
-          <td class="backlog-score"><span class="score-{{ item.gameplay | default: 'na' | slugify }}">{{ item.gameplay | default: "–" }}</span></td>
-          <td class="backlog-score"><span class="score-{{ item.desafio | default: 'na' | slugify }}">{{ item.desafio | default: "–" }}</span></td>
-          <td class="backlog-score backlog-score-final"><span class="score-{{ item.geral | default: 'na' | slugify }}">{{ item.geral | default: "–" }}</span></td>
-          <td class="backlog-emoji-col">{{ item.humor | default: "–" }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+    <div class="backlog-catalog-filters" role="group" aria-label="Filtrar zerados por plataforma" id="backlog-played-filters">
+      <button type="button" class="backlog-chip is-active" data-platform="*">Todas</button>
+    </div>
+    <div id="backlog-played-grid"></div>
+    <script type="application/json" id="backlog-played-data">{{ player_data.played | jsonify }}</script>
   </section>
   {% endif %}
 

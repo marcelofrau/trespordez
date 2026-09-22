@@ -2639,7 +2639,7 @@ a:hover {
 
 .backlog-player-card:hover {
     transform: translate(-3px, -3px);
-    border-color: #ffde59;
+    border-color: #7fd4e7;
     box-shadow: 8px 8px 0 #000;
 }
 
@@ -2801,6 +2801,22 @@ a:hover {
     margin: 0;
     color: #888;
     font-size: 13px;
+}
+
+.backlog-player-card .backlog-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.backlog-player-card .backlog-stat {
+    padding: 8px 6px;
+}
+
+.backlog-player-card .backlog-stat strong {
+    font-size: 15px;
+}
+
+.backlog-player-card .backlog-stat span {
+    font-size: 9px;
 }
 
 .backlog-stats {
@@ -3028,19 +3044,156 @@ a:hover {
     box-shadow: 3px 3px 0 #000;
 }
 
-#backlog-catalog-grid {
+#backlog-catalog-grid,
+#backlog-played-grid,
+#backlog-queue-grid {
     overflow-x: auto;
 }
 
 .backlog-grid-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     font-size: 14px;
 }
 
 .gridjs-wrapper {
-    border: 2px solid #000 !important;
-    border-radius: var(--radius) !important;
+    border: var(--border) !important;
+    border-radius: 12px !important;
+    box-shadow: 4px 4px 0 #000;
+    overflow: hidden;
+}
+
+.backlog-grid-table thead th {
+    background: #1b1b1b !important;
+    color: var(--accent) !important;
+    font: 700 12px var(--head) !important;
+    letter-spacing: .04em !important;
+    text-transform: uppercase !important;
+    border: 0 !important;
+    border-right: 1px solid #ddd !important;
+    padding: 10px 14px !important;
+    white-space: nowrap;
+}
+
+.backlog-grid-table thead th:last-child {
+    border-right: 0 !important;
+}
+
+.backlog-grid-table tbody td {
+    padding: 9px 14px !important;
+    border: 0 !important;
+    border-right: 1px solid #ddd !important;
+    border-bottom: 1px solid #eee !important;
+    vertical-align: middle;
+    background: #fff !important;
+}
+
+.backlog-grid-table tbody td:last-child {
+    border-right: 0 !important;
+}
+
+.backlog-grid-table tbody tr:nth-child(even) td {
+    background: #f3f3f3 !important;
+}
+
+.backlog-grid-table tbody tr:hover td {
+    background: rgba(127, 212, 231, .15) !important;
+}
+
+.backlog-grid-table tbody tr:last-child td {
+    border-bottom: 0 !important;
+}
+
+.backlog-grid-name {
+    font: 800 15px var(--head) !important;
+}
+
+.backlog-grid-table .backlog-score span,
+.backlog-grid-table .backlog-score-final-outer span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    padding: 3px 7px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    background: #efefef;
+    color: #000;
+    font: 800 14px var(--head) !important;
+    text-shadow: none;
+}
+
+.backlog-grid-table .backlog-score-final-outer span {
+    box-shadow: 3px 3px 0 #000;
+}
+
+.backlog-grid-table .backlog-score-empty {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    padding: 3px 7px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    background: #efefef;
+    color: #000;
+    font: 800 14px var(--head) !important;
+    color: #999;
+}
+
+.gridjs-pagination {
+    padding: 10px 14px;
+    border: var(--border);
+    border-top: 0;
+    border-radius: 0 0 12px 12px;
+    background: #fff;
+    font-family: var(--head);
+}
+
+.gridjs-pagination .gridjs-pages {
+    justify-content: flex-end;
+}
+
+.gridjs-pagination .gridjs-pages button {
+    min-width: 30px;
+    padding: 5px 9px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ink);
+    font: 700 13px var(--head);
+    cursor: pointer;
+}
+
+.gridjs-pagination .gridjs-pages button:hover,
+.gridjs-pagination .gridjs-pages button.gridjs-currentPage {
+    background: var(--accent);
+    box-shadow: 2px 2px 0 #000;
+}
+
+.gridjs-footer {
+    border: 0;
+    padding: 0;
+}
+
+.gridjs-search input {
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 7px 12px;
+    font: 600 13px var(--body);
+}
+
+.gridjs-head {
+    padding: 10px 14px 0;
+    border: var(--border);
+    border-bottom: 0;
+    border-radius: 12px 12px 0 0;
+    background: #fff;
+}
+
+#backlog-played-grid .gridjs-wrapper {
+    margin-top: 4px;
 }
 
 @media (max-width: 640px) {

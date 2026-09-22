@@ -2,22 +2,51 @@
   if (typeof globalThis.gridjs === "undefined") return;
   const { h } = gridjs;
 
-  const buildGrid = (gridId, dataId, filterSelector) => {
+  const scoreCell = (value) => {
+    const v = Number(value);
+    const valid = value != null && value !== "" && !Number.isNaN(v);
+    return h(
+      "span",
+      { className: valid ? `score-${v}` : "backlog-score-empty" },
+      valid ? String(value) : "–"
+    );
+  };
+
+  const playedColumns = [
+    { name: "Jogo", formatter: (c) => h("strong", { className: "backlog-grid-name" }, c) },
+    "Plataforma",
+    { name: "Graf.", width: "56px", className: "backlog-score", formatter: scoreCell },
+    { name: "Som", width: "56px", className: "backlog-score", formatter: scoreCell },
+    { name: "Gameplay", width: "56px", className: "backlog-score", formatter: scoreCell },
+    { name: "Desafio", width: "56px", className: "backlog-score", formatter: scoreCell },
+    { name: "Geral", width: "64px", className: "backlog-score", formatter: (c) => h("span", { className: "backlog-score-final-outer" }, scoreCell(c)) },
+    { name: "Humor", width: "70px", className: "backlog-emoji-col", formatter: (c) => c || "–" },
+  ];
+
+  const simpleColumns = [
+    { name: "Jogo", formatter: (c) => h("strong", { className: "backlog-grid-name" }, c) },
+    "Plataforma",
+    { name: "Status", className: "backlog-emoji-col", formatter: (c) => c || "–" },
+    { name: "Humor", className: "backlog-emoji-col", formatter: (c) => c || "–" },
+  ];
+
+  const buildGrid = (gridId, dataId, filterSelector, columns, isPlayed) => {
     const root = document.getElementById(gridId);
     const dataEl = document.getElementById(dataId);
     if (!root || !dataEl) return;
 
     const raw = JSON.parse(dataEl.textContent || "[]");
-    const rows = raw.map((item) => [
-      item.name,
-      item.platform || "—",
-      item.status || "—",
-      item.humor || "—",
-    ]);
+    const hash = gridId.replace("backlog-", "").replace("-grid", "");
+
+    const makeRows = (items) => items.map((item) =>
+      isPlayed
+        ? [item.name, item.platform || "—", item.graf, item.som, item.gameplay, item.desafio, item.geral, item.humor || "—"]
+        : [item.name, item.platform || "—", item.status || "—", item.humor || "—"]
+    );
 
     const grid = new gridjs.Grid({
-      columns: ["Jogo", "Plataforma", "Status", "Humor"],
-      data: rows,
+      columns,
+      data: makeRows(raw),
       sort: true,
       search: {
         enabled: true,
@@ -25,15 +54,10 @@
       },
       pagination: {
         enabled: true,
-        limit: 15,
+        limit: 20,
         summary: false,
       },
       autoWidth: false,
-      className: { table: "backlog-grid-table" },
-      style: {
-        th: { background: "var(--accent)", border: "2px solid #000", "font-family": "var(--head)" },
-        td: { border: "1px solid #000" },
-      },
     });
 
     const filters = document.querySelector(filterSelector);
@@ -49,8 +73,9 @@
       }
 
       const render = (filter) => {
-        const data = filter === "*" || filter == null ? rows : rows.filter((r) => r[1] === filter);
-        grid.updateConfig({ data }).forceRender();
+        const data = filter === "*" || filter == null ? raw : raw.filter((r) => r.platform === filter);
+        grid.updateConfig({ data: makeRows(data) });
+        grid.forceRender();
       };
 
       filters.addEventListener("click", (event) => {
@@ -63,8 +88,11 @@
     }
 
     grid.render(root);
+    window.__backlogGrids = window.__backlogGrids || {};
+    window.__backlogGrids[hash] = grid;
   };
 
-  buildGrid("backlog-queue-grid", "backlog-queue-data", "#backlog-queue-filters");
-  buildGrid("backlog-catalog-grid", "backlog-catalog-data", ".backlog-section.backlog-catalog .backlog-catalog-filters");
+  buildGrid("backlog-queue-grid", "backlog-queue-data", "#backlog-queue-filters", simpleColumns, false);
+  buildGrid("backlog-played-grid", "backlog-played-data", "#backlog-played-filters", playedColumns, true);
+  buildGrid("backlog-catalog-grid", "backlog-catalog-data", ".backlog-section.backlog-catalog .backlog-catalog-filters", simpleColumns, false);
 })();

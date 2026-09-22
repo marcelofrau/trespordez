@@ -29,6 +29,23 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2023/11/1
 <p>A quantidade de personagens que se juntam na sua party é fantástica e a ideia de como eles entram na sua mente é muito criativa e original.</p>
 
 <p>De toda forma, eu recomendo jogar pois a ação do jogo é sensacional e o passo rápido te deixa  bem acordado e ágil pra poder enfrentar os desafios do jogo.</p>
+<div class="post-gallery" aria-label="Galeria de screenshots de Indivisible">
+<a href="{{{{ '/assets/images/posts/indivisible/01-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 1"><img alt="Indivisible" src="{{{{ '/assets/images/posts/indivisible/01-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/indivisible/02-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 2"><img alt="Indivisible" src="{{{{ '/assets/images/posts/indivisible/02-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/indivisible/03-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 3"><img alt="Indivisible" src="{{{{ '/assets/images/posts/indivisible/03-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/indivisible/04-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 4"><img alt="Indivisible" src="{{{{ '/assets/images/posts/indivisible/04-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/indivisible/05-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 5"><img alt="Indivisible" src="{{{{ '/assets/images/posts/indivisible/05-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/indivisible/06-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 6"><img alt="Indivisible" src="{{{{ '/assets/images/posts/indivisible/06-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/indivisible/07-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 7"><img alt="Indivisible" src="{{{{ '/assets/images/posts/indivisible/07-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/indivisible/08-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 8"><img alt="Indivisible" src="{{{{ '/assets/images/posts/indivisible/08-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/indivisible/09-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 9"><img alt="Indivisible" src="{{{{ '/assets/images/posts/indivisible/09-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/indivisible/10-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 10"><img alt="Indivisible" src="{{{{ '/assets/images/posts/indivisible/10-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/indivisible/11-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 11"><img alt="Indivisible" src="{{{{ '/assets/images/posts/indivisible/11-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/indivisible/12-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 12"><img alt="Indivisible" src="{{{{ '/assets/images/posts/indivisible/12-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/indivisible/13-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 13"><img alt="Indivisible" src="{{{{ '/assets/images/posts/indivisible/13-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/indivisible/14-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 14"><img alt="Indivisible" src="{{{{ '/assets/images/posts/indivisible/14-screenshot.jpg' | relative_url }}}}" /></a>
+</div>
+
 <p>IGDB: <a href="https://www.igdb.com/games/indivisible">https://www.igdb.com/games/indivisible</a></p>
 
 <section class="review-score" aria-label="Avaliação de Indivisible"><h2>Indivisible</h2><p>Plataforma JRPG/Ação/Indie</p><div class="score-item" style="--score-color:#972fff"><span class="score-label">Gráficos</span><img class="score-icon" src="{{ '/assets/images/ui/review/slight-smile.png' | relative_url }}" alt=""><span class="score-value">8/10</span></div>

@@ -29,6 +29,14 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2023/11/s
 <p>Gráficos estonteantes e lindos de se ver, mantendo a característica low-poly detalhada e impecável. </p>
 
 <p>Do começo ao fim, suspense e curiosidade é exposto ao jogador da melhor maneira possível. A atmosfera, o ambiente e como a história é contada está lindo de ver e gostosérrimo de jogar. </p>
+<div class="post-gallery" aria-label="Galeria de screenshots de Somerville">
+<a href="{{{{ '/assets/images/posts/somerville/01-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 1"><img alt="Somerville" src="{{{{ '/assets/images/posts/somerville/01-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/somerville/02-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 2"><img alt="Somerville" src="{{{{ '/assets/images/posts/somerville/02-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/somerville/03-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 3"><img alt="Somerville" src="{{{{ '/assets/images/posts/somerville/03-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/somerville/04-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 4"><img alt="Somerville" src="{{{{ '/assets/images/posts/somerville/04-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/somerville/05-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 5"><img alt="Somerville" src="{{{{ '/assets/images/posts/somerville/05-screenshot.jpg' | relative_url }}}}" /></a>
+</div>
+
 <p>IGDB: <a href="https://www.igdb.com/games/somerville">https://www.igdb.com/games/somerville</a></p>
 
 <section class="review-score" aria-label="Avaliação de Somerville"><h2>Somerville</h2><p>Adventure/Horror/Indie</p><div class="score-item" style="--score-color:#03c2c9"><span class="score-label">Gráficos</span><img class="score-icon" src="{{ '/assets/images/ui/review/sunglasses.png' | relative_url }}" alt=""><span class="score-value">9/10</span></div>

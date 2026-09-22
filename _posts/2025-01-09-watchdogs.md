@@ -40,6 +40,19 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2025/01/W
 
 <p>Watch Dogs é, sem dúvida, uma experiência que vale a pena. Mesmo jogando anos após o lançamento, senti o impacto de tudo o que ele tinha a oferecer. A imersão, os controles e a narrativa se destacam como os grandes pontos fortes. Se você ainda não jogou, recomendo dar uma chance. É um jogo que mostra como a inovação pode criar experiências memoráveis — e que, mesmo com o passar do tempo, ainda mantém seu charme.</p>
 
+<div class="post-gallery" aria-label="Galeria de screenshots de Watch Dogs">
+<a href="{{{{ '/assets/images/posts/watchdogs/01-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 1"><img alt="Watch Dogs" src="{{{{ '/assets/images/posts/watchdogs/01-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/watchdogs/02-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 2"><img alt="Watch Dogs" src="{{{{ '/assets/images/posts/watchdogs/02-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/watchdogs/03-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 3"><img alt="Watch Dogs" src="{{{{ '/assets/images/posts/watchdogs/03-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/watchdogs/04-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 4"><img alt="Watch Dogs" src="{{{{ '/assets/images/posts/watchdogs/04-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/watchdogs/05-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 5"><img alt="Watch Dogs" src="{{{{ '/assets/images/posts/watchdogs/05-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/watchdogs/06-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 6"><img alt="Watch Dogs" src="{{{{ '/assets/images/posts/watchdogs/06-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/watchdogs/07-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 7"><img alt="Watch Dogs" src="{{{{ '/assets/images/posts/watchdogs/07-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/watchdogs/08-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 8"><img alt="Watch Dogs" src="{{{{ '/assets/images/posts/watchdogs/08-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/watchdogs/09-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 9"><img alt="Watch Dogs" src="{{{{ '/assets/images/posts/watchdogs/09-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/watchdogs/10-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 10"><img alt="Watch Dogs" src="{{{{ '/assets/images/posts/watchdogs/10-screenshot.jpg' | relative_url }}}}" /></a>
+</div>
+
 <p><a href="https://www.igdb.com/games/watch-dogs">https://www.igdb.com/games/watch-dogs</a></p>
 <section class="review-score" aria-label="Avaliação de Watchdogs"><h2>Watchdogs</h2><p>Shooter/Adventure/Open World</p><div class="score-item" style="--score-color:#01ff91"><span class="score-label">Graphics</span><img class="score-icon" src="{{ '/assets/images/ui/review/star-struck.png' | relative_url }}" alt=""><span class="score-value">10</span></div>
 <div class="score-item" style="--score-color:#fa4946"><span class="score-label">Sound</span><img class="score-icon" src="{{ '/assets/images/ui/review/smiling.png' | relative_url }}" alt=""><span class="score-value">6</span></div>

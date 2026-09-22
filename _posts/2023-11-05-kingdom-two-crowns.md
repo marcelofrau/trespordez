@@ -31,6 +31,15 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2023/11/1
 <p>Não tem como falar mais do jogo sem dar spoilers, pois o mesmo é baseado em exploração, experimentação e conquista de território.</p>
 
 <p>Pixelart feito com maestria, sem contar nos lindos efeitos de parallax. Este jogo é uma obra de arte.</p>
+<div class="post-gallery" aria-label="Galeria de screenshots de Kingdom Two Crowns">
+<a href="{{{{ '/assets/images/posts/kingdom-two-crowns/01-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 1"><img alt="Kingdom Two Crowns" src="{{{{ '/assets/images/posts/kingdom-two-crowns/01-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/kingdom-two-crowns/02-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 2"><img alt="Kingdom Two Crowns" src="{{{{ '/assets/images/posts/kingdom-two-crowns/02-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/kingdom-two-crowns/03-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 3"><img alt="Kingdom Two Crowns" src="{{{{ '/assets/images/posts/kingdom-two-crowns/03-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/kingdom-two-crowns/04-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 4"><img alt="Kingdom Two Crowns" src="{{{{ '/assets/images/posts/kingdom-two-crowns/04-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/kingdom-two-crowns/05-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 5"><img alt="Kingdom Two Crowns" src="{{{{ '/assets/images/posts/kingdom-two-crowns/05-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{{{ '/assets/images/posts/kingdom-two-crowns/06-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 6"><img alt="Kingdom Two Crowns" src="{{{{ '/assets/images/posts/kingdom-two-crowns/06-screenshot.jpg' | relative_url }}}}" /></a>
+</div>
+
 <p>IGDB: <a href="https://www.igdb.com/games/kingdom-two-crowns">https://www.igdb.com/games/kingdom-two-crowns</a></p>
 
 <section class="review-score" aria-label="Avaliação de Kingdom Two Crowns"><h2>Kingdom Two Crowns</h2><p>Tower Defence/RogueLike/Indie</p><div class="score-item" style="--score-color:#01ff91"><span class="score-label">Gráficos</span><img class="score-icon" src="{{ '/assets/images/ui/review/sunglasses.png' | relative_url }}" alt=""><span class="score-value">10/10</span></div>

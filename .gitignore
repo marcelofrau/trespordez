@@ -8,3 +8,4 @@ _migration-source/
 _library/
 _data/giscus.yml
 _data/backlog/*.yml
+logs/

@@ -2156,6 +2156,11 @@ a:hover {
         box-shadow: 3px 3px 0 #000;
     }
 
+    .main-nav li:hover ul,
+    .main-nav li:focus-within ul {
+        display: none;
+    }
+
     .post-card {
         grid-template-columns: 1fr;
         padding: 18px;

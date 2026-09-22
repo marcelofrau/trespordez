@@ -67,6 +67,7 @@ node scripts/sync-review-assets.mjs
 - Add owner Retrobright process photos, materials, timings and personal results.
 - Verify one real Giscus comment on production.
 - Confirm no legacy `trespordez.com.br` references remain in user-facing content before the domain is released.
+- Acionar Cloudflare Web Analytics (token em `_data/analytics.yml`, ignorado) e verificar no Google Search Console via DNS TXT + envio do sitemap. Ver `docs/seo.md`.
 
 ## Recent Work
 

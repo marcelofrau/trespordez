@@ -16,5 +16,6 @@
   <script id="site-quotes" type="application/json">{{ site.data.quotes | jsonify }}</script>
   <script src="{{ '/assets/js/quotes.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
   {% if page.url == '/' %}<script src="{{ '/assets/js/home-feed.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>{% endif %}
+  {% if site.data.analytics and site.data.analytics.cloudflare_beacon %}<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.data.analytics.cloudflare_beacon }}"}' data-cf-beacon-csp-insights="false"></script>{% endif %}
 </body>
 </html>

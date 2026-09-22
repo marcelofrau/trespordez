@@ -1,5 +1,6 @@
 ---
 title: Música
+description: Trilhas sonoras de games em um lugar só — chiptune YM3812/OPL3, synthwave, OST de RPG, remixes e house de console (Sonic Rush, Jet Set Radio), com players do YouTube e do Bandcamp embutidos.
 permalink: /musica/
 ---
 

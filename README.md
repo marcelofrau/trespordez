@@ -30,4 +30,5 @@ Open `http://localhost:4000`. Use `bundle exec jekyll build` for a production bu
 - [Content model](docs/content-model.md)
 - [Migration inventory](docs/migration-inventory.md)
 - [Cloudflare and Giscus setup](docs/platform-setup.md)
+- [SEO, analytics and verification](docs/seo.md)
 - [Session handoff and current state](docs/handoff.md)

@@ -7,6 +7,7 @@ author: the-archivist
 categories: [moddding, retrogaming, reviews]
 tags: [flashcart, hardware, retrogaming, snes]
 description: "Acompanhando o desenvolvimento Depois de anos pesquisando e olhando minha lista de desejos, sempre via o SD2SNES lá, mas nunca tive coragem de desembolsar 100 euros num cartucho de SNES — o tão esperado item que me permitiria jogar 100% dos jogos no meu querido console que tenho desde criança. Lembro quando o SD2SNES ainda [&hellip;]"
+excerpt: "Depois de anos namorando a SD2SNES na lista de desejos, a coragem de desembolsar 100 euros num cartucho de SNES finalmente chegou: o FXPAK Pro, o flashcart que roda 100% da biblioteca do console — incluindo os jogos com chip especial."
 wordpress_id: 1214
 wordpress_url: https://trespordez.com.br/2025/10/fxpak-pro-snes/
 wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2025/10/fx-pak-pro-thumb.jpg

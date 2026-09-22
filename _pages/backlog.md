@@ -23,11 +23,13 @@ layout: page
       <div>
         <h3>{{ author.name }}</h3>
         <ul class="backlog-stats">
-          <li class="backlog-stat"><strong>{{ data.backlog.size }}</strong><span>na fila</span></li>
-          <li class="backlog-stat"><strong>{{ data.played.size }}</strong><span>zerados</span></li>
-          <li class="backlog-stat"><strong>{{ data.dropped.size }}</strong><span>abandonados</span></li>
-          <li class="backlog-stat"><strong>{{ data.catalog.size }}</strong><span>no catálogo</span></li>
+          <li class="backlog-stat{% if data.backlog.size == 0 %} zero{% endif %}"><strong>{{ data.backlog.size }}</strong><span>na fila</span></li>
+          <li class="backlog-stat{% if data.played.size == 0 %} zero{% endif %}"><strong>{{ data.played.size }}</strong><span>zerados</span></li>
+          <li class="backlog-stat{% if data.dropped.size == 0 %} zero{% endif %}"><strong>{{ data.dropped.size }}</strong><span>abandonados</span></li>
+          <li class="backlog-stat{% if data.catalog.size == 0 %} zero{% endif %}"><strong>{{ data.catalog.size }}</strong><span>catálogo</span></li>
         </ul>
+        {% assign total = data.backlog.size | plus: data.played.size | plus: data.dropped.size | plus: data.catalog.size %}
+        {% if total == 0 %}<p class="backlog-empty">Sem jogos registrados ainda — a fila desse jogador está vazia por enquanto.</p>{% endif %}
       </div>
     </a>
   {% endfor %}

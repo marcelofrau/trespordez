@@ -2757,6 +2757,16 @@ a:hover {
     font-size: 26px;
 }
 
+.backlog-feature-cover {
+    flex: 0 0 64px;
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid #2b3140;
+    border-radius: 12px;
+}
+
 .backlog-feature-body {
     min-width: 0;
 }

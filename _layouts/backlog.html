@@ -41,10 +41,10 @@ layout: default
           {% endif %}
         {% endif %}
       {% endfor %}
-      {% if has_review and count < 5 %}
+      {% if has_review and count < 4 %}
         {% capture card %}
           <a class="backlog-feature-card has-review" href="{{ review_url | relative_url }}">
-            <span class="backlog-feature-status">{{ item.status | default: "⚪" }}</span>
+            {% if item.cover %}<img class="backlog-feature-cover" src="{{ item.cover | relative_url }}" alt="Capa de {{ item.name }}">{% else %}<span class="backlog-feature-status">{{ item.status | default: "⚪" }}</span>{% endif %}
             <div class="backlog-feature-body">
               <p class="backlog-feature-platform">{{ item.platform }}</p>
               <h3>{{ item.name }}</h3>
@@ -57,7 +57,7 @@ layout: default
         {% assign count = count | plus: 1 %}
       {% endif %}
     {% endfor %}
-    {% if count < 5 %}
+    {% if count < 4 %}
       {% assign shown = "" | split: "," %}
       {% for item in player_data.backlog %}
         {% if count >= 5 %}{% break %}{% endif %}
@@ -74,7 +74,7 @@ layout: default
           {% if shown contains item_name %}{% else %}
             {% capture card %}
               <div class="backlog-feature-card">
-                <span class="backlog-feature-status">{{ item.status | default: "⚪" }}</span>
+                {% if item.cover %}<img class="backlog-feature-cover" src="{{ item.cover | relative_url }}" alt="Capa de {{ item.name }}">{% else %}<span class="backlog-feature-status">{{ item.status | default: "⚪" }}</span>{% endif %}
                 <div class="backlog-feature-body">
                   <p class="backlog-feature-platform">{{ item.platform }}</p>
                   <h3>{{ item.name }}</h3>

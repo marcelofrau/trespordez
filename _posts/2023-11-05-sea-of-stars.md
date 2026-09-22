@@ -12,6 +12,9 @@ wordpress_url: https://trespordez.com.br/2023/11/sea-of-stars/
 wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2023/11/presskit-seaofstars-keyart-with-logo.jpg
 ---
 
+<h2>Trailer</h2>
+<iframe title="Sea of Stars | Launch Trailer" width="640" height="360" src="https://www.youtube.com/embed/8jkeh6O1Rzs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <p>Esse é um jogo em especial que eu gostaria de compartilhar. Cada minuto jogado vale. Se trata de uma história de aventura, de magia e traição, de amizades e maravilhas e sobretudo sobre heroísmo.Sea of Stars, como os próprios desenvolvedores descreveram, é uma carta de amor aos jogos de JRPG, inspirando-se em clássicos como Chrono Trigger, Final Fantasy, Grandia, Tales of Phantasia, e outros JRPGs da era dos consoles de 16 e 32 bits</p>
 
 <p>Foi maravilhoso explorar um jogo como estes em 2023, que certamente pra mim é o meu jogo do ano. Havia anos em que eu não explorava um mundo tão vasto, nao me sentia tão imerso e adentro de um jogo tão detalhado.</p>
@@ -31,6 +34,15 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2023/11/p
 <p>Maravilhoso. </p>
 
 <p>Obrigado Sabotage. </p>
+<div class="post-gallery" aria-label="Galeria de screenshots de Sea of Stars">
+<a href="{{ '/assets/images/posts/sea-of-stars/01-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 1"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/01-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/sea-of-stars/02-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 2"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/02-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/sea-of-stars/03-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 3"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/03-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/sea-of-stars/04-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 4"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/04-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/sea-of-stars/05-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 5"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/05-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/sea-of-stars/06-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 6"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/06-screenshot.jpg' | relative_url }}" /></a>
+</div>
+
 <section class="review-score" aria-label="Avaliação de Sea of Stars"><h2>Sea of Stars</h2><p>JRPG/Indie</p><div class="score-item" style="--score-color:#01ff91"><span class="score-label">Gráficos</span><img class="score-icon" src="{{ '/assets/images/ui/review/sunglasses.png' | relative_url }}" alt=""><span class="score-value">10/10</span></div>
 <div class="score-item" style="--score-color:#01ff91"><span class="score-label">Som</span><img class="score-icon" src="{{ '/assets/images/ui/review/slight-smile.png' | relative_url }}" alt=""><span class="score-value">10/10</span></div>
 <div class="score-item" style="--score-color:#03c2c9"><span class="score-label">Gameplay</span><img class="score-icon" src="{{ '/assets/images/ui/review/grinning.png' | relative_url }}" alt=""><span class="score-value">9/10</span></div>

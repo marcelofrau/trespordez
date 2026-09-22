@@ -12,6 +12,9 @@ wordpress_url: https://trespordez.com.br/2023/11/indivisible/
 wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2023/11/11307fXAMUZgvpeLLx7A-EjO_fCbZnAHHCT_CsciSUZk6vzwaYOI1gPWoC7RLIPn3pHeRmhbhuJY0mhAFZ5PBamiv4As23Es-4019847642.jpg
 ---
 
+<h2>Trailer</h2>
+<iframe title="Indivisible Launch Trailer" width="640" height="360" src="https://www.youtube.com/embed/ndzu-A4NGLs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <p>Sem nem esperar nada, eis que eu vejo na lista dos jogos do gamepass (infelizmente não está mais lá), e me deparo com Indivisible. A primeira vista parecia um jogo de plataforma a lá RPG, como Paper Mario, Child of Light e entre outros. </p>
 
 <p>Mas nos primeiros minutos do jogo, você pode observar que existe algo a mais aqui, que existe um detalhe muito mais frenético que o normal. A ação do jogo, e as batalhas se passam em um passo muito rápido que pode te deixar maluco em conseguir orquestrar e raciocinar o que fazer ao mesmo tempo.</p>

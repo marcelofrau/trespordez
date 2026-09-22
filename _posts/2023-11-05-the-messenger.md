@@ -12,6 +12,9 @@ wordpress_url: https://trespordez.com.br/2023/11/the-messenger/
 wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2025/07/wp4884577-4009596710.jpg
 ---
 
+<h2>Trailer</h2>
+<iframe title="The Messenger - Launch Trailer - Nintendo Switch" width="640" height="360" src="https://www.youtube.com/embed/qJf9edBS0TQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <p>Um jogo ousado e maravilhoso que nos oferece uma experiência nos levando de volta às raízes dos clássicos como Ninja Gaiden, enquanto infunde uma vitalidade moderna que é genuinamente surpreendente. Seu estilo Metroidvania casado com Ninja Gaiden faz o jogo se tornar algo ainda mais nostálgico do que parece.</p>
 
 <p>A equipe da Sabotage fez uma estreia notável com este título. Eles conseguiram criar uma jornada épica, repleta de humor, sarcasmo e desafio, e aprimorá-la com uma trilha sonora espetacular. Desde o momento em que você inicia o jogo, é imediatamente cativado por sua atmosfera e estilo únicos, mas com uma pitada gigante de nostalgia.</p>

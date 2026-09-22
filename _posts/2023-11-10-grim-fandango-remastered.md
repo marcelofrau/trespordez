@@ -12,6 +12,9 @@ wordpress_url: https://trespordez.com.br/2023/11/grim-fandango-remastered/
 wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2023/11/zVcIbPiHflPazZmco4RW9M0uzssv3ZGd-252886555.jpg
 ---
 
+<h2>Trailer</h2>
+<iframe title="Grim Fandango Remastered Launch Trailer" width="640" height="360" src="https://www.youtube.com/embed/QRB6Likh478" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <p>Grim Fandango, uma das ultimas obras da Lucas Arts, na época onde grandes jogos e grandes point&click adventures eram lançados com uma qualidade tremenda como obras primas. Um dos sucessores dos famosos jogos Scumm, usava uma engine pouco mais robusta que Scumm (conhecida como Grim-e) mas infelizmente pouco usada, provavelmente devido aos jogos do gênero estar em declínio.</p>
 <p>Desenvolvido pelo famoso Tim Schafer, conhecido por grandes obras primas como Full Throttle, Psychonauts, The secret of Monkey Island e Day of the Tentacle, todos muito bem aclamados e avaliados. Com certeza foi um dos desenvolvedores/designers que mais fizeram jogos de sucesso da década de 90. Pós Lucas Arts, Tim foi para a Double Fine Productions onde fez mais belíssimos jogos.</p>
 <figure><img src="{{ '/assets/images/posts/grim-fandango-remastered/tim-schafer.jpg' | relative_url }}" alt="Tim Schafer" /><figcaption>Tim Schafer, criador de Grim Fandango.</figcaption></figure>

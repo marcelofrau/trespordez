@@ -12,6 +12,9 @@ wordpress_url: https://trespordez.com.br/2023/11/kingdom-two-crowns/
 wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2023/11/1545036722_kingdom-two-crowns-3092933257.jpg
 ---
 
+<h2>Trailer</h2>
+<iframe title="Kingdom Two Crowns - Launch Trailer" width="640" height="360" src="https://www.youtube.com/embed/0I7tyYuOYnk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <p>Nem sei por onde começar. Este jogo (e suas versões anteriores) tomou tantas horas de meu tempo e cada minuto apesar de parecer um jogo relaxante, vai te levar a louruca montando a melhor estratégia pra poder acabar com os monstros que aparecem pela madrugada.</p>
 
 <p>O jogo começa simples, você, em seu cavalo, acha umas moedas pelo chão, e consegue recrutar pessoas ao seu reino e aí que tudo começa. O jogo é baseado em turnos e ciclos. Durante o dia, você se prepara pra noite, onde monstros aparecem e tentam tomar sua coroa.</p>

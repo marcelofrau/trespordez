@@ -12,6 +12,9 @@ wordpress_url: https://trespordez.com.br/2023/11/somerville/
 wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2023/11/somerville-header-small-913284051.webp
 ---
 
+<h2>Trailer</h2>
+<iframe title="Somerville Release Trailer" width="640" height="360" src="https://www.youtube.com/embed/B_lPMatv07o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <p>Mais um jogo de Dino Patti. E era de se esperar uma obra prima depois dos grandiosos e bem avaliados Limbo e Inside.</p>
 
 <p>E mais uma vez, ele conseguiu melhorar ainda mais a qualidade de seus jogos. Com o primeiro Limbo sendo o marco e um dos pioneiros no ramo de indie games, e aqui a terceira peça de arte onde muito conseguiu ser explorado.</p>

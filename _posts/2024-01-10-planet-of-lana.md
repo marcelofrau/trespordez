@@ -12,6 +12,9 @@ wordpress_url: https://trespordez.com.br/2024/01/planet-of-lana/
 wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2024/01/015a405c56e48665bf9f4eda64ede22b3cfcbf3b598af8baadd3ffe292864005-2085649132.jpg
 ---
 
+<h2>Trailer</h2>
+<iframe title="Planet of Lana - Official Launch Trailer" width="640" height="360" src="https://www.youtube.com/embed/L7o8oWENPC4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <p>Estava navegando nos jogos disponíveis no gamepass, me deparei com “Planet of Lana”, vi o trailer, achei bonitinho, interessante, botei o jogo pra instalar e sem dar muita importância, deixei o jogo de lado, focando em outros que achava que seriam mais importantes. Passou o tempo, esqueci do jogo, e na semana passada, resolvi experimentar. Estava naquela fase de não saber o que jogar e ficava indo e vindo jogando uma coisa, depois jogando outra, mas nada que me prendesse o foco.</p>
 
 <p>E depois de ir e vir em diversos outros jogos, resolvo dar uma chance pra Planet of Lana, comecei a jogar como quem não queria nada, nem lembrava mais do que se tratava e nem lembrava mais do trailer.</p>
@@ -35,6 +38,15 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2024/01/0
 <p>Minha recomendação pessoal é, não veja muito do jogo, apenas jogue e veja com seus próprios olhos.</p>
 
 <p>IGDB: <a href="https://www.igdb.com/games/planet-of-lana">https://www.igdb.com/games/planet-of-lana</a></p>
+<div class="post-gallery" aria-label="Galeria de screenshots de Planet of Lana">
+<a href="{{ '/assets/images/posts/planet-of-lana/01-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 1"><img alt="Planet of Lana" src="{{ '/assets/images/posts/planet-of-lana/01-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/planet-of-lana/02-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 2"><img alt="Planet of Lana" src="{{ '/assets/images/posts/planet-of-lana/02-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/planet-of-lana/03-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 3"><img alt="Planet of Lana" src="{{ '/assets/images/posts/planet-of-lana/03-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/planet-of-lana/04-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 4"><img alt="Planet of Lana" src="{{ '/assets/images/posts/planet-of-lana/04-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/planet-of-lana/05-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 5"><img alt="Planet of Lana" src="{{ '/assets/images/posts/planet-of-lana/05-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/planet-of-lana/06-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 6"><img alt="Planet of Lana" src="{{ '/assets/images/posts/planet-of-lana/06-screenshot.jpg' | relative_url }}" /></a>
+</div>
+
 <section class="review-score" aria-label="Avaliação de Planet of Lana"><h2>Planet of Lana</h2><p>Plataforma-Puzzle</p><div class="score-item" style="--score-color:#01ff91"><span class="score-label">Gráficos</span><img class="score-icon" src="{{ '/assets/images/ui/review/sunglasses.png' | relative_url }}" alt=""><span class="score-value">10/10</span></div>
 <div class="score-item" style="--score-color:#01ff91"><span class="score-label">Som</span><img class="score-icon" src="{{ '/assets/images/ui/review/slight-smile.png' | relative_url }}" alt=""><span class="score-value">10/10</span></div>
 <div class="score-item" style="--score-color:#972fff"><span class="score-label">Gameplay</span><img class="score-icon" src="{{ '/assets/images/ui/review/sunglasses.png' | relative_url }}" alt=""><span class="score-value">8/10</span></div>

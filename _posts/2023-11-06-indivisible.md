@@ -7,6 +7,7 @@ author: the-archivist
 categories: [reviews]
 tags: [action, indie, jrpg, platformer]
 description: "Sem nem esperar nada, eis que eu vejo na lista dos jogos do gamepass (infelizmente não está mais lá), e me deparo com Indivisible. A primeira vista parecia um jogo de plataforma a lá RPG, como Paper Mario, Child of Light e entre outros. Mas nos primeiros minutos do jogo, você pode observar que existe [&hellip;]"
+excerpt: "Parece um plataformer com combate de RPG, mas esconde batalhas frenéticas que não deixam você orquestrar o que fazer. Do Game Pass de antigamente."
 wordpress_id: 325
 wordpress_url: https://trespordez.com.br/2023/11/indivisible/
 wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2023/11/11307fXAMUZgvpeLLx7A-EjO_fCbZnAHHCT_CsciSUZk6vzwaYOI1gPWoC7RLIPn3pHeRmhbhuJY0mhAFZ5PBamiv4As23Es-4019847642.jpg

@@ -7,6 +7,7 @@ author: the-archivist
 categories: [reviews]
 tags: [adventure, horror, indie, sci-fi]
 description: "Mais um jogo de Dino Patti. E era de se esperar uma obra prima depois dos grandiosos e bem avaliados Limbo e Inside. E mais uma vez, ele conseguiu melhorar ainda mais a qualidade de seus jogos. Com o primeiro Limbo sendo o marco e um dos pioneiros no ramo de indie games, e aqui [&hellip;]"
+excerpt: "A terceira peça de arte do Dino Patti, o pai de Limbo e Inside: uma aventura cinematográfica de invasão que segue evoluindo a qualidade dos clássicos do estúdio."
 wordpress_id: 306
 wordpress_url: https://trespordez.com.br/2023/11/somerville/
 wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2023/11/somerville-header-small-913284051.webp

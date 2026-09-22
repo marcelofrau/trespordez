@@ -7,6 +7,7 @@ author: the-archivist
 categories: [retrogaming, reviews]
 tags: [adventure, lucasarts, point-and-click, remaster]
 description: "Grim Fandango, uma das ultimas obras da Lucas Arts, na época onde grandes jogos e grandes point&click adventures eram lançados com uma qualidade tremenda como obras primas. Um dos sucessores dos famosos jogos Scumm, usava uma engine pouco mais robusta que Scumm (conhecida como Grim-e) mas infelizmente pouco usada, provavelmente devido aos jogos do gênero [&hellip;]"
+excerpt: "Uma das últimas obras da LucasArts, com o Tim Schafer no comando: point&click noir de um agente de viagens no Mundo dos Mortos, em clave de filme mexicano."
 wordpress_id: 386
 wordpress_url: https://trespordez.com.br/2023/11/grim-fandango-remastered/
 wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2023/11/zVcIbPiHflPazZmco4RW9M0uzssv3ZGd-252886555.jpg

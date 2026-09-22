@@ -7,6 +7,7 @@ author: the-archivist
 categories: [reviews]
 tags: [indie, roguelike, strategy, tower-defense]
 description: "Nem sei por onde começar. Este jogo (e suas versões anteriores) tomou tantas horas de meu tempo e cada minuto apesar de parecer um jogo relaxante, vai te levar a louruca montando a melhor estratégia pra poder acabar com os monstros que aparecem pela madrugada. O jogo começa simples, você, em seu cavalo, acha umas [&hellip;]"
+excerpt: "Estratégia minimalista em ciclos de dia e noite: de dia você monta o reino, de noite os monstros vêm tomar sua coroa. Simples de entender, cruel de dominar."
 wordpress_id: 302
 wordpress_url: https://trespordez.com.br/2023/11/kingdom-two-crowns/
 wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2023/11/1545036722_kingdom-two-crowns-3092933257.jpg

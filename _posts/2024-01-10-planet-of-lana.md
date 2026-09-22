@@ -7,6 +7,7 @@ author: the-archivist
 categories: [reviews]
 tags: [indie, platformer, puzzle, sci-fi]
 description: "Estava navegando nos jogos disponíveis no gamepass, me deparei com “Planet of Lana”, vi o trailer, achei bonitinho, interessante, botei o jogo pra instalar e sem dar muita importância, deixei o jogo de lado, focando em outros que achava que seriam mais importantes. Passou o tempo, esqueci do jogo, e na semana passada, resolvi experimentar. [&hellip;]"
+excerpt: "Um jogo bonitinho do Game Pass que eu deixei esquecido até a fase de não saber o que jogar — e virou uma surpresa deliciosa de aventura e puzzle."
 wordpress_id: 461
 wordpress_url: https://trespordez.com.br/2024/01/planet-of-lana/
 wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2024/01/015a405c56e48665bf9f4eda64ede22b3cfcbf3b598af8baadd3ffe292864005-2085649132.jpg

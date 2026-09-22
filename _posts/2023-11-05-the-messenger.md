@@ -7,6 +7,7 @@ author: the-archivist
 categories: [reviews]
 tags: [indie, metroidvania, pixel-art, platformer]
 description: "Um jogo ousado e maravilhoso que nos oferece uma experiência nos levando de volta às raízes dos clássicos como Ninja Gaiden, enquanto infunde uma vitalidade moderna que é genuinamente surpreendente. Seu estilo Metroidvania casado com Ninja Gaiden faz o jogo se tornar algo ainda mais nostálgico do que parece. A equipe da Sabotage fez uma [&hellip;]"
+excerpt: "Metroidvania da Sabotage nas raízes de Ninja Gaiden, com humor, sarcasmo, desafio e uma trilha sonora espetacular. Nostálgico do jeito certo."
 wordpress_id: 253
 wordpress_url: https://trespordez.com.br/2023/11/the-messenger/
 wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2025/07/wp4884577-4009596710.jpg

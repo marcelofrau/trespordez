@@ -35,7 +35,7 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2026/04/1
 <p>A trilha sonora, agora mais um pouco nos moldes dos Forza Horizon, vem com o tradicional sistema de diversas radios. Mas eu fiquei impressionado com os generos de musica e radios diferentes que tem aqui, e não sei, mas eu adorei cada uma das radios, tem pra todo gosto e as musicas apesar de de bandas independentes ou pouco conhecidas, sao maravilhosas. Tem Indie Rock, tem Punk Rock, tem Lo-Fi, tem Classica, tem musica brasileira, mano eu achei muito boa e casou perfeitamente no jogo.</p>
 <p>Cada carro vem com uma radio pre-definida, claro que você pode trocar, mas quando você troca de carro, a radio muda fazendo você variar um pouco na trilha sonora. Mano e a trilha de cinema dramatica, ela tras um ar muito divertido.</p>
 
-<div class="post-gallery" aria-label="Galeria de screenshots de {1}">
+<div class="post-gallery" aria-label="Galeria de screenshots de Wreckreation">
 <a href="{{ '/assets/images/posts/wreckreation/01-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 1"><img alt="Gameplay de Wreckreation" src="{{ '/assets/images/posts/wreckreation/01-screenshot.jpg' | relative_url }}" /></a>
 <a href="{{ '/assets/images/posts/wreckreation/02-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 2"><img alt="Gameplay de Wreckreation" src="{{ '/assets/images/posts/wreckreation/02-screenshot.jpg' | relative_url }}" /></a>
 <a href="{{ '/assets/images/posts/wreckreation/03-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 3"><img alt="Gameplay de Wreckreation" src="{{ '/assets/images/posts/wreckreation/03-screenshot.jpg' | relative_url }}" /></a>

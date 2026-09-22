@@ -7,6 +7,7 @@ author: the-archivist
 categories: [reviews]
 tags: [indie, jrpg, pixel-art, rpg]
 description: "Esse é um jogo em especial que eu gostaria de compartilhar. Cada minuto jogado vale. Se trata de uma história de aventura, de magia e traição, de amizades e maravilhas e sobretudo sobre heroísmo.Sea of Stars, como os próprios desenvolvedores descreveram, é uma carta de amor aos jogos de JRPG, inspirando-se em clássicos como Chrono [&hellip;]"
+excerpt: "Uma carta de amor aos JRPGs de 16 e 32 bits, com aventura, magia e heroísmo. Cada minuto jogado vale — e pra mim foi o jogo do ano."
 wordpress_id: 84
 wordpress_url: https://trespordez.com.br/2023/11/sea-of-stars/
 wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2023/11/presskit-seaofstars-keyart-with-logo.jpg
@@ -34,7 +35,7 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2023/11/p
 <p>Maravilhoso. </p>
 
 <p>Obrigado Sabotage. </p>
-<div class="post-gallery" aria-label="Galeria de screenshots de {1}">
+<div class="post-gallery" aria-label="Galeria de screenshots de Sea of Stars">
 <a href="{{ '/assets/images/posts/sea-of-stars/01-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 1"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/01-screenshot.jpg' | relative_url }}" /></a>
 <a href="{{ '/assets/images/posts/sea-of-stars/02-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 2"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/02-screenshot.jpg' | relative_url }}" /></a>
 <a href="{{ '/assets/images/posts/sea-of-stars/03-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 3"><img alt="Sea of Stars" src="{{ '/assets/images/posts/sea-of-stars/03-screenshot.jpg' | relative_url }}" /></a>

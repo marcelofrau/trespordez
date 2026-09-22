@@ -51,15 +51,6 @@ permalink: /musica/
 </section>
 
 <section class="music-section">
-  <p class="eyebrow">Turbo do DS</p>
-  <h2><i class="fa-solid fa-gauge-high" aria-hidden="true"></i> Sonic Rush</h2>
-  <p>OST do Sonic Rush no Nintendo DS, composta pelo Hideki Naganuma: house, funk e breakbeat com energia de coins que caem do céu. A trilha que provou que portátil também sabe fazer a sala inteira virar pista de dança.</p>
-  <div class="music-players">
-    <figure class="music-player"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLqzVNX9DhzKHqsPNBqGzPA_2edjLSia_m" title="Sonic Rush OST - playlist no YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><figcaption>A playlist completa da OST do Sonic Rush.<small> Aperta play e o DS vira sistema de som.</small></figcaption></figure>
-  </div>
-</section>
-
-<section class="music-section">
   <p class="eyebrow">Lareira e dungeon</p>
   <h2><i class="fa-solid fa-dragon" aria-hidden="true"></i> RPG e OST</h2>
   <p>Ambience de masmorra, taverna e boas noites de jogatina de RPG. Clássico da madrugada com wind chime e violão.</p>
@@ -109,5 +100,16 @@ permalink: /musica/
     <a href="https://soundsfromsci.bandcamp.com/album/video-essay-cues-23-24" class="software-card" target="_blank" rel="noopener"><i class="fa-solid fa-clapperboard" aria-hidden="true"></i><strong>Sounds from Sci - Video Essay Cues 23/24</strong><span>Trilhas de suporte pra vídeo-ensaio: a coleção que faz qualquer documentário de internet soar profissional.</span><small>Bandcamp · Corpus <span class="card-link">ouvir</span></small></a>
     <a href="https://nathandivino.bandcamp.com/" class="software-card" target="_blank" rel="noopener"><i class="fa-solid fa-user-music" aria-hidden="true"></i><strong>Nathan Divino</strong><span>Perfil do compositor: gostinho de trilha de jogo, curtas e música pra tela pequena com cara de grande.</span><small>Bandcamp · Perfil <span class="card-link">ouvir</span></small></a>
     <a href="https://www.blueturtle-design.com/library" class="software-card" target="_blank" rel="noopener"><i class="fa-solid fa-turtle" aria-hidden="true"></i><strong>Blue Turtle Design - Library</strong><span>Biblioteca do estúdio: recursos liberados pra dar apoio a quem faz, edita e joga reports.</span><small>Site · Biblioteca <span class="card-link">visitar</span></small></a>
+  </div>
+</section>
+
+<section class="music-section">
+  <p class="eyebrow">Pista de dança do console</p>
+  <h2><i class="fa-solid fa-gauge-high" aria-hidden="true"></i> House da Sega</h2>
+  <p>House, funk e breakbeat com cara de coin que cai do céu: a família de trilhas do Hideki Naganuma, do Dreamcast pros portáteis da Nintendo, e o que nasceu dela. Console virando sistema de som desde antes disso virar moda.</p>
+  <div class="music-players">
+    <figure class="music-player"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLqzVNX9DhzKHqsPNBqGzPA_2edjLSia_m" title="Sonic Rush OST - playlist no YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><figcaption>Sonic Rush (DS) — a OST completa do Naganuma.<small> Aperta play e o DS vira pista de dança.</small></figcaption></figure>
+    <figure class="music-player"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLdNbNmx1hI3lpvwZoFatTrfSFcoGXlkm4" title="Jet Set Radio - The Ultimate Playlist" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><figcaption>Jet Set Radio (Dreamcast) — a Ultimate Playlist.<small> O rollerblade dirigido por funk house do Naganuma.</small></figcaption></figure>
+    <figure class="music-player"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLE3VL-5NEtZjU9Ne8KSJbPgI9HfRcZRP0" title="Jet Set Radio Future: The Complete Soundtrack" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><figcaption>Jet Set Radio Future (Xbox) — a trilha completa.<small> A sequência que levou o Naganuma pro 128-bit.</small></figcaption></figure>
   </div>
 </section>

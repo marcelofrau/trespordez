@@ -5,7 +5,7 @@
 - Jekyll builds Markdown, Liquid templates, data files, CSS, and static assets into `_site`.
 - GitHub stores source, history, Discussions, Actions, and QA build artifacts.
 - GitHub Pages exposes QA at `marcelofrau.github.io/trespordez`.
-- Cloudflare Pages serves production at `trespordez.com.br` after DNS cutover.
+- Cloudflare Pages serves production at `trespordez.pages.dev`.
 - Giscus embeds GitHub Discussions comments. No database or application server exists.
 
 ## Deployment
@@ -16,7 +16,7 @@ flowchart LR
   B --> C[GitHub Actions validation]
   C --> D[GitHub Pages QA]
   B --> E[Cloudflare Pages build]
-  E --> F[trespordez.com.br]
+  E --> F[trespordez.pages.dev]
 ```
 
 Cloudflare configuration stays outside source because it contains account-level state. See `platform-setup.md`.

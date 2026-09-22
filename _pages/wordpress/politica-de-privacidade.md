@@ -10,7 +10,7 @@ wordpress_id: 1204
 
 <h2>Quem somos</h2>
 
-<p>Nosso endereço é: <a href="https://trespordez.com.br">https://trespordez.com.br</a></p>
+<p>Nosso endereço é: <a href="https://trespordez.pages.dev">https://trespordez.pages.dev</a></p>
 
 <p>Trespordez é uma iniciativa independente voltada à criação de conteúdo sobre <strong>jogos retrô</strong>, <strong>reviews</strong>, <strong>curiosidades</strong>, <strong>listas</strong>, <strong>emulação</strong>, e tudo mais que envolva a paixão gamer das antigas gerações.</p>
 

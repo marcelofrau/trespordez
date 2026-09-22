@@ -2,7 +2,7 @@
 
 ## Scope
 
-Static Jekyll blog. Source repo: `marcelofrau/trespordez`. Production URL: `https://trespordez.com.br`. GitHub Pages QA URL: `https://marcelofrau.github.io/trespordez/`.
+Static Jekyll blog. Source repo: `marcelofrau/trespordez`. Deployed on Cloudflare Pages. Production URL: `https://trespordez.pages.dev`. Pushes to `main` deploy straight to production.
 
 ## Identity and Git
 
@@ -25,7 +25,7 @@ Static Jekyll blog. Source repo: `marcelofrau/trespordez`. Production URL: `http
 - Write Portuguese matching existing informal editorial tone. Do not alter author meaning while converting migrated content.
 - Markdown first. Use HTML only for responsive video embeds, figures, or tables that Markdown cannot express.
 - Platform emulator drafts belong in `_pages/platforms/`. Mark them as initial catalogs until tested editorial recommendations exist; do not present a draft as a personal review.
-- Use `relative_url` in layouts/includes for every local URL. Root-absolute URLs break GitHub Pages QA.
+- Use `relative_url` in layouts/includes for every local URL. Root-absolute URLs break the site when served from a subpath.
 - Long screenshot sequences use `.post-gallery` and PhotoSwipe. Do not add many full-width screenshots to a post; preserve clickable, zoomable gallery behavior.
 - Review score cards use `.review-score` and `.score-item`; preserve score color and approved ReffPixels icon semantics.
 
@@ -52,8 +52,7 @@ Static Jekyll blog. Source repo: `marcelofrau/trespordez`. Production URL: `http
 
 ## Current Site State
 
-- QA is live at `https://marcelofrau.github.io/trespordez/`; it is noindex.
-- Production remains WordPress until Cloudflare Pages and DNS cutover are explicitly approved.
+- Production is live on Cloudflare Pages at `https://trespordez.pages.dev`. Pushes to `main` deploy straight to production after CI passes. Legacy domain `trespordez.com.br` is being decommissioned (cost).
 - `_pages/wordpress/` holds migrated rich pages. `_pages/platforms/` holds initial emulator catalogs; they are intentionally not personal recommendations.
 - `/emuladores/` is system index. Every platform card must link to a page.
 - `/emuladores/ports/` lists Video Game Esoterica reference pages; label entries as catalog/references, not reviews.

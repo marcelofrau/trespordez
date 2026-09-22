@@ -1,20 +1,19 @@
 # Session Handoff
 
-Last updated: 2026-09-21.
+Last updated: 2026-09-22.
 
 ## Source of Truth
 
 - Repository: `marcelofrau/trespordez`.
 - Personal Git: `Marcelo Frau <marcelofrau@gmail.com>` via `git@github-personal:marcelofrau/trespordez.git`.
 - QA: `https://marcelofrau.github.io/trespordez/`.
-- Production currently remains WordPress at `https://trespordez.com.br`.
-- `main` deploys QA using GitHub Actions. Do not push unless owner explicitly authorizes.
+- Production is live on Cloudflare Pages at `https://trespordez.pages.dev`. Legacy domain `trespordez.com.br` is being decommissioned (cost); do not reference it for new content.
+- `main` deploys straight to production. Do not push unless owner explicitly authorizes.
 
 ## Architecture
 
 - Jekyll 4 static site.
-- GitHub Pages builds QA using `.github/workflows/pages.yml` and `_config.qa.yml`.
-- Cloudflare Pages production is planned but not connected/cut over.
+- GitHub Actions validates `main`. Cloudflare Pages builds and deploys `main` to `trespordez.pages.dev`.
 - Giscus is active using GitHub Discussions. Build reads `GISCUS_REPO_ID` and `GISCUS_CATEGORY_ID` GitHub Variables through `scripts/prepare-giscus.mjs`; generated `_data/giscus.yml` is ignored.
 - Comments map to `post-<slug>`, so QA and production share a Discussion.
 
@@ -66,12 +65,13 @@ node scripts/sync-review-assets.mjs
 - Perform visual/editorial review of every migrated WordPress page on desktop and mobile.
 - Validate official URLs and test each emulator catalog before elevating it from initial catalog to recommendation.
 - Add owner Retrobright process photos, materials, timings and personal results.
-- Verify one real Giscus comment after site review.
-- Connect Cloudflare Pages with personal account, add Giscus variables, test Pages preview and only then approve DNS cutover.
-- Keep WordPress online until SEO, historical URLs, media, RSS, sitemap and QA verification are satisfactory.
+- Verify one real Giscus comment on production.
+- Confirm no legacy `trespordez.com.br` references remain in user-facing content before the domain is released.
 
 ## Recent Work
 
+- Site migrated to Cloudflare Pages production at `https://trespordez.pages.dev`; legacy domain `trespordez.com.br` in decommission.
+- Music page: added "House da Sega" section (Sonic Rush, Jet Set Radio, Jet Set Radio Future OST playlists).
 - XB Homebrew Vault post: `/2026/09/xb-homebrew-vault/` with local media and gallery.
 - Comments use Giscus light theme.
 - `indie` appears as visible badge and archive `/tag/indie/`.

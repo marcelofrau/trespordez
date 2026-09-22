@@ -1,13 +1,12 @@
 # Três por Dez
 
-Static source for [trespordez.com.br](https://trespordez.com.br): Jekyll content, assets, and site design.
+Static source for [trespordez.pages.dev](https://trespordez.pages.dev): Jekyll content, assets, and site design.
 
 ## Environments
 
 | Environment | URL | Purpose |
 | --- | --- | --- |
-| QA | `https://marcelofrau.github.io/trespordez/` | Review migration before DNS cutover |
-| Production | `https://trespordez.com.br` | Cloudflare Pages after launch |
+| Production | `https://trespordez.pages.dev` | Cloudflare Pages, live |
 
 ## Local development
 
@@ -23,7 +22,7 @@ Open `http://localhost:4000`. Use `bundle exec jekyll build` for a production bu
 
 ## Publishing
 
-`main` is direct publishing branch. CI validates content then deploys GitHub Pages QA. Cloudflare Pages builds the same commit for production after its Git integration is configured. Read [docs/publishing.md](docs/publishing.md) before pushing.
+`main` is direct publishing branch. CI validates content then Cloudflare Pages deploys straight to production. Read [docs/publishing.md](docs/publishing.md) before pushing.
 
 ## Setup
 

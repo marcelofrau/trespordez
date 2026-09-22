@@ -7,7 +7,7 @@
     const valid = value != null && value !== "" && !Number.isNaN(v);
     return h(
       "span",
-      { className: valid ? `score-${v}` : "backlog-score-empty" },
+      { className: valid ? `backlog-score-chip score-${v}` : "backlog-score-chip backlog-score-empty" },
       valid ? String(value) : "–"
     );
   };

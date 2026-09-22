@@ -170,6 +170,7 @@ a:hover {
 }
 
 .main-nav li ul {
+    display: block;
     position: absolute;
     top: 100%;
     left: 0;
@@ -235,7 +236,8 @@ a:hover {
 }
 
 .main-nav li ul a:hover {
-    background: #fff4c2;
+    background: var(--dark);
+    color: #fff;
     padding-left: 18px;
 }
 

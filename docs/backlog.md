@@ -136,7 +136,39 @@ node scripts/backlog-export.mjs                                      # regenera 
 - Primeira passada (2026-09): 2.116 itens novos (5.079 favoritos em 62
   gamelists; ~2.963 já constavam no backlog).
 
-### 5. Repassada geral (limpeza de nomes/gêneros)
+### 5. Repassada geral (normalização de nomes/gêneros)
+
+`scripts/backlog-cleanup.mjs` capitaliza nomes/gêneros minúsculos (preservando
+slugs curados como `jrpg`/`platformer` e tokens como `USA`/`II`), tira extensões
+de arquivo dos títulos (`.iso`, `.cmd`...) e sinaliza entradas estranhas
+(`shortcut`, `ecwolf.exe`) sem apagar nada:
+
+```bash
+node scripts/backlog-cleanup.mjs            # dry-run (mostra o que muda + junk)
+node scripts/backlog-cleanup.mjs --apply    # aplica
+node scripts/backlog-export.mjs             # regenera yml
+```
+
+### 6. Editor desktop (Python + tkinter)
+
+`scripts/backlog_editor.py` é um editor master-detail em Python puro (stdlib, sem
+dependências) para manter o banco de forma visual:
+
+```bash
+python scripts/backlog_editor.py            # abre a UI (precisa tkinter)
+python scripts/backlog_editor.py --selftest # smoke test sobre uma cópia do db
+```
+
+Recursos: filtros (jogador, seção, texto, plataforma, gênero, status) com grid
+master + painel de detalhe (todos os campos, scores inclusos); toolbar de
+`Renomear em batch` (substituição simples ou regex), `Organizar`
+(renomear/merge de plataforma ou gênero), `Batch...` (definir campo em comum p/
+seleção), mover entre seções, reordenar (↑/↓), duplicar, apagar; aba de scores
+dos posts; botão `Exportar yml` que roda o `backlog-export.mjs` por baixo.
+
+O editor escreve direto no `data/trespordez.sqlite` (mesma fonte de verdade dos
+scripts). Rodou selftest com 5 verificações sobre cópia — não toca o banco real
+no dry-run. (limpeza de nomes/gêneros)
 
 `scripts/backlog-cleanup.mjs` varre o sqlite e conserta o que entrou "sujo":
 remove extensão de arquivo do título (`Gran Turismo 3 A-Spec.iso` → sem `.iso`),

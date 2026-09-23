@@ -1,0 +1,176 @@
+.score-item {
+    background: var(--score-color, #fff);
+}
+
+.score-icon {
+    display: block;
+    width: 42px !important;
+    height: 42px !important;
+    margin: 7px auto !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    image-rendering: pixelated;
+}
+
+.score-value {
+    border-top-color: rgb(0 0 0 / .25);
+}
+
+.site-context-menu {
+    position: fixed;
+    z-index: 1000;
+    min-width: 210px;
+    margin: 0;
+    padding: 6px;
+    background: var(--dark);
+    border: 3px solid var(--accent);
+    border-radius: 10px;
+    box-shadow: 6px 6px 0 #000;
+    list-style: none;
+}
+
+.site-context-menu[hidden] {
+    display: none;
+}
+
+.site-context-menu li+li {
+    border-top: 1px solid #3b3b3b;
+}
+
+.site-context-menu a,
+.site-context-menu button {
+    display: block;
+    width: 100%;
+    padding: 9px 11px;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font: 600 13px var(--head);
+    text-align: left;
+}
+
+.site-context-menu a:hover,
+.site-context-menu button:hover {
+    background: var(--accent);
+    color: #000;
+}
+
+.post-taxonomy {
+    gap: 7px;
+}
+
+.badge,
+.tag-chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
+    padding: 3px 9px;
+    border: 2px solid #000;
+    border-radius: 999px;
+    color: #111 !important;
+    font: 700 12px/1 var(--head);
+    letter-spacing: .01em;
+    text-transform: none;
+}
+
+.post-taxonomy .badge-violet {
+    background: #c5a2ff;
+}
+
+.post-taxonomy .badge-orange {
+    background: #ffb454;
+}
+
+.post-taxonomy .badge-blue {
+    background: #8dc7ff;
+}
+
+.post-taxonomy .badge-red {
+    background: #ff9696;
+}
+
+.post-taxonomy .badge-cyan {
+    background: #75e6e6;
+}
+
+.post-taxonomy .badge-yellow {
+    background: #ffe56b;
+}
+
+.post-taxonomy .badge-green {
+    background: #91e5a3;
+}
+
+.post-taxonomy .badge-pink {
+    background: #ffacd0;
+}
+
+.post-taxonomy .badge-purple {
+    background: #d5a1e9;
+}
+
+.post-taxonomy .badge-neutral {
+    background: #ddd;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding-top: 22px;
+}
+
+.tags>span {
+    margin-right: 3px;
+    color: var(--muted);
+    font: 700 13px var(--head);
+    text-transform: uppercase;
+}
+
+.post-content .tag-chip {
+    border-color: rgb(0 0 0 / .45);
+    font-size: 12px;
+    box-shadow: 1px 1px 0 rgb(0 0 0 / .35);
+}
+
+.post-content .tag-chip:nth-of-type(5n+1) {
+    background: #ffe56b;
+}
+
+.post-content .tag-chip:nth-of-type(5n+2) {
+    background: #91e5a3;
+}
+
+.post-content .tag-chip:nth-of-type(5n+3) {
+    background: #8dc7ff;
+}
+
+.post-content .tag-chip:nth-of-type(5n+4) {
+    background: #ffacd0;
+}
+
+.post-content .tag-chip:nth-of-type(5n+5) {
+    background: #c5a2ff;
+}
+
+.post-card .post-taxonomy {
+    gap: 5px;
+}
+
+.post-card .badge {
+    min-height: 21px;
+    padding: 2px 7px;
+    border-width: 1px;
+    box-shadow: none;
+    font-size: 11px;
+}
+
+.post-card .post-taxonomy {
+    margin-bottom: 7px;
+}
+
+.post-taxonomy .badge-indigo {
+    background: #a9b7ff;
+}

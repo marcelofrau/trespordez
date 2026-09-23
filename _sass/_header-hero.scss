@@ -1,0 +1,34 @@
+.site-header {
+    background-image: none;
+}
+
+.site-header::before {
+    background-image: linear-gradient(to bottom, rgb(1 7 18 / .7) 0%, rgb(1 7 18 / .82) 76%, var(--page) 100%), url("../images/site/header-backdrop-v2-blur.jpg");
+    background-position: center, center;
+    background-repeat: no-repeat, repeat;
+    background-size: 100% 100%, 680px auto;
+    background-attachment: scroll, fixed;
+    pointer-events: none;
+}
+
+.brand img {
+    width: 365px;
+}
+
+.nav-toggle i {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 12px;
+    transition: transform .25s cubic-bezier(.2, .8, .2, 1);
+}
+
+.has-children.is-open .nav-toggle i {
+    transform: rotate(180deg);
+}
+
+@media (max-width:767px) {
+    .site-header::before {
+        background-attachment: scroll, scroll;
+        background-size: 100% 100%, auto 320px;
+    }
+}

@@ -1,0 +1,796 @@
+/* ============================================================
+   Backlog pages
+   ============================================================ */
+
+.backlog-hero {
+    margin: 0 0 28px;
+    padding: 30px 26px;
+    background: linear-gradient(135deg, #141414, #333);
+    color: #fff;
+    border-radius: var(--radius);
+}
+
+.backlog-hero h2 {
+    margin: 4px 0 10px;
+    color: var(--accent);
+    font: 800 38px var(--head);
+}
+
+.backlog-hero h2 i {
+    color: var(--accent);
+    margin-right: 6px;
+}
+
+.backlog-hero p {
+    margin: 0;
+    color: #fff;
+}
+
+.backlog-hero .eyebrow {
+    color: #8c58c2;
+}
+
+.backlog-hero-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    gap: 22px;
+    margin: 0 0 32px;
+}
+
+.backlog-player-card {
+    display: grid;
+    grid-template-columns: 182px 1fr;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    background: #111318;
+    border: 2px solid #22262e;
+    border-radius: 14px;
+    box-shadow: 4px 4px 0 #000;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.backlog-player-card:hover {
+    transform: translate(-3px, -3px);
+    border-color: #c5a2ff;
+    box-shadow: 8px 8px 0 #000;
+}
+
+.backlog-player-card .team-avatar {
+    width: 182px;
+    height: 182px;
+    border-color: #22262e;
+    border-radius: 14px;
+    box-shadow: 4px 4px 0 #000;
+}
+
+.backlog-player-card .team-avatar img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+    border-radius: 12px;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.backlog-player-card h3 {
+    margin: 0 0 14px;
+    min-height: 2.4em;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font: 800 20px var(--head);
+}
+
+.backlog-jump {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 28px;
+}
+
+.backlog-jump button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 16px;
+    background: #111318;
+    border: 2px solid #22262e;
+    border-radius: 999px;
+    color: #dcecf2;
+    font: 700 13px var(--head);
+    cursor: pointer;
+    appearance: none;
+    transition: transform .15s ease, border-color .15s ease, color .15s ease, background .15s ease;
+}
+
+.backlog-jump button:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.backlog-jump button.is-active {
+    background: var(--accent);
+    border-color: #000;
+    color: #000;
+    box-shadow: 3px 3px 0 #000;
+}
+
+.backlog-jump button i {
+    color: var(--accent);
+    font-size: 12px;
+}
+
+.backlog-jump button.is-active i {
+    color: #000;
+}
+
+.backlog-section[hidden] {
+    display: none !important;
+}
+
+.backlog-table th i,
+.backlog-grid-table thead th i {
+    margin-right: 6px;
+    color: var(--accent);
+}
+
+.backlog-hero--player {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 22px;
+}
+
+.backlog-hero--player .profile-hero {
+    flex: 1 1 320px;
+    min-width: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    color: inherit;
+}
+
+.backlog-hero--player .profile-hero h2 {
+    color: var(--accent);
+}
+
+.backlog-hero--player .backlog-stats {
+    flex: 0 0 auto;
+    min-width: 200px;
+}
+
+.backlog-feature {
+    position: relative;
+}
+
+.backlog-feature>h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.backlog-feature>h2 small {
+    color: #999;
+    font: 600 14px var(--body);
+}
+
+.backlog-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 16px;
+    margin: 18px 0 0;
+}
+
+.backlog-feature-card {
+    display: grid;
+    grid-template-columns: 52px 1fr auto;
+    gap: 12px;
+    align-items: center;
+    padding: 16px;
+    background: #111318;
+    border: 2px solid #22262e;
+    border-radius: 14px;
+    box-shadow: 4px 4px 0 #000;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.backlog-feature-card:not(.has-review):hover {
+    border-color: #7fd4e7;
+}
+
+.backlog-feature-card:not(.has-review) {
+    cursor: default;
+}
+
+.backlog-feature-card.has-review:hover {
+    transform: translate(-2px, -2px);
+    border-color: #7fd4e7;
+    box-shadow: 7px 7px 0 #000;
+}
+
+.backlog-feature-status {
+    display: grid;
+    width: 52px;
+    height: 52px;
+    place-items: center;
+    background: #1d212a;
+    border: 2px solid #2b3140;
+    border-radius: 12px;
+    font-size: 26px;
+}
+
+.backlog-feature-cover {
+    flex: 0 0 64px;
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid #2b3140;
+    border-radius: 12px;
+}
+
+.backlog-feature-body {
+    min-width: 0;
+}
+
+.backlog-feature-platform {
+    margin: 0 0 3px;
+    color: #7fd4e7;
+    font: 700 11px var(--head);
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+.backlog-feature-body h3 {
+    margin: 0 0 4px;
+    color: #fff;
+    font: 800 15px/1.3 var(--head);
+    overflow-wrap: anywhere;
+}
+
+.backlog-feature-mood {
+    margin: 0;
+    color: #9aa3b2;
+    font-size: 13px;
+}
+
+.backlog-feature-mood span {
+    color: #6b7484;
+    font-size: 11px;
+}
+
+.backlog-feature-review {
+    color: #7fd4e7;
+    font-size: 13px;
+}
+
+.backlog-flist-head {
+    margin: 26px 0 0;
+    padding-top: 22px;
+    border-top: 2px solid #eee;
+}
+
+.backlog-flist-head h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 4px;
+    font: 800 18px var(--head);
+}
+
+.backlog-flist-head h3 i {
+    color: #173b45;
+}
+
+.backlog-flist-head p {
+    margin: 0;
+    color: #888;
+    font-size: 13px;
+}
+
+.backlog-player-card .backlog-stats {
+    display: flex;
+    gap: 8px;
+    align-items: stretch;
+}
+
+.backlog-player-card .backlog-stat {
+    flex: 1 1 0;
+    height: 60px;
+    padding: 8px;
+    border-color: #000;
+    border-radius: 10px;
+    justify-content: center;
+    gap: 3px;
+}
+
+.backlog-player-card .backlog-stat:nth-child(1) {
+    background: #ffcc00;
+}
+
+.backlog-player-card .backlog-stat:nth-child(2) {
+    background: #c5a2ff;
+}
+
+.backlog-player-card .backlog-stat strong {
+    font-size: 15px;
+    color: #000;
+}
+
+.backlog-player-card .backlog-stat span {
+    font-size: 9px;
+    color: #000;
+    white-space: nowrap;
+}
+
+.backlog-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.backlog-stat {
+    display: inline-flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 9px 6px;
+    background: #1d212a;
+    border: 2px solid #2b3140;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.backlog-stat strong {
+    color: #7fd4e7;
+    font: 800 17px var(--head);
+}
+
+.backlog-stat span {
+    font: 600 10px var(--body);
+    color: #9aa3b2;
+}
+
+.backlog-stat.zero strong {
+    color: #555c6a;
+}
+
+.backlog-section {
+    margin: 0 0 28px;
+    padding: 28px;
+    background: #fff;
+    border: var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.backlog-section h2 {
+    margin: 5px 0 8px;
+    color: var(--ink);
+    font: 800 28px/1.15 var(--head);
+}
+
+.backlog-section .eyebrow {
+    margin-top: 0;
+}
+
+.backlog-platform {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 22px 0 10px;
+    font: 800 16px var(--head);
+}
+
+.backlog-platform:first-of-type {
+    margin-top: 6px;
+}
+
+.backlog-table {
+    width: 100%;
+    margin: 30px 0 0;
+    border: var(--border);
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 4px 4px 0 #000;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.backlog-table th {
+    background: #1b1b1b;
+    color: var(--accent);
+    font: 700 12px var(--head);
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.backlog-table th:first-child {
+    border-top-left-radius: 9px;
+}
+
+.backlog-table th:last-child {
+    border-top-right-radius: 9px;
+}
+
+.backlog-table td {
+    padding: 9px 14px;
+    vertical-align: middle;
+    border-bottom: 1px solid #eee;
+}
+
+.backlog-table th,
+.backlog-table td {
+    border: 0;
+    border-right: 1px solid #ddd;
+}
+
+.backlog-table th:last-child,
+.backlog-table td:last-child {
+    border-right: 0;
+}
+
+.backlog-table tbody tr:nth-child(even) td {
+    background: #f3f3f3;
+}
+
+.backlog-table tbody tr:hover td {
+    background: rgba(127, 212, 231, .15);
+}
+
+.backlog-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.backlog-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 9px;
+}
+
+.backlog-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 9px;
+}
+
+.backlog-table td:first-child {
+    font: 800 15px var(--head);
+}
+
+.backlog-emoji-col {
+    width: 70px;
+    text-align: center !important;
+    font-size: 16px;
+}
+
+.backlog-platform-col {
+    text-align: center;
+}
+
+.backlog-score {
+    width: 84px;
+    text-align: center !important;
+}
+
+.backlog-score span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    padding: 3px 7px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    background: #efefef;
+    color: #000;
+    font: 800 14px var(--head);
+    text-shadow: none;
+}
+
+.backlog-score-final span {
+    box-shadow: 3px 3px 0 #000;
+}
+
+.score-10,
+.score-9 {
+    background: #2ebd59 !important;
+    color: #fff !important;
+}
+
+.score-8 {
+    background: #6bb6ff !important;
+}
+
+.score-7 {
+    background: #ffd557 !important;
+}
+
+.score-6 {
+    background: #ff9147 !important;
+}
+
+.score-5,
+.score-4,
+.score-3,
+.score-2,
+.score-1,
+.score-0 {
+    background: #ff5a5a !important;
+    color: #fff !important;
+}
+
+.backlog-ratings {
+    overflow-x: auto;
+    display: block;
+}
+
+.backlog-lista {
+    min-height: 420px;
+}
+
+.backlog-catalog-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 18px 0 14px;
+}
+
+.backlog-chip {
+    padding: 5px 12px;
+    border: 2px solid #000;
+    border-radius: 999px;
+    background: #f2f2f2;
+    font: 700 12px var(--head);
+    cursor: pointer;
+    transition: background .15s ease, color .15s ease;
+}
+
+.backlog-chip:hover {
+    background: var(--accent);
+}
+
+.backlog-chip.is-active {
+    background: var(--accent);
+    box-shadow: 3px 3px 0 #000;
+}
+
+#backlog-lista-grid,
+#backlog-played-grid {
+    overflow-x: auto;
+}
+
+.backlog-hot-col {
+    display: none !important;
+}
+
+.backlog-hot-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 6px;
+    padding: 2px 7px;
+    background: #1b1b1b;
+    border: 2px solid #000;
+    border-radius: 999px;
+    color: var(--accent);
+    font: 700 10px var(--head);
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.backlog-date-col {
+    text-align: center;
+    white-space: nowrap;
+    font: 700 12px var(--head);
+    color: #555;
+}
+
+.backlog-grid-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 14px;
+}
+
+.gridjs-wrapper {
+    border: var(--border);
+    border-radius: 12px;
+    box-shadow: 4px 4px 0 #000;
+    overflow: hidden;
+}
+
+.backlog-grid-table thead th {
+    background: #1b1b1b !important;
+    color: var(--accent) !important;
+    font: 700 12px var(--head) !important;
+    letter-spacing: .04em !important;
+    text-transform: uppercase !important;
+    border: 0 !important;
+    border-bottom: 2px solid #000 !important;
+    padding: 10px 14px !important;
+    white-space: nowrap;
+}
+
+.backlog-grid-table thead th:last-child {
+    border-bottom: 2px solid #000 !important;
+}
+
+.backlog-grid-table tbody td {
+    padding: 9px 14px !important;
+    border: 0 !important;
+    border-bottom: 1px solid #eee !important;
+    vertical-align: middle;
+    background: #fff !important;
+}
+
+.backlog-grid-table tbody td:last-child {
+    border-bottom: 1px solid #eee !important;
+}
+
+.backlog-grid-table tbody tr:nth-child(even) td {
+    background: #f3f3f3 !important;
+}
+
+.backlog-grid-table tbody tr:hover td {
+    background: rgba(127, 212, 231, .15) !important;
+}
+
+.backlog-grid-table tbody tr:last-child td,
+.backlog-grid-table tbody tr:last-child td:last-child {
+    border-bottom: 0 !important;
+}
+
+.backlog-grid-name {
+    font: 800 15px var(--head) !important;
+}
+
+.backlog-score-chip,
+.backlog-score-empty {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    padding: 3px 7px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    background: #efefef;
+    color: #000;
+    font: 800 14px var(--head) !important;
+    text-shadow: none;
+}
+
+.backlog-score-empty {
+    color: #999;
+}
+
+.backlog-score-final-outer>.backlog-score-chip {
+    box-shadow: 3px 3px 0 #000;
+}
+
+.backlog-score-chip.score-10,
+.backlog-score-chip.score-9 {
+    background: #2ebd59 !important;
+    color: #fff !important;
+}
+
+.backlog-score-chip.score-8 {
+    background: #6bb6ff !important;
+}
+
+.backlog-score-chip.score-7 {
+    background: #ffd557 !important;
+}
+
+.backlog-score-chip.score-6 {
+    background: #ff9147 !important;
+}
+
+.backlog-score-chip.score-5,
+.backlog-score-chip.score-4,
+.backlog-score-chip.score-3,
+.backlog-score-chip.score-2,
+.backlog-score-chip.score-1,
+.backlog-score-chip.score-0 {
+    background: #ff5a5a !important;
+    color: #fff !important;
+}
+
+.gridjs-head {
+    padding: 0 0 12px;
+    border: 0;
+    background: transparent;
+}
+
+.gridjs-search {
+    float: none;
+}
+
+.gridjs-search input {
+    width: 100%;
+    border: var(--border);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font: 600 13px var(--body);
+    box-shadow: 2px 2px 0 #000;
+    background: #fff;
+}
+
+.gridjs-footer {
+    border: 0;
+    padding-top: 14px;
+    background: transparent;
+}
+
+.gridjs-pagination {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-family: var(--head);
+}
+
+.gridjs-pagination .gridjs-pages {
+    justify-content: flex-end;
+    gap: 4px;
+}
+
+.gridjs-pagination .gridjs-pages button {
+    min-width: 30px;
+    padding: 5px 9px;
+    border: var(--border);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ink);
+    font: 700 13px var(--head);
+    cursor: pointer;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, .4);
+}
+
+.gridjs-pagination .gridjs-pages button:hover,
+.gridjs-pagination .gridjs-pages button.gridjs-currentPage {
+    background: var(--accent);
+    box-shadow: 2px 2px 0 #000;
+}
+
+.gridjs-pagination .gridjs-pages button:disabled {
+    opacity: .5;
+}
+
+@media (max-width: 640px) {
+    .backlog-player-card {
+        grid-template-columns: 137px 1fr;
+        gap: 14px;
+    }
+
+    .backlog-section,
+    .backlog-hero {
+        padding: 20px;
+    }
+
+    .backlog-player-card .team-avatar,
+    .backlog-player-card .team-avatar img {
+        width: 137px;
+        height: 137px;
+    }
+
+    .backlog-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .backlog-feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .backlog-hero--player {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

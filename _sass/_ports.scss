@@ -1,0 +1,47 @@
+/* Ports e recomps */
+.ports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    margin: 0;
+}
+
+.port-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 18px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 12px;
+    box-shadow: 3px 3px 0 #000;
+    text-decoration: none;
+    color: inherit;
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.port-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 #000;
+}
+
+.port-card span {
+    align-self: flex-start;
+    padding: 3px 9px;
+    background: #222;
+    color: #fff;
+    border-radius: 999px;
+    font: 700 11px/1.4 var(--head);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+.port-card strong {
+    font: 800 17px/1.4 var(--head);
+    color: #1a1a1a;
+}
+
+.port-card small {
+    font: 500 13px/1.5 var(--body);
+    color: #555;
+}

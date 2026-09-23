@@ -1,0 +1,204 @@
+@media (max-width:991px) {
+    .site-main {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        padding-left: 0;
+    }
+
+    .platform-grid {
+        grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+    }
+}
+
+@media (max-width:767px) {
+    .masthead {
+        height: 145px;
+        justify-content: center;
+        padding: 16px 0 32px;
+    }
+
+    .brand img {
+        width: 235px;
+    }
+
+    .tagline {
+        padding: 0 18px;
+        font-size: 12px;
+    }
+
+    .main-nav {
+        overflow: visible;
+    }
+
+    .menu-button {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        width: 100%;
+        padding: 11px 16px;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        font: 700 16px var(--head);
+    }
+
+    .main-nav>.wrap {
+        overflow: visible;
+    }
+
+    .main-nav>.wrap>ul {
+        display: none;
+        flex-direction: column;
+        min-width: 0;
+        padding: 6px 10px 12px;
+    }
+
+    .main-nav.nav-open>.wrap>ul {
+        display: flex;
+    }
+
+    .main-nav.nav-open>.wrap>ul>li {
+        animation: nav-item-in .4s cubic-bezier(.2, .8, .2, 1) both;
+    }
+
+    .main-nav.nav-open>.wrap>ul>li:nth-child(2) {
+        animation-delay: .05s;
+    }
+
+    .main-nav.nav-open>.wrap>ul>li:nth-child(3) {
+        animation-delay: .1s;
+    }
+
+    .main-nav.nav-open>.wrap>ul>li:nth-child(4) {
+        animation-delay: .15s;
+    }
+
+    .main-nav.nav-open>.wrap>ul>li:nth-child(5) {
+        animation-delay: .2s;
+    }
+
+    .main-nav.nav-open>.wrap>ul>li:nth-child(6) {
+        animation-delay: .25s;
+    }
+
+    .main-nav.nav-open>.wrap>ul>li:nth-child(7) {
+        animation-delay: .3s;
+    }
+
+    @keyframes nav-item-in {
+        from {
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .main-nav>.wrap>ul>li {
+        width: 100%;
+    }
+
+    .main-nav>.wrap>ul>li:first-child> :first-child {
+        border-radius: 11px 11px 0 0;
+    }
+
+    .main-nav>.wrap>ul>li:last-child> :first-child {
+        border-radius: 0 0 11px 11px;
+    }
+
+    .main-nav li ul {
+        position: static;
+        min-width: 0;
+        margin: 0 14px 0;
+        padding: 0;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        max-height: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        overflow: hidden;
+        transition: max-height .34s cubic-bezier(.2, .8, .2, 1), margin .34s cubic-bezier(.2, .8, .2, 1), padding .34s cubic-bezier(.2, .8, .2, 1), box-shadow .34s cubic-bezier(.2, .8, .2, 1);
+        pointer-events: auto;
+    }
+
+    .main-nav li.is-open>ul {
+        max-height: 500px;
+        margin: 0 14px 6px;
+        padding: 6px 0;
+        box-shadow: 3px 3px 0 #000;
+    }
+
+    .main-nav li:hover ul,
+    .main-nav li:focus-within ul {
+        display: none;
+    }
+
+    .main-nav li.is-open:hover ul,
+    .main-nav li.is-open:focus-within ul {
+        display: block;
+    }
+
+    .main-nav li ul a {
+        padding: 9px 13px;
+    }
+
+    .main-nav>.wrap>ul>li>a::after,
+    .main-nav>.wrap>ul>li>.nav-toggle::after {
+        right: auto;
+        left: 16px;
+        width: calc(100% - 32px);
+    }
+
+    .post-card {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+
+    .post-card img {
+        min-height: 0;
+    }
+
+    .post-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .post-byline {
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .post-header h1 {
+        font-size: 29px;
+    }
+
+    .post-content {
+        padding: 20px;
+    }
+
+    .review-score {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        display: block;
+    }
+
+    .footer-links {
+        margin-top: 22px;
+    }
+}
+
+@media (max-width:767px) {
+    .post-content p {
+        text-align: left;
+        hyphens: manual;
+    }
+}

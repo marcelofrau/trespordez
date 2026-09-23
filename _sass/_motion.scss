@@ -1,0 +1,142 @@
+.sidebar section {
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.sidebar section:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 9px 9px 0 #000;
+}
+
+.reveal-pending {
+    opacity: 0;
+    transform: translateY(42px) scale(.975);
+    filter: blur(3px);
+}
+
+.reveal-pending.is-revealed {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+    transition: opacity .6s ease, transform .6s cubic-bezier(.2, .8, .2, 1), filter .55s ease;
+}
+
+.post-list .post-card.reveal-pending:nth-child(2n) {
+    transition-delay: .09s;
+}
+
+.load-more {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 10px;
+}
+
+.load-more button {
+    padding: 12px 24px;
+    border: var(--border);
+    border-radius: 12px;
+    background: var(--accent);
+    box-shadow: 5px 5px 0 #000;
+    cursor: pointer;
+    font: 700 16px var(--head);
+}
+
+.load-more button:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 7px 7px 0 #000;
+}
+
+.load-more button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #000;
+}
+
+@keyframes card-in {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion:reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}
+
+.motion-ready .masthead {
+    opacity: 0;
+    transform: translateY(-36px);
+}
+
+.motion-ready .main-nav {
+    opacity: 0;
+    transform: translateY(-30px) scale(.96);
+}
+
+.motion-ready .site-main {
+    opacity: 0;
+    transform: translateY(48px);
+}
+
+.motion-ready .site-footer {
+    opacity: 0;
+    transform: translateY(48px);
+}
+
+.motion-ready.page-loaded .masthead {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .8s ease, transform .8s cubic-bezier(.2, .8, .2, 1);
+}
+
+.motion-ready.page-loaded .main-nav {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: opacity .72s .14s ease, transform .72s .14s cubic-bezier(.2, .8, .2, 1);
+}
+
+.motion-ready.page-loaded .site-main {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .86s .3s ease, transform .86s .3s cubic-bezier(.2, .8, .2, 1);
+}
+
+.motion-ready.page-loaded .site-footer {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .8s .48s ease, transform .8s .48s cubic-bezier(.2, .8, .2, 1);
+}
+
+.post-card.reveal-pending:not([hidden]),
+.sidebar section.reveal-pending,
+.post-header.reveal-pending,
+.post-cover.reveal-pending,
+.post-content.reveal-pending,
+.review-score.reveal-pending {
+    opacity: 0;
+    transform: translateY(42px) scale(.975);
+    filter: blur(3px);
+}
+
+.post-card.reveal-pending.is-revealed,
+.sidebar section.reveal-pending.is-revealed,
+.post-header.reveal-pending.is-revealed,
+.post-cover.reveal-pending.is-revealed,
+.post-content.reveal-pending.is-revealed,
+.review-score.reveal-pending.is-revealed {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+    transition: opacity .72s ease, transform .72s cubic-bezier(.2, .8, .2, 1), filter .65s ease;
+}

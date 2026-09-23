@@ -1,0 +1,133 @@
+.gem-intro,
+.software-hero,
+.software-section {
+    margin: 0 0 28px;
+    padding: 24px;
+    background: #fff;
+    border: var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.gem-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 16px;
+}
+
+.gem-links a {
+    padding: 7px 10px;
+    background: #c5a2ff;
+    border: 2px solid #000;
+    border-radius: 999px;
+    font: 700 13px var(--head);
+}
+
+.software-hero {
+    background: linear-gradient(135deg, #141414, #333);
+    color: #fff;
+}
+
+.software-hero h2 {
+    margin: 4px 0 8px;
+    color: var(--accent);
+    font: 800 34px var(--head);
+}
+
+.software-hero p {
+    max-width: 700px;
+    margin: 0;
+}
+
+.eyebrow {
+    /*color: #91e5a3;*/
+    color: #8c58c2;
+    font: 700 13px var(--head);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.software-section h2 {
+    margin: 0 0 18px;
+    font: 800 24px var(--head);
+}
+
+.software-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 14px;
+}
+
+.software-card {
+    display: grid;
+    min-height: 128px;
+    align-content: space-between;
+    gap: 8px;
+    padding: 16px;
+    background: #f9f9f9;
+    border: 2px solid #000;
+    border-radius: 11px;
+    box-shadow: 3px 3px 0 #000;
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.software-card:hover {
+    background: #ffe56b;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #000;
+}
+
+.software-card strong {
+    font: 800 18px var(--head);
+}
+
+.software-card span {
+    color: #444;
+    font-size: 14px;
+}
+
+.software-card small {
+    color: #666;
+    font-weight: 600;
+}
+
+.software-own {
+    background: #eaf9ee;
+}
+
+.software-section h2 i {
+    margin-right: 8px;
+    color: #8c58c2;
+}
+
+.software-card i.fa-brands,
+.software-card i.fa-solid {
+    font-size: 26px;
+    color: #213f82;
+}
+
+.software-card small i {
+    font-size: 11px;
+    color: inherit;
+}
+
+.software-card .card-link {
+    color: #1d6fe0;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.software-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr));
+}
+
+.software-card>* {
+    min-width: 0;
+}
+
+.software-card span,
+.software-card small {
+    overflow-wrap: break-word;
+}

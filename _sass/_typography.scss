@@ -1,0 +1,145 @@
+.post-content> :first-child {
+    margin-top: 0;
+}
+
+.post-content> :last-child {
+    margin-bottom: 0;
+}
+
+.post-content p {
+    max-width: none;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
+
+.post-content ul,
+.post-content ol {
+    padding-left: 1.4em;
+}
+
+.post-content li+li {
+    margin-top: .38em;
+}
+
+.post-content blockquote {
+    margin: 28px 0;
+    padding: 16px 20px;
+    border-left: 5px solid var(--accent);
+    border-radius: 0 10px 10px 0;
+    background: #f4f4f4;
+    color: #333;
+    font-size: 1.05em;
+}
+
+.post-content hr {
+    height: 3px;
+    margin: 36px 0;
+    border: 0;
+    background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.post-content table {
+    width: 100%;
+    margin: 28px 0;
+    border: 2px solid #222;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 3px 3px 0 rgb(0 0 0 / .25);
+}
+
+.post-content table th {
+    background: #1b1b1b;
+    color: var(--accent);
+    font: 700 14px var(--head);
+}
+
+.post-content table th,
+.post-content table td {
+    border: 0;
+    padding: 11px 14px;
+}
+
+.post-content table tr+tr td {
+    border-top: 1px solid #dedede;
+}
+
+.post-content table tbody tr:nth-child(even) td {
+    background: #f6f6f6;
+}
+
+.post-content table th:first-child {
+    border-top-left-radius: 8px;
+}
+
+.post-content table th:last-child {
+    border-top-right-radius: 8px;
+}
+
+.post-content table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 8px;
+}
+
+.post-content table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 8px;
+}
+
+.emulator-page .post-content table {
+    display: table;
+    width: 100%;
+    max-width: none;
+    border: 2px solid #111;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0 #000;
+}
+
+.emulator-page .post-content table th,
+.emulator-page .post-content table td {
+    border: 0;
+}
+
+.emulator-page .post-content table tr+tr td {
+    border-top: 1px solid #d4d4d4;
+}
+
+.emulator-page .post-content table td:last-child {
+    color: #af7000;
+}
+
+.emulator-page .post-content table tbody tr:nth-child(even) td {
+    background: #f1f1f1;
+}
+
+.emulator-page .post-content table th,
+.emulator-page .post-content table td {
+    vertical-align: middle;
+}
+
+.emulator-page .post-content table td {
+    line-height: 1.45;
+}
+
+.emulator-page .post-content table td:nth-child(3),
+.emulator-page .post-content table td:last-child {
+    text-align: center;
+}
+
+.emulator-page .post-content table td:last-child {
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+.emulator-page .post-content table tbody tr {
+    height: 58px;
+}
+
+.emulator-page .post-content table td:first-child {
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}

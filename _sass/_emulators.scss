@@ -1,0 +1,155 @@
+.emulator-hero {
+    display: grid;
+    grid-template-columns: minmax(190px, 32%) 1fr;
+    gap: 28px;
+    align-items: center;
+    margin: 0 0 28px;
+    padding: 24px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #171717, #3a3a3a);
+    border: var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    color: #fff;
+}
+
+.emulator-hero img {
+    display: block;
+    width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+    background: #111;
+    border: 0;
+    border-radius: 10px;
+}
+
+.emulator-hero h1 {
+    margin: 3px 0 10px;
+    color: var(--accent);
+    font: 800 38px/1.1 var(--head);
+}
+
+.emulator-hero p {
+    margin: 0;
+}
+
+.emulator-page .post-content>table:first-child {
+    margin-top: 0;
+}
+
+.emulator-page .post-content table {
+    display: table;
+    width: 100%;
+    margin: 30px 0;
+    overflow: hidden;
+    border: var(--border);
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 4px 4px 0 #000;
+}
+
+.emulator-page .post-content table th {
+    background: #1b1b1b;
+    color: var(--accent);
+    font: 700 14px var(--head);
+}
+
+.emulator-page .post-content table th:first-child {
+    border-top-left-radius: 9px;
+}
+
+.emulator-page .post-content table th:last-child {
+    border-top-right-radius: 9px;
+}
+
+.emulator-page .post-content table td {
+    vertical-align: top;
+}
+
+.emulator-page .post-content table tr:nth-child(even) td {
+    background: #f3f3f3;
+}
+
+.emulator-page .post-content table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 9px;
+}
+
+.emulator-page .post-content table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 9px;
+}
+
+.emulator-page .post-content table td:first-child {
+    font: 800 16px var(--head);
+}
+
+.emulator-page .post-content table td:last-child {
+    color: #af7000;
+    font-size: 18px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.emulator-page .post-content table a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 31px;
+    min-height: 29px;
+    margin: 1px;
+    padding: 3px 7px;
+    background: var(--accent);
+    border: 1px solid #000;
+    border-radius: 7px;
+    color: #000;
+    font-size: 14px;
+}
+
+.emulator-page .post-content>img {
+    display: none;
+}
+
+.emulator-page .post-gallery {
+    margin: 34px 0;
+}
+
+.emulator-page .post-content h2 {
+    display: inline-block;
+    padding-bottom: 6px;
+    border-bottom: 4px solid var(--accent);
+}
+
+.emulator-page .post-content h3 {
+    color: #693d99;
+}
+
+.emulator-page .post-content iframe+iframe {
+    margin-top: 18px;
+}
+
+@media (max-width:767px) {
+    .emulator-hero {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .emulator-hero img {
+        max-height: 180px;
+    }
+
+    .emulator-hero h1 {
+        font-size: 30px;
+    }
+
+    .emulator-page .post-content table {
+        font-size: 13px;
+    }
+
+    .emulator-page .post-content th,
+    .emulator-page .post-content td {
+        min-width: 120px;
+        padding: 8px;
+    }
+}

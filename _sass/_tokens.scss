@@ -1,0 +1,44 @@
+:root {
+    --ink: #212121;
+    --muted: #5c5c5c;
+    --paper: #fff;
+    --page: #c8d0dc;
+    --line: #c2cad5;
+    --accent: #ffcc00;
+    --dark: #0f1012;
+    --wrap: 1440px;
+    --border: 3px solid #000;
+    --radius: 15px;
+    --shadow: 7px 7px 0 #000;
+    --head: "Chakra Petch", Arial, sans-serif;
+    --body: "Alegreya Sans", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--page);
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--page);
+    font: 16px/1.78 var(--body);
+}
+
+a {
+    color: var(--ink);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+}
+
+.wrap {
+    width: min(calc(100% - 40px), var(--wrap));
+    margin: auto;
+}

@@ -1,0 +1,38 @@
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.platform-card {
+    margin: 0 !important;
+    padding: 12px;
+    border: var(--border);
+    border-radius: var(--radius);
+    background: #fff;
+    box-shadow: 4px 4px 0 #000;
+}
+
+.platform-card.is-unavailable {
+    opacity: .38;
+    filter: grayscale(1);
+}
+
+.platform-card:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 6px 6px 0 #000;
+}
+
+.platform-card img {
+    width: 100%;
+    aspect-ratio: .92;
+    object-fit: contain;
+    margin: 0;
+}
+
+.platform-card figcaption {
+    margin-top: 7px;
+    font: 700 13px var(--head);
+    text-align: center;
+}

@@ -105,10 +105,8 @@ layout: default
       <h3><i class="fa-solid fa-list-ul"></i> Lista completa</h3>
       <p>Fila de espera e catálogo juntos — selo "na fila", gênero e data de inclusão.</p>
     </div>
-    <div class="backlog-catalog-filters" role="group" aria-label="Filtrar lista por plataforma"
-      id="backlog-lista-filters">
-      <button type="button" class="backlog-chip is-active" data-platform="*">Todas</button>
-    </div>
+    <div class="backlog-catalog-filters" role="group" aria-label="Filtrar lista"
+      id="backlog-lista-filters"></div>
     <div id="backlog-lista-grid"></div>
     <script type="application/json" id="backlog-lista-hot-data">{{ player_data.backlog | jsonify }}</script>
     <script type="application/json" id="backlog-lista-catalog-data">{{ player_data.catalog | jsonify }}</script>
@@ -119,10 +117,8 @@ layout: default
   <section class="backlog-section backlog-ratings" id="backlog-zerados"{% if first_list != 'backlog-zerados' %} hidden{% endif %}>
     <p class="eyebrow"><i class="fa-solid fa-trophy"></i> Já saíram da lista</p>
     <h2>Zerados e avaliados</h2>
-    <div class="backlog-catalog-filters" role="group" aria-label="Filtrar zerados por plataforma"
-      id="backlog-played-filters">
-      <button type="button" class="backlog-chip is-active" data-platform="*">Todas</button>
-    </div>
+    <div class="backlog-catalog-filters" role="group" aria-label="Filtrar zerados"
+      id="backlog-played-filters"></div>
     <div id="backlog-played-grid"></div>
     <script type="application/json" id="backlog-played-data">{{ player_data.played | jsonify }}</script>
   </section>

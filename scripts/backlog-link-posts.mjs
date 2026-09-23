@@ -33,13 +33,34 @@ export function collectPosts() {
     .filter(Boolean);
 }
 
+function compact(value) {
+  return normalize(value).replace(/\s+/g, "");
+}
+
+function editDistance(a, b) {
+  if (a === b) return 0;
+  const n = a.length;
+  const m = b.length;
+  if (!n) return m;
+  if (!m) return n;
+  const dp = Array.from({ length: n + 1 }, (_, i) => [i, ...Array(m).fill(0)]);
+  for (let j = 1; j <= m; j += 1) dp[0][j] = j;
+  for (let i = 1; i <= n; i += 1) {
+    for (let j = 1; j <= m; j += 1) {
+      dp[i][j] = Math.min(
+        dp[i - 1][j] + 1,
+        dp[i][j - 1] + 1,
+        dp[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)
+      );
+    }
+  }
+  return dp[n][m];
+}
+
 export function main() {
   const db = openDb();
   const posts = collectPosts();
-  const byNormalizedTitle = new Map();
-  for (const post of posts) {
-    byNormalizedTitle.set(post.normalized, (byNormalizedTitle.get(post.normalized) || []).concat(post));
-  }
+  const itemKey = (item) => compact(item.name);
 
   const items = db
     .prepare("SELECT id, player_key, section, name FROM backlog_items WHERE post_slug IS NULL")
@@ -47,23 +68,30 @@ export function main() {
 
   const update = db.prepare("UPDATE backlog_items SET post_slug = ? WHERE id = ?");
   let linked = 0;
+  let near = 0;
   const unmatched = [];
   const ambiguous = [];
 
   for (const item of items) {
-    const key = normalize(item.name);
-    const matches = byNormalizedTitle.get(key) || [];
-    if (matches.length === 1) {
-      update.run(matches[0].slug, item.id);
+    const key = itemKey(item);
+    const scored = posts.map((post) => ({ post, distance: editDistance(key, compact(post.title)) }));
+    const bestDistance = Math.min(...scored.map((candidate) => candidate.distance));
+    const best = scored
+      .filter((candidate) => candidate.distance === bestDistance)
+      .map((candidate) => candidate.post);
+
+    if (best.length === 1 && bestDistance <= 1) {
+      update.run(best[0].slug, item.id);
       linked += 1;
-    } else if (matches.length > 1) {
-      ambiguous.push(`${item.player_key}/${item.section}: "${item.name}" -> ${matches.map((m) => m.slug).join(", ")}`);
+      if (bestDistance > 0) near += 1;
+    } else if (best.length > 1) {
+      ambiguous.push(`${item.player_key}/${item.section}: "${item.name}" -> ${best.map((b) => b.slug).join(", ")}`);
     } else {
       unmatched.push(`${item.player_key}/${item.section}: "${item.name}"`);
     }
   }
 
-  console.log(`linkou ${linked} item(ns) a posts.`);
+  console.log(`linkou ${linked} item(ns) a posts${near ? ` (${near} por proximidade de título)` : ""}.`);
   if (ambiguous.length) {
     console.log(`\nambíguo (mais de um post com título igual) — não linkado:`);
     console.log(ambiguous.join("\n"));

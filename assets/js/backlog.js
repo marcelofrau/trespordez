@@ -61,24 +61,29 @@
     ]);
   };
 
-  const hiddenCol = () => ({ name: "", width: "0px", className: "backlog-hot-col", formatter: () => "" });
+  const genreCell = (value) => {
+    const label = String(value ?? "").trim() || "–";
+    return h("span", { className: "backlog-grid-genre", title: label, "aria-label": label }, label);
+  };
+
+  const hiddenCol = () => ({ name: "", hidden: true });
 
   const playedColumns = [
     {
       name: thHead("fa-solid fa-gamepad", "Jogo"),
       formatter: (c, row) => nameCell(c, row, { hotIdx: -1, postIdx: 7 }),
     },
-    { name: thHead("fa-solid fa-box", "Plataforma"), width: "90px", className: "backlog-platform-col", sort: { enabled: false } },
-    { name: fa("fa-solid fa-palette", "Gráficos"), width: "96px", className: "backlog-score", formatter: scoreCell, sort: { enabled: false } },
-    { name: fa("fa-solid fa-volume-high", "Som"), width: "96px", className: "backlog-score", formatter: scoreCell, sort: { enabled: false } },
-    { name: fa("fa-solid fa-bolt", "Gameplay"), width: "96px", className: "backlog-score", formatter: scoreCell, sort: { enabled: false } },
-    { name: fa("fa-solid fa-fire", "Desafio"), width: "96px", className: "backlog-score", formatter: scoreCell, sort: { enabled: false } },
+    { name: thHead("fa-solid fa-box", "Plataforma"), width: "90px", className: "backlog-platform-col", sort: false },
+    { name: fa("fa-solid fa-palette", "Gráficos"), width: "96px", className: "backlog-score", formatter: scoreCell, sort: false },
+    { name: fa("fa-solid fa-volume-high", "Som"), width: "96px", className: "backlog-score", formatter: scoreCell, sort: false },
+    { name: fa("fa-solid fa-bolt", "Gameplay"), width: "96px", className: "backlog-score", formatter: scoreCell, sort: false },
+    { name: fa("fa-solid fa-fire", "Desafio"), width: "96px", className: "backlog-score", formatter: scoreCell, sort: false },
     {
       name: fa("fa-solid fa-star", "Geral"),
       width: "96px",
       className: "backlog-score",
       formatter: (c) => h("span", { className: "backlog-score-final-outer" }, scoreCell(c)),
-      sort: { enabled: false },
+      sort: false,
     },
     hiddenCol(),
   ];
@@ -88,11 +93,11 @@
       name: thHead("fa-solid fa-gamepad", "Jogo"),
       formatter: (c, row) => nameCell(c, row, { hotIdx: 5, postIdx: 6 }),
     },
-    { name: thHead("fa-solid fa-tags", "Gênero"), width: "120px", className: "backlog-genre-col", formatter: (c) => c || "–" },
-    { name: thHead("fa-solid fa-box", "Plataforma"), width: "90px", className: "backlog-platform-col", sort: { enabled: false } },
+    { name: thHead("fa-solid fa-tags", "Gênero"), width: "180px", className: "backlog-genre-col", formatter: genreCell },
+    { name: thHead("fa-solid fa-box", "Plataforma"), width: "90px", className: "backlog-platform-col", sort: false },
     { name: thHead("fa-solid fa-calendar-plus", "Data"), width: "110px", className: "backlog-date-col", formatter: formatDate },
     { name: thHead("fa-solid fa-bars-progress", "Status"), width: "72px", className: "backlog-emoji-col", formatter: (c) => c || "–" },
-    { name: "", width: "0px", className: "backlog-hot-col", formatter: (c) => c || "na fila" },
+    { name: "", hidden: true },
     hiddenCol(),
   ];
 
@@ -106,7 +111,12 @@
     }
   };
 
-  const buildGrid = ({ gridId, filterSelector, columns, loadItems, makeRows }) => {
+  const splitField = (value) =>
+    (Array.isArray(value) ? value : String(value ?? "").split(","))
+      .map((s) => s.trim())
+      .filter(Boolean);
+
+  const buildGrid = ({ gridId, filterSelector, columns, loadItems, makeRows, filterFields = [] }) => {
     const root = document.getElementById(gridId);
     if (!root) return;
 
@@ -136,30 +146,46 @@
     });
 
     const filters = document.querySelector(filterSelector);
-    if (filters) {
-      const platforms = [...new Set(raw.map((item) => item.platform).filter(Boolean))].sort();
-      for (const platform of platforms) {
-        const button = document.createElement("button");
-        button.type = "button";
-        button.className = "backlog-chip";
-        button.dataset.platform = platform;
-        button.textContent = platform;
-        filters.appendChild(button);
+    if (filters && filterFields.length) {
+      const selects = [];
+      for (const { field, label } of filterFields) {
+        const values = [...new Set(raw.flatMap((item) => splitField(item[field])))].sort((a, b) =>
+          a.localeCompare(b, "pt", { numeric: true, sensitivity: "base" })
+        );
+        if (!values.length) continue;
+        const wrap = document.createElement("label");
+        wrap.className = "backlog-filter";
+        const text = document.createElement("span");
+        text.textContent = label;
+        const select = document.createElement("select");
+        select.dataset.field = field;
+        select.setAttribute("aria-label", `Filtrar por ${label}`);
+        const all = document.createElement("option");
+        all.value = "";
+        all.textContent = "Todas";
+        select.appendChild(all);
+        for (const value of values) {
+          const option = document.createElement("option");
+          option.value = value;
+          option.textContent = value;
+          select.appendChild(option);
+        }
+        wrap.append(text, select);
+        filters.appendChild(wrap);
+        selects.push(select);
       }
 
-      const render = (filter) => {
-        const data = filter === "*" || filter == null ? raw : raw.filter((r) => r.platform === filter);
+      const render = () => {
+        const data = raw.filter((item) =>
+          selects.every((select) => {
+            const wanted = select.value;
+            return !wanted || splitField(item[select.dataset.field]).includes(wanted);
+          })
+        );
         grid.updateConfig({ data: makeRows(data) });
         grid.forceRender();
       };
-
-      filters.addEventListener("click", (event) => {
-        const button = event.target.closest(".backlog-chip");
-        if (!button) return;
-        filters.querySelectorAll(".backlog-chip").forEach((c) => c.classList.remove("is-active"));
-        button.classList.add("is-active");
-        render(button.dataset.platform);
-      });
+      selects.forEach((select) => select.addEventListener("change", render));
     }
 
     grid.render(root);
@@ -171,6 +197,10 @@
     gridId: "backlog-lista-grid",
     filterSelector: "#backlog-lista-filters",
     columns: listColumns,
+    filterFields: [
+      { field: "platform", label: "Plataforma" },
+      { field: "genre", label: "Gênero" },
+    ],
     loadItems: () => [
       ...readJson("backlog-lista-hot-data").map((item) => ({ ...item, hot: true })),
       ...readJson("backlog-lista-catalog-data").map((item) => ({ ...item, hot: false })),
@@ -191,6 +221,7 @@
     gridId: "backlog-played-grid",
     filterSelector: "#backlog-played-filters",
     columns: playedColumns,
+    filterFields: [{ field: "platform", label: "Plataforma" }],
     loadItems: () => readJson("backlog-played-data"),
     makeRows: (items) =>
       items.map((item) => [

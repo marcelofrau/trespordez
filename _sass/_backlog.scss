@@ -566,29 +566,38 @@
 }
 
 .backlog-catalog-filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    display: block;
     margin: 18px 0 14px;
 }
 
-.backlog-chip {
-    padding: 5px 12px;
-    border: 2px solid #000;
-    border-radius: 999px;
-    background: #f2f2f2;
+.backlog-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.backlog-filter {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     font: 700 12px var(--head);
+    color: #555;
+}
+
+.backlog-filter select {
+    padding: 6px 10px;
+    border: var(--border);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ink);
+    font: 600 13px var(--body);
     cursor: pointer;
-    transition: background .15s ease, color .15s ease;
+    box-shadow: 2px 2px 0 #000;
 }
 
-.backlog-chip:hover {
-    background: var(--accent);
-}
-
-.backlog-chip.is-active {
-    background: var(--accent);
-    box-shadow: 3px 3px 0 #000;
+.backlog-filter select:hover,
+.backlog-filter select:focus {
+    border-color: var(--accent);
 }
 
 #backlog-lista-grid,
@@ -596,8 +605,19 @@
     overflow-x: auto;
 }
 
-.backlog-hot-col {
-    display: none !important;
+.backlog-genre-col {
+    text-align: center;
+}
+
+.backlog-grid-genre {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+    color: #444;
+    font: 700 13px var(--head);
 }
 
 .backlog-hot-tag {
@@ -641,12 +661,12 @@
 .backlog-grid-table thead th {
     background: #1b1b1b !important;
     color: var(--accent) !important;
-    font: 700 12px var(--head) !important;
+    font: 700 14px var(--head) !important;
     letter-spacing: .04em !important;
     text-transform: uppercase !important;
     border: 0 !important;
     border-bottom: 2px solid #000 !important;
-    padding: 10px 14px !important;
+    padding: 12px 14px !important;
     white-space: nowrap;
     text-align: center;
 }
@@ -715,8 +735,6 @@
 
 .backlog-genre-col {
     text-align: center;
-    color: #444;
-    font: 700 13px var(--head);
 }
 
 .backlog-score-chip,
@@ -845,13 +863,15 @@
 }
 
 .backlog-grid-table .gridjs-th .gridjs-th-content {
-    display: block;
-    float: left;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: none;
+    width: 100%;
 }
 
 .backlog-grid-table .gridjs-th:first-child .gridjs-th-content {
-    text-align: left;
+    justify-content: flex-start;
 }
 
 .backlog-grid-table .gridjs-th:first-child {
@@ -864,10 +884,26 @@
     gap: 7px;
 }
 
+.backlog-th i {
+    font-size: 13px;
+}
+
 .backlog-th-label {
-    font: 700 12px var(--head) !important;
+    font: 700 14px var(--head) !important;
     letter-spacing: .04em;
     text-transform: uppercase;
+}
+
+.backlog-grid-table th.gridjs-th-sort .gridjs-th-content {
+    width: calc(100% - 20px);
+}
+
+.backlog-grid-table th.gridjs-th-sort button.gridjs-sort {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    float: none;
 }
 
 .backlog-grid-table button.gridjs-sort-neutral {

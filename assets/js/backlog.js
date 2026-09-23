@@ -5,6 +5,12 @@
   const fa = (cls, label) =>
     h("span", { title: label, "aria-label": label }, h("i", { className: cls, "aria-hidden": "true" }));
 
+  const thHead = (cls, label) =>
+    h("span", { className: "backlog-th" }, [
+      h("i", { className: cls, "aria-hidden": "true" }),
+      h("span", { className: "backlog-th-label" }, label),
+    ]);
+
   const tabs = document.querySelectorAll(".backlog-jump-tab");
   if (tabs.length) {
     const sections = document.querySelectorAll(".backlog-wrap .backlog-section");
@@ -59,10 +65,10 @@
 
   const playedColumns = [
     {
-      name: fa("fa-solid fa-gamepad", "Jogo"),
+      name: thHead("fa-solid fa-gamepad", "Jogo"),
       formatter: (c, row) => nameCell(c, row, { hotIdx: -1, postIdx: 7 }),
     },
-    { name: fa("fa-solid fa-box", "Plataforma"), width: "90px", className: "backlog-platform-col", sort: { enabled: false } },
+    { name: thHead("fa-solid fa-box", "Plataforma"), width: "90px", className: "backlog-platform-col", sort: { enabled: false } },
     { name: fa("fa-solid fa-palette", "Gráficos"), width: "96px", className: "backlog-score", formatter: scoreCell, sort: { enabled: false } },
     { name: fa("fa-solid fa-volume-high", "Som"), width: "96px", className: "backlog-score", formatter: scoreCell, sort: { enabled: false } },
     { name: fa("fa-solid fa-bolt", "Gameplay"), width: "96px", className: "backlog-score", formatter: scoreCell, sort: { enabled: false } },
@@ -79,13 +85,13 @@
 
   const listColumns = [
     {
-      name: fa("fa-solid fa-gamepad", "Jogo"),
+      name: thHead("fa-solid fa-gamepad", "Jogo"),
       formatter: (c, row) => nameCell(c, row, { hotIdx: 5, postIdx: 6 }),
     },
-    { name: fa("fa-solid fa-tags", "Gênero"), width: "120px", className: "backlog-genre-col", formatter: (c) => c || "–" },
-    { name: fa("fa-solid fa-box", "Plataforma"), width: "90px", className: "backlog-platform-col", sort: { enabled: false } },
-    { name: fa("fa-solid fa-calendar-plus", "Data"), width: "110px", className: "backlog-date-col", formatter: formatDate },
-    { name: fa("fa-solid fa-bars-progress", "Status"), width: "72px", className: "backlog-emoji-col", formatter: (c) => c || "–" },
+    { name: thHead("fa-solid fa-tags", "Gênero"), width: "120px", className: "backlog-genre-col", formatter: (c) => c || "–" },
+    { name: thHead("fa-solid fa-box", "Plataforma"), width: "90px", className: "backlog-platform-col", sort: { enabled: false } },
+    { name: thHead("fa-solid fa-calendar-plus", "Data"), width: "110px", className: "backlog-date-col", formatter: formatDate },
+    { name: thHead("fa-solid fa-bars-progress", "Status"), width: "72px", className: "backlog-emoji-col", formatter: (c) => c || "–" },
     { name: "", width: "0px", className: "backlog-hot-col", formatter: (c) => c || "na fila" },
     hiddenCol(),
   ];
@@ -118,6 +124,12 @@
         enabled: true,
         limit: 20,
         summary: false,
+      },
+      language: {
+        pagination: {
+          previous: "‹",
+          next: "›",
+        },
       },
       autoWidth: false,
       className: { table: "backlog-grid-table" },

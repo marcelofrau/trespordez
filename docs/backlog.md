@@ -111,6 +111,31 @@ aparecem na seção "Sem match" do dry-run e ficam intactos.
 Primeira passada (2026-09): 803 itens enriquecidos (664 exatos, 139 por
 prefixo) + 244 inseridos no catalog.
 
+### 4. Via EmulationStation (favoritos das coleções)
+
+As coleções do Machine (root `E:\`) têm `gamelist.xml` por sistema; o script
+`scripts/es-gamelist-import.mjs` varre o root, ignora arcade/mame e pastas
+`_*`, e injeta no `catalog` só os jogos com `<favorite>true</favorite>`.
+
+```bash
+node scripts/es-gamelist-import.mjs                                  # dry-run
+node scripts/es-gamelist-import.mjs --apply                           # insere no sqlite
+node scripts/es-gamelist-import.mjs --apply --json out.json           # grava lista p/ revisão
+node scripts/backlog-export.mjs                                      # regenera _data/backlog/*.yml
+```
+
+- `platform`: mapeada da pasta de sistema → vocabulário do site (ex. "Sega
+  Genesis" → `MegaDrive`); plataformas novas (3DO, Jaguar, X68000…) entram com
+  o nome próprio.
+- `genre`: copiado cru do `<genre>` do gamelist (ScreenScraper, ex.
+  "Shoot'em Up / Vertical-Shoot'em Up") — dá para limpar depois via edição.
+- `added_at`: **creation time (Windows) do arquivo de ROM** — o gamelist.xml
+  não carrega "date added" e o sort por data do ES-DE usa a criação do arquivo.
+- Dedupe por nome normalizado (sem ruído `[US]`/`(U)`/`[!]`) contra `backlog` +
+  `catalog`; nada de duplicata.
+- Primeira passada (2026-09): 2.116 itens novos (5.079 favoritos em 62
+  gamelists; ~2.963 já constavam no backlog).
+
 ## Adicionar um jogador
 
 1. `scripts/backlog-sync.mjs` → adicione a chave do player e os gids em `PLAYERS`.

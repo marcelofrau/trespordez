@@ -20,6 +20,7 @@ import { existsSync, readFileSync, statSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { openDb, appendItems } from "./backlog-lib.mjs";
+import { norm, stripNoise, addedDate } from "./gamenorm.mjs";
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const EXTRACT_EXE = join(SCRIPT_DIR, "playnite-extract", "bin", "Release", "net10.0", "playnite-extract.exe");
@@ -139,43 +140,6 @@ function tableExists(db, table) {
   return !!db
     .prepare("SELECT 1 FROM sqlite_master WHERE type='table' AND name=?" )
     .get(table);
-}
-
-function norm(value) {
-  return String(value ?? "")
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^a-z0-9]+/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-// Remove região/markers ([US], (U), (Rev 1), (v1.0) ...) de nomes de ROM.
-function stripNoise(value) {
-  return String(value ?? "")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/\s*\([^()]*\)/g, " ")
-    .replace(/\s*\[[^[\]]*\]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function addedDate(value) {
-  if (value == null) return null;
-  if (typeof value === "number") return ticksToDate(value);
-  const s = String(value).trim();
-  if (/^(\d{4})-(\d{2})-(\d{2})/.test(s)) return s.slice(0, 10);
-  if (/^\d+$/.test(s)) return ticksToDate(Number(s));
-  return null;
-}
-
-// .NET ticks (100ns desde 0001-01-01) -> YYYY-MM-DD
-function ticksToDate(ticks) {
-  const days = ticks / 8.64e11;
-  const ms = (days - 621355968.5) * 86400000;
-  return new Date(ms).toISOString().slice(0, 10);
 }
 
 function applyPlayniteSnapshot(db) {

@@ -119,18 +119,58 @@
 
   const FILTER_ICON = { platform: "fa-box", genre: "fa-tags" };
 
-  const buildFilterBar = (container, raw, fields, onChange) => {
+  const debounce = (fn, ms) => {
+    let timer;
+    return (...args) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => fn(...args), ms);
+    };
+  };
+
+  const buildFilterbar = ({ container, raw, fields, onSearch, onChange }) => {
     if (!container) return [];
+    const bar = document.createElement("div");
+    bar.className = "backlog-filterbar";
+
+    const field = document.createElement("div");
+    field.className = "backlog-filterbar-field";
+
+    const ico = document.createElement("span");
+    ico.className = "backlog-filterbar-ico";
+    ico.innerHTML =
+      '<i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>';
+
+    const input = document.createElement("input");
+    input.type = "search";
+    input.className = "backlog-filterbar-input";
+    input.placeholder = "Buscar jogo…";
+    input.setAttribute("aria-label", "Buscar jogo");
+    input.autocomplete = "off";
+    input.spellcheck = false;
+
+    const clear = document.createElement("button");
+    clear.type = "button";
+    clear.className = "backlog-filterbar-clear";
+    clear.setAttribute("aria-label", "Limpar busca");
+    clear.innerHTML = '<i class="fa-solid fa-xmark" aria-hidden="true"></i>';
+    clear.hidden = true;
+    const syncClear = () => {
+      clear.hidden = input.value === "";
+    };
+
+    const actions = document.createElement("div");
+    actions.className = "backlog-filterbar-actions";
+
     const controls = [];
-    for (const { field, label } of fields) {
-      const values = [...new Set(raw.flatMap((item) => splitField(item[field])))].sort((a, b) =>
+    for (const { field: fieldKey, label } of fields) {
+      const values = [...new Set(raw.flatMap((item) => splitField(item[fieldKey])))].sort((a, b) =>
         a.localeCompare(b, "pt", { numeric: true, sensitivity: "base" })
       );
       if (!values.length) continue;
 
       const wrap = document.createElement("div");
       wrap.className = "backlog-filter";
-      wrap.dataset.field = field;
+      wrap.dataset.field = fieldKey;
 
       const trigger = document.createElement("button");
       trigger.type = "button";
@@ -140,7 +180,7 @@
       trigger.setAttribute("aria-label", `Filtrar por ${label}`);
       trigger.title = `Filtrar por ${label}`;
       trigger.innerHTML =
-        `<i class="fa-solid ${FILTER_ICON[field] || "fa-filter"}" aria-hidden="true"></i>` +
+        `<i class="fa-solid ${FILTER_ICON[fieldKey] || "fa-filter"}" aria-hidden="true"></i>` +
         `<span class="backlog-filter-count" hidden></span>` +
         `<i class="fa-solid fa-chevron-down backlog-filter-chevron" aria-hidden="true"></i>`;
 
@@ -152,11 +192,11 @@
       head.className = "backlog-filter-head";
       const headTitle = document.createElement("span");
       headTitle.textContent = label;
-      const clear = document.createElement("button");
-      clear.type = "button";
-      clear.className = "backlog-filter-clear";
-      clear.textContent = "Limpar";
-      head.append(headTitle, clear);
+      const clearAll = document.createElement("button");
+      clearAll.type = "button";
+      clearAll.className = "backlog-filter-clear";
+      clearAll.textContent = "Limpar";
+      head.append(headTitle, clearAll);
 
       const chips = document.createElement("div");
       chips.className = "backlog-filter-chips";
@@ -188,23 +228,23 @@
       for (const value of values) {
         const lab = document.createElement("label");
         lab.className = "backlog-chip-toggle";
-        const input = document.createElement("input");
-        input.type = "checkbox";
-        input.value = value;
-        const span = document.createElement("span");
-        span.textContent = value;
-        lab.append(input, span);
-        input.addEventListener("change", () => {
-          if (input.checked) selected.add(value);
+        const chipInput = document.createElement("input");
+        chipInput.type = "checkbox";
+        chipInput.value = value;
+        const chipSpan = document.createElement("span");
+        chipSpan.textContent = value;
+        lab.append(chipInput, chipSpan);
+        chipInput.addEventListener("change", () => {
+          if (chipInput.checked) selected.add(value);
           else selected.delete(value);
-          lab.classList.toggle("is-on", input.checked);
+          lab.classList.toggle("is-on", chipInput.checked);
           syncCount();
           onChange();
         });
         chips.appendChild(lab);
       }
 
-      clear.addEventListener("click", () => {
+      clearAll.addEventListener("click", () => {
         selected.clear();
         chips.querySelectorAll("input").forEach((i) => {
           i.checked = false;
@@ -221,18 +261,41 @@
 
       panel.append(head, chips);
       wrap.append(trigger, panel);
-      container.appendChild(wrap);
+      actions.appendChild(wrap);
 
-      controls.push({ field, values, get: () => [...selected] });
+      controls.push({ field: fieldKey, get: () => [...selected] });
     }
 
-    document.addEventListener("click", (ev) => {
-      document.querySelectorAll(".backlog-filter.is-open").forEach((open) => {
-        if (!open.contains(ev.target)) {
-          open.querySelector(".backlog-filter-trigger").click();
-        }
-      });
+    input.addEventListener(
+      "input",
+      debounce(() => {
+        syncClear();
+        onSearch(input.value.trim());
+      }, 120)
+    );
+    clear.addEventListener("click", () => {
+      input.value = "";
+      syncClear();
+      onSearch("");
+      input.focus();
     });
+
+    field.append(ico, input, clear, actions);
+    bar.appendChild(field);
+    container.appendChild(bar);
+
+    document.addEventListener(
+      "click",
+      (ev) => {
+        document.querySelectorAll(".backlog-filter.is-open").forEach((openWrap) => {
+          if (!openWrap.contains(ev.target)) {
+            const t = openWrap.querySelector(".backlog-filter-trigger");
+            if (t) t.click();
+          }
+        });
+      },
+      true
+    );
 
     return controls;
   };
@@ -247,10 +310,6 @@
       columns,
       data: makeRows(raw),
       sort: { multiColumn: false },
-      search: {
-        enabled: true,
-        placeholder: "Buscar jogo…",
-      },
       pagination: {
         enabled: true,
         limit: 20,
@@ -269,20 +328,25 @@
     const filters = document.querySelector(filterSelector);
     let controls = [];
     let render = () => {};
+    render = () => {
+      const data = raw.filter((item) =>
+        controls.every((ctl) => {
+          const wanted = ctl.get();
+          if (!wanted.length) return true;
+          return wanted.some((v) => splitField(item[ctl.field]).includes(v));
+        })
+      );
+      grid.updateConfig({ data: makeRows(data) });
+      grid.forceRender();
+    };
     if (filters && filterFields.length) {
-      render = () => {
-        const data = raw.filter((item) =>
-          controls.every((ctl) => {
-            const wanted = ctl.get();
-            if (!wanted.length) return true;
-            const itemValues = splitField(item[ctl.field]);
-            return wanted.some((v) => itemValues.includes(v));
-          })
-        );
-        grid.updateConfig({ data: makeRows(data) });
-        grid.forceRender();
-      };
-      controls = buildFilterBar(filters, raw, filterFields, render);
+      controls = buildFilterbar({
+        container: filters,
+        raw,
+        fields: filterFields,
+        onSearch: (term) => grid.search(term),
+        onChange: render,
+      });
     }
 
     grid.render(root);

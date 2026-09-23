@@ -521,8 +521,10 @@
 }
 
 .backlog-grid-table td.backlog-score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    vertical-align: middle;
 }
 
 .backlog-score span {
@@ -585,16 +587,69 @@
     margin: 18px 0 14px;
 }
 
-.backlog-filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.backlog-filterbar {
+    margin: 0 0 14px;
 }
 
-.backlog-filters {
+.backlog-filterbar-field {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     gap: 10px;
+    padding: 7px 8px 7px 14px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 999px;
+    box-shadow: 3px 3px 0 #000;
+}
+
+.backlog-filterbar-ico {
+    display: inline-flex;
+    color: #999;
+    font-size: 15px;
+}
+
+.backlog-filterbar-input {
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    padding: 4px 0;
+    color: var(--ink);
+    font: 500 14px var(--body);
+}
+
+.backlog-filterbar-input::placeholder {
+    color: #999;
+}
+
+.backlog-filterbar-clear {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: #888;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.backlog-filterbar-clear:hover {
+    background: #f2f2f2;
+    color: var(--ink);
+}
+
+.backlog-filterbar-clear[hidden] {
+    display: none;
+}
+
+.backlog-filterbar-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .backlog-filter {
@@ -605,33 +660,39 @@
 .backlog-filter-trigger {
     display: inline-flex;
     align-items: center;
-    gap: 7px;
-    padding: 7px 10px;
-    border: var(--border);
-    border-radius: 8px;
-    background: #fff;
+    justify-content: center;
+    gap: 6px;
+    min-width: 34px;
+    height: 34px;
+    padding: 0 10px;
+    border: 2px solid #000;
+    border-radius: 999px;
+    background: #f2f2f2;
     color: var(--ink);
     font-size: 15px;
     line-height: 1;
     cursor: pointer;
-    box-shadow: 2px 2px 0 #000;
     transition: background .15s ease, border-color .15s ease;
 }
 
 .backlog-filter-trigger:hover {
     border-color: var(--accent);
-    background: #fff7ef;
+    background: #ffe4d3;
 }
 
 .backlog-filter-trigger.is-open {
     background: var(--accent);
-    border-color: var(--accent);
+    border-color: #000;
     color: #fff;
 }
 
 .backlog-filter-trigger.has-selection {
-    box-shadow: 3px 3px 0 var(--accent);
     border-color: var(--accent);
+    box-shadow: 2px 2px 0 var(--accent);
+}
+
+.backlog-filter-trigger.has-selection .backlog-filter-chevron {
+    display: none;
 }
 
 .backlog-filter-count {
@@ -668,18 +729,19 @@
 
 .backlog-filter-panel {
     position: absolute;
-    top: calc(100% + 8px);
-    left: 0;
+    top: calc(100% + 10px);
+    right: 0;
+    left: auto;
     z-index: 40;
     display: flex;
     flex-direction: column;
     gap: 8px;
     min-width: 250px;
-    max-width: 320px;
+    max-width: 300px;
     padding: 10px 12px 12px;
     background: #fff;
-    border: var(--border);
-    border-radius: 10px;
+    border: 2px solid #000;
+    border-radius: 12px;
     box-shadow: 4px 4px 0 #000;
 }
 
@@ -999,15 +1061,20 @@
 
 .gridjs-pagination .gridjs-pages button.gridjs-currentPage {
     min-width: 34px;
-    background: var(--accent);
-    border-color: var(--accent);
-    color: #fff;
+    background: #ff8c1a;
+    border-color: #000;
+    color: #1b1b1b;
     font-size: 14px;
     font-weight: 800;
     box-shadow: 3px 3px 0 #000;
     transform: translateY(-1px);
-    outline: 2px solid rgba(0, 0, 0, .18);
-    outline-offset: 1px;
+}
+
+.gridjs-pagination .gridjs-pages button.gridjs-currentPage:hover,
+.gridjs-pagination .gridjs-pages button.gridjs-currentPage:focus {
+    background: #ff8c1a;
+    color: #1b1b1b;
+    outline: none;
 }
 
 .gridjs-pagination .gridjs-pages button:first-child,

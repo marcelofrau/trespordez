@@ -2,6 +2,24 @@
   if (typeof globalThis.gridjs === "undefined") return;
   const { h } = gridjs;
 
+  const fa = (cls, label) =>
+    h("span", { title: label, "aria-label": label }, h("i", { className: cls, "aria-hidden": "true" }));
+
+  const tabs = document.querySelectorAll(".backlog-jump-tab");
+  if (tabs.length) {
+    const sections = document.querySelectorAll(".backlog-wrap .backlog-section");
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach((t) => t.classList.remove("is-active"));
+        tab.classList.add("is-active");
+        const id = tab.dataset.target;
+        sections.forEach((section) => {
+          section.hidden = section.id !== id;
+        });
+      });
+    });
+  }
+
   const scoreCell = (value) => {
     const v = Number(value);
     const valid = value != null && value !== "" && !Number.isNaN(v);
@@ -12,42 +30,71 @@
     );
   };
 
+  const formatDate = (value) => {
+    const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value || "");
+    return m ? `${m[3]}/${m[2]}/${m[1]}` : "–";
+  };
+
   const playedColumns = [
-    { name: "Jogo", formatter: (c) => h("strong", { className: "backlog-grid-name" }, c) },
-    "Plataforma",
-    { name: "Graf.", width: "56px", className: "backlog-score", formatter: scoreCell },
-    { name: "Som", width: "56px", className: "backlog-score", formatter: scoreCell },
-    { name: "Gameplay", width: "56px", className: "backlog-score", formatter: scoreCell },
-    { name: "Desafio", width: "56px", className: "backlog-score", formatter: scoreCell },
-    { name: "Geral", width: "64px", className: "backlog-score", formatter: (c) => h("span", { className: "backlog-score-final-outer" }, scoreCell(c)) },
-    { name: "Humor", width: "70px", className: "backlog-emoji-col", formatter: (c) => c || "–" },
+    {
+      name: fa("fa-solid fa-gamepad", "Jogo"),
+      formatter: (c) => h("strong", { className: "backlog-grid-name" }, String(c ?? "")),
+    },
+    { name: fa("fa-solid fa-box", "Plataforma"), width: "90px", className: "backlog-platform-col" },
+    { name: fa("fa-solid fa-palette", "Gráficos"), width: "96px", className: "backlog-score", formatter: scoreCell },
+    { name: fa("fa-solid fa-volume-high", "Som"), width: "96px", className: "backlog-score", formatter: scoreCell },
+    { name: fa("fa-solid fa-bolt", "Gameplay"), width: "96px", className: "backlog-score", formatter: scoreCell },
+    { name: fa("fa-solid fa-fire", "Desafio"), width: "96px", className: "backlog-score", formatter: scoreCell },
+    {
+      name: fa("fa-solid fa-star", "Geral"),
+      width: "96px",
+      className: "backlog-score",
+      formatter: (c) => h("span", { className: "backlog-score-final-outer" }, scoreCell(c)),
+    },
   ];
 
-  const simpleColumns = [
-    { name: "Jogo", formatter: (c) => h("strong", { className: "backlog-grid-name" }, c) },
-    "Plataforma",
-    { name: "Status", className: "backlog-emoji-col", formatter: (c) => c || "–" },
-    { name: "Humor", className: "backlog-emoji-col", formatter: (c) => c || "–" },
+  const listColumns = [
+    {
+      name: fa("fa-solid fa-gamepad", "Jogo"),
+      formatter: (c, row) => {
+        const kids = [String(c ?? "")];
+        if (row[4]) {
+          kids.push(
+            h("span", { className: "backlog-hot-tag" }, [
+              h("i", { className: "fa-solid fa-fire", "aria-hidden": "true" }),
+              " na fila",
+            ])
+          );
+        }
+        return h("strong", { className: "backlog-grid-name" }, kids);
+      },
+    },
+    { name: fa("fa-solid fa-box", "Plataforma"), width: "90px", className: "backlog-platform-col" },
+    { name: fa("fa-solid fa-calendar-plus", "Data"), width: "110px", className: "backlog-date-col", formatter: formatDate },
+    { name: fa("fa-solid fa-clock", "Status"), width: "72px", className: "backlog-emoji-col", formatter: (c) => c || "–" },
+    { name: "", width: "0px", className: "backlog-hot-col", formatter: (c) => c || "" },
   ];
 
-  const buildGrid = (gridId, dataId, filterSelector, columns, isPlayed) => {
+  const readJson = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return [];
+    try {
+      return JSON.parse(el.textContent || "[]");
+    } catch (e) {
+      return [];
+    }
+  };
+
+  const buildGrid = ({ gridId, filterSelector, columns, loadItems, makeRows }) => {
     const root = document.getElementById(gridId);
-    const dataEl = document.getElementById(dataId);
-    if (!root || !dataEl) return;
+    if (!root) return;
 
-    const raw = JSON.parse(dataEl.textContent || "[]");
-    const hash = gridId.replace("backlog-", "").replace("-grid", "");
-
-    const makeRows = (items) => items.map((item) =>
-      isPlayed
-        ? [item.name, item.platform || "—", item.graf, item.som, item.gameplay, item.desafio, item.geral, item.humor || "—"]
-        : [item.name, item.platform || "—", item.status || "—", item.humor || "—"]
-    );
+    const raw = loadItems();
 
     const grid = new gridjs.Grid({
       columns,
       data: makeRows(raw),
-      sort: true,
+      sort: false,
       search: {
         enabled: true,
         placeholder: "Buscar jogo…",
@@ -58,6 +105,7 @@
         summary: false,
       },
       autoWidth: false,
+      className: { table: "backlog-grid-table" },
     });
 
     const filters = document.querySelector(filterSelector);
@@ -89,10 +137,41 @@
 
     grid.render(root);
     window.__backlogGrids = window.__backlogGrids || {};
-    window.__backlogGrids[hash] = grid;
+    window.__backlogGrids[gridId.replace("backlog-", "").replace("-grid", "")] = grid;
   };
 
-  buildGrid("backlog-queue-grid", "backlog-queue-data", "#backlog-queue-filters", simpleColumns, false);
-  buildGrid("backlog-played-grid", "backlog-played-data", "#backlog-played-filters", playedColumns, true);
-  buildGrid("backlog-catalog-grid", "backlog-catalog-data", ".backlog-section.backlog-catalog .backlog-catalog-filters", simpleColumns, false);
+  buildGrid({
+    gridId: "backlog-lista-grid",
+    filterSelector: "#backlog-lista-filters",
+    columns: listColumns,
+    loadItems: () => [
+      ...readJson("backlog-lista-hot-data").map((item) => ({ ...item, hot: true })),
+      ...readJson("backlog-lista-catalog-data").map((item) => ({ ...item, hot: false })),
+    ],
+    makeRows: (items) =>
+      items.map((item) => [
+        item.name,
+        item.platform || "—",
+        item.added_at || "",
+        item.status || "—",
+        item.hot ? "na fila" : "",
+      ]),
+  });
+
+  buildGrid({
+    gridId: "backlog-played-grid",
+    filterSelector: "#backlog-played-filters",
+    columns: playedColumns,
+    loadItems: () => readJson("backlog-played-data"),
+    makeRows: (items) =>
+      items.map((item) => [
+        item.name,
+        item.platform || "—",
+        item.graf,
+        item.som,
+        item.gameplay,
+        item.desafio,
+        item.geral,
+      ]),
+  });
 })();

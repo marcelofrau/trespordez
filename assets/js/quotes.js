@@ -53,10 +53,20 @@
 
   var card = document.querySelector('[data-quotes-card]');
   if (card) {
-    var q = quotes[randomIndex()];
     var block = card.querySelector('blockquote');
-    if (block) block.textContent = '"' + q.text + '"';
     var cap = card.querySelector('figcaption');
-    if (cap) cap.textContent = q.source ? '\u2014 ' + q.source : '';
+    function renderCard() {
+      var q = quotes[randomIndex()];
+      if (block) block.textContent = '"' + q.text + '"';
+      if (cap) cap.textContent = q.source ? '\u2014 ' + q.source : '';
+    }
+    renderCard();
+    setInterval(function () {
+      card.classList.add('is-fading');
+      setTimeout(function () {
+        renderCard();
+        card.classList.remove('is-fading');
+      }, 350);
+    }, 5000);
   }
 })();

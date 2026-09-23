@@ -4,6 +4,15 @@ layout: default
 <link rel="stylesheet" href="{{ '/assets/css/lib/mermaid.min.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 
 {% assign player_data = site.data.backlog[page.player] %}
+{% assign lista_size = player_data.backlog.size | plus: player_data.catalog.size %}
+{% assign first_list = "" %}
+{% if lista_size > 0 %}
+{% assign first_list = "backlog-lista" %}
+{% elsif player_data.played.size > 0 %}
+{% assign first_list = "backlog-zerados" %}
+{% elsif player_data.dropped.size > 0 %}
+{% assign first_list = "backlog-abandonados" %}
+{% endif %}
 
 <article class="page backlog-wrap">
   <header class="backlog-hero backlog-hero--player">
@@ -24,19 +33,15 @@ layout: default
     </ul>
   </header>
 
-  <nav class="backlog-jump" aria-label="Ir para seção">
-    {% if player_data.backlog.size > 0 %}<a href="#backlog-fila"><i class="fa-solid fa-hourglass-half"></i> Fila</a>{%
-    endif %}
-    {% if player_data.played.size > 0 %}<a href="#backlog-zerados"><i class="fa-solid fa-trophy"></i> Zerados</a>{%
-    endif %}
-    {% if player_data.dropped.size > 0 %}<a href="#backlog-abandonados"><i class="fa-solid fa-skull"></i>
-      Abandonados</a>{% endif %}
-    {% if player_data.catalog.size > 0 %}<a href="#backlog-catalogo"><i class="fa-solid fa-box-open"></i> Catálogo</a>{%
-    endif %}
+  <nav class="backlog-jump" aria-label="Alternar lista">
+    {% if lista_size > 0 %}<button type="button" class="backlog-jump-tab{% if first_list == 'backlog-lista' %} is-active{% endif %}" data-target="backlog-lista"><i class="fa-solid fa-list-ul"></i> Lista</button>{% endif %}
+    {% if player_data.played.size > 0 %}<button type="button" class="backlog-jump-tab{% if first_list == 'backlog-zerados' %} is-active{% endif %}" data-target="backlog-zerados"><i class="fa-solid fa-trophy"></i> Zerados</button>{% endif %}
+    {% if player_data.dropped.size > 0 %}<button type="button" class="backlog-jump-tab{% if first_list == 'backlog-abandonados' %} is-active{% endif %}" data-target="backlog-abandonados"><i class="fa-solid fa-skull"></i> Abandonados</button>{% endif %}
   </nav>
 
-  {% if player_data.backlog.size > 0 %}
+  {% if lista_size > 0 %}
 
+  {% if player_data.backlog.size > 0 %}
   {% capture featured_cards %}
   {% assign count = 0 %}
   {% assign shown = "" | split: "," %}
@@ -88,26 +93,30 @@ layout: default
   {% assign count = count | plus: 1 %}
   {% endfor %}
   {% endcapture %}
+  {% endif %}
 
-  <section class="backlog-section backlog-feature" id="backlog-fila">
+  <section class="backlog-section backlog-feature backlog-lista" id="backlog-lista"{% if first_list != 'backlog-lista' %} hidden{% endif %}>
+    {% if player_data.backlog.size > 0 %}
     <p class="eyebrow"><i class="fa-solid fa-hourglass-half"></i> Em espera</p>
     <h2>Fila de espera <small>em destaque</small></h2>
     <div class="backlog-feature-grid">{{ featured_cards }}</div>
+    {% endif %}
     <div class="backlog-flist-head">
       <h3><i class="fa-solid fa-list-ul"></i> Lista completa</h3>
-      <p>Pesquise, filtre por plataforma e navegue pela fila inteira.</p>
+      <p>Fila de espera e catálogo juntos — o que está na fila aparece com o selo "na fila".</p>
     </div>
-    <div class="backlog-catalog-filters" role="group" aria-label="Filtrar fila por plataforma"
-      id="backlog-queue-filters">
+    <div class="backlog-catalog-filters" role="group" aria-label="Filtrar lista por plataforma"
+      id="backlog-lista-filters">
       <button type="button" class="backlog-chip is-active" data-platform="*">Todas</button>
     </div>
-    <div id="backlog-queue-grid"></div>
-    <script type="application/json" id="backlog-queue-data">{{ player_data.backlog | jsonify }}</script>
+    <div id="backlog-lista-grid"></div>
+    <script type="application/json" id="backlog-lista-hot-data">{{ player_data.backlog | jsonify }}</script>
+    <script type="application/json" id="backlog-lista-catalog-data">{{ player_data.catalog | jsonify }}</script>
   </section>
   {% endif %}
 
   {% if player_data.played.size > 0 %}
-  <section class="backlog-section backlog-ratings" id="backlog-zerados">
+  <section class="backlog-section backlog-ratings" id="backlog-zerados"{% if first_list != 'backlog-zerados' %} hidden{% endif %}>
     <p class="eyebrow"><i class="fa-solid fa-trophy"></i> Já saíram da lista</p>
     <h2>Zerados e avaliados</h2>
     <div class="backlog-catalog-filters" role="group" aria-label="Filtrar zerados por plataforma"
@@ -120,16 +129,15 @@ layout: default
   {% endif %}
 
   {% if player_data.dropped.size > 0 %}
-  <section class="backlog-section" id="backlog-abandonados">
+  <section class="backlog-section" id="backlog-abandonados"{% if first_list != 'backlog-abandonados' %} hidden{% endif %}>
     <p class="eyebrow"><i class="fa-solid fa-skull"></i> Não rolou</p>
     <h2>Abandonados</h2>
     <table class="backlog-table">
       <thead>
         <tr>
           <th><i class="fa-solid fa-gamepad"></i> Jogo</th>
-          <th>Plataforma</th>
-          <th>Motivo</th>
-          <th class="backlog-emoji-col">Humor</th>
+          <th><i class="fa-solid fa-box"></i> Plataforma</th>
+          <th><i class="fa-solid fa-comment-dots"></i> Motivo</th>
         </tr>
       </thead>
       <tbody>
@@ -138,28 +146,15 @@ layout: default
           <td>{{ item.name }}</td>
           <td>{{ item.platform }}</td>
           <td>{{ item.reason | default: "–" }}</td>
-          <td class="backlog-emoji-col">{{ item.humor | default: "–" }}</td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
   </section>
   {% endif %}
-
-  {% if player_data.catalog.size > 0 %}
-  <section class="backlog-section backlog-catalog" id="backlog-catalogo">
-    <p class="eyebrow"><i class="fa-solid fa-box-open"></i> Coleção de desejos</p>
-    <h2>Catálogo completo</h2>
-    <div class="backlog-catalog-filters" role="group" aria-label="Filtrar por plataforma">
-      <button type="button" class="backlog-chip is-active" data-platform="*">Todas</button>
-    </div>
-    <div id="backlog-catalog-grid"></div>
-    <script type="application/json" id="backlog-catalog-data">{{ player_data.catalog | jsonify }}</script>
-  </section>
-  {% endif %}
 </article>
 
-{% if player_data.catalog.size > 0 or player_data.backlog.size > 0 %}
+{% if lista_size > 0 or player_data.played.size > 0 %}
 <script src="{{ '/assets/js/lib/gridjs.umd.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 <script src="{{ '/assets/js/backlog.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 {% endif %}

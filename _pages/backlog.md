@@ -8,7 +8,7 @@ layout: page
   <div>
     <p class="eyebrow">Lista de desejos do time</p>
     <h2><i class="fa-solid fa-chess-king"></i> Cada um com a sua fila de espera.</h2>
-    <p>O que cada jogador da casa ainda quer zerar, e o que já saiu da lista — organizado por plataforma e sempre sendo atualizado.</p>
+    <p>O que cada jogador da casa ainda quer zerar e o que já saiu da lista — organizado por plataforma.</p>
   </div>
 </section>
 
@@ -23,14 +23,16 @@ layout: page
       <div>
         <h3>{{ author.name }}</h3>
         <ul class="backlog-stats">
-          <li class="backlog-stat{% if data.backlog.size == 0 %} zero{% endif %}"><strong>{{ data.backlog.size }}</strong><span>na fila</span></li>
-          <li class="backlog-stat{% if data.played.size == 0 %} zero{% endif %}"><strong>{{ data.played.size }}</strong><span>zerados</span></li>
-          <li class="backlog-stat{% if data.dropped.size == 0 %} zero{% endif %}"><strong>{{ data.dropped.size }}</strong><span>abandonados</span></li>
-          <li class="backlog-stat{% if data.catalog.size == 0 %} zero{% endif %}"><strong>{{ data.catalog.size }}</strong><span>catálogo</span></li>
+          <li class="backlog-stat{% if data.backlog.size == 0 %} zero{% endif %}"><strong>{% if data.backlog.size == 0 %}-{% else %}{{ data.backlog.size }}{% endif %}</strong><span>na fila</span></li>
+          <li class="backlog-stat{% if data.catalog.size == 0 %} zero{% endif %}"><strong>{% if data.catalog.size == 0 %}-{% else %}{{ data.catalog.size }}{% endif %}</strong><span>catálogo</span></li>
         </ul>
-        {% assign total = data.backlog.size | plus: data.played.size | plus: data.dropped.size | plus: data.catalog.size %}
-        {% if total == 0 %}<p class="backlog-empty">Sem jogos registrados ainda — a fila desse jogador está vazia por enquanto.</p>{% endif %}
       </div>
     </a>
   {% endfor %}
+</section>
+
+<section class="quote-card" data-quotes-card>
+  <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+  <blockquote></blockquote>
+  <figcaption></figcaption>
 </section>

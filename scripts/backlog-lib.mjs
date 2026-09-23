@@ -4,11 +4,24 @@ import { join, dirname } from "node:path";
 
 export const DB_PATH = join(process.cwd(), "data", "trespordez.sqlite");
 
+function today() {
+  return new Date().toISOString().slice(0, 10);
+}
+
 export function openDb() {
   mkdirSync(dirname(DB_PATH), { recursive: true });
   const db = new DatabaseSync(DB_PATH);
   db.exec(SCHEMA);
+  migrateAddedAt(db);
   return db;
+}
+
+function migrateAddedAt(db) {
+  const cols = db.prepare("PRAGMA table_info(backlog_items)").all();
+  if (!cols.some((c) => c.name === "added_at")) {
+    db.exec("ALTER TABLE backlog_items ADD COLUMN added_at TEXT");
+  }
+  db.exec("UPDATE backlog_items SET added_at = date('now') WHERE added_at IS NULL");
 }
 
 export function readYaml(file) {
@@ -42,6 +55,7 @@ CREATE TABLE IF NOT EXISTS backlog_items (
   reason     TEXT,
   graf       REAL, som REAL, gameplay REAL, desafio REAL, geral REAL,
   post_slug  TEXT,
+  added_at   TEXT,
   UNIQUE (player_key, section, pos)
 );
 
@@ -67,12 +81,20 @@ export function upsertPlayer(db, player) {
 }
 
 export function replaceSection(db, playerKey, section, items) {
+  const preserved = new Map();
+  const prior = db
+    .prepare(
+      "SELECT name, added_at FROM backlog_items WHERE player_key = ? AND section = ? AND added_at IS NOT NULL"
+    )
+    .all(playerKey, section);
+  for (const row of prior) preserved.set(row.name, row.added_at);
+
   db.prepare("DELETE FROM backlog_items WHERE player_key = ? AND section = ?").run(playerKey, section);
   const ins = db.prepare(
     `INSERT INTO backlog_items
        (player_key, section, pos, name, platform, status, mood, humor, reason,
-        graf, som, gameplay, desafio, geral, post_slug)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+        graf, som, gameplay, desafio, geral, post_slug, added_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
   );
   items.forEach((item, pos) => {
     ins.run(
@@ -85,7 +107,8 @@ export function replaceSection(db, playerKey, section, items) {
       item.reason ?? null,
       item.graf ?? null, item.som ?? null, item.gameplay ?? null,
       item.desafio ?? null, item.geral ?? null,
-      item.post_slug ?? null
+      item.post_slug ?? null,
+      item.added_at ?? preserved.get(item.name) ?? today()
     );
   });
   return items.length;
@@ -98,8 +121,8 @@ export function appendItems(db, playerKey, section, items) {
   const ins = db.prepare(
     `INSERT INTO backlog_items
        (player_key, section, pos, name, platform, status, mood, humor, reason,
-        graf, som, gameplay, desafio, geral, post_slug)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+        graf, som, gameplay, desafio, geral, post_slug, added_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
   );
   items.forEach((item, i) => {
     ins.run(
@@ -107,7 +130,8 @@ export function appendItems(db, playerKey, section, items) {
       item.name ?? null, item.platform ?? null, item.status ?? null,
       item.mood ?? null, item.humor ?? null, item.reason ?? null,
       item.graf ?? null, item.som ?? null, item.gameplay ?? null,
-      item.desafio ?? null, item.geral ?? null, item.post_slug ?? null
+      item.desafio ?? null, item.geral ?? null, item.post_slug ?? null,
+      item.added_at ?? today()
     );
   });
   return items.length;

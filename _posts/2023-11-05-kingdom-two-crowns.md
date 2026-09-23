@@ -32,12 +32,12 @@ wordpress_featured_image: https://trespordez.com.br/wp-content/uploads/2023/11/1
 
 <p>Pixelart feito com maestria, sem contar nos lindos efeitos de parallax. Este jogo é uma obra de arte.</p>
 <div class="post-gallery" aria-label="Galeria de screenshots de Kingdom Two Crowns">
-<a href="{{{{ '/assets/images/posts/kingdom-two-crowns/01-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 1"><img alt="Kingdom Two Crowns" src="{{{{ '/assets/images/posts/kingdom-two-crowns/01-screenshot.jpg' | relative_url }}}}" /></a>
-<a href="{{{{ '/assets/images/posts/kingdom-two-crowns/02-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 2"><img alt="Kingdom Two Crowns" src="{{{{ '/assets/images/posts/kingdom-two-crowns/02-screenshot.jpg' | relative_url }}}}" /></a>
-<a href="{{{{ '/assets/images/posts/kingdom-two-crowns/03-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 3"><img alt="Kingdom Two Crowns" src="{{{{ '/assets/images/posts/kingdom-two-crowns/03-screenshot.jpg' | relative_url }}}}" /></a>
-<a href="{{{{ '/assets/images/posts/kingdom-two-crowns/04-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 4"><img alt="Kingdom Two Crowns" src="{{{{ '/assets/images/posts/kingdom-two-crowns/04-screenshot.jpg' | relative_url }}}}" /></a>
-<a href="{{{{ '/assets/images/posts/kingdom-two-crowns/05-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 5"><img alt="Kingdom Two Crowns" src="{{{{ '/assets/images/posts/kingdom-two-crowns/05-screenshot.jpg' | relative_url }}}}" /></a>
-<a href="{{{{ '/assets/images/posts/kingdom-two-crowns/06-screenshot.jpg' | relative_url }}}}" aria-label="Abrir Screenshot 6"><img alt="Kingdom Two Crowns" src="{{{{ '/assets/images/posts/kingdom-two-crowns/06-screenshot.jpg' | relative_url }}}}" /></a>
+<a href="{{ '/assets/images/posts/kingdom-two-crowns/01-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 1"><img alt="Kingdom Two Crowns" src="{{ '/assets/images/posts/kingdom-two-crowns/01-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/kingdom-two-crowns/02-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 2"><img alt="Kingdom Two Crowns" src="{{ '/assets/images/posts/kingdom-two-crowns/02-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/kingdom-two-crowns/03-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 3"><img alt="Kingdom Two Crowns" src="{{ '/assets/images/posts/kingdom-two-crowns/03-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/kingdom-two-crowns/04-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 4"><img alt="Kingdom Two Crowns" src="{{ '/assets/images/posts/kingdom-two-crowns/04-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/kingdom-two-crowns/05-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 5"><img alt="Kingdom Two Crowns" src="{{ '/assets/images/posts/kingdom-two-crowns/05-screenshot.jpg' | relative_url }}" /></a>
+<a href="{{ '/assets/images/posts/kingdom-two-crowns/06-screenshot.jpg' | relative_url }}" aria-label="Abrir Screenshot 6"><img alt="Kingdom Two Crowns" src="{{ '/assets/images/posts/kingdom-two-crowns/06-screenshot.jpg' | relative_url }}" /></a>
 </div>
 
 <p>IGDB: <a href="https://www.igdb.com/games/kingdom-two-crowns">https://www.igdb.com/games/kingdom-two-crowns</a></p>

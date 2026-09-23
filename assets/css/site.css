@@ -2402,17 +2402,17 @@ a:hover {
     margin: 0 0 4px;
 }
 
-.music-section > h2 {
+.music-section>h2 {
     margin: 0 0 8px;
     font: 800 28px var(--head);
 }
 
-.music-section > p {
+.music-section>p {
     max-width: 860px;
     margin: 0 0 14px;
 }
 
-.music-section > h2 i {
+.music-section>h2 i {
     color: #173b45;
     margin-right: 6px;
 }
@@ -2518,7 +2518,7 @@ a:hover {
     font: 800 30px var(--head);
 }
 
-.music-feature > p {
+.music-feature>p {
     max-width: 860px;
     margin: 0 0 16px;
     color: #dcecf2;
@@ -2670,6 +2670,38 @@ a:hover {
     font: 800 20px var(--head);
 }
 
+.backlog-jump {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 28px;
+}
+
+.backlog-jump a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 16px;
+    background: #111318;
+    border: 2px solid #22262e;
+    border-radius: 999px;
+    color: #dcecf2;
+    font: 700 13px var(--head);
+    text-decoration: none;
+    transition: transform .15s ease, border-color .15s ease, color .15s ease;
+}
+
+.backlog-jump a:hover {
+    transform: translateY(-2px);
+    border-color: #7fd4e7;
+    color: #7fd4e7;
+}
+
+.backlog-jump a i {
+    color: #7fd4e7;
+    font-size: 12px;
+}
+
 .backlog-hero--player {
     display: flex;
     flex-wrap: wrap;
@@ -2701,13 +2733,13 @@ a:hover {
     position: relative;
 }
 
-.backlog-feature > h2 {
+.backlog-feature>h2 {
     display: flex;
     align-items: baseline;
     gap: 8px;
 }
 
-.backlog-feature > h2 small {
+.backlog-feature>h2 small {
     color: #999;
     font: 600 14px var(--body);
 }
@@ -3162,7 +3194,7 @@ a:hover {
     color: #999;
 }
 
-.backlog-score-final-outer > .backlog-score-chip {
+.backlog-score-final-outer>.backlog-score-chip {
     box-shadow: 3px 3px 0 #000;
 }
 
@@ -3255,27 +3287,32 @@ a:hover {
 }
 
 @media (max-width: 640px) {
-  .backlog-player-card {
-    grid-template-columns: 114px 1fr;
-    gap: 14px;
-  }
-  .backlog-section,
-  .backlog-hero {
-    padding: 20px;
-  }
-  .backlog-player-card .team-avatar,
-  .backlog-player-card .team-avatar img {
-    width: 114px;
-    height: 114px;
-  }
-  .backlog-stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .backlog-feature-grid {
-    grid-template-columns: 1fr;
-  }
-  .backlog-hero--player {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    .backlog-player-card {
+        grid-template-columns: 114px 1fr;
+        gap: 14px;
+    }
+
+    .backlog-section,
+    .backlog-hero {
+        padding: 20px;
+    }
+
+    .backlog-player-card .team-avatar,
+    .backlog-player-card .team-avatar img {
+        width: 114px;
+        height: 114px;
+    }
+
+    .backlog-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .backlog-feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .backlog-hero--player {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }

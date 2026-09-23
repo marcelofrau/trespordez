@@ -1,0 +1,130 @@
+# Backlog — manutenção
+
+> Referência completa para manter os backlogs do Três por Dez. Leia junto com a
+> seção **Backlog** do `AGENTS.md`.
+
+## Visão geral
+
+Cada jogador tem uma página em `/backlog/<player>/`, renderizada por
+`_layouts/backlog.html` e alimentada por `_data/backlog/<player>.yml`
+(exposta no Jekyll como `site.data.backlog.<player>`).
+
+| Player | Página | Dados |
+| --- | --- | --- |
+| The Archivist | `/backlog/the-archivist/` | `_data/backlog/the-archivist.yml` |
+
+## Fonte dos dados
+
+A fonte original é um Google Sheets público do The Archivist (aba principal
+`Backlog pessoal`). O script `scripts/backlog-sync.mjs` baixa as 4 abas pelo
+endpoint de CSV público (`/pub?output=csv&gid=<gid>`), normaliza e escreve o
+YAML de cada player. **Nenhuma credencial é usada** — a planilha está publicada
+como "para quem tiver o link".
+
+O mapeamento player → abas (gid) fica em `PLAYERS` no topo do script. Para
+trocar a planilha de um player, atualize `PUB_BASE` e os gids.
+
+## Schema
+
+Todos os valores são strings ou `null`. Emojis de status (`▶️ ✅ ❌ ⏳ …`)
+vêm da planilha e **não devem ser traduzidos nem mapeados**.
+
+```yaml
+backlog:          # fila de espera
+  - name: "Grandia"
+    platform: "Saturn"
+    status: "▶️"
+    mood: null
+played:           # zerados / avaliados
+  - name: "Expedition 33"
+    platform: "PC"
+    status: null
+    humor: null
+    graf: 10       # números ou null
+    som: 10
+    gameplay: 10
+    desafio: 10
+    geral: 10
+dropped:          # abandonados
+  - name: "Grim Fandango"
+    platform: "PC"
+    reason: "Não valeu"
+    humor: null
+catalog:          # catálogo de desejos (grande; Grid.js no front)
+  - name: "Captain Tomaday"
+    platform: "NeoGeo"
+    status: null
+    humor: null
+```
+
+Normalização feita pelo sync: `??`, `?` e `-` viram `null`; notas ficam como
+número quando numéricas; linhas sem `name` são descartadas.
+
+## Como atualizar
+
+### 1. Via sync (fonte: Google Sheets)
+
+```bash
+node scripts/backlog-sync.mjs
+```
+
+- Reescreve `_data/backlog/*.yml` a partir das abas publicadas.
+- Mostra contagem por seção; confira se os números batem com o esperado.
+- **Cuidado:** qualquer edição manual do YAML é perdida no próximo sync. Use
+  um caminho ou o outro, não os dois misturados.
+
+### 2. Via edição direta do YAML
+
+Válido e melhor quando a mudança é pontual (ex.: marcar um jogo como zerado).
+Respeite o schema acima e rode a validação depois:
+
+```bash
+node scripts/validate-site.mjs
+```
+
+## Adicionar um jogador
+
+1. `scripts/backlog-sync.mjs` → adicione a chave do player e os gids em `PLAYERS`.
+2. `_pages/backlog/<player>.md`:
+
+   ```yaml
+   ---
+   title: "Backlog — Nome do Player"
+   permalink: /backlog/<player>/
+   layout: backlog
+   player: <player>
+   ---
+   ```
+
+3. `_data/authors.yml` → chave do player (avatar, nome, slug).
+4. `_data/navigation.yml` → filho em `Backlog` apontando para `/backlog/<player>/`.
+
+O index `/backlog/` lista os players automaticamente (loop sobre
+`site.data.backlog`).
+
+## Páginas e layout
+
+- `_pages/backlog.md` — índice (`layout: page`, iterando `site.data.backlog`).
+- `_pages/backlog/<player>.md` — página por jogador (`layout: backlog`).
+- `_layouts/backlog.html` — renderiza seções condicionalmente: fila (agrupada
+  por plataforma), zerados (com notas), abandonados e catálogo. Se a seção não
+  existir nos dados, ela não aparece.
+- O catálogo usa **Grid.js** (busca, ordenação, paginação e filtro por
+  plataforma). Arquivos vendored:
+  - `assets/js/lib/gridjs.umd.js`
+  - `assets/css/lib/mermaid.min.css`
+  - **Não** mova para diretórios `vendor/` (ignorados pelo git).
+  - Atribuição: `docs/asset-credits.md`.
+
+## Troubleshooting
+
+- **Contagens erradas / itens faltando:** confira se a planilha está com "Publicar
+  planilha" ativo (Arquivo → Compartilhar → Publicar na web). O CSV público
+  reflete **o que está publicado**, não o estado do editor.
+- **Emoji estranho no terminal:** o console do Windows às vezes decodifica
+  UTF-8 errado; o arquivo costuma estar correto. Confira com um editor ou
+  `node -e "console.log(require('fs').readFileSync('_data/backlog/<p>.yml','utf8'))"`.
+- **YAML gigante:** o catálogo do The Archivist tem ~2.400 itens (~250 KB).
+  Normal para Jekyll; o Grid.js pagina em cliente.
+- **CI/QA verde:** rode `node scripts/validate-site.mjs` e garanta build Jekyll
+  limpo antes do push.

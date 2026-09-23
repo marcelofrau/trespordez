@@ -77,6 +77,7 @@ export function playerSections(db, playerKey) {
         for (const field of ["graf", "som", "gameplay", "desafio", "geral"])
           if (row[field] != null) item[field] = row[field];
         if (row.cover != null) item.cover = row.cover;
+        if (row.post_slug != null) item.post_slug = row.post_slug;
         return item;
       });
   }

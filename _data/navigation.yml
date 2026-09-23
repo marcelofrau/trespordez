@@ -37,17 +37,13 @@
       url: /category/emulators/
     - label: Ports e Recomps
       url: /emuladores/ports/
-- label: Equipe
-  url: /equipe/
+- label: Backlog
+  url: /backlog/
 - label: Softwares
   url: /softwares/
 - label: Música
   url: /musica/
-- label: Backlog
-  children:
-    - label: Backlog
-      url: /backlog/
-    - label: The Archivist
-      url: /backlog/the-archivist/
+- label: Equipe
+  url: /equipe/
 - label: Links
   url: /links/

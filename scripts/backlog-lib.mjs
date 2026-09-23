@@ -44,6 +44,16 @@ CREATE TABLE IF NOT EXISTS backlog_items (
   post_slug  TEXT,
   UNIQUE (player_key, section, pos)
 );
+
+CREATE TABLE IF NOT EXISTS scores (
+  content_slug TEXT PRIMARY KEY,
+  graf         REAL,
+  som          REAL,
+  gameplay     REAL,
+  desafio      REAL,
+  geral        REAL,
+  raw          TEXT
+);
 `;
 
 export function upsertPlayer(db, player) {
@@ -108,6 +118,24 @@ export function countItems(db, playerKey, section) {
     .prepare("SELECT COUNT(*) AS n FROM backlog_items WHERE player_key=? AND section=?")
     .get(playerKey, section);
   return row.n;
+}
+
+export function upsertScore(db, slug, values, raw) {
+  db.prepare(
+    `INSERT INTO scores (content_slug, graf, som, gameplay, desafio, geral, raw)
+     VALUES (?, ?, ?, ?, ?, ?, ?)
+     ON CONFLICT (content_slug) DO UPDATE SET
+       graf=excluded.graf, som=excluded.som, gameplay=excluded.gameplay,
+       desafio=excluded.desafio, geral=excluded.geral, raw=excluded.raw`
+  ).run(
+    slug,
+    values.graf ?? null,
+    values.som ?? null,
+    values.gameplay ?? null,
+    values.desafio ?? null,
+    values.geral ?? null,
+    raw
+  );
 }
 
 export function setMeta(db, key, value) {

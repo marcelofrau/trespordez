@@ -1,5 +1,6 @@
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
+import { openDb } from "./backlog-lib.mjs";
 
 const root = process.cwd();
 const errors = [];
@@ -24,6 +25,23 @@ for (const file of files(join(root, "_posts")).filter((path) => path.endsWith(".
   }
   for (const image of content.matchAll(/!\[[^\]]*\]\((\/assets\/[^)\s]+)/g)) {
     if (!existsSync(join(root, image[1]))) errors.push(`${file}: missing image ${image[1]}`);
+  }
+}
+
+const db = openDb();
+const played = db
+  .prepare(
+    `SELECT b.player_key, b.name, b.post_slug, b.geral
+     FROM backlog_items b
+     WHERE b.section = 'played' AND b.post_slug IS NOT NULL AND b.geral IS NOT NULL`
+  )
+  .all();
+for (const item of played) {
+  const score = db.prepare("SELECT geral FROM scores WHERE content_slug = ?").get(item.post_slug);
+  if (score && score.geral != null && Math.abs(score.geral - item.geral) > 0.01) {
+    console.warn(
+      `aviso: ${item.player_key}/${item.name} — nota sheet ${item.geral} vs nota post ${score.geral} (${item.post_slug})`
+    );
   }
 }
 

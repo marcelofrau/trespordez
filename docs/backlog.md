@@ -136,6 +136,25 @@ node scripts/backlog-export.mjs                                      # regenera 
 - Primeira passada (2026-09): 2.116 itens novos (5.079 favoritos em 62
   gamelists; ~2.963 já constavam no backlog).
 
+### 5. Repassada geral (limpeza de nomes/gêneros)
+
+`scripts/backlog-cleanup.mjs` varre o sqlite e conserta o que entrou "sujo":
+remove extensão de arquivo do título (`Gran Turismo 3 A-Spec.iso` → sem `.iso`),
+capitaliza nome/gênero que chegaram tudo minúsculo (title case, com `USA`, `3D`,
+`II` preservados e `of`/`the`/`for` minúsculos) e lista estranhos para revisão.
+
+```bash
+node scripts/backlog-cleanup.mjs                # dry-run (mudanças + junk)
+node scripts/backlog-cleanup.mjs --apply         # grava
+node scripts/backlog-export.mjs                  # regenera yml
+```
+
+- Gêneros com slug curado (`jrpg`, `platformer`, `racing`…) **não** são
+  capitalizados — mantêm a taxonomia de propósito.
+- Junk (nomes tipo `ecwolf.exe`, `eur`, `D`) só é listado, nunca apagado.
+- Duplicatas entre seções (`played`/`catalog`) são intencionais; duplicatas
+  dentro do mesmo section existem e são tratadas caso a caso (sem merge automático).
+
 ## Adicionar um jogador
 
 1. `scripts/backlog-sync.mjs` → adicione a chave do player e os gids em `PLAYERS`.

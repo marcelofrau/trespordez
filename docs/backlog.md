@@ -159,12 +159,15 @@ python scripts/backlog_editor.py            # abre a UI (precisa tkinter)
 python scripts/backlog_editor.py --selftest # smoke test sobre uma cópia do db
 ```
 
-Recursos: filtros (jogador, seção, texto, plataforma, gênero, status) com grid
-master + painel de detalhe (todos os campos, scores inclusos); toolbar de
-`Renomear em batch` (substituição simples ou regex), `Organizar`
-(renomear/merge de plataforma ou gênero), `Batch...` (definir campo em comum p/
-seleção), mover entre seções, reordenar (↑/↓), duplicar, apagar; aba de scores
-dos posts; botão `Exportar yml` que roda o `backlog-export.mjs` por baixo.
+UI temática pistache + laranja, organizada em abas: **Backlog** (master-detail),
+**Scores** (posts), **Plataformas**, **Gêneros** e **Jogadores**.
+
+Recursos: filtros live (texto/combo sem botão aplicar, debounced), colunas
+ordenáveis no cabeçalho, campos de detalhe completos (incl. `description`
+multilinha), batch rename (literal ou regex), batch de campo comum,
+organizar/merge plataforma e gênero, mover entre seções, reordenar (↑/↓),
+duplicar, apagar; botão `Exportar yml` roda o `backlog-export.mjs` por baixo.
+`description` também é emitida no yml quando preenchida.
 
 O editor escreve direto no `data/trespordez.sqlite` (mesma fonte de verdade dos
 scripts). Rodou selftest com 5 verificações sobre cópia — não toca o banco real

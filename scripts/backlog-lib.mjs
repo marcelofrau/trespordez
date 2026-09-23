@@ -32,6 +32,13 @@ function migrateAddedAt(db) {
   db.exec("UPDATE backlog_items SET added_at = date('now') WHERE added_at IS NULL");
 }
 
+function migrateDescription(db) {
+  const cols = db.prepare("PRAGMA table_info(backlog_items)").all();
+  if (!cols.some((c) => c.name === "description")) {
+    db.exec("ALTER TABLE backlog_items ADD COLUMN description TEXT");
+  }
+}
+
 export function readYaml(file) {
   return JSON.parse(readFileSync(file, "utf8"));
 }

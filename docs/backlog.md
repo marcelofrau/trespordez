@@ -82,6 +82,31 @@ Respeite o schema acima e rode a validação depois:
 node scripts/validate-site.mjs
 ```
 
+### 3. Via Playnite (enriquecer genre e data de adição)
+
+A library local do Playnite (Playnite 10+: `C:\Apps\Playnite\library\`) pode
+preencher `genre` e `added_at` nos itens de `backlog` e `catalog`. O script
+`scripts/playnite-backlog.mjs` detecta os dois formatos de library (sqlite
+antiga `library.db` ou LiteDB nova `games.db` + `genres.db` + `platforms.db`),
+extrai um snapshot dos jogos e casa por nome (exato → sem ruído de ROM `[US]`/
+`(U)` → prefixo). A extração LiteDB usa `scripts/playnite-extract` (C#,
+referencia a `LiteDB.dll` que o próprio Playnite carrega; compila sozinho na
+primeira execução via `dotnet`).
+
+```bash
+node scripts/playnite-backlog.mjs                                  # dry-run
+node scripts/playnite-backlog.mjs --apply                           # preenche genre/added onde vazio
+node scripts/playnite-backlog.mjs --apply --overwrite-added         # também sobrescreve added_at
+node scripts/backlog-export.mjs                                    # regenera _data/backlog/*.yml depois
+```
+
+Regras: `genre` só é preenchido quando **vazio** (não sobrescreve slugs curados
+como `jrpg`/`metroidvania`). `added_at` vira data real do Playnite apenas com
+`--overwrite-added` (sem ele a migração deixa a data de hoje como default).
+Itens sem match aparecem na seção "Sem match" do dry-run e ficam intactos.
+Primeira passada (2026-09): 803 itens enriquecidos (664 exatos, 139 por
+prefixo), 244 do Playnite sem correspondência no backlog.
+
 ## Adicionar um jogador
 
 1. `scripts/backlog-sync.mjs` → adicione a chave do player e os gids em `PLAYERS`.

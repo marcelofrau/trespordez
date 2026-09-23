@@ -127,6 +127,36 @@
     color: #000;
 }
 
+.backlog-jump button:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.backlog-jump button:disabled:hover {
+    border-color: #22262e;
+    color: #dcecf2;
+}
+
+.backlog-jump-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    padding: 1px 7px;
+    background: var(--accent);
+    border: 2px solid #000;
+    border-radius: 999px;
+    color: #000;
+    font: 800 11px var(--head);
+    line-height: 1.4;
+}
+
+.backlog-jump button.is-active .backlog-jump-count {
+    background: #000;
+    color: var(--accent);
+}
+
 .backlog-section[hidden] {
     display: none !important;
 }
@@ -618,6 +648,7 @@
     border-bottom: 2px solid #000 !important;
     padding: 10px 14px !important;
     white-space: nowrap;
+    text-align: center;
 }
 
 .backlog-grid-table thead th:last-child {
@@ -651,6 +682,41 @@
 
 .backlog-grid-name {
     font: 800 15px var(--head) !important;
+}
+
+.backlog-grid-name-wrap {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.backlog-grid-link {
+    color: #173b45;
+    font: 800 15px var(--head);
+    text-decoration: underline dotted;
+    text-underline-offset: 3px;
+    transition: color .15s ease;
+}
+
+.backlog-grid-link:hover {
+    color: var(--accent);
+}
+
+.backlog-grid-link-ico {
+    margin-left: 5px;
+    font-size: 11px;
+    color: var(--accent);
+}
+
+.backlog-grid-link:hover .backlog-grid-link-ico {
+    color: #173b45;
+}
+
+.backlog-genre-col {
+    text-align: center;
+    color: #444;
+    font: 700 13px var(--head);
 }
 
 .backlog-score-chip,

@@ -34,9 +34,9 @@ layout: default
   </header>
 
   <nav class="backlog-jump" aria-label="Alternar lista">
-    {% if lista_size > 0 %}<button type="button" class="backlog-jump-tab{% if first_list == 'backlog-lista' %} is-active{% endif %}" data-target="backlog-lista"><i class="fa-solid fa-list-ul"></i> Lista</button>{% endif %}
-    {% if player_data.played.size > 0 %}<button type="button" class="backlog-jump-tab{% if first_list == 'backlog-zerados' %} is-active{% endif %}" data-target="backlog-zerados"><i class="fa-solid fa-trophy"></i> Zerados</button>{% endif %}
-    {% if player_data.dropped.size > 0 %}<button type="button" class="backlog-jump-tab{% if first_list == 'backlog-abandonados' %} is-active{% endif %}" data-target="backlog-abandonados"><i class="fa-solid fa-skull"></i> Abandonados</button>{% endif %}
+    <button type="button" class="backlog-jump-tab{% if first_list == 'backlog-lista' %} is-active{% endif %}" data-target="backlog-lista"{% if lista_size == 0 %} disabled{% endif %}><i class="fa-solid fa-list-ul"></i> Lista <span class="backlog-jump-count">{{ lista_size }}</span></button>
+    <button type="button" class="backlog-jump-tab{% if first_list == 'backlog-zerados' %} is-active{% endif %}" data-target="backlog-zerados"{% if player_data.played.size == 0 %} disabled{% endif %}><i class="fa-solid fa-trophy"></i> Zerados <span class="backlog-jump-count">{{ player_data.played.size }}</span></button>
+    <button type="button" class="backlog-jump-tab{% if first_list == 'backlog-abandonados' %} is-active{% endif %}" data-target="backlog-abandonados"{% if player_data.dropped.size == 0 %} disabled{% endif %}><i class="fa-solid fa-skull"></i> Abandonados <span class="backlog-jump-count">{{ player_data.dropped.size }}</span></button>
   </nav>
 
   {% if lista_size > 0 %}
@@ -103,7 +103,7 @@ layout: default
     {% endif %}
     <div class="backlog-flist-head">
       <h3><i class="fa-solid fa-list-ul"></i> Lista completa</h3>
-      <p>Fila de espera e catálogo juntos — o que está na fila aparece com o selo "na fila".</p>
+      <p>Fila de espera e catálogo juntos — selo "na fila", gênero e data de inclusão.</p>
     </div>
     <div class="backlog-catalog-filters" role="group" aria-label="Filtrar lista por plataforma"
       id="backlog-lista-filters">

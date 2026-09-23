@@ -73,6 +73,7 @@ export function playerSections(db, playerKey) {
           platform: row.platform,
         };
         for (const field of ["status", "mood"]) if (row[field] != null) item[field] = row[field];
+        if (row.genre != null) item.genre = row.genre;
         for (const field of ["humor", "reason"]) if (row[field] != null) item[field] = row[field];
         for (const field of ["graf", "som", "gameplay", "desafio", "geral"])
           if (row[field] != null) item[field] = row[field];

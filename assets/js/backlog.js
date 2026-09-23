@@ -10,6 +10,7 @@
     const sections = document.querySelectorAll(".backlog-wrap .backlog-section");
     tabs.forEach((tab) => {
       tab.addEventListener("click", () => {
+        if (tab.disabled) return;
         tabs.forEach((t) => t.classList.remove("is-active"));
         tab.classList.add("is-active");
         const id = tab.dataset.target;
@@ -35,44 +36,58 @@
     return m ? `${m[3]}/${m[2]}/${m[1]}` : "–";
   };
 
+  const nameCell = (value, row, { hotIdx, postIdx }) => {
+    const slug = row[postIdx] && String(row[postIdx]);
+    const label = String(value ?? "");
+    const inner = slug
+      ? h("a", { className: "backlog-grid-link", href: slug[0] === "/" ? slug : `/${slug}` }, [
+          label,
+          h("i", { className: "fa-solid fa-arrow-up-right-from-square backlog-grid-link-ico", "aria-hidden": "true" }),
+        ])
+      : h("strong", { className: "backlog-grid-name" }, label);
+    if (hotIdx < 0 || !row[hotIdx]) return inner;
+    return h("span", { className: "backlog-grid-name-wrap" }, [
+      inner,
+      h("span", { className: "backlog-hot-tag" }, [
+        h("i", { className: "fa-solid fa-fire", "aria-hidden": "true" }),
+        " na fila",
+      ]),
+    ]);
+  };
+
+  const hiddenCol = () => ({ name: "", width: "0px", className: "backlog-hot-col", formatter: () => "" });
+
   const playedColumns = [
     {
       name: fa("fa-solid fa-gamepad", "Jogo"),
-      formatter: (c) => h("strong", { className: "backlog-grid-name" }, String(c ?? "")),
+      formatter: (c, row) => nameCell(c, row, { hotIdx: -1, postIdx: 7 }),
     },
-    { name: fa("fa-solid fa-box", "Plataforma"), width: "90px", className: "backlog-platform-col" },
-    { name: fa("fa-solid fa-palette", "Gráficos"), width: "96px", className: "backlog-score", formatter: scoreCell },
-    { name: fa("fa-solid fa-volume-high", "Som"), width: "96px", className: "backlog-score", formatter: scoreCell },
-    { name: fa("fa-solid fa-bolt", "Gameplay"), width: "96px", className: "backlog-score", formatter: scoreCell },
-    { name: fa("fa-solid fa-fire", "Desafio"), width: "96px", className: "backlog-score", formatter: scoreCell },
+    { name: fa("fa-solid fa-box", "Plataforma"), width: "90px", className: "backlog-platform-col", sort: { enabled: false } },
+    { name: fa("fa-solid fa-palette", "Gráficos"), width: "96px", className: "backlog-score", formatter: scoreCell, sort: { enabled: false } },
+    { name: fa("fa-solid fa-volume-high", "Som"), width: "96px", className: "backlog-score", formatter: scoreCell, sort: { enabled: false } },
+    { name: fa("fa-solid fa-bolt", "Gameplay"), width: "96px", className: "backlog-score", formatter: scoreCell, sort: { enabled: false } },
+    { name: fa("fa-solid fa-fire", "Desafio"), width: "96px", className: "backlog-score", formatter: scoreCell, sort: { enabled: false } },
     {
       name: fa("fa-solid fa-star", "Geral"),
       width: "96px",
       className: "backlog-score",
       formatter: (c) => h("span", { className: "backlog-score-final-outer" }, scoreCell(c)),
+      sort: { enabled: false },
     },
+    hiddenCol(),
   ];
 
   const listColumns = [
     {
       name: fa("fa-solid fa-gamepad", "Jogo"),
-      formatter: (c, row) => {
-        const kids = [String(c ?? "")];
-        if (row[4]) {
-          kids.push(
-            h("span", { className: "backlog-hot-tag" }, [
-              h("i", { className: "fa-solid fa-fire", "aria-hidden": "true" }),
-              " na fila",
-            ])
-          );
-        }
-        return h("strong", { className: "backlog-grid-name" }, kids);
-      },
+      formatter: (c, row) => nameCell(c, row, { hotIdx: 5, postIdx: 6 }),
     },
-    { name: fa("fa-solid fa-box", "Plataforma"), width: "90px", className: "backlog-platform-col" },
+    { name: fa("fa-solid fa-tags", "Gênero"), width: "120px", className: "backlog-genre-col", formatter: (c) => c || "–" },
+    { name: fa("fa-solid fa-box", "Plataforma"), width: "90px", className: "backlog-platform-col", sort: { enabled: false } },
     { name: fa("fa-solid fa-calendar-plus", "Data"), width: "110px", className: "backlog-date-col", formatter: formatDate },
-    { name: fa("fa-solid fa-clock", "Status"), width: "72px", className: "backlog-emoji-col", formatter: (c) => c || "–" },
-    { name: "", width: "0px", className: "backlog-hot-col", formatter: (c) => c || "" },
+    { name: fa("fa-solid fa-bars-progress", "Status"), width: "72px", className: "backlog-emoji-col", formatter: (c) => c || "–" },
+    { name: "", width: "0px", className: "backlog-hot-col", formatter: (c) => c || "na fila" },
+    hiddenCol(),
   ];
 
   const readJson = (id) => {
@@ -94,7 +109,7 @@
     const grid = new gridjs.Grid({
       columns,
       data: makeRows(raw),
-      sort: false,
+      sort: { multiColumn: false },
       search: {
         enabled: true,
         placeholder: "Buscar jogo…",
@@ -151,10 +166,12 @@
     makeRows: (items) =>
       items.map((item) => [
         item.name,
+        item.genre || "",
         item.platform || "—",
         item.added_at || "",
         item.status || "—",
         item.hot ? "na fila" : "",
+        item.post_slug || "",
       ]),
   });
 
@@ -172,6 +189,7 @@
         item.gameplay,
         item.desafio,
         item.geral,
+        item.post_slug || "",
       ]),
   });
 })();

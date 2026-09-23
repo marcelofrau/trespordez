@@ -19,7 +19,7 @@ import { execFileSync, spawnSync } from "node:child_process";
 import { existsSync, readFileSync, statSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { openDb } from "./backlog-lib.mjs";
+import { openDb, appendItems } from "./backlog-lib.mjs";
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const EXTRACT_EXE = join(SCRIPT_DIR, "playnite-extract", "bin", "Release", "net10.0", "playnite-extract.exe");
@@ -28,6 +28,7 @@ const argv = process.argv.slice(2);
 const APPLY = argv.includes("--apply");
 const OVERWRITE = argv.includes("--overwrite-added");
 const LIST_UNMATCHED = argv.includes("--unmatched");
+const ADD_MISSING = argv.includes("--add-missing");
 const HELP = argv.includes("--help") || argv.includes("-h");
 
 const USAGE = `playnite-backlog: preenche genre/added_at do backlog a partir do Playnite
@@ -40,6 +41,8 @@ const USAGE = `playnite-backlog: preenche genre/added_at do backlog a partir do 
                       Playnite). genre só preenche quando vazio.
   --unmatched         imprime a lista completa de jogos do Playnite sem
                       correspondência no backlog.
+  --add-missing       adiciona no catalog os jogos do Playnite sem match
+                      (platform "PC"; dry-run lista antes de gravar com --apply).
   PLAYNITE_LIB        caminho para a library do Playnite: pode ser o diretório
                       (com library/games.db — Playnite 10+ LiteDB) ou o arquivo
                       library.db (Playnite 7-9 sqlite). Default: procura em
@@ -330,6 +333,26 @@ function main() {
     console.log(`Sem match no backlog: ${unmatched.length} (ex. ${unmatched.slice(0, 8).map((g) => g.name).join(", ") || "—"})`);
   }
 
+  let inserts = [];
+  if (ADD_MISSING) {
+    const existingCatalog = new Set(
+      items.filter((i) => i.section === "catalog").map((i) => norm(i.name))
+    );
+    inserts = unmatched
+      .filter((g) => norm(g.name) && !existingCatalog.has(norm(g.name)))
+      .map((g) => ({
+        name: g.name,
+        platform: "PC",
+        genre: g.genres || null,
+        added_at: g.added || null,
+      }));
+    console.log(`\n--- Novos no catalog via --add-missing (${inserts.length}) ---`);
+    for (const g of inserts.slice(0, 15)) {
+      console.log(`add  ${g.name.padEnd(30)} platform=${g.platform} genre="${g.genre}" added=${g.added_at}`);
+    }
+    if (inserts.length > 15) console.log(`   ... mais ${inserts.length - 15}`);
+  }
+
   if (APPLY) {
     const upd = db.prepare(
       "UPDATE backlog_items SET genre = ?, added_at = ? WHERE id = ?"
@@ -343,6 +366,15 @@ function main() {
       touched++;
     }
     console.log(`\nAplicado: ${touched} itens atualizados no sqlite.`);
+
+    if (ADD_MISSING && inserts.length) {
+      const players = [...new Set(items.map((i) => i.player_key))];
+      let inserted = 0;
+      for (const p of players) {
+        inserted += appendItems(db, p, "catalog", inserts);
+      }
+      console.log(`Inserido no catalog: ${inserted} itens novos.`);
+    }
     console.log("Rode: node scripts/backlog-export.mjs para regenerar _data/backlog/*.yml");
   } else {
     console.log("\n[dry-run] Nada escrito. Use --apply para gravar.");

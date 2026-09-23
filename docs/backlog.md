@@ -97,15 +97,19 @@ primeira execução via `dotnet`).
 node scripts/playnite-backlog.mjs                                  # dry-run
 node scripts/playnite-backlog.mjs --apply                           # preenche genre/added onde vazio
 node scripts/playnite-backlog.mjs --apply --overwrite-added         # também sobrescreve added_at
+node scripts/playnite-backlog.mjs --unmatched                       # lista jogos sem correspondência
+node scripts/playnite-backlog.mjs --apply --add-missing             # adiciona sem-match no catalog (platform "PC")
 node scripts/backlog-export.mjs                                    # regenera _data/backlog/*.yml depois
 ```
 
 Regras: `genre` só é preenchido quando **vazio** (não sobrescreve slugs curados
 como `jrpg`/`metroidvania`). `added_at` vira data real do Playnite apenas com
 `--overwrite-added` (sem ele a migração deixa a data de hoje como default).
-Itens sem match aparecem na seção "Sem match" do dry-run e ficam intactos.
+`--add-missing` insere no `catalog` os jogos do Playnite sem match (platform
+fixa `"PC"` — coleção atual é toda PC; dry-run lista antes). Itens sem match
+aparecem na seção "Sem match" do dry-run e ficam intactos.
 Primeira passada (2026-09): 803 itens enriquecidos (664 exatos, 139 por
-prefixo), 244 do Playnite sem correspondência no backlog.
+prefixo) + 244 inseridos no catalog.
 
 ## Adicionar um jogador
 

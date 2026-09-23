@@ -81,6 +81,7 @@ export function playerSections(db, playerKey) {
         if (row.description != null) item.description = row.description;
         if (row.cover != null) item.cover = row.cover;
         if (row.post_slug != null) item.post_slug = row.post_slug;
+        if (row.glyph != null) item.glyph = row.glyph;
         return item;
       });
   }

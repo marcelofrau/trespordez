@@ -14,7 +14,15 @@ export function openDb() {
   db.exec(SCHEMA);
   migrateAddedAt(db);
   migrateGenre(db);
+  migrateGlyph(db);
   return db;
+}
+
+function migrateGlyph(db) {
+  const cols = db.prepare("PRAGMA table_info(backlog_items)").all();
+  if (!cols.some((c) => c.name === "glyph")) {
+    db.exec("ALTER TABLE backlog_items ADD COLUMN glyph TEXT");
+  }
 }
 
 function migrateGenre(db) {

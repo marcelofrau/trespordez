@@ -327,14 +327,20 @@
     display: flex;
     gap: 8px;
     align-items: stretch;
+    flex-wrap: nowrap;
 }
 
 .backlog-player-card .backlog-stat {
     flex: 1 1 0;
     height: 60px;
+    min-height: 60px;
+    box-sizing: border-box;
     padding: 8px;
     border-color: #000;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     gap: 3px;
 }
@@ -349,13 +355,16 @@
 
 .backlog-player-card .backlog-stat strong {
     font-size: 15px;
+    line-height: 1;
     color: #000;
 }
 
 .backlog-player-card .backlog-stat span {
     font-size: 9px;
+    line-height: 1.2;
     color: #000;
     white-space: nowrap;
+    text-align: center;
 }
 
 .backlog-stats {
@@ -503,11 +512,17 @@
 
 .backlog-platform-col {
     text-align: center;
+    white-space: nowrap;
 }
 
 .backlog-score {
     width: 84px;
     text-align: center !important;
+}
+
+.backlog-grid-table td.backlog-score {
+    text-align: center;
+    vertical-align: middle;
 }
 
 .backlog-score span {
@@ -576,28 +591,166 @@
     gap: 10px;
 }
 
-.backlog-filter {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font: 700 12px var(--head);
-    color: #555;
+.backlog-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.backlog-filter select {
-    padding: 6px 10px;
+.backlog-filter {
+    position: relative;
+    display: inline-flex;
+}
+
+.backlog-filter-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 10px;
     border: var(--border);
     border-radius: 8px;
     background: #fff;
     color: var(--ink);
-    font: 600 13px var(--body);
+    font-size: 15px;
+    line-height: 1;
     cursor: pointer;
     box-shadow: 2px 2px 0 #000;
+    transition: background .15s ease, border-color .15s ease;
 }
 
-.backlog-filter select:hover,
-.backlog-filter select:focus {
+.backlog-filter-trigger:hover {
     border-color: var(--accent);
+    background: #fff7ef;
+}
+
+.backlog-filter-trigger.is-open {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+.backlog-filter-trigger.has-selection {
+    box-shadow: 3px 3px 0 var(--accent);
+    border-color: var(--accent);
+}
+
+.backlog-filter-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    font: 800 11px var(--head);
+    box-shadow: 1px 1px 0 #000;
+}
+
+.backlog-filter-count[hidden] {
+    display: none;
+}
+
+.backlog-filter-trigger.is-open .backlog-filter-count {
+    background: #fff;
+    color: var(--accent);
+}
+
+.backlog-filter-chevron {
+    font-size: 11px;
+    color: #999;
+}
+
+.backlog-filter-trigger.is-open .backlog-filter-chevron {
+    color: #fff;
+}
+
+.backlog-filter-panel {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 250px;
+    max-width: 320px;
+    padding: 10px 12px 12px;
+    background: #fff;
+    border: var(--border);
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 #000;
+}
+
+.backlog-filter-panel[hidden] {
+    display: none;
+}
+
+.backlog-filter-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.backlog-filter-head span {
+    font: 800 13px var(--head);
+    color: var(--ink);
+}
+
+.backlog-filter-clear {
+    border: 0;
+    background: transparent;
+    color: var(--accent);
+    font: 700 12px var(--body);
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.backlog-filter-clear:hover {
+    text-decoration: underline;
+}
+
+.backlog-filter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    max-height: 240px;
+    overflow-y: auto;
+}
+
+.backlog-chip-toggle {
+    cursor: pointer;
+    position: relative;
+}
+
+.backlog-chip-toggle input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backlog-chip-toggle span {
+    display: inline-block;
+    padding: 4px 10px;
+    border: 2px solid #000;
+    border-radius: 999px;
+    background: #f2f2f2;
+    color: var(--ink);
+    font: 600 12px var(--body);
+    transition: background .12s ease, box-shadow .12s ease, font-weight .12s ease;
+}
+
+.backlog-chip-toggle:hover span {
+    background: #ffe4d3;
+}
+
+.backlog-chip-toggle.is-on span {
+    background: var(--accent);
+    font-weight: 800;
+    box-shadow: 2px 2px 0 #000;
 }
 
 #backlog-lista-grid,
@@ -845,11 +998,16 @@
 }
 
 .gridjs-pagination .gridjs-pages button.gridjs-currentPage {
-    border-color: #000;
-    color: #000;
+    min-width: 34px;
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    font-size: 14px;
     font-weight: 800;
     box-shadow: 3px 3px 0 #000;
     transform: translateY(-1px);
+    outline: 2px solid rgba(0, 0, 0, .18);
+    outline-offset: 1px;
 }
 
 .gridjs-pagination .gridjs-pages button:first-child,

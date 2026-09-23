@@ -32,6 +32,185 @@ ROW_FIELDS = [
     "mood", "humor", "reason", "description", "post_slug", "added_at",
 ] + SCORE_FIELDS
 
+# Vocabulário canônico de gêneros ----------------------------------------------
+
+GENRE_SYNONYM = {
+    # RPG
+    "role-playing (rpg)": "rpg", "role playing game": "rpg", "role playing games": "rpg",
+    "role-playing": "rpg", "role playing": "rpg", "mmorpg": "rpg",
+    "japanese rpg": "jrpg", "j-rpg": "jrpg", "jrpg": "jrpg",
+    "dungeon crawler rpg": "rpg", "dungeon crawler": "rpg",
+    "party-based rpg": "rpg", "party based rpg": "rpg",
+    "action rpg": "action-rpg", "action-rpg": "action-rpg",
+    "tactical rpg": "tactical-rpg", "rpg tactico": "tactical-rpg",
+    "jogos de rpg": "rpg", "rpg táctico": "tactical-rpg",
+    # RTS / TBS -> strategy
+    "real time strategy (rts)": "rts", "real-time strategy (rts)": "rts",
+    "real-time strategy": "rts", "real time strategy": "rts",
+    "turn-based strategy (tbs)": "tbs", "turn based strategy": "tbs",
+    # beat'em up / hack & slash
+    "beat'em up": "beat-em-up", "beat 'em up": "beat-em-up", "beat-em-up": "beat-em-up",
+    "hack and slash/beat 'em up": "beat-em-up", "hack and slash": "beat-em-up",
+    "hack-and-slash": "beat-em-up",
+    # shoot'em up
+    "shoot'em up": "shoot-em-up", "shoot em up": "shoot-em-up", "shoot-em-up": "shoot-em-up",
+    "horizontal-shoot'em up": "shoot-em-up", "vertical-shoot'em up": "shoot-em-up",
+    "shmup": "shoot-em-up",
+    # shooter
+    "first-person shooter": "fps", "first person shooter": "fps",
+    "1st person-shooter": "fps", "fpv shooter": "fps", "shooter / fpv": "fps",
+    "third-person shooter": "shooter", "3rd person-shooter": "shooter",
+    "lightgun shooter": "lightgun", "shooter / tpv": "shooter",
+    # run and gun
+    "run-and-gun": "run-and-gun", "run and gun": "run-and-gun", "run & gun": "run-and-gun",
+    # point and click
+    "point-and-click": "point and click", "point and click": "point and click",
+    "point and-click": "point and click",
+    # visual novel
+    "visual-novel": "visual-novel", "visual novel": "visual-novel",
+    # open world
+    "open-world": "sandbox", "open world": "sandbox",
+    # horror
+    "survival horror": "horror", "survival-horror": "horror",
+    # música
+    "music and dancing": "music", "music and dance": "music",
+    "music and dance-rhythm": "music", "musica e danca": "music",
+    # corrida
+    "racing, driving": "racing", "race, driving": "racing", "racing tpv": "racing",
+    "corrida, pilotagem": "racing", "motorcycle race": "racing",
+    # esportes (ScreenScraper "Sports / X")
+    "sports / football (soccer)": "sports", "sports / tennis": "sports",
+    "esporte / futebol": "sports", "esporte / tenis": "sports",
+    # tabuleiro/cartas
+    "asiatic board game": "board game", "board game": "board game",
+    "card & board game": "card game", "playing cards": "card game",
+    "shougi": "board game", "othello": "board game", "hanafuda": "board game",
+    "pachinko": "gambling", "casino": "card game",
+    # portugues
+    "quebra-cabecas": "puzzle", "plataforma": "platformer", "esporte": "sports",
+    "aventura": "adventure", "acao": "action", "tiro": "shooter", "corrida": "racing",
+    "estrategia": "strategy", "luta": "fighting", "musica": "music", "ritmico": "rhythm",
+    "sobrevivencia": "survival", "jogos de cartas": "card game",
+    # misc compacts
+    "puzzle-game": "puzzle", "puzzle game": "puzzle", "puzzle games": "puzzle",
+    "casual game": "casual", "rail shooter": "rail-shooter", "rails shooter": "rail-shooter",
+}
+
+GENRE_MAP = {
+    "action": "action", "adventure": "adventure", "action-adventure": "action-adventure",
+    "arcade": "arcade", "platformer": "platformer", "platform": "platformer",
+    "fps": "fps", "shooter": "shooter", "puzzle": "puzzle", "sports": "sports",
+    "racing": "racing", "strategy": "strategy", "horror": "horror",
+    "shoot-em-up": "shoot-em-up", "stealth": "stealth", "point and click": "point and click",
+    "metroidvania": "metroidvania", "fighting": "fighting", "fight": "fighting",
+    "beat-em-up": "beat-em-up", "simulation": "simulation", "simulator": "simulation",
+    "sim": "simulation", "management": "simulation", "managerial": "simulation",
+    "building": "simulation", "life": "simulation", "tycoon": "simulation",
+    "rpg": "rpg", "action-rpg": "action-rpg", "jrpg": "jrpg", "tactical-rpg": "tactical-rpg",
+    "sandbox": "sandbox", "run-and-gun": "run-and-gun", "rail-shooter": "rail-shooter",
+    "lightgun": "lightgun", "roguelike": "roguelike", "pinball": "pinball",
+    "music": "music", "rhythm": "rhythm", "educational": "educational",
+    "casual": "casual", "various": "various", "compilation": "compilation",
+    "board game": "board game", "card game": "card game", "gambling": "gambling",
+    "mahjong": "board game", "go": "board game", "tactical": "tactical",
+    "quiz": "quiz", "survival": "survival", "party": "party",
+    "visual-novel": "visual-novel", "rts": "strategy", "tbs": "strategy",
+    "soccer": "sports", "football": "sports", "baseball": "sports", "tennis": "sports",
+    "hockey": "sports", "golf": "sports", "basketball": "sports", "rugby": "sports",
+    "volleyball": "sports", "boxing": "sports", "cycling": "sports", "skiing": "sports",
+    "skateboard": "sports", "sumo": "sports", "pool": "sports",
+    "wrestling": "sports",
+    "space": "arcade",
+}
+
+GENRE_DROP = {
+    "indie", "fantasy", "sci-fi", "sci fi", "comedy", "adult", "adults",
+    "mystery", "detective", "historical", "fpp", "fpv", "tpv", "2d", "3d",
+    "labyrinth", "throw", "fall", "space", "vehicle", "unofficial", "kart",
+    "adventure-2", "sci", "moab", "2d",
+}
+
+
+def _strip_accents(s):
+    import unicodedata
+    return "".join(c for c in unicodedata.normalize("NFD", s) if unicodedata.category(c) != "Mn")
+
+
+def normalize_genre(value):
+    """Unifica gêneros ScreenScraper/PT-EN num vocabulário canônico (ou None)."""
+    if not value:
+        return None
+    s = _strip_accents(str(value)).lower()
+    s = s.split("/")[0].strip()
+    for syn in sorted(GENRE_SYNONYM, key=len, reverse=True):
+        s = re.sub(r"\b" + re.escape(syn) + r"\b", " " + GENRE_SYNONYM[syn] + " ", s)
+    def map_piece(piece):
+        if piece in GENRE_MAP:
+            return [GENRE_MAP[piece]]
+        out = []
+        for sub in re.split(r"-+", piece):
+            if sub and sub not in GENRE_DROP and sub in GENRE_MAP:
+                c = GENRE_MAP[sub]
+                if c not in out:
+                    out.append(c)
+        return out
+
+    parts = []
+    for piece in re.split(r"[\s,]+", s):
+        if not piece:
+            continue
+        if piece in GENRE_DROP:
+            continue
+        for canon in map_piece(piece):
+            if canon not in parts:
+                parts.append(canon)
+    return ", ".join(parts) if parts else None
+
+
+def name_key(s):
+    return re.sub(r"[^a-z0-9]+", " ", _strip_accents(str(s or "")).lower()).strip()
+
+
+def find_duplicate_groups(conn):
+    """Grupos [id,...] duplicados por (player, section, nome normalizado)."""
+    rows = conn.execute(
+        "SELECT id, player_key, section, name FROM backlog_items "
+        "ORDER BY player_key, section, id").fetchall()
+    groups = {}
+    for r in rows:
+        key = (r["player_key"], r["section"], name_key(r["name"]))
+        groups.setdefault(key, []).append(r["id"])
+    return [ids for ids in groups.values() if len(ids) > 1]
+
+
+def merge_duplicates(conn, groups):
+    """Mantém o registro mais completo de cada grupo; copia lacunas; apaga o resto."""
+    merged = deleted = 0
+    for ids in groups:
+        rows = [conn.execute("SELECT * FROM backlog_items WHERE id=?", (i,)).fetchone() for i in ids]
+        rows.sort(key=lambda r: (-sum(1 for f in ROW_FIELDS if r[f] is not None), r["id"]))
+        keeper, others = rows[0], rows[1:]
+        fields = {}
+        for f in ROW_FIELDS:
+            if keeper[f] is not None:
+                continue
+            for r2 in others:
+                if r2[f] is not None:
+                    fields[f] = r2[f]
+                    break
+        if fields:
+            conn.execute(
+                f"UPDATE backlog_items SET {', '.join(f'{k}=?' for k in fields)} WHERE id=?",
+                (*fields.values(), keeper["id"]))
+        for r2 in others:
+            conn.execute("DELETE FROM backlog_items WHERE id=?", (r2["id"],))
+        _reindex(conn, keeper["player_key"], keeper["section"])
+        merged += 1
+        deleted += len(others)
+    conn.commit()
+    return merged, deleted
+
+
 # Tema pistache/laranja --------------------------------------------------------
 BG      = "#F4F8EB"   # fundo claro pistache
 PANEL   = "#E7F0D7"   # painéis

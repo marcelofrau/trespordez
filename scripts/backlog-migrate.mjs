@@ -1,28 +1,12 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { openDb, upsertPlayer, replaceSection, setMeta } from "./backlog-lib.mjs";
+import { openDb, upsertPlayer, replaceSection, setMeta, loadAuthors } from "./backlog-lib.mjs";
 
 const BACKLOG_DIR = join(process.cwd(), "_data", "backlog");
-const AUTHORS_FILE = join(process.cwd(), "_data", "authors.yml");
 const SECTIONS = ["backlog", "played", "dropped", "catalog"];
 
 function parseAuthors() {
-  const text = readFileSync(AUTHORS_FILE, "utf8");
-  const players = {};
-  let key = null;
-  for (const raw of text.split(/\r?\n/)) {
-    const keyMatch = raw.match(/^(\S+):\s*$/);
-    if (keyMatch) {
-      key = keyMatch[1];
-      players[key] = {};
-      continue;
-    }
-    if (key) {
-      const f = raw.match(/^\s{2}(\w+):\s*(.*)$/);
-      if (f) players[key][f[1]] = (f[2] || "").replace(/^["']|["']$/g, "") || null;
-    }
-  }
-  return players;
+  return loadAuthors();
 }
 
 function parseSections(file) {

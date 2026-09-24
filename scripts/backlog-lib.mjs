@@ -1,5 +1,5 @@
 import { DatabaseSync } from "node:sqlite";
-import { mkdirSync, readFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, readdirSync } from "node:fs";
 import { join, dirname } from "node:path";
 
 export const DB_PATH = join(process.cwd(), "data", "trespordez.sqlite");
@@ -49,6 +49,51 @@ function migrateDescription(db) {
 
 export function readYaml(file) {
   return JSON.parse(readFileSync(file, "utf8"));
+}
+
+export function loadAuthors() {
+  const dir = join(process.cwd(), "_data", "authors");
+  if (existsSync(dir)) {
+    const players = {};
+    for (const file of readdirSync(dir)) {
+      if (!/\.ya?ml$/i.test(file)) continue;
+      const key = file.replace(/\.[^.]+$/, "");
+      players[key] = parseAuthorFile(readFileSync(join(dir, file), "utf8"));
+    }
+    if (Object.keys(players).length) return players;
+  }
+  const single = join(process.cwd(), "_data", "authors.yml");
+  if (existsSync(single)) {
+    const players = {};
+    let key = null;
+    for (const raw of readFileSync(single, "utf8").split(/\r?\n/)) {
+      const keyMatch = raw.match(/^(\S+):\s*$/);
+      if (keyMatch) {
+        key = keyMatch[1];
+        players[key] = {};
+        continue;
+      }
+      if (key) {
+        const f = raw.match(/^\s{2}(\w+):\s*(.*)$/);
+        if (f) players[key][f[1]] = cleanValue(f[2]);
+      }
+    }
+    if (Object.keys(players).length) return players;
+  }
+  throw new Error("Nenhum autor em _data/authors/ nem _data/authors.yml");
+}
+
+function parseAuthorFile(text) {
+  const fields = {};
+  for (const raw of text.split(/\r?\n/)) {
+    const m = raw.match(/^\s*([A-Za-z_]\w*):\s*(.*)$/);
+    if (m) fields[m[1]] = cleanValue(m[2]);
+  }
+  return fields;
+}
+
+function cleanValue(raw) {
+  return (raw || "").replace(/^["']|["']$/g, "") || null;
 }
 
 const SCHEMA = `

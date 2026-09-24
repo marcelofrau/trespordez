@@ -265,6 +265,7 @@
     background: #1d212a;
     border: 2px solid #2b3140;
     border-radius: 12px;
+    color: #7fd4e7;
     font-size: 26px;
 }
 
@@ -568,20 +569,20 @@
 
 .score-10,
 .score-9 {
-    background: #2ebd59 !important;
-    color: #fff !important;
+    background: #91e5a3 !important;
+    color: #000 !important;
 }
 
 .score-8 {
-    background: #6bb6ff !important;
+    background: #8dc7ff !important;
 }
 
 .score-7 {
-    background: #ffd557 !important;
+    background: #ffe56b !important;
 }
 
 .score-6 {
-    background: #ff9147 !important;
+    background: #ffb454 !important;
 }
 
 .score-5,
@@ -590,8 +591,8 @@
 .score-2,
 .score-1,
 .score-0 {
-    background: #ff5a5a !important;
-    color: #fff !important;
+    background: #ff9696 !important;
+    color: #000 !important;
 }
 
 .backlog-ratings {
@@ -698,13 +699,13 @@
 
 .backlog-filter-trigger:hover {
     border-color: var(--accent);
-    background: #ffe4d3;
+    background: #fff6d6;
 }
 
 .backlog-filter-trigger.is-open {
     background: var(--accent);
     border-color: #000;
-    color: #fff;
+    color: #000;
 }
 
 .backlog-filter-trigger.has-selection {
@@ -745,7 +746,7 @@
 }
 
 .backlog-filter-trigger.is-open .backlog-filter-chevron {
-    color: #fff;
+    color: #000;
 }
 
 .backlog-filter-panel {
@@ -827,7 +828,7 @@
 }
 
 .backlog-chip-toggle:hover span {
-    background: #ffe4d3;
+    background: #fff6d6;
 }
 
 .backlog-chip-toggle.is-on span {
@@ -998,20 +999,20 @@
 
 .backlog-score-chip.score-10,
 .backlog-score-chip.score-9 {
-    background: #2ebd59 !important;
-    color: #fff !important;
+    background: #91e5a3 !important;
+    color: #000 !important;
 }
 
 .backlog-score-chip.score-8 {
-    background: #6bb6ff !important;
+    background: #8dc7ff !important;
 }
 
 .backlog-score-chip.score-7 {
-    background: #ffd557 !important;
+    background: #ffe56b !important;
 }
 
 .backlog-score-chip.score-6 {
-    background: #ff9147 !important;
+    background: #ffb454 !important;
 }
 
 .backlog-score-chip.score-5,
@@ -1020,8 +1021,8 @@
 .backlog-score-chip.score-2,
 .backlog-score-chip.score-1,
 .backlog-score-chip.score-0 {
-    background: #ff5a5a !important;
-    color: #fff !important;
+    background: #ff9696 !important;
+    color: #000 !important;
 }
 
 .gridjs-head {
@@ -1082,7 +1083,7 @@
 
 .gridjs-pagination .gridjs-pages button.gridjs-currentPage {
     min-width: 34px;
-    background: #ff8c1a;
+    background: var(--accent);
     border-color: #000;
     color: #1b1b1b;
     font-size: 14px;

@@ -64,7 +64,7 @@ layout: default
   <a class="backlog-feature-card has-review" href="{{ matched_post.url | relative_url }}">
     {% if item.cover %}<img class="backlog-feature-cover" src="{{ item.cover | relative_url }}"
       alt="Capa de {{ item.name }}">{% else %}<span class="backlog-feature-status"><i
-        class="fa-solid {{ item.glyph | default: 'fa-hourglass-half' }}" aria-hidden="true"></i></span>{% endif %}
+        class="fa-solid {% assign pf = item.platform | default: '' | downcase %}{% if pf contains 'pc' %}fa-keyboard{% else %}fa-gamepad{% endif %}" aria-hidden="true"></i></span>{% endif %}
     <div class="backlog-feature-body">
       <p class="backlog-feature-platform">{{ item.platform | default: "Plataforma a definir" }}</p>
       <h3>{{ item.name }}</h3>
@@ -87,7 +87,7 @@ layout: default
   <div class="backlog-feature-card">
     {% if item.cover %}<img class="backlog-feature-cover" src="{{ item.cover | relative_url }}"
       alt="Capa de {{ item.name }}">{% else %}<span class="backlog-feature-status"><i
-        class="fa-solid {{ item.glyph | default: 'fa-hourglass-half' }}" aria-hidden="true"></i></span>{% endif %}
+        class="fa-solid {% assign pf = item.platform | default: '' | downcase %}{% if pf contains 'pc' %}fa-keyboard{% else %}fa-gamepad{% endif %}" aria-hidden="true"></i></span>{% endif %}
     <div class="backlog-feature-body">
       <p class="backlog-feature-platform">{{ item.platform | default: "Plataforma a definir" }}</p>
       <h3>{{ item.name }}</h3>

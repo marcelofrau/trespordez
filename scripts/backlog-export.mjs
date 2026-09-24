@@ -11,6 +11,8 @@ export function parseAuthors() {
 
 function yamlString(value) {
   if (value == null) return value;
+  if (value === true) return "true";
+  if (value === false) return "false";
   return JSON.stringify(String(value));
 }
 
@@ -66,6 +68,7 @@ export function playerSections(db, playerKey) {
         if (row.cover != null) item.cover = row.cover;
         if (row.post_slug != null) item.post_slug = row.post_slug;
         if (row.glyph != null) item.glyph = row.glyph;
+        if (row.hidden) item.hidden = true;
         return item;
       });
   }

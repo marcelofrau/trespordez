@@ -29,7 +29,7 @@ SECTIONS = ["backlog", "played", "dropped", "catalog"]
 SCORE_FIELDS = ["graf", "som", "gameplay", "desafio", "geral"]
 ROW_FIELDS = [
     "player_key", "section", "pos", "name", "platform", "genre", "status",
-    "mood", "humor", "reason", "description", "post_slug", "added_at",
+    "mood", "humor", "reason", "description", "post_slug", "added_at", "hidden",
 ] + SCORE_FIELDS
 
 # Vocabulário canônico de gêneros ----------------------------------------------
@@ -270,6 +270,7 @@ def theme(root):
         bordercolor=PIST, padding=(8, 5), borderwidth=1)
     st.map("TButton",
         background=[("active", ORANGE_P), ("pressed", ORANGE_P)])
+    st.configure("Pist.TCheckbutton", background=BG, foreground=INK, focuscolor=BG)
     st.configure("Horizontal.TScrollbar", background=PIST, troughcolor=PANEL,
         bordercolor=PANEL, arrowcolor=INK)
     st.configure("Vertical.TScrollbar", background=PIST, troughcolor=PANEL,
@@ -313,7 +314,7 @@ def distinct_values(conn, column):
 
 
 def list_rows(conn, player=None, section=None, text=None,
-              platform=None, genre=None, status=None):
+              platform=None, genre=None, status=None, hidden=None):
     q = ["SELECT bi.*, p.name AS player_name FROM backlog_items bi",
          "JOIN players p ON p.key = bi.player_key WHERE 1=1"]
     args = []
@@ -330,6 +331,8 @@ def list_rows(conn, player=None, section=None, text=None,
         q.append("AND bi.genre = ?"); args.append(genre)
     if status:
         q.append("AND bi.status = ?"); args.append(status)
+    if hidden is not None:
+        q.append("AND bi.hidden = ?"); args.append(1 if hidden else 0)
     q.append("ORDER BY bi.section, bi.pos")
     return conn.execute(" ".join(q), args).fetchall()
 
@@ -407,6 +410,18 @@ def batch_rename(conn, row_ids, pattern, replacement, use_regex):
             n += 1
     conn.commit()
     return n
+
+
+def set_hidden_rows(conn, row_ids, hidden):
+    """Marca oculto (1) ou visível (0) em lote sobre os ids dados."""
+    if not row_ids:
+        return 0
+    cur = conn.executemany(
+        "UPDATE backlog_items SET hidden=? WHERE id=?",
+        [(1 if hidden else 0, rid) for rid in row_ids],
+    )
+    conn.commit()
+    return cur.rowcount if hasattr(cur, "rowcount") else len(row_ids)
 
 
 def delete_row(conn, row_id):
@@ -618,8 +633,20 @@ class BacklogTab:
         self.var_status = tk.StringVar(value="")
         self._live_combo(inner, self.var_status, "status", 13, "status")
 
+        ttk.Label(inner, text="oculto:").pack(side="left", padx=(0, 2))
+        self.var_hidden = tk.StringVar(value="")
+        cb_hid = ttk.Combobox(inner, textvariable=self.var_hidden,
+                              values=("", "sim", "nao"), width=6, state="readonly")
+        cb_hid.pack(side="left", padx=(0, 6))
+        cb_hid.bind("<<ComboboxSelected>>", lambda e: self.load_master())
+
         self.lbl_count = ttk.Label(inner, text="", style="Hint.TLabel")
         self.lbl_count.pack(side="right", padx=8)
+
+        ttk.Button(inner, text="Ocultar sel.", style="Pist.TButton",
+                   command=lambda: self.batch_hidden(1)).pack(side="right", padx=2)
+        ttk.Button(inner, text="Mostrar sel.", style="Accent.TButton",
+                   command=lambda: self.batch_hidden(0)).pack(side="right", padx=2)
 
     def _live_combo(self, parent, var, key, width, table):
         ttk.Label(parent, text=f"{key}:").pack(side="left", padx=(0, 2))
@@ -649,9 +676,9 @@ class BacklogTab:
         body.add(bottom, weight=2)
 
     def _build_master(self, parent):
-        cols = ("id", "pos", "name", "platform", "genre", "status", "added_at", "geral")
-        heads = ("id", "pos", "nome", "plataforma", "gênero", "status", "adicionado", "nota")
-        widths = (48, 42, 320, 95, 130, 95, 85, 42)
+        cols = ("id", "pos", "name", "platform", "genre", "status", "added_at", "geral", "hidden")
+        heads = ("id", "pos", "nome", "plataforma", "gênero", "status", "adicionado", "nota", "oculto")
+        widths = (48, 42, 320, 95, 130, 95, 85, 42, 56)
         self.tree = ttk.Treeview(parent, columns=cols, show="headings", selectmode="extended")
         for c, h, w in zip(cols, heads, widths):
             self.tree.heading(c, text=h, command=lambda k=c: self.sort_by(k))
@@ -666,6 +693,52 @@ class BacklogTab:
         parent.rowconfigure(0, weight=1)
         parent.columnconfigure(0, weight=1)
         self.tree.bind("<<TreeviewSelect>>", lambda e: self.on_select())
+        self._bind_multi_select()
+        tip = ttk.Label(parent, text="dica: clique simples troca registro, Ctrl+clique soma/seleção, Shift+clique seleciona faixa",
+                        style="Hint.TLabel")
+        tip.grid(row=2, column=0, sticky="w", padx=2)
+
+    def _bind_multi_select(self):
+        tree = self.tree
+        anchor = {"iid": ""}
+
+        def _anchor(ev):
+            iid = tree.identify_row(ev.y)
+            if iid:
+                anchor["iid"] = iid
+
+        def _ctrl_press(ev):
+            iid = tree.identify_row(ev.y)
+            if not iid:
+                return
+            sel = set(tree.selection())
+            if iid in sel:
+                sel.discard(iid)
+            else:
+                sel.add(iid)
+            tree.selection_set(tuple(sel))
+            anchor["iid"] = iid
+            return "break"
+
+        def _shift_press(ev):
+            iid = tree.identify_row(ev.y)
+            if not iid:
+                return
+            a = anchor["iid"]
+            items = list(tree.get_children())
+            if a and a in items and iid != a:
+                ai = items.index(a)
+                ii = items.index(iid)
+                lo, hi = (ai, ii) if ai < ii else (ii, ai)
+                tree.selection_set(tuple(items[lo:hi + 1]))
+                return "break"
+            tree.selection_set(iid)
+            anchor["iid"] = iid
+            return "break"
+
+        tree.bind("<ButtonPress-1>", _anchor, add="+")
+        tree.bind("<Control-ButtonPress-1>", _ctrl_press, add="+")
+        tree.bind("<Shift-ButtonPress-1>", _shift_press, add="+")
 
     def _build_detail(self, parent):
         self.detail = DetailPanel(parent, self.editor, self)
@@ -677,6 +750,7 @@ class BacklogTab:
         return "" if self.var_player.get() in ("", "(todos)") else self.var_player.get()
 
     def current_filters(self):
+        hid = self.var_hidden.get()
         return dict(
             player=self.player() or None,
             section=self.var_section.get() or None,
@@ -684,7 +758,16 @@ class BacklogTab:
             platform=self.var_platform.get() or None,
             genre=self.var_genre.get() or None,
             status=self.var_status.get() or None,
+            hidden=None if hid == "" else (1 if hid == "sim" else 0),
         )
+
+    def batch_hidden(self, value):
+        ids = self.selection_ids()
+        if not ids:
+            return
+        n = set_hidden_rows(self.conn, ids, value)
+        self.lbl_count.config(text=f"{n} marcado(s)")
+        self.load_master(keep_selection=True)
 
     def selection_ids(self):
         return [int(self.tree.item(i)["values"][0]) for i in self.tree.selection()]
@@ -721,6 +804,7 @@ class BacklogTab:
                 r["id"], r["pos"], r["name"] or "", r["platform"] or "",
                 r["genre"] or "", r["status"] or "", r["added_at"] or "",
                 "" if r["geral"] is None else r["geral"],
+                "sim" if r["hidden"] else "",
             ))
         self.lbl_count.config(text=f"{len(rows)} registros")
         if keep_selection and sel is not None:
@@ -792,6 +876,11 @@ class DetailPanel:
         field(6, "Humor", "humor", 2, width=14)
         field(6, "Post slug", "post_slug", 4, width=20, span=2)
 
+        self.var_hidden = tk.BooleanVar()
+        ttk.Checkbutton(inner, text="Oculto (esconder do site)", variable=self.var_hidden,
+                        style="Pist.TCheckbutton").grid(row=8, column=8, sticky="w",
+                                                        padx=(padx, 2), pady=(4, 2))
+
         field(8, "Gráficos", "graf", 0, kind="score")
         field(8, "Som", "som", 2, kind="score")
         field(8, "Gameplay", "gameplay", 4, kind="score")
@@ -826,6 +915,7 @@ class DetailPanel:
             for k, var in self.vars.items():
                 var.set("")
             self.txt_desc.delete("1.0", "end")
+            self.var_hidden.set(False)
             return
         for k, var in self.vars.items():
             v = row[k] if k in row.keys() else None
@@ -833,6 +923,7 @@ class DetailPanel:
         self.txt_desc.delete("1.0", "end")
         if row["description"]:
             self.txt_desc.insert("1.0", row["description"])
+        self.var_hidden.set(bool(row["hidden"]))
         for key, combo in self.editor.combos.items():
             if key in self.vars:
                 combo.refresh()
@@ -848,6 +939,7 @@ class DetailPanel:
             if (k in SCORE_FIELDS or k == "added_at") and s == "":
                 s = None
             values[k] = s
+        values["hidden"] = "1" if self.var_hidden.get() else "0"
         values["description"] = self.txt_desc.get("1.0", "end-1c").strip() or None
         if sel is None:
             player = values.pop("player_key", "") or editor.player()
@@ -1216,6 +1308,7 @@ def selftest():
     shutil.copy2(DB_PATH, tmp)
     conn = connect_db(tmp)
     ensure_column(conn, "backlog_items", "description")
+    ensure_column(conn, "backlog_items", "hidden")
     tests = 0
 
     n_before = conn.execute("SELECT COUNT(*) n FROM backlog_items").fetchone()["n"]
@@ -1223,6 +1316,20 @@ def selftest():
     # description column
     ensure_column(conn, "backlog_items", "description")
     assert "description" in [r["name"] for r in conn.execute("PRAGMA table_info(backlog_items)")]
+    tests += 1
+
+    # hidden column + batch hide/filter
+    assert "hidden" in [r["name"] for r in conn.execute("PRAGMA table_info(backlog_items)")]
+    rows = conn.execute("SELECT id FROM backlog_items WHERE section='catalog' LIMIT 2").fetchall()
+    ids = [r["id"] for r in rows]
+    set_hidden_rows(conn, ids, 1)
+    assert conn.execute("SELECT COUNT(*) n FROM backlog_items WHERE hidden=1").fetchone()["n"] >= 1
+    assert conn.execute("SELECT COUNT(*) n FROM backlog_items WHERE hidden=1 AND id=?",
+                        (ids[0],)).fetchone()["n"] == 1
+    vis = list_rows(conn, hidden=0)
+    assert all(not r["hidden"] for r in vis)
+    set_hidden_rows(conn, ids, 0)
+    assert conn.execute("SELECT COUNT(*) n FROM backlog_items WHERE hidden=1").fetchone()["n"] == 0
     tests += 1
 
     # reorder/new
@@ -1278,6 +1385,7 @@ def main():
         sys.exit(1)
     conn = connect_db()
     ensure_column(conn, "backlog_items", "description")
+    ensure_column(conn, "backlog_items", "hidden")
     try:
         root = tk.Tk()
         EditorApp(root, conn)

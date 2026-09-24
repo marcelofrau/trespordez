@@ -4,13 +4,17 @@ layout: default
 <link rel="stylesheet" href="{{ '/assets/css/lib/mermaid.min.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 
 {% assign player_data = site.data.backlog[page.player] %}
-{% assign lista_size = player_data.backlog.size | plus: player_data.catalog.size %}
+{% assign visible_backlog = player_data.backlog | where_exp: "item", "item.hidden != true" %}
+{% assign visible_played = player_data.played | where_exp: "item", "item.hidden != true" %}
+{% assign visible_dropped = player_data.dropped | where_exp: "item", "item.hidden != true" %}
+{% assign visible_catalog = player_data.catalog | where_exp: "item", "item.hidden != true" %}
+{% assign lista_size = visible_backlog.size | plus: visible_catalog.size %}
 {% assign first_list = "" %}
 {% if lista_size > 0 %}
 {% assign first_list = "backlog-lista" %}
-{% elsif player_data.played.size > 0 %}
+{% elsif visible_played.size > 0 %}
 {% assign first_list = "backlog-zerados" %}
-{% elsif player_data.dropped.size > 0 %}
+{% elsif visible_dropped.size > 0 %}
 {% assign first_list = "backlog-abandonados" %}
 {% endif %}
 
@@ -26,10 +30,10 @@ layout: default
       </div>
     </section>
     <ul class="backlog-stats">
-      <li class="backlog-stat"><strong>{{ player_data.backlog.size }}</strong><span>na fila</span></li>
-      <li class="backlog-stat"><strong>{{ player_data.played.size }}</strong><span>zerados</span></li>
-      <li class="backlog-stat"><strong>{{ player_data.dropped.size }}</strong><span>abandonados</span></li>
-      <li class="backlog-stat"><strong>{{ player_data.catalog.size }}</strong><span>no catálogo</span></li>
+      <li class="backlog-stat"><strong>{{ visible_backlog.size }}</strong><span>na fila</span></li>
+      <li class="backlog-stat"><strong>{{ visible_played.size }}</strong><span>zerados</span></li>
+      <li class="backlog-stat"><strong>{{ visible_dropped.size }}</strong><span>abandonados</span></li>
+      <li class="backlog-stat"><strong>{{ visible_catalog.size }}</strong><span>no catálogo</span></li>
     </ul>
   </header>
 
@@ -38,22 +42,22 @@ layout: default
       data-target="backlog-lista" {% if lista_size==0 %} disabled{% endif %}><i class="fa-solid fa-list-ul"></i> Lista
       <span class="backlog-jump-count">{{ lista_size }}</span></button>
     <button type="button" class="backlog-jump-tab{% if first_list == 'backlog-zerados' %} is-active{% endif %}"
-      data-target="backlog-zerados" {% if player_data.played.size==0 %} disabled{% endif %}><i
-        class="fa-solid fa-trophy"></i> Zerados <span class="backlog-jump-count">{{ player_data.played.size
+      data-target="backlog-zerados" {% if visible_played.size==0 %} disabled{% endif %}><i
+        class="fa-solid fa-trophy"></i> Zerados <span class="backlog-jump-count">{{ visible_played.size
         }}</span></button>
     <button type="button" class="backlog-jump-tab{% if first_list == 'backlog-abandonados' %} is-active{% endif %}"
-      data-target="backlog-abandonados" {% if player_data.dropped.size==0 %} disabled{% endif %}><i
-        class="fa-solid fa-skull"></i> Abandonados <span class="backlog-jump-count">{{ player_data.dropped.size
+      data-target="backlog-abandonados" {% if visible_dropped.size==0 %} disabled{% endif %}><i
+        class="fa-solid fa-skull"></i> Abandonados <span class="backlog-jump-count">{{ visible_dropped.size
         }}</span></button>
   </nav>
 
   {% if lista_size > 0 %}
 
-  {% if player_data.backlog.size > 0 %}
+  {% if visible_backlog.size > 0 %}
   {% capture featured_cards %}
   {% assign count = 0 %}
   {% assign shown = "" | split: "," %}
-  {% for item in player_data.backlog %}
+  {% for item in visible_backlog %}
   {% if count >= 4 %}{% break %}{% endif %}
   {% unless item.post_slug %}{% continue %}{% endunless %}
   {% assign matched_post = site.posts | where: "slug", item.post_slug | first %}
@@ -78,7 +82,7 @@ layout: default
   {% assign shown = shown | push: item_name %}
   {% assign count = count | plus: 1 %}
   {% endfor %}
-  {% for item in player_data.backlog %}
+  {% for item in visible_backlog %}
   {% if count >= 4 %}{% break %}{% endif %}
   {% if item.post_slug %}{% continue %}{% endif %}
   {% assign item_name = item.name | downcase | strip %}
@@ -105,7 +109,7 @@ layout: default
 
   <section class="backlog-section backlog-feature backlog-lista" id="backlog-lista" {% if first_list !='backlog-lista'
     %} hidden{% endif %}>
-    {% if player_data.backlog.size > 0 %}
+    {% if visible_backlog.size > 0 %}
     <p class="eyebrow"><i class="fa-solid fa-hourglass-half"></i> Em espera</p>
     <h2>Fila de espera <small>em destaque</small></h2>
     <div class="backlog-feature-grid">{{ featured_cards }}</div>
@@ -116,23 +120,23 @@ layout: default
     </div>
     <div class="backlog-catalog-filters" role="group" aria-label="Filtrar lista" id="backlog-lista-filters"></div>
     <div id="backlog-lista-grid"></div>
-    <script type="application/json" id="backlog-lista-hot-data">{{ player_data.backlog | jsonify }}</script>
-    <script type="application/json" id="backlog-lista-catalog-data">{{ player_data.catalog | jsonify }}</script>
+    <script type="application/json" id="backlog-lista-hot-data">{{ visible_backlog | jsonify }}</script>
+    <script type="application/json" id="backlog-lista-catalog-data">{{ visible_catalog | jsonify }}</script>
   </section>
   {% endif %}
 
-  {% if player_data.played.size > 0 %}
+  {% if visible_played.size > 0 %}
   <section class="backlog-section backlog-ratings" id="backlog-zerados" {% if first_list !='backlog-zerados' %} hidden{%
     endif %}>
     <p class="eyebrow"><i class="fa-solid fa-trophy"></i> Já saíram da lista</p>
     <h2>Zerados e avaliados</h2>
     <div class="backlog-catalog-filters" role="group" aria-label="Filtrar zerados" id="backlog-played-filters"></div>
     <div id="backlog-played-grid"></div>
-    <script type="application/json" id="backlog-played-data">{{ player_data.played | jsonify }}</script>
+    <script type="application/json" id="backlog-played-data">{{ visible_played | jsonify }}</script>
   </section>
   {% endif %}
 
-  {% if player_data.dropped.size > 0 %}
+  {% if visible_dropped.size > 0 %}
   <section class="backlog-section" id="backlog-abandonados" {% if first_list !='backlog-abandonados' %} hidden{% endif
     %}>
     <p class="eyebrow"><i class="fa-solid fa-skull"></i> Não rolou</p>
@@ -146,7 +150,7 @@ layout: default
         </tr>
       </thead>
       <tbody>
-        {% for item in player_data.dropped %}
+        {% for item in visible_dropped %}
         <tr>
           <td>{% if item.post_slug %}{% assign matched_post = site.posts | where: "slug", item.post_slug | first %}{% if matched_post %}<a class="backlog-grid-link" href="{{ matched_post.url | relative_url }}">{{ item.name }} <i class="fa-solid fa-arrow-up-right-from-square backlog-grid-link-ico" aria-hidden="true"></i></a>{% else %}{{ item.name }}{% endif %}{% else %}{{ item.name }}{% endif %}</td>
           <td>{{ item.platform }}</td>
@@ -159,7 +163,7 @@ layout: default
   {% endif %}
 </article>
 
-{% if lista_size > 0 or player_data.played.size > 0 %}
+{% if lista_size > 0 or visible_played.size > 0 %}
 {% capture review_map_json %}
 {
 {% for post in site.posts %}{% unless forloop.first %},{% endunless %}"{{ post.slug }}":"{{ post.url | relative_url }}"{% endfor %}

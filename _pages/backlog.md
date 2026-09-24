@@ -18,14 +18,16 @@ layout: page
     {% assign author = author_pair[1] %}
     {% assign data = site.data.backlog[key] %}
     {% unless data %}{% continue %}{% endunless %}
+    {% assign visible_count_backlog = data.backlog | where_exp: "item", "item.hidden != true" | size %}
+    {% assign visible_count_catalog = data.catalog | where_exp: "item", "item.hidden != true" | size %}
     <a class="backlog-player-card" href="{{ '/backlog/' | append: key | append: '/' | relative_url }}">
       <span class="team-avatar"><img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" loading="lazy"></span>
       <div>
         <h3>{{ author.name }}</h3>
         {% if author.slogan %}<p>{{ author.slogan }}</p>{% endif %}
         <ul class="backlog-stats">
-          <li class="backlog-stat{% if data.backlog.size == 0 %} zero{% endif %}"><strong>{% if data.backlog.size == 0 %}-{% else %}{{ data.backlog.size }}{% endif %}</strong><span>na fila</span></li>
-          <li class="backlog-stat{% if data.catalog.size == 0 %} zero{% endif %}"><strong>{% if data.catalog.size == 0 %}-{% else %}{{ data.catalog.size }}{% endif %}</strong><span>catálogo</span></li>
+          <li class="backlog-stat{% if visible_count_backlog == 0 %} zero{% endif %}"><strong>{% if visible_count_backlog == 0 %}-{% else %}{{ visible_count_backlog }}{% endif %}</strong><span>na fila</span></li>
+          <li class="backlog-stat{% if visible_count_catalog == 0 %} zero{% endif %}"><strong>{% if visible_count_catalog == 0 %}-{% else %}{{ visible_count_catalog }}{% endif %}</strong><span>catálogo</span></li>
         </ul>
       </div>
     </a>
@@ -43,8 +45,8 @@ layout: page
   "players": [
 {% for author_pair in site.data.authors %}{% assign key = author_pair[0] %}{% assign author = author_pair[1] %}{% assign data = site.data.backlog[key] %}{% unless data %}{% continue %}{% endunless %}
 {% assign candidates = "" %}{% assign genre_bits = "" %}{% assign aff_json = "" %}
-{% for item in data.backlog %}{% capture c %}{"name":{{ item.name | jsonify }},"platform":{{ item.platform | jsonify }},"genre":{{ item.genre | jsonify }},"hot":true{% if item.post_slug %}{% assign rp = site.posts | where: "slug", item.post_slug | first %}{% if rp %},"reviewed":true,"url":{{ rp.url | relative_url | jsonify }}{% endif %}{% endif %}}{% endcapture %}{% assign candidates = candidates | append: c | append: "," %}{% if item.genre %}{% assign genre_bits = genre_bits | append: item.genre | append: "," %}{% endif %}{% endfor %}
-{% for item in data.catalog %}{% assign mod = forloop.index0 | modulo: 25 %}{% if mod == 0 or item.post_slug %}{% capture c %}{"name":{{ item.name | jsonify }},"platform":{{ item.platform | jsonify }},"genre":{{ item.genre | jsonify }},"hot":false{% if item.post_slug %}{% assign rp = site.posts | where: "slug", item.post_slug | first %}{% if rp %},"reviewed":true,"url":{{ rp.url | relative_url | jsonify }}{% endif %}{% endif %}}{% endcapture %}{% assign candidates = candidates | append: c | append: "," %}{% if item.genre %}{% assign genre_bits = genre_bits | append: item.genre | append: "," %}{% endif %}{% endif %}{% endfor %}
+{% for item in data.backlog %}{% if item.hidden %}{% continue %}{% endif %}{% capture c %}{"name":{{ item.name | jsonify }},"platform":{{ item.platform | jsonify }},"genre":{{ item.genre | jsonify }},"hot":true{% if item.post_slug %}{% assign rp = site.posts | where: "slug", item.post_slug | first %}{% if rp %},"reviewed":true,"url":{{ rp.url | relative_url | jsonify }}{% endif %}{% endif %}}{% endcapture %}{% assign candidates = candidates | append: c | append: "," %}{% if item.genre %}{% assign genre_bits = genre_bits | append: item.genre | append: "," %}{% endif %}{% endfor %}
+{% for item in data.catalog %}{% if item.hidden %}{% continue %}{% endif %}{% assign mod = forloop.index0 | modulo: 25 %}{% if mod == 0 or item.post_slug %}{% capture c %}{"name":{{ item.name | jsonify }},"platform":{{ item.platform | jsonify }},"genre":{{ item.genre | jsonify }},"hot":false{% if item.post_slug %}{% assign rp = site.posts | where: "slug", item.post_slug | first %}{% if rp %},"reviewed":true,"url":{{ rp.url | relative_url | jsonify }}{% endif %}{% endif %}}{% endcapture %}{% assign candidates = candidates | append: c | append: "," %}{% if item.genre %}{% assign genre_bits = genre_bits | append: item.genre | append: "," %}{% endif %}{% endif %}{% endfor %}
 {% assign genre_list = genre_bits | split: "," %}{% assign sentinels = "" %}
 {% for g in genre_list %}{% assign gg = g | strip | downcase %}{% if gg == "" %}{% continue %}{% endif %}{% if sentinels contains gg %}{% continue %}{% endif %}{% assign sentinels = sentinels | append: gg | append: "~" %}{% assign aff_json = aff_json | append: '"' | append: gg | append: '":1,' %}{% endfor %}
 {% assign aff_len = aff_json | size %}{% if aff_len > 0 %}{% assign aff_len = aff_len | minus: 1 %}{% assign aff_json = aff_json | slice: 0, aff_len %}{% endif %}

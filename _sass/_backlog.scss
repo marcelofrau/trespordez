@@ -912,12 +912,18 @@
     border-bottom: 2px solid #000 !important;
 }
 
+
+.backlog-grid-table tbody td:first-child {
+    text-align: left;
+}
+
 .backlog-grid-table tbody td {
     padding: 9px 14px !important;
     border: 0 !important;
     border-bottom: 1px solid #eee !important;
     vertical-align: middle;
     background: #fff !important;
+    text-align: center;
 }
 
 .backlog-grid-table tbody td:last-child {
@@ -929,7 +935,7 @@
 }
 
 .backlog-grid-table tbody tr:hover td {
-    background: rgba(127, 212, 231, .15) !important;
+    background: #ffb454 !important;
 }
 
 .backlog-grid-table tbody tr:last-child td,
@@ -1094,7 +1100,7 @@
 
 .gridjs-pagination .gridjs-pages button.gridjs-currentPage:hover,
 .gridjs-pagination .gridjs-pages button.gridjs-currentPage:focus {
-    background: #ff8c1a;
+    // background: #ff8c1a;
     color: #1b1b1b;
     outline: none;
 }

@@ -42,8 +42,15 @@
     return m ? `${m[3]}/${m[2]}/${m[1]}` : "–";
   };
 
+  const cellAt = (row, idx) => {
+    if (!row || idx < 0) return undefined;
+    if (Array.isArray(row)) return row[idx];
+    if (Array.isArray(row.cells)) return row.cells[idx] ? row.cells[idx].data : undefined;
+    return row[idx];
+  };
+
   const nameCell = (value, row, { hotIdx, urlIdx }) => {
-    const url = urlIdx >= 0 && row[urlIdx] ? String(row[urlIdx]) : "";
+    const url = urlIdx >= 0 ? String(cellAt(row, urlIdx) ?? "") : "";
     const label = String(value ?? "");
     const inner = url
       ? h("a", { className: "backlog-grid-link", href: url }, [
@@ -51,7 +58,7 @@
           h("i", { className: "fa-solid fa-arrow-up-right-from-square backlog-grid-link-ico", "aria-hidden": "true" }),
         ])
       : h("strong", { className: "backlog-grid-name" }, label);
-    const glyph = hotIdx >= 0 && row[hotIdx] ? String(row[hotIdx]) : "";
+    const glyph = hotIdx >= 0 ? String(cellAt(row, hotIdx) ?? "") : "";
     if (!glyph) return inner;
     return h("span", { className: "backlog-grid-name-wrap" }, [
       inner,

@@ -19,6 +19,7 @@ layout: page
     {% assign data = site.data.backlog[key] %}
     {% unless data %}{% continue %}{% endunless %}
     {% assign visible_count_backlog = data.backlog | where_exp: "item", "item.hidden != true" | size %}
+    {% assign visible_count_played = data.played | where_exp: "item", "item.hidden != true" | size %}
     {% assign visible_count_catalog = data.catalog | where_exp: "item", "item.hidden != true" | size %}
     <a class="backlog-player-card" href="{{ '/backlog/' | append: key | append: '/' | relative_url }}">
       <span class="team-avatar"><img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" loading="lazy"></span>
@@ -26,7 +27,7 @@ layout: page
         <h3>{{ author.name }}</h3>
         {% if author.slogan %}<p>{{ author.slogan }}</p>{% endif %}
         <ul class="backlog-stats">
-          <li class="backlog-stat{% if visible_count_backlog == 0 %} zero{% endif %}"><strong>{% if visible_count_backlog == 0 %}-{% else %}{{ visible_count_backlog }}{% endif %}</strong><span>na fila</span></li>
+          <li class="backlog-stat{% if visible_count_played == 0 %} zero{% endif %}"><strong>{% if visible_count_played == 0 %}-{% else %}{{ visible_count_played }}{% endif %}</strong><span>zerado</span></li>
           <li class="backlog-stat{% if visible_count_catalog == 0 %} zero{% endif %}"><strong>{% if visible_count_catalog == 0 %}-{% else %}{{ visible_count_catalog }}{% endif %}</strong><span>catálogo</span></li>
         </ul>
       </div>

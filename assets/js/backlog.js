@@ -249,11 +249,13 @@
       const close = () => {
         panel.hidden = true;
         trigger.classList.remove("is-open");
+        wrap.classList.remove("is-open");
         trigger.setAttribute("aria-expanded", "false");
       };
       const open = () => {
         panel.hidden = false;
         trigger.classList.add("is-open");
+        wrap.classList.add("is-open");
         trigger.setAttribute("aria-expanded", "true");
         chips.scrollTop = 0;
       };

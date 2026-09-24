@@ -148,7 +148,7 @@ layout: default
       <tbody>
         {% for item in player_data.dropped %}
         <tr>
-          <td>{{ item.name }}</td>
+          <td>{% if item.post_slug %}{% assign matched_post = site.posts | where: "slug", item.post_slug | first %}{% if matched_post %}<a class="backlog-grid-link" href="{{ matched_post.url | relative_url }}">{{ item.name }} <i class="fa-solid fa-arrow-up-right-from-square backlog-grid-link-ico" aria-hidden="true"></i></a>{% else %}{{ item.name }}{% endif %}{% else %}{{ item.name }}{% endif %}</td>
           <td>{{ item.platform }}</td>
           <td>{{ item.reason | default: "–" }}</td>
         </tr>
@@ -160,6 +160,12 @@ layout: default
 </article>
 
 {% if lista_size > 0 or player_data.played.size > 0 %}
+{% capture review_map_json %}
+{
+{% for post in site.posts %}{% unless forloop.first %},{% endunless %}"{{ post.slug }}":"{{ post.url | relative_url }}"{% endfor %}
+}
+{% endcapture %}
+<script type="application/json" id="backlog-review-map">{{ review_map_json }}</script>
 <script src="{{ '/assets/js/lib/gridjs.umd.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 <script src="{{ '/assets/js/backlog.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 {% endif %}

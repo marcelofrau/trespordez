@@ -42,11 +42,11 @@
     return m ? `${m[3]}/${m[2]}/${m[1]}` : "–";
   };
 
-  const nameCell = (value, row, { hotIdx, postIdx }) => {
-    const slug = row[postIdx] && String(row[postIdx]);
+  const nameCell = (value, row, { hotIdx, urlIdx }) => {
+    const url = urlIdx >= 0 && row[urlIdx] ? String(row[urlIdx]) : "";
     const label = String(value ?? "");
-    const inner = slug
-      ? h("a", { className: "backlog-grid-link", href: slug[0] === "/" ? slug : `/${slug}` }, [
+    const inner = url
+      ? h("a", { className: "backlog-grid-link", href: url }, [
           label,
           h("i", { className: "fa-solid fa-arrow-up-right-from-square backlog-grid-link-ico", "aria-hidden": "true" }),
         ])
@@ -72,7 +72,7 @@
   const playedColumns = [
     {
       name: thHead("fa-solid fa-gamepad", "Jogo"),
-      formatter: (c, row) => nameCell(c, row, { hotIdx: -1, postIdx: 7 }),
+      formatter: (c, row) => nameCell(c, row, { hotIdx: -1, urlIdx: 8 }),
     },
     { name: fa("fa-solid fa-box", "Plataforma"), width: "120px", className: "backlog-platform-col", sort: false },
     { name: fa("fa-solid fa-palette", "Gráficos"), width: "96px", className: "backlog-score", formatter: scoreCell, sort: false },
@@ -87,18 +87,20 @@
       sort: false,
     },
     hiddenCol(),
+    hiddenCol(),
   ];
 
   const listColumns = [
     {
       name: thHead("fa-solid fa-gamepad", "Jogo"),
-      formatter: (c, row) => nameCell(c, row, { hotIdx: 5, postIdx: 6 }),
+      formatter: (c, row) => nameCell(c, row, { hotIdx: 5, urlIdx: 7 }),
     },
     { name: thHead("fa-solid fa-tags", "Gênero"), width: "180px", className: "backlog-genre-col", formatter: genreCell },
     { name: fa("fa-solid fa-box", "Plataforma"), width: "120px", className: "backlog-platform-col", sort: false },
     { name: fa("fa-solid fa-calendar-plus", "Data"), width: "110px", className: "backlog-date-col", formatter: formatDate },
     { name: fa("fa-solid fa-bars-progress", "Status"), width: "72px", className: "backlog-emoji-col", formatter: (c) => c || "–", sort: false },
     { name: "", hidden: true },
+    hiddenCol(),
     hiddenCol(),
   ];
 
@@ -111,6 +113,18 @@
       return [];
     }
   };
+
+  const readMap = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return {};
+    try {
+      return JSON.parse(el.textContent || "{}");
+    } catch (e) {
+      return {};
+    }
+  };
+
+  const REVIEW_URLS = readMap("backlog-review-map");
 
   const splitField = (value) =>
     (Array.isArray(value) ? value : String(value ?? "").split(","))
@@ -375,6 +389,7 @@
         item.status || "—",
         item.glyph || "",
         item.post_slug || "",
+        item.post_slug ? REVIEW_URLS[item.post_slug] || "" : "",
       ]),
   });
 
@@ -394,6 +409,7 @@
         item.desafio,
         item.geral,
         item.post_slug || "",
+        item.post_slug ? REVIEW_URLS[item.post_slug] || "" : "",
       ]),
   });
 })();

@@ -34,9 +34,17 @@ layout: default
   </header>
 
   <nav class="backlog-jump" aria-label="Alternar lista">
-    <button type="button" class="backlog-jump-tab{% if first_list == 'backlog-lista' %} is-active{% endif %}" data-target="backlog-lista"{% if lista_size == 0 %} disabled{% endif %}><i class="fa-solid fa-list-ul"></i> Lista <span class="backlog-jump-count">{{ lista_size }}</span></button>
-    <button type="button" class="backlog-jump-tab{% if first_list == 'backlog-zerados' %} is-active{% endif %}" data-target="backlog-zerados"{% if player_data.played.size == 0 %} disabled{% endif %}><i class="fa-solid fa-trophy"></i> Zerados <span class="backlog-jump-count">{{ player_data.played.size }}</span></button>
-    <button type="button" class="backlog-jump-tab{% if first_list == 'backlog-abandonados' %} is-active{% endif %}" data-target="backlog-abandonados"{% if player_data.dropped.size == 0 %} disabled{% endif %}><i class="fa-solid fa-skull"></i> Abandonados <span class="backlog-jump-count">{{ player_data.dropped.size }}</span></button>
+    <button type="button" class="backlog-jump-tab{% if first_list == 'backlog-lista' %} is-active{% endif %}"
+      data-target="backlog-lista" {% if lista_size==0 %} disabled{% endif %}><i class="fa-solid fa-list-ul"></i> Lista
+      <span class="backlog-jump-count">{{ lista_size }}</span></button>
+    <button type="button" class="backlog-jump-tab{% if first_list == 'backlog-zerados' %} is-active{% endif %}"
+      data-target="backlog-zerados" {% if player_data.played.size==0 %} disabled{% endif %}><i
+        class="fa-solid fa-trophy"></i> Zerados <span class="backlog-jump-count">{{ player_data.played.size
+        }}</span></button>
+    <button type="button" class="backlog-jump-tab{% if first_list == 'backlog-abandonados' %} is-active{% endif %}"
+      data-target="backlog-abandonados" {% if player_data.dropped.size==0 %} disabled{% endif %}><i
+        class="fa-solid fa-skull"></i> Abandonados <span class="backlog-jump-count">{{ player_data.dropped.size
+        }}</span></button>
   </nav>
 
   {% if lista_size > 0 %}
@@ -95,7 +103,8 @@ layout: default
   {% endcapture %}
   {% endif %}
 
-  <section class="backlog-section backlog-feature backlog-lista" id="backlog-lista"{% if first_list != 'backlog-lista' %} hidden{% endif %}>
+  <section class="backlog-section backlog-feature backlog-lista" id="backlog-lista" {% if first_list !='backlog-lista'
+    %} hidden{% endif %}>
     {% if player_data.backlog.size > 0 %}
     <p class="eyebrow"><i class="fa-solid fa-hourglass-half"></i> Em espera</p>
     <h2>Fila de espera <small>em destaque</small></h2>
@@ -105,8 +114,7 @@ layout: default
       <h3><i class="fa-solid fa-list-ul"></i> Lista completa</h3>
       <p>Fila de espera e catálogo juntos — selo "na fila", gênero e data de inclusão.</p>
     </div>
-    <div class="backlog-catalog-filters" role="group" aria-label="Filtrar lista"
-      id="backlog-lista-filters"></div>
+    <div class="backlog-catalog-filters" role="group" aria-label="Filtrar lista" id="backlog-lista-filters"></div>
     <div id="backlog-lista-grid"></div>
     <script type="application/json" id="backlog-lista-hot-data">{{ player_data.backlog | jsonify }}</script>
     <script type="application/json" id="backlog-lista-catalog-data">{{ player_data.catalog | jsonify }}</script>
@@ -114,18 +122,19 @@ layout: default
   {% endif %}
 
   {% if player_data.played.size > 0 %}
-  <section class="backlog-section backlog-ratings" id="backlog-zerados"{% if first_list != 'backlog-zerados' %} hidden{% endif %}>
+  <section class="backlog-section backlog-ratings" id="backlog-zerados" {% if first_list !='backlog-zerados' %} hidden{%
+    endif %}>
     <p class="eyebrow"><i class="fa-solid fa-trophy"></i> Já saíram da lista</p>
     <h2>Zerados e avaliados</h2>
-    <div class="backlog-catalog-filters" role="group" aria-label="Filtrar zerados"
-      id="backlog-played-filters"></div>
+    <div class="backlog-catalog-filters" role="group" aria-label="Filtrar zerados" id="backlog-played-filters"></div>
     <div id="backlog-played-grid"></div>
     <script type="application/json" id="backlog-played-data">{{ player_data.played | jsonify }}</script>
   </section>
   {% endif %}
 
   {% if player_data.dropped.size > 0 %}
-  <section class="backlog-section" id="backlog-abandonados"{% if first_list != 'backlog-abandonados' %} hidden{% endif %}>
+  <section class="backlog-section" id="backlog-abandonados" {% if first_list !='backlog-abandonados' %} hidden{% endif
+    %}>
     <p class="eyebrow"><i class="fa-solid fa-skull"></i> Não rolou</p>
     <h2>Abandonados</h2>
     <table class="backlog-table">

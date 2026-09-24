@@ -22,6 +22,7 @@ layout: page
       <span class="team-avatar"><img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" loading="lazy"></span>
       <div>
         <h3>{{ author.name }}</h3>
+        {% if author.slogan %}<p>{{ author.slogan }}</p>{% endif %}
         <ul class="backlog-stats">
           <li class="backlog-stat{% if data.backlog.size == 0 %} zero{% endif %}"><strong>{% if data.backlog.size == 0 %}-{% else %}{{ data.backlog.size }}{% endif %}</strong><span>na fila</span></li>
           <li class="backlog-stat{% if data.catalog.size == 0 %} zero{% endif %}"><strong>{% if data.catalog.size == 0 %}-{% else %}{{ data.catalog.size }}{% endif %}</strong><span>catálogo</span></li>

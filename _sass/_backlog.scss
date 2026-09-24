@@ -32,7 +32,7 @@
 
 .backlog-hero-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(420px, 100%), 1fr));
     gap: 22px;
     margin: 0 0 32px;
 }
@@ -41,7 +41,8 @@
     display: grid;
     grid-template-columns: 182px 1fr;
     gap: 20px;
-    align-items: center;
+    align-items: stretch;
+    height: 100%;
     padding: 20px;
     background: #111318;
     border: 2px solid #22262e;
@@ -74,13 +75,26 @@
     object-position: top center;
 }
 
+.backlog-player-card>div {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 .backlog-player-card h3 {
-    margin: 0 0 14px;
+    margin: 0;
     min-height: 2.4em;
     display: flex;
     align-items: center;
     color: #fff;
     font: 800 20px var(--head);
+}
+
+.backlog-player-card p {
+    margin: 2px 0 0;
+    color: #ccc;
+    font-size: 12px;
+    font-style: italic;
 }
 
 .backlog-jump {
@@ -324,14 +338,18 @@
 }
 
 .backlog-player-card .backlog-stats {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 8px;
-    align-items: stretch;
-    flex-wrap: nowrap;
+    align-items: end;
+    margin: auto 0 0;
+    padding: 14px 0 0;
 }
 
 .backlog-player-card .backlog-stat {
     flex: 1 1 0;
+    min-width: 0;
+    max-width: 100%;
     height: 60px;
     min-height: 60px;
     box-sizing: border-box;
@@ -360,6 +378,9 @@
 }
 
 .backlog-player-card .backlog-stat span {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-size: 9px;
     line-height: 1.2;
     color: #000;
@@ -1183,5 +1204,19 @@
     .backlog-hero--player {
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+
+@media (max-width: 400px) {
+    .backlog-player-card {
+        grid-template-columns: 110px 1fr;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .backlog-player-card .team-avatar,
+    .backlog-player-card .team-avatar img {
+        width: 110px;
+        height: 110px;
     }
 }

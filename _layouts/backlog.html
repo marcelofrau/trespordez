@@ -72,8 +72,7 @@ layout: default
     <div class="backlog-feature-body">
       <p class="backlog-feature-platform">{{ item.platform | default: "Plataforma a definir" }}</p>
       <h3>{{ item.name }}</h3>
-      <p class="backlog-feature-mood">{% if item.mood %}{{ item.mood }} <span>na fila</span>{% else %}Aguardando a vez{%
-        endif %}</p>
+      <p class="backlog-feature-mood">Aguardando a vez</p>
     </div>
     <span class="backlog-feature-review"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
   </a>
@@ -95,8 +94,7 @@ layout: default
     <div class="backlog-feature-body">
       <p class="backlog-feature-platform">{{ item.platform | default: "Plataforma a definir" }}</p>
       <h3>{{ item.name }}</h3>
-      <p class="backlog-feature-mood">{% if item.mood %}{{ item.mood }} <span>na fila</span>{% else %}Aguardando a vez{%
-        endif %}</p>
+      <p class="backlog-feature-mood">Aguardando a vez</p>
     </div>
   </div>
   {% endcapture %}

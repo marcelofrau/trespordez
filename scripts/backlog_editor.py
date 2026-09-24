@@ -29,7 +29,7 @@ SECTIONS = ["backlog", "played", "dropped", "catalog"]
 SCORE_FIELDS = ["graf", "som", "gameplay", "desafio", "geral"]
 ROW_FIELDS = [
     "player_key", "section", "pos", "name", "platform", "genre", "status",
-    "mood", "humor", "reason", "description", "post_slug", "added_at", "hidden",
+    "reason", "post_slug", "added_at", "hidden",
 ] + SCORE_FIELDS
 
 # Vocabulário único de status: chave no banco → rótulo no editor/site.
@@ -887,8 +887,6 @@ class DetailPanel:
         field(4, "Gênero", "genre", 3, combo_from=("genre",), width=22)
         field(4, "Status", "status", 6, values=tuple(STATUS_META.values()), width=16)
 
-        field(6, "Mood", "mood", 0, width=14)
-        field(6, "Humor", "humor", 2, width=14)
         field(6, "Post slug", "post_slug", 4, width=20, span=2)
 
         self.var_hidden = tk.BooleanVar()
@@ -906,15 +904,6 @@ class DetailPanel:
         ttk.Entry(inner, textvariable=self.vars["reason"], width=88).grid(
             row=11, column=0, columnspan=10, sticky="we", padx=(padx, 2), pady=(0, 6))
 
-        ttk.Label(inner, text="Descrição").grid(row=12, column=0, sticky="w", padx=(padx, 2), pady=(4, 2))
-        self.txt_desc = tk.Text(inner, height=4, wrap="word", font=("Segoe UI", 10),
-                                bg=FIELD, fg=INK, insertbackground=INK,
-                                highlightthickness=1, highlightbackground=PIST,
-                                highlightcolor=ORANGE)
-        self.txt_desc.grid(row=13, column=0, columnspan=10, sticky="nsew",
-                           padx=(padx, 2), pady=(0, 8))
-        inner.rowconfigure(13, weight=1)
-
         btns = ttk.Frame(inner)
         btns.grid(row=14, column=0, columnspan=10, sticky="w", padx=(padx - 2, 2), pady=(0, 4))
         ttk.Button(btns, text="Salvar", style="Accent.TButton", command=self.save).pack(side="left", padx=2)
@@ -929,7 +918,6 @@ class DetailPanel:
         if row is None:
             for k, var in self.vars.items():
                 var.set("")
-            self.txt_desc.delete("1.0", "end")
             self.var_hidden.set(False)
             return
         for k, var in self.vars.items():
@@ -937,9 +925,6 @@ class DetailPanel:
             var.set("" if v is None else str(v))
         if row["status"]:
             self.vars["status"].set(STATUS_META.get(str(row["status"]), str(row["status"])))
-        self.txt_desc.delete("1.0", "end")
-        if row["description"]:
-            self.txt_desc.insert("1.0", row["description"])
         self.var_hidden.set(bool(row["hidden"]))
         for key, combo in self.editor.combos.items():
             if key in self.vars:
@@ -959,7 +944,6 @@ class DetailPanel:
         if values.get("status"):
             values["status"] = STATUS_BY_LABEL.get(values["status"], values["status"])
         values["hidden"] = "1" if self.var_hidden.get() else "0"
-        values["description"] = self.txt_desc.get("1.0", "end-1c").strip() or None
         if sel is None:
             player = values.pop("player_key", "") or editor.player()
             section = values.pop("section", "") or editor.section()
@@ -1326,16 +1310,10 @@ def selftest():
     tmp = Path(tempfile.mkdtemp(prefix="backlog-editor-")) / "trespordez.sqlite"
     shutil.copy2(DB_PATH, tmp)
     conn = connect_db(tmp)
-    ensure_column(conn, "backlog_items", "description")
     ensure_column(conn, "backlog_items", "hidden")
     tests = 0
 
     n_before = conn.execute("SELECT COUNT(*) n FROM backlog_items").fetchone()["n"]
-
-    # description column
-    ensure_column(conn, "backlog_items", "description")
-    assert "description" in [r["name"] for r in conn.execute("PRAGMA table_info(backlog_items)")]
-    tests += 1
 
     # hidden column + batch hide/filter
     assert "hidden" in [r["name"] for r in conn.execute("PRAGMA table_info(backlog_items)")]
@@ -1352,10 +1330,9 @@ def selftest():
     tests += 1
 
     # reorder/new
-    rid = insert_row(conn, "the-archivist", "catalog", "ZZZ selftest", description="desc teste")
+    rid = insert_row(conn, "the-archivist", "catalog", "ZZZ selftest")
     tests += 1
     assert fetch_row(conn, rid)["pos"] >= 0
-    assert fetch_row(conn, rid)["description"] == "desc teste"
 
     # batch rename regex
     rows = conn.execute("SELECT id FROM backlog_items WHERE section='catalog' LIMIT 3").fetchall()
@@ -1403,7 +1380,6 @@ def main():
                                     f"Rode node scripts/backlog-lib *.mjs antes ou verifique o path.")
         sys.exit(1)
     conn = connect_db()
-    ensure_column(conn, "backlog_items", "description")
     ensure_column(conn, "backlog_items", "hidden")
     try:
         root = tk.Tk()

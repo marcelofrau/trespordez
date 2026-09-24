@@ -100,10 +100,9 @@ async function main() {
       const header = rows.shift();
       switch (section) {
         case "backlog":
-          sections.backlog = list(rows, { name: 0, platform: 1, status: 2, mood: 3 }).map((i) => ({
+          sections.backlog = list(rows, { name: 0, platform: 1, status: 2 }).map((i) => ({
             ...i,
             status: normStatus(i.status),
-            mood: normStatus(i.mood),
           }));
           break;
         case "played":
@@ -111,7 +110,6 @@ async function main() {
             name: 0,
             platform: 1,
             status: 2,
-            humor: 3,
             graf: 5,
             som: 6,
             gameplay: 7,
@@ -121,7 +119,6 @@ async function main() {
             name: i.name,
             platform: i.platform,
             status: normStatus(i.status),
-            humor: normStatus(i.humor),
             graf: normScore(i.graf),
             som: normScore(i.som),
             gameplay: normScore(i.gameplay),
@@ -130,17 +127,15 @@ async function main() {
           }));
           break;
         case "dropped":
-          sections.dropped = list(rows, { name: 0, platform: 1, reason: 2, humor: 3 }).map((i) => ({
+          sections.dropped = list(rows, { name: 0, platform: 1, reason: 2 }).map((i) => ({
             ...i,
             reason: clean(i.reason),
-            humor: normStatus(i.humor),
           }));
           break;
         case "catalog":
-          sections.catalog = list(rows, { name: 0, platform: 1, status: 2, humor: 3 }).map((i) => ({
+          sections.catalog = list(rows, { name: 0, platform: 1, status: 2 }).map((i) => ({
             ...i,
             status: normStatus(i.status),
-            humor: normStatus(i.humor),
           }));
           break;
       }

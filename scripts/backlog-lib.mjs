@@ -17,15 +17,11 @@ export function openDb() {
   migrateGlyph(db);
   migrateHidden(db);
   migrateStatus(db);
+  migrateDropLegacy(db);
   return db;
 }
 
-function migrateGlyph(db) {
-  const cols = db.prepare("PRAGMA table_info(backlog_items)").all();
-  if (!cols.some((c) => c.name === "glyph")) {
-    db.exec("ALTER TABLE backlog_items ADD COLUMN glyph TEXT");
-  }
-}
+function migrateGlyph(db) {}
 
 function migrateHidden(db) {
   const cols = db.prepare("PRAGMA table_info(backlog_items)").all();
@@ -75,10 +71,14 @@ function migrateAddedAt(db) {
   db.exec("UPDATE backlog_items SET added_at = date('now') WHERE added_at IS NULL");
 }
 
-function migrateDescription(db) {
+const DROPPED_COLUMNS = ["mood", "humor", "description", "glyph"];
+
+function migrateDropLegacy(db) {
   const cols = db.prepare("PRAGMA table_info(backlog_items)").all();
-  if (!cols.some((c) => c.name === "description")) {
-    db.exec("ALTER TABLE backlog_items ADD COLUMN description TEXT");
+  for (const name of DROPPED_COLUMNS) {
+    if (cols.some((c) => c.name === name)) {
+      db.exec(`ALTER TABLE backlog_items DROP COLUMN ${name}`);
+    }
   }
 }
 
@@ -154,8 +154,6 @@ CREATE TABLE IF NOT EXISTS backlog_items (
   platform   TEXT,
   genre      TEXT,
   status     TEXT,
-  mood       TEXT,
-  humor      TEXT,
   reason     TEXT,
   graf       REAL, som REAL, gameplay REAL, desafio REAL, geral REAL,
   post_slug  TEXT,
@@ -197,9 +195,9 @@ export function replaceSection(db, playerKey, section, items) {
   db.prepare("DELETE FROM backlog_items WHERE player_key = ? AND section = ?").run(playerKey, section);
   const ins = db.prepare(
     `INSERT INTO backlog_items
-       (player_key, section, pos, name, platform, genre, status, mood, humor, reason,
+       (player_key, section, pos, name, platform, genre, status, reason,
         graf, som, gameplay, desafio, geral, post_slug, added_at, hidden)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
   );
   items.forEach((item, pos) => {
     const priorRow = preserved.get(item.name);
@@ -209,8 +207,6 @@ export function replaceSection(db, playerKey, section, items) {
       item.platform ?? null,
       item.genre ?? (priorRow ? priorRow.genre : null),
       normalizeStatus(item.status ?? null),
-      item.mood ?? null,
-      item.humor ?? null,
       item.reason ?? null,
       item.graf ?? null, item.som ?? null, item.gameplay ?? null,
       item.desafio ?? null, item.geral ?? null,
@@ -228,16 +224,16 @@ export function appendItems(db, playerKey, section, items) {
     .get(playerKey, section);
   const ins = db.prepare(
     `INSERT INTO backlog_items
-       (player_key, section, pos, name, platform, genre, status, mood, humor, reason,
+       (player_key, section, pos, name, platform, genre, status, reason,
         graf, som, gameplay, desafio, geral, post_slug, added_at, hidden)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
   );
   items.forEach((item, i) => {
     ins.run(
       playerKey, section, m + 1 + i,
       item.name ?? null, item.platform ?? null, item.genre ?? null,
       normalizeStatus(item.status ?? null),
-      item.mood ?? null, item.humor ?? null, item.reason ?? null,
+      item.reason ?? null,
       item.graf ?? null, item.som ?? null, item.gameplay ?? null,
       item.desafio ?? null, item.geral ?? null, item.post_slug ?? null,
       item.added_at ?? today(),

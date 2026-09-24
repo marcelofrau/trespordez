@@ -219,8 +219,6 @@ class LocalItem:
     name: str
     platform: Optional[str]
     status: Optional[str]
-    mood: Optional[str]
-    humor: Optional[str]
     reason: Optional[str]
     scores: dict = field(default_factory=dict)
     post_slug: Optional[str] = None
@@ -461,7 +459,7 @@ def load_local(player_key: str = "the-archivist") -> list[LocalItem]:
     con = sqlite3.connect(DB_PATH)
     con.row_factory = sqlite3.Row
     rows = con.execute(
-        """SELECT section, pos, name, platform, status, mood, humor, reason,
+        """SELECT section, pos, name, platform, status, reason,
                   graf, som, gameplay, desafio, geral, post_slug
            FROM backlog_items WHERE player_key = ? ORDER BY section, pos""",
         (player_key,),
@@ -480,8 +478,6 @@ def load_local(player_key: str = "the-archivist") -> list[LocalItem]:
             name=(r["name"] or "").strip(),
             platform=r["platform"],
             status=r["status"],
-            mood=r["mood"],
-            humor=r["humor"],
             reason=r["reason"],
             scores=scores,
             post_slug=r["post_slug"],
@@ -501,10 +497,6 @@ def build_note(item: LocalItem, notes: Optional[str] = None) -> str:
     if item.scores and (item.section == "played" or item.scores.get("geral")):
         bits = " · ".join(f"{k.capitalize()} {v}" for k, v in item.scores.items())
         parts.append(f"Notas: {bits}")
-    if item.humor:
-        parts.append(f"Reação: {item.humor}")
-    if item.mood:
-        parts.append(f"Humor: {item.mood}")
     if item.post_slug:
         parts.append(f"Cobertura: /{item.post_slug}/")
     if notes and notes.strip():

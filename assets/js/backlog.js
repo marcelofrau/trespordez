@@ -56,7 +56,7 @@
     return h("span", { className: "backlog-grid-name-wrap" }, [
       inner,
       h("span", { className: "backlog-hot-tag", title: "Na fila de espera" }, [
-        h("i", { className: `fa-solid ${glyph === "na fila" ? "fa-fire" : glyph}`, "aria-hidden": "true" }),
+        h("i", { className: `fa-solid ${glyph}`, "aria-hidden": "true" }),
         " na fila",
       ]),
     ]);
@@ -406,7 +406,7 @@
         item.platform || "—",
         item.added_at || "",
         item.status || "—",
-        item.glyph || "",
+        item.hot ? "fa-fire" : "",
         item.post_slug || "",
         item.post_slug ? REVIEW_URLS[item.post_slug] || "" : "",
       ]),

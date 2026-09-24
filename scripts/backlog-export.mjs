@@ -58,17 +58,14 @@ export function playerSections(db, playerKey) {
           name: row.name,
           platform: row.platform,
         };
-        for (const field of ["status", "mood"]) if (row[field] != null) item[field] = row[field];
+        for (const field of ["status"]) if (row[field] != null) item[field] = row[field];
         if (row.genre != null) item.genre = row.genre;
-        for (const field of ["humor", "reason"]) if (row[field] != null) item[field] = row[field];
+        for (const field of ["reason"]) if (row[field] != null) item[field] = row[field];
         for (const field of ["graf", "som", "gameplay", "desafio", "geral"])
           if (row[field] != null) item[field] = row[field];
         if (row.added_at != null) item.added_at = row.added_at;
-        if (row.description != null) item.description = row.description;
-        if (row.cover != null) item.cover = row.cover;
-        if (row.post_slug != null) item.post_slug = row.post_slug;
-        if (row.glyph != null) item.glyph = row.glyph;
         if (row.hidden) item.hidden = true;
+        if (row.post_slug != null) item.post_slug = row.post_slug;
         return item;
       });
   }

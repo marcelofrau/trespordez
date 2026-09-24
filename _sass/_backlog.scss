@@ -1183,7 +1183,136 @@
     font-size: 16px !important;
 }
 
+.backlog-lucky {
+    margin: 16px 0 0;
+    padding: 26px;
+    background: #1b1b1b;
+    border-radius: 14px;
+    box-shadow: 3px 3px 0 #000;
+}
+
+.backlog-lucky-head .eyebrow {
+    margin-bottom: 8px;
+    color: var(--accent);
+}
+
+.backlog-lucky-head h2 {
+    margin: 0 0 6px;
+    color: #fff;
+    font: 800 22px var(--head);
+}
+
+.backlog-lucky-head p {
+    margin: 0;
+    max-width: 46rem;
+    color: #999;
+    font: 600 14px/1.5 var(--body);
+}
+
+.backlog-lucky-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    min-height: 104px;
+    margin-top: 18px;
+    padding: 18px 20px;
+    background: #242424;
+    border: 1px dashed #3a3a3a;
+    border-radius: 12px;
+}
+
+.backlog-lucky-placeholder {
+    margin: 0;
+    color: #999;
+    font: 600 15px var(--body);
+}
+
+.backlog-lucky-placeholder strong {
+    color: var(--accent);
+    font-weight: 800;
+}
+
+.backlog-lucky-name {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #fff;
+    font: 800 21px var(--head);
+}
+
+.backlog-lucky-card a.backlog-lucky-name {
+    color: var(--accent);
+    text-decoration: underline dotted;
+    text-underline-offset: 3px;
+}
+
+.backlog-lucky-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.backlog-lucky-tag {
+    padding: 3px 10px;
+    background: #2e2e2e;
+    border-radius: 20px;
+    color: #cfcfcf;
+    font: 700 12px var(--head);
+    letter-spacing: .03em;
+}
+
+.backlog-lucky-tag-hot {
+    background: rgba(255, 204, 0, .14);
+    color: var(--accent);
+}
+
+.backlog-lucky-tag-review {
+    background: rgba(127, 212, 231, .14);
+    color: #7fd4e7;
+}
+
+.backlog-lucky-meta {
+    color: #8a8a8a;
+    font: 600 13px/1.5 var(--body);
+}
+
+.backlog-lucky-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 10px 18px;
+    background: var(--accent);
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0 #000;
+    color: #000;
+    cursor: pointer;
+    font: 800 14px var(--head);
+    letter-spacing: .03em;
+    transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.backlog-lucky-btn:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0 #000;
+}
+
+.backlog-lucky-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 #000;
+}
+
 @media (max-width: 640px) {
+    .backlog-lucky {
+        padding: 20px 18px;
+    }
+
+    .backlog-lucky-name {
+        font-size: 18px;
+    }
+
     .backlog-player-card {
         grid-template-columns: 137px 1fr;
         gap: 14px;

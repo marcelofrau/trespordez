@@ -16,6 +16,7 @@ export function openDb() {
   migrateGenre(db);
   migrateGlyph(db);
   migrateHidden(db);
+  migrateStatus(db);
   return db;
 }
 
@@ -30,6 +31,32 @@ function migrateHidden(db) {
   const cols = db.prepare("PRAGMA table_info(backlog_items)").all();
   if (!cols.some((c) => c.name === "hidden")) {
     db.exec("ALTER TABLE backlog_items ADD COLUMN hidden INTEGER NOT NULL DEFAULT 0");
+  }
+}
+
+export const STATUS_KEYS = ["jogando", "zerado", "na-fila", "pausado", "arquivado"];
+
+const STATUS_LEGACY = {
+  "▶️": "jogando",
+  "👑": "zerado",
+  "⏸️": "pausado",
+  "💤": "pausado",
+  "🟡": "pausado",
+  "🗃️": "arquivado",
+  "⏲️": "arquivado",
+  "?": "arquivado",
+  "⚪": "na-fila",
+  "💾": "na-fila",
+};
+
+export function normalizeStatus(status) {
+  if (status == null) return status;
+  return STATUS_LEGACY[String(status)] ?? status;
+}
+
+function migrateStatus(db) {
+  for (const [legacy, key] of Object.entries(STATUS_LEGACY)) {
+    db.prepare("UPDATE backlog_items SET status = ? WHERE status = ?").run(key, legacy);
   }
 }
 
@@ -181,7 +208,7 @@ export function replaceSection(db, playerKey, section, items) {
       item.name ?? null,
       item.platform ?? null,
       item.genre ?? (priorRow ? priorRow.genre : null),
-      item.status ?? null,
+      normalizeStatus(item.status ?? null),
       item.mood ?? null,
       item.humor ?? null,
       item.reason ?? null,
@@ -208,7 +235,8 @@ export function appendItems(db, playerKey, section, items) {
   items.forEach((item, i) => {
     ins.run(
       playerKey, section, m + 1 + i,
-      item.name ?? null, item.platform ?? null, item.genre ?? null, item.status ?? null,
+      item.name ?? null, item.platform ?? null, item.genre ?? null,
+      normalizeStatus(item.status ?? null),
       item.mood ?? null, item.humor ?? null, item.reason ?? null,
       item.graf ?? null, item.som ?? null, item.gameplay ?? null,
       item.desafio ?? null, item.geral ?? null, item.post_slug ?? null,

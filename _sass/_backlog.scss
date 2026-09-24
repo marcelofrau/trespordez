@@ -526,10 +526,37 @@
     font: 800 15px var(--head);
 }
 
-.backlog-emoji-col {
-    width: 70px;
+.backlog-status-col {
+    width: 112px;
     text-align: center !important;
-    font-size: 16px;
+}
+
+.backlog-grid-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font: 700 12px var(--head);
+    color: #333;
+    white-space: nowrap;
+}
+
+.backlog-grid-status i {
+    color: #173b45;
+    font-size: 13px;
+}
+
+.backlog-grid-status .fa-play {
+    color: #2e7d32;
+}
+
+.backlog-grid-status .fa-floppy-disk {
+    color: #b8860b;
+}
+
+.backlog-grid-status--muted {
+    color: #999;
+    font: 600 12px var(--head);
 }
 
 .backlog-platform-col {

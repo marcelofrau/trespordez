@@ -32,6 +32,16 @@ ROW_FIELDS = [
     "mood", "humor", "reason", "description", "post_slug", "added_at", "hidden",
 ] + SCORE_FIELDS
 
+# Vocabulário único de status: chave no banco → rótulo no editor/site.
+STATUS_META = {
+    "jogando": "Jogando",
+    "zerado": "Zerado",
+    "na-fila": "Na fila",
+    "pausado": "Pausado",
+    "arquivado": "Arquivado",
+}
+STATUS_BY_LABEL = {v: k for k, v in STATUS_META.items()}
+
 # Vocabulário canônico de gêneros ----------------------------------------------
 
 GENRE_SYNONYM = {
@@ -631,7 +641,12 @@ class BacklogTab:
         self.var_genre = tk.StringVar(value="")
         self._live_combo(inner, self.var_genre, "genre", 15, "genre")
         self.var_status = tk.StringVar(value="")
-        self._live_combo(inner, self.var_status, "status", 13, "status")
+        ttk.Label(inner, text="status:").pack(side="left", padx=(0, 2))
+        cb_st = ttk.Combobox(inner, textvariable=self.var_status,
+                             values=tuple(STATUS_META.values()), width=13)
+        cb_st.pack(side="left", padx=(0, 6))
+        cb_st.bind("<<ComboboxSelected>>", lambda e: self.load_master())
+        self.cb_status = cb_st
 
         ttk.Label(inner, text="oculto:").pack(side="left", padx=(0, 2))
         self.var_hidden = tk.StringVar(value="")
@@ -757,7 +772,7 @@ class BacklogTab:
             text=self.var_text.get().strip() or None,
             platform=self.var_platform.get() or None,
             genre=self.var_genre.get() or None,
-            status=self.var_status.get() or None,
+            status=STATUS_BY_LABEL.get(self.var_status.get(), self.var_status.get()) or None,
             hidden=None if hid == "" else (1 if hid == "sim" else 0),
         )
 
@@ -802,7 +817,7 @@ class BacklogTab:
         for r in rows:
             self.tree.insert("", "end", iid=str(r["id"]), values=(
                 r["id"], r["pos"], r["name"] or "", r["platform"] or "",
-                r["genre"] or "", r["status"] or "", r["added_at"] or "",
+                r["genre"] or "", STATUS_META.get(r["status"] or "", r["status"] or ""), r["added_at"] or "",
                 "" if r["geral"] is None else r["geral"],
                 "sim" if r["hidden"] else "",
             ))
@@ -870,7 +885,7 @@ class DetailPanel:
 
         field(4, "Plataforma", "platform", 0, combo_from=("platform",), width=18)
         field(4, "Gênero", "genre", 3, combo_from=("genre",), width=22)
-        field(4, "Status", "status", 6, combo_from=("status",), width=16)
+        field(4, "Status", "status", 6, values=tuple(STATUS_META.values()), width=16)
 
         field(6, "Mood", "mood", 0, width=14)
         field(6, "Humor", "humor", 2, width=14)
@@ -920,6 +935,8 @@ class DetailPanel:
         for k, var in self.vars.items():
             v = row[k] if k in row.keys() else None
             var.set("" if v is None else str(v))
+        if row["status"]:
+            self.vars["status"].set(STATUS_META.get(str(row["status"]), str(row["status"])))
         self.txt_desc.delete("1.0", "end")
         if row["description"]:
             self.txt_desc.insert("1.0", row["description"])
@@ -939,6 +956,8 @@ class DetailPanel:
             if (k in SCORE_FIELDS or k == "added_at") and s == "":
                 s = None
             values[k] = s
+        if values.get("status"):
+            values["status"] = STATUS_BY_LABEL.get(values["status"], values["status"])
         values["hidden"] = "1" if self.var_hidden.get() else "0"
         values["description"] = self.txt_desc.get("1.0", "end-1c").strip() or None
         if sel is None:

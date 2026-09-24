@@ -67,6 +67,25 @@
     return h("span", { className: "backlog-grid-genre", title: label, "aria-label": label }, label);
   };
 
+  const STATUS = {
+    jogando: { icon: "fa-play", label: "Jogando" },
+    zerado: { icon: "fa-trophy", label: "Zerado" },
+    "na-fila": { icon: "fa-floppy-disk", label: "Na fila" },
+    pausado: { icon: "fa-pause", label: "Pausado" },
+    arquivado: { icon: "fa-box-archive", label: "Arquivado" },
+  };
+
+  const statusCell = (value) => {
+    const s = STATUS[String(value ?? "")];
+    if (!s) {
+      return h("span", { className: "backlog-grid-status backlog-grid-status--muted" }, value ? String(value) : "–");
+    }
+    return h("span", { className: "backlog-grid-status", title: s.label }, [
+      h("i", { className: `fa-solid ${s.icon}`, "aria-hidden": "true" }),
+      s.label,
+    ]);
+  };
+
   const hiddenCol = () => ({ name: "", hidden: true });
 
   const playedColumns = [
@@ -98,7 +117,7 @@
     { name: thHead("fa-solid fa-tags", "Gênero"), width: "180px", className: "backlog-genre-col", formatter: genreCell },
     { name: fa("fa-solid fa-box", "Plataforma"), width: "120px", className: "backlog-platform-col", sort: false },
     { name: fa("fa-solid fa-calendar-plus", "Data"), width: "110px", className: "backlog-date-col", formatter: formatDate },
-    { name: fa("fa-solid fa-bars-progress", "Status"), width: "72px", className: "backlog-emoji-col", formatter: (c) => c || "–", sort: false },
+    { name: fa("fa-solid fa-bars-progress", "Status"), width: "112px", className: "backlog-status-col", formatter: statusCell, sort: false },
     { name: "", hidden: true },
     hiddenCol(),
     hiddenCol(),

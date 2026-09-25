@@ -48,7 +48,7 @@
 
 .music-players {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
     gap: 16px;
     margin: 0 0 16px;
 }
@@ -96,7 +96,7 @@
 .music-player figcaption small {
     display: block;
     margin-top: 2px;
-    color: #999;
+    color: #666;
 }
 
 .music-chips {
@@ -163,4 +163,8 @@
     margin-top: 14px;
     color: #93a7b5;
     font: 600 13px/1.5 var(--body);
+}
+
+.music-feature .software-card small {
+    color: #666;
 }

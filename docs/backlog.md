@@ -6,39 +6,41 @@
 ## Visão geral
 
 Cada jogador tem uma página em `/backlog/<player>/`, renderizada por
-`_layouts/backlog.html` e alimentada por `_data/backlog/<player>.yml`
-(exposta no Jekyll como `site.data.backlog.<player>`).
+`_layouts/backlog.html`. Os dados vêm de `data/trespordez.sqlite` e são
+exportados para `_data/backlog/<player>.yml` como artefato de build.
 
 | Player | Página | Dados |
 | --- | --- | --- |
-| The Archivist | `/backlog/the-archivist/` | `_data/backlog/the-archivist.yml` |
+| The Archivist | `/backlog/the-archivist/` | `data/trespordez.sqlite` → `_data/backlog/the-archivist.yml` |
 
 ## Fonte dos dados
 
-A fonte original é um Google Sheets público do The Archivist (aba principal
-`Backlog pessoal`). O script `scripts/backlog-sync.mjs` baixa as 4 abas pelo
-endpoint de CSV público (`/pub?output=csv&gid=<gid>`), normaliza e escreve o
-YAML de cada player. **Nenhuma credencial é usada** — a planilha está publicada
-como "para quem tiver o link".
+A fonte de verdade é `data/trespordez.sqlite`, tabela `backlog_items`. O script
+`scripts/backlog-sync.mjs` importa a planilha pública do The Archivist para o
+SQLite; `scripts/backlog-export.mjs` gera os YAMLs consumidos pelo Jekyll.
+**Nenhuma credencial é usada** para ler a planilha: ela está publicada como
+"para quem tiver o link".
 
 O mapeamento player → abas (gid) fica em `PLAYERS` no topo do script. Para
-trocar a planilha de um player, atualize `PUB_BASE` e os gids.
+trocar a planilha de um player, atualize `PUB_BASE` e os gids. Para sincronizar
+uma biblioteca externa, veja [`docs/backloggery.md`](backloggery.md).
 
 ## Schema
 
-Todos os valores são strings ou `null`. Emojis de status (`▶️ ✅ ❌ ⏳ …`)
-vêm da planilha e **não devem ser traduzidos nem mapeados**.
+O SQLite armazena notas numéricas, `null` para valores ausentes e status
+canônicos (`jogando`, `zerado`, `na-fila`, `pausado`, `arquivado`). O YAML
+gerado preserva esses valores para o build do site; não edite YAML manualmente.
 
 ```yaml
 backlog:          # fila de espera
   - name: "Grandia"
     platform: "Saturn"
-    status: "▶️"
-    mood: null
+    status: "na-fila"
+    humor: null
 played:           # zerados / avaliados
   - name: "Expedition 33"
     platform: "PC"
-    status: null
+    status: "zerado"
     humor: null
     graf: 10       # números ou null
     som: 10
@@ -68,19 +70,25 @@ número quando numéricas; linhas sem `name` são descartadas.
 node scripts/backlog-sync.mjs
 ```
 
-- Reescreve `_data/backlog/*.yml` a partir das abas publicadas.
+- Importa as abas publicadas para `data/trespordez.sqlite`.
+- Gera os artefatos `_data/backlog/*.yml` usados pelo build.
 - Mostra contagem por seção; confira se os números batem com o esperado.
-- **Cuidado:** qualquer edição manual do YAML é perdida no próximo sync. Use
-  um caminho ou o outro, não os dois misturados.
+- **Cuidado:** qualquer edição manual do YAML é perdida no próximo export.
 
-### 2. Via edição direta do YAML
+### 2. Via edição direta do SQLite
 
-Válido e melhor quando a mudança é pontual (ex.: marcar um jogo como zerado).
-Respeite o schema acima e rode a validação depois:
+Use `scripts/backlog_editor.py` para alterações pontuais. O editor escreve no
+SQLite e preserva o schema canônico; não edite os YAMLs manualmente. Depois,
+valide e exporte:
 
 ```bash
+python scripts/backlog_editor.py --selftest
+node scripts/backlog-export.mjs
 node scripts/validate-site.mjs
 ```
+
+A sincronização com Backloggery é separada e está documentada em
+[`docs/backloggery.md`](backloggery.md).
 
 ### 3. Via Playnite (enriquecer genre e data de adição)
 
@@ -204,7 +212,7 @@ node scripts/backlog-export.mjs                  # regenera yml
    ---
    ```
 
-3. `_data/authors.yml` → chave do player (avatar, nome, slug).
+3. `_data/authors/<player>.yml` → chave do player (avatar, nome, slug).
 4. `_data/navigation.yml` → filho em `Backlog` apontando para `/backlog/<player>/`.
 
 O index `/backlog/` lista os players automaticamente (loop sobre
@@ -232,7 +240,7 @@ O index `/backlog/` lista os players automaticamente (loop sobre
 - **Emoji estranho no terminal:** o console do Windows às vezes decodifica
   UTF-8 errado; o arquivo costuma estar correto. Confira com um editor ou
   `node -e "console.log(require('fs').readFileSync('_data/backlog/<p>.yml','utf8'))"`.
-- **YAML gigante:** o catálogo do The Archivist tem ~2.400 itens (~250 KB).
+- **YAML gigante:** o catálogo do The Archivist tem ~4.987 itens (~500 KB).
   Normal para Jekyll; o Grid.js pagina em cliente.
 - **CI/QA verde:** rode `node scripts/validate-site.mjs` e garanta build Jekyll
   limpo antes do push.

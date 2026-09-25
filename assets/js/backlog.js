@@ -98,8 +98,9 @@
   const playedColumns = [
     {
       name: thHead("fa-solid fa-gamepad", "Jogo"),
-      formatter: (c, row) => nameCell(c, row, { hotIdx: -1, urlIdx: 8 }),
+      formatter: (c, row) => nameCell(c, row, { hotIdx: -1, urlIdx: 9 }),
     },
+    { name: fa("fa-solid fa-calendar-plus", "Data"), width: "110px", className: "backlog-date-col", formatter: formatDate },
     { name: fa("fa-solid fa-box", "Plataforma"), width: "120px", className: "backlog-platform-col", sort: false },
     { name: fa("fa-solid fa-palette", "Gráficos"), width: "96px", className: "backlog-score", formatter: scoreCell, sort: false },
     { name: fa("fa-solid fa-volume-high", "Som"), width: "96px", className: "backlog-score", formatter: scoreCell, sort: false },
@@ -151,6 +152,15 @@
   };
 
   const REVIEW_URLS = readMap("backlog-review-map");
+  const REVIEW_DATES = readMap("backlog-review-dates");
+
+  const itemDate = (item) => REVIEW_DATES[item.post_slug] || item.added_at || "";
+
+  const sortByDateDesc = (items) =>
+    items
+      .map((item, index) => ({ item, index, date: itemDate(item) }))
+      .sort((a, b) => (b.date || "").localeCompare(a.date || "") || b.index - a.index)
+      .map(({ item }) => item);
 
   const splitField = (value) =>
     (Array.isArray(value) ? value : String(value ?? "").split(","))
@@ -413,7 +423,7 @@
         item.name,
         item.genre || "",
         item.platform || "—",
-        item.added_at || "",
+        itemDate(item),
         item.status || "—",
         item.hot ? "fa-fire" : "",
         item.post_slug || "",
@@ -426,10 +436,11 @@
     filterSelector: "#backlog-played-filters",
     columns: playedColumns,
     filterFields: [{ field: "platform", label: "Plataforma" }],
-    loadItems: () => readJson("backlog-played-data"),
+    loadItems: () => sortByDateDesc(readJson("backlog-played-data")),
     makeRows: (items) =>
       items.map((item) => [
         item.name,
+        itemDate(item),
         item.platform || "—",
         item.graf,
         item.som,

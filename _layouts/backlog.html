@@ -8,6 +8,7 @@ layout: default
 {% assign visible_played = player_data.played | where_exp: "item", "item.hidden != true" %}
 {% assign visible_dropped = player_data.dropped | where_exp: "item", "item.hidden != true" %}
 {% assign visible_catalog = player_data.catalog | where_exp: "item", "item.hidden != true" %}
+{% assign playing_items = visible_backlog | where: "status", "jogando" %}
 {% assign lista_size = visible_backlog.size | plus: visible_catalog.size %}
 {% assign first_list = "" %}
 {% if lista_size > 0 %}
@@ -51,6 +52,38 @@ layout: default
         }}</span></button>
   </nav>
 
+  {% if playing_items.size > 0 %}
+  <section class="backlog-playing" aria-labelledby="backlog-playing-title">
+    <div class="backlog-playing-head">
+      <div>
+        <p class="backlog-playing-kicker"><i class="fa-solid fa-play"></i> Em andamento</p>
+        <h2 id="backlog-playing-title">Jogando agora</h2>
+        <p class="backlog-playing-note">O que está acontecendo na mesa de controle neste momento.</p>
+      </div>
+      <span class="backlog-playing-count">{{ playing_items.size }} em andamento</span>
+    </div>
+    <div class="backlog-playing-grid">
+      {% for item in playing_items %}
+      {% assign playing_icon = "fa-gamepad" %}
+      {% assign playing_platform = item.platform | default: '' | downcase %}
+      {% if playing_platform contains 'pc' %}{% assign playing_icon = "fa-keyboard" %}{% endif %}
+      <article class="backlog-playing-card">
+        <div class="backlog-playing-media">
+          {% if item.cover %}<img src="{{ item.cover | relative_url }}" alt="Capa de {{ item.name }}">{% else %}<span class="backlog-playing-icon"><i class="fa-solid {{ playing_icon }}" aria-hidden="true"></i></span>{% endif %}
+          <span class="backlog-playing-status"><i class="fa-solid fa-play" aria-hidden="true"></i> Jogando</span>
+        </div>
+        <div class="backlog-playing-copy">
+          <p class="backlog-playing-platform">{{ item.platform | default: "Plataforma a definir" }}</p>
+          <h3>{{ item.name }}</h3>
+          <p class="backlog-playing-mood">Começando agora</p>
+          {% if item.added_at %}<p class="backlog-playing-date"><i class="fa-regular fa-calendar-plus" aria-hidden="true"></i> Adicionado em {{ item.added_at | date: "%d/%m/%Y" }}</p>{% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
   {% if lista_size > 0 %}
 
   {% if visible_backlog.size > 0 %}
@@ -58,6 +91,7 @@ layout: default
   {% assign count = 0 %}
   {% assign shown = "" | split: "," %}
   {% for item in visible_backlog %}
+  {% if item.status == "jogando" %}{% continue %}{% endif %}
   {% if count >= 4 %}{% break %}{% endif %}
   {% unless item.post_slug %}{% continue %}{% endunless %}
   {% assign matched_post = site.posts | where: "slug", item.post_slug | first %}
@@ -82,6 +116,7 @@ layout: default
   {% assign count = count | plus: 1 %}
   {% endfor %}
   {% for item in visible_backlog %}
+  {% if item.status == "jogando" %}{% continue %}{% endif %}
   {% if count >= 4 %}{% break %}{% endif %}
   {% if item.post_slug %}{% continue %}{% endif %}
   {% assign item_name = item.name | downcase | strip %}
@@ -167,7 +202,14 @@ layout: default
 {% for post in site.posts %}{% unless forloop.first %},{% endunless %}"{{ post.slug }}":"{{ post.url | relative_url }}"{% endfor %}
 }
 {% endcapture %}
-<script type="application/json" id="backlog-review-map">{{ review_map_json }}</script>
+    <script type="application/json" id="backlog-review-map">{{ review_map_json }}</script>
+    {% capture review_dates_json %}
+    {
+    {% for post in site.posts reversed %}"{{ post.slug }}":"{{ post.date | date: "%Y-%m-%d" }}"{% unless forloop.last %},{% endunless %}{% endfor %}
+    }
+    {% endcapture %}
+    <script type="application/json" id="backlog-review-dates">{{ review_dates_json }}</script>
+
 <script src="{{ '/assets/js/lib/gridjs.umd.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 <script src="{{ '/assets/js/backlog.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 {% endif %}

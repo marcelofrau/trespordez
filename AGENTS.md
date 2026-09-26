@@ -36,6 +36,8 @@ Static Jekyll blog. Source repo: `marcelofrau/trespordez`. Deployed on Cloudflar
 - Do not hotlink `wp-content` assets. Import local copy before production cutover.
 - Preserve existing external links. Never use copyrighted game art beyond assets already owned or published by Três por Dez without approval.
 - `_library/` is local source material and must remain ignored. Copy only assets approved for website use into `assets/`.
+- Backlog game art lives in `assets/images/backlog/` and is registered per game in the SQLite column `backlog_items.cover` (local path or absolute URL). Render it through `_includes/cover-url.html`; never apply `relative_url` blindly to a stored cover value.
+- Per-item playing history lives in the SQLite table `backlog_notes` (`item_id`, `note_date`, `body`, `pos`), one note per row. The editor edits it as free text: one note per line, `AAAA-MM-DD | texto` (a line without a date uses today). The site renders the notes of the item with status `jogando` in the right column of the "Jogando agora" card, newest first. `replaceSection` deletes and re-inserts a whole section, so it reattaches notes by item name — keep that preservation when touching it.
 - ReffPixels Pixel Art Emoji is approved by author for this website. Use only curated copies under `assets/images/ui/review/`; retain attribution in `docs/asset-credits.md`.
 
 ## Validation

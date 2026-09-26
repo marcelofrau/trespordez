@@ -10,5 +10,6 @@ _data/giscus.yml
 _data/backlog/*.yml
 logs/
 __pycache__/
+.cortexkit/
 scripts/playnite-extract/bin/
 scripts/playnite-extract/obj/

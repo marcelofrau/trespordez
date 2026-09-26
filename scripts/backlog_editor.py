@@ -18,6 +18,7 @@ import subprocess
 import sys
 import tempfile
 import tkinter as tk
+from datetime import date
 from pathlib import Path
 from tkinter import messagebox, simpledialog, ttk
 
@@ -29,7 +30,7 @@ SECTIONS = ["backlog", "played", "dropped", "catalog"]
 SCORE_FIELDS = ["graf", "som", "gameplay", "desafio", "geral"]
 ROW_FIELDS = [
     "player_key", "section", "pos", "name", "platform", "genre", "status",
-    "reason", "post_slug", "added_at", "hidden",
+    "reason", "post_slug", "added_at", "cover", "hidden",
 ] + SCORE_FIELDS
 
 # Vocabulário único de status: chave no banco → rótulo no editor/site.
@@ -297,6 +298,7 @@ def theme(root):
 def connect_db(path=None):
     conn = sqlite3.connect(str(path or DB_PATH))
     conn.row_factory = sqlite3.Row
+    conn.execute("PRAGMA foreign_keys=ON")
     return conn
 
 
@@ -305,6 +307,19 @@ def ensure_column(conn, table, column):
     if column not in cols:
         conn.execute(f"ALTER TABLE {table} ADD COLUMN {column} TEXT")
         conn.commit()
+
+
+def ensure_notes_table(conn):
+    conn.execute(
+        """CREATE TABLE IF NOT EXISTS backlog_notes (
+               id        INTEGER PRIMARY KEY,
+               item_id   INTEGER NOT NULL REFERENCES backlog_items(id) ON DELETE CASCADE,
+               note_date TEXT NOT NULL,
+               body      TEXT NOT NULL,
+               pos       INTEGER NOT NULL DEFAULT 0)"""
+    )
+    conn.execute("CREATE INDEX IF NOT EXISTS idx_backlog_notes_item ON backlog_notes(item_id)")
+    conn.commit()
 
 
 def load_players(conn):
@@ -395,6 +410,62 @@ def update_row(conn, row_id, **fields):
     return 1
 
 
+NOTE_DATE_RE = re.compile(r"^(\d{4})-(\d{1,2})-(\d{1,2})\s*\|\s*(.+)$")
+NOTE_TODAY = date.today().isoformat()
+
+
+def parse_notes(text):
+    """Converte o campo multi-linha em [{date, body}]; linha sem data usa hoje."""
+    out = []
+    for raw in (text or "").splitlines():
+        line = raw.strip()
+        if not line:
+            continue
+        m = NOTE_DATE_RE.match(line)
+        if m:
+            y, mo, d, body = m.groups()
+            date_s = f"{int(y):04d}-{int(mo):02d}-{int(d):02d}"
+        else:
+            date_s, body = NOTE_TODAY, line
+        body = body.strip()
+        if body:
+            out.append({"date": date_s, "body": body})
+    return out
+
+
+def load_notes(conn, item_id):
+    if not item_id:
+        return []
+    return conn.execute(
+        "SELECT note_date, body, pos FROM backlog_notes WHERE item_id=? ORDER BY note_date DESC, id DESC",
+        (item_id,),
+    ).fetchall()
+
+
+def replace_notes(conn, item_id, notes):
+    if not item_id:
+        return 0
+    conn.execute("DELETE FROM backlog_notes WHERE item_id=?", (item_id,))
+    for i, note in enumerate(notes):
+        conn.execute(
+            "INSERT INTO backlog_notes (item_id, note_date, body, pos) VALUES (?, ?, ?, ?)",
+            (item_id, note["date"], note["body"], note.get("pos", i)),
+        )
+    conn.commit()
+    return len(notes)
+
+
+def notes_count(conn, item_ids):
+    if not item_ids:
+        return {}
+    marks = ",".join("?" * len(item_ids))
+    rows = conn.execute(
+        f"SELECT item_id, COUNT(*) n FROM backlog_notes WHERE item_id IN ({marks}) GROUP BY item_id",
+        list(item_ids),
+    ).fetchall()
+    return {r["item_id"]: r["n"] for r in rows}
+
+
 def batch_update(conn, row_ids, **fields):
     allowed = {k: v for k, v in fields.items() if k in ROW_FIELDS and v is not None}
     if not allowed:
@@ -438,7 +509,9 @@ def delete_row(conn, row_id):
     row = fetch_row(conn, row_id)
     if row is None:
         return 0
+    conn.execute("DELETE FROM backlog_notes WHERE item_id=?", (row_id,))
     conn.execute("DELETE FROM backlog_items WHERE id=?", (row_id,))
+    conn.commit()
     _reindex(conn, row["player_key"], row["section"])
     return 1
 
@@ -691,9 +764,9 @@ class BacklogTab:
         body.add(bottom, weight=2)
 
     def _build_master(self, parent):
-        cols = ("id", "pos", "name", "platform", "genre", "status", "added_at", "geral", "hidden")
-        heads = ("id", "pos", "nome", "plataforma", "gênero", "status", "adicionado", "nota", "oculto")
-        widths = (48, 42, 320, 95, 130, 95, 85, 42, 56)
+        cols = ("id", "pos", "name", "platform", "genre", "status", "added_at", "geral", "cover", "notes", "hidden")
+        heads = ("id", "pos", "nome", "plataforma", "gênero", "status", "adicionado", "nota", "capa", "hist", "oculto")
+        widths = (48, 42, 320, 95, 130, 95, 85, 42, 56, 44, 56)
         self.tree = ttk.Treeview(parent, columns=cols, show="headings", selectmode="extended")
         for c, h, w in zip(cols, heads, widths):
             self.tree.heading(c, text=h, command=lambda k=c: self.sort_by(k))
@@ -814,11 +887,14 @@ class BacklogTab:
         sel = self.selection_id()
         self.tree.delete(*self.tree.get_children())
         rows = self._sort_rows(list_rows(self.conn, **self.current_filters()))
+        counts = notes_count(self.conn, [r["id"] for r in rows])
         for r in rows:
             self.tree.insert("", "end", iid=str(r["id"]), values=(
                 r["id"], r["pos"], r["name"] or "", r["platform"] or "",
                 r["genre"] or "", STATUS_META.get(r["status"] or "", r["status"] or ""), r["added_at"] or "",
                 "" if r["geral"] is None else r["geral"],
+                ("url" if str(r["cover"] or "").startswith(("http://", "https://", "//")) else "img") if r["cover"] else "",
+                counts.get(r["id"], 0) or "",
                 "sim" if r["hidden"] else "",
             ))
         self.lbl_count.config(text=f"{len(rows)} registros")
@@ -888,6 +964,7 @@ class DetailPanel:
         field(4, "Status", "status", 6, values=tuple(STATUS_META.values()), width=16)
 
         field(6, "Post slug", "post_slug", 4, width=20, span=2)
+        field(6, "Capa (URL)", "cover", 6, width=34, span=3)
 
         self.var_hidden = tk.BooleanVar()
         ttk.Checkbutton(inner, text="Oculto (esconder do site)", variable=self.var_hidden,
@@ -904,12 +981,25 @@ class DetailPanel:
         ttk.Entry(inner, textvariable=self.vars["reason"], width=88).grid(
             row=11, column=0, columnspan=10, sticky="we", padx=(padx, 2), pady=(0, 6))
 
+        ttk.Label(inner, text="Histórico (uma nota por linha: AAAA-MM-DD | texto)").grid(
+            row=12, column=0, sticky="w", padx=(padx, 2), pady=(8, 2))
+        notes_wrap = ttk.Frame(inner)
+        notes_wrap.grid(row=13, column=0, columnspan=10, sticky="we", padx=(padx, 2))
+        self.txt_notes = tk.Text(notes_wrap, height=6, width=88, wrap="word", undo=True)
+        notes_sb = ttk.Scrollbar(notes_wrap, orient="vertical", command=self.txt_notes.yview)
+        self.txt_notes.configure(yscrollcommand=notes_sb.set)
+        self.txt_notes.grid(row=0, column=0, sticky="we")
+        notes_sb.grid(row=0, column=1, sticky="ns")
+        notes_wrap.columnconfigure(0, weight=1)
+        inner.rowconfigure(13, weight=1)
+
         btns = ttk.Frame(inner)
         btns.grid(row=14, column=0, columnspan=10, sticky="w", padx=(padx - 2, 2), pady=(0, 4))
         ttk.Button(btns, text="Salvar", style="Accent.TButton", command=self.save).pack(side="left", padx=2)
         ttk.Button(btns, text="Novo", style="Pist.TButton", command=self._new).pack(side="left", padx=2)
         ttk.Button(btns, text="Duplicar", command=self._duplicate).pack(side="left", padx=2)
         ttk.Button(btns, text="Mover…", command=self._move).pack(side="left", padx=2)
+        ttk.Button(btns, text="Notas…", command=self._notes_window).pack(side="left", padx=2)
         ttk.Button(btns, text="↑", command=lambda: self._swap(-1)).pack(side="left", padx=2)
         ttk.Button(btns, text="↓", command=lambda: self._swap(1)).pack(side="left", padx=2)
         ttk.Button(btns, text="Apagar", style="Pist.TButton", command=self._delete).pack(side="left", padx=2)
@@ -919,6 +1009,7 @@ class DetailPanel:
             for k, var in self.vars.items():
                 var.set("")
             self.var_hidden.set(False)
+            self.txt_notes.delete("1.0", "end")
             return
         for k, var in self.vars.items():
             v = row[k] if k in row.keys() else None
@@ -929,6 +1020,71 @@ class DetailPanel:
         for key, combo in self.editor.combos.items():
             if key in self.vars:
                 combo.refresh()
+        self.txt_notes.delete("1.0", "end")
+        notes = load_notes(self.tab.conn, row["id"])
+        if notes:
+            lines = [f'{n["note_date"]} | {n["body"]}' for n in sorted(
+                notes, key=lambda n: str(n["note_date"]), reverse=True)]
+            self.txt_notes.insert("1.0", "\n".join(lines))
+        self.txt_notes.edit_reset()
+
+    def _notes_window(self):
+        """Janela grande para escrever o histórico (uma nota por linha)."""
+        tab = self.tab
+        rid = tab.selection_id()
+        if rid is None:
+            messagebox.showwarning("Histórico", "Selecione um registro primeiro.")
+            return
+        row = fetch_row(tab.conn, rid)
+        if row is None:
+            return
+        d = tk.Toplevel(self.frame)
+        d.title(f"Histórico — {row['name']}")
+        d.configure(bg=BG)
+        d.transient(self.frame.winfo_toplevel())
+        d.geometry("760x520")
+
+        ttk.Label(
+            d,
+            text="Uma nota por linha: AAAA-MM-DD | texto\n"
+                 "Linha sem data usa a data de hoje. As mais recentes aparecem primeiro no site.",
+            style="Hint.TLabel", justify="left",
+        ).pack(anchor="w", padx=12, pady=(12, 6))
+
+        wrap = ttk.Frame(d)
+        wrap.pack(fill="both", expand=True, padx=12)
+        txt = tk.Text(wrap, wrap="word", undo=True, height=20)
+        sb = ttk.Scrollbar(wrap, orient="vertical", command=txt.yview)
+        txt.configure(yscrollcommand=sb.set)
+        txt.pack(side="left", fill="both", expand=True)
+        sb.pack(side="right", fill="y")
+
+        notes = load_notes(tab.conn, rid)
+        if notes:
+            lines = [f'{n["note_date"]} | {n["body"]}'
+                     for n in sorted(notes, key=lambda n: str(n["note_date"]), reverse=True)]
+            txt.insert("1.0", "\n".join(lines))
+
+        def ok():
+            parsed = parse_notes(txt.get("1.0", "end"))
+            replace_notes(tab.conn, rid, parsed)
+            self.txt_notes.delete("1.0", "end")
+            if parsed:
+                self.txt_notes.insert(
+                    "1.0",
+                    "\n".join(f'{n["date"]} | {n["body"]}'
+                              for n in sorted(parsed, key=lambda n: n["date"], reverse=True)),
+                )
+            self.txt_notes.edit_reset()
+            tab.load_master(keep_selection=True)
+            tab.tree.selection_set(str(rid))
+            d.destroy()
+
+        btns = ttk.Frame(d)
+        btns.pack(anchor="w", padx=12, pady=10)
+        ttk.Button(btns, text="Salvar histórico", style="Accent.TButton", command=ok).pack(side="left", padx=2)
+        ttk.Button(btns, text="Cancelar", command=d.destroy).pack(side="left", padx=2)
+        txt.focus_set()
 
     def save(self):
         editor = self.editor
@@ -938,7 +1094,7 @@ class DetailPanel:
         values = {}
         for k, var in self.vars.items():
             s = var.get().strip()
-            if (k in SCORE_FIELDS or k == "added_at") and s == "":
+            if (k in SCORE_FIELDS or k in ("added_at", "cover")) and s == "":
                 s = None
             values[k] = s
         if values.get("status"):
@@ -957,6 +1113,8 @@ class DetailPanel:
             values.pop("pos", None)
             update_row(conn, sel, **values)
             rid = sel
+        if rid is not None:
+            replace_notes(conn, rid, parse_notes(self.txt_notes.get("1.0", "end")))
         tab.load_master()
         if rid is not None:
             tab.tree.selection_set(str(rid))
@@ -1311,6 +1469,7 @@ def selftest():
     shutil.copy2(DB_PATH, tmp)
     conn = connect_db(tmp)
     ensure_column(conn, "backlog_items", "hidden")
+    ensure_notes_table(conn)
     tests = 0
 
     n_before = conn.execute("SELECT COUNT(*) n FROM backlog_items").fetchone()["n"]
@@ -1365,6 +1524,32 @@ def selftest():
     delete_player(conn, "_test")
     tests += 1
 
+    # notas: parse (com/sem data, linhas em branco), ida e volta e cascade no delete
+    rid_notes = insert_row(conn, "the-archivist", "catalog", "ZZZ notas")
+    parsed = parse_notes(
+        "2026-09-24 | lancou e peguei a copia\n"
+        "\n"
+        "sem data aqui\n"
+        "2026-9-5 | data sem zero a esquerda"
+    )
+    assert len(parsed) == 3, parsed
+    assert parsed[0] == {"date": "2026-09-24", "body": "lancou e peguei a copia"}
+    assert parsed[1] == {"date": NOTE_TODAY, "body": "sem data aqui"}
+    assert parsed[2] == {"date": "2026-09-05", "body": "data sem zero a esquerda"}
+    replace_notes(conn, rid_notes, parsed)
+    stored = load_notes(conn, rid_notes)
+    # load_notes ordena da mais recente para a mais antiga
+    assert [n["note_date"] for n in stored] == [NOTE_TODAY, "2026-09-24", "2026-09-05"], [n["note_date"] for n in stored]
+    assert notes_count(conn, [rid_notes])[rid_notes] == 3
+    replace_notes(conn, rid_notes, [parsed[0]])
+    assert len(load_notes(conn, rid_notes)) == 1
+    tests += 1
+    delete_row(conn, rid_notes)
+    assert load_notes(conn, rid_notes) == []
+    assert conn.execute("SELECT COUNT(*) n FROM backlog_notes WHERE item_id=?",
+                        (rid_notes,)).fetchone()["n"] == 0
+    tests += 1
+
     conn.close()
     n_after_none = True  # nada foi commitado de volta ao resto
     print(f"[selftest] {tests} checks OK — {tmp}")
@@ -1381,6 +1566,7 @@ def main():
         sys.exit(1)
     conn = connect_db()
     ensure_column(conn, "backlog_items", "hidden")
+    ensure_notes_table(conn)
     try:
         root = tk.Tk()
         EditorApp(root, conn)

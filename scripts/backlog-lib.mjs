@@ -14,6 +14,7 @@ export function openDb() {
   db.exec(SCHEMA);
   migrateAddedAt(db);
   migrateGenre(db);
+  migrateCover(db);
   migrateGlyph(db);
   migrateHidden(db);
   migrateStatus(db);
@@ -22,6 +23,13 @@ export function openDb() {
 }
 
 function migrateGlyph(db) {}
+
+function migrateCover(db) {
+  const cols = db.prepare("PRAGMA table_info(backlog_items)").all();
+  if (!cols.some((c) => c.name === "cover")) {
+    db.exec("ALTER TABLE backlog_items ADD COLUMN cover TEXT");
+  }
+}
 
 function migrateHidden(db) {
   const cols = db.prepare("PRAGMA table_info(backlog_items)").all();
@@ -158,6 +166,7 @@ CREATE TABLE IF NOT EXISTS backlog_items (
   graf       REAL, som REAL, gameplay REAL, desafio REAL, geral REAL,
   post_slug  TEXT,
   added_at   TEXT,
+  cover      TEXT,
   hidden     INTEGER NOT NULL DEFAULT 0,
   UNIQUE (player_key, section, pos)
 );
@@ -167,10 +176,21 @@ CREATE TABLE IF NOT EXISTS scores (
   graf         REAL,
   som          REAL,
   gameplay     REAL,
-  desafio      REAL,
+  desafio     REAL,
   geral        REAL,
   raw          TEXT
 );
+
+-- histórico de anotações por item (uma linha por nota, com data)
+CREATE TABLE IF NOT EXISTS backlog_notes (
+  id        INTEGER PRIMARY KEY,
+  item_id   INTEGER NOT NULL REFERENCES backlog_items(id) ON DELETE CASCADE,
+  note_date TEXT NOT NULL,
+  body      TEXT NOT NULL,
+  pos       INTEGER NOT NULL DEFAULT 0
+);
+
+CREATE INDEX IF NOT EXISTS idx_backlog_notes_item ON backlog_notes(item_id);
 `;
 
 export function upsertPlayer(db, player) {
@@ -187,21 +207,46 @@ export function replaceSection(db, playerKey, section, items) {
   const preserved = new Map();
   const prior = db
     .prepare(
-      "SELECT name, added_at, genre, hidden FROM backlog_items WHERE player_key = ? AND section = ?"
+      "SELECT name, added_at, genre, cover, hidden FROM backlog_items WHERE player_key = ? AND section = ?"
     )
     .all(playerKey, section);
   for (const row of prior) preserved.set(row.name, row);
+
+  // o DELETE abaixo troca todo item_id da seção: as notas são recuardadas por nome
+  // e religadas nos ids novos, senão um sync apagaria o histórico.
+  const notesByName = new Map();
+  const priorNotes = db
+    .prepare(
+      `SELECT bi.name AS owner, bn.note_date, bn.body, bn.pos
+         FROM backlog_notes bn
+         JOIN backlog_items bi ON bi.id = bn.item_id
+        WHERE bi.player_key = ? AND bi.section = ?
+        ORDER BY bn.note_date, bn.id`
+    )
+    .all(playerKey, section);
+  for (const note of priorNotes) {
+    if (!notesByName.has(note.owner)) notesByName.set(note.owner, []);
+    notesByName.get(note.owner).push(note);
+  }
+  db.prepare(
+    `DELETE FROM backlog_notes WHERE item_id IN
+       (SELECT id FROM backlog_items WHERE player_key = ? AND section = ?)`
+  ).run(playerKey, section);
 
   db.prepare("DELETE FROM backlog_items WHERE player_key = ? AND section = ?").run(playerKey, section);
   const ins = db.prepare(
     `INSERT INTO backlog_items
        (player_key, section, pos, name, platform, genre, status, reason,
-        graf, som, gameplay, desafio, geral, post_slug, added_at, hidden)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+        graf, som, gameplay, desafio, geral, post_slug, added_at, cover, hidden)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
   );
+  const insNote = db.prepare(
+    "INSERT INTO backlog_notes (item_id, note_date, body, pos) VALUES (?, ?, ?, ?)"
+  );
+
   items.forEach((item, pos) => {
     const priorRow = preserved.get(item.name);
-    ins.run(
+    const info = ins.run(
       playerKey, section, pos,
       item.name ?? null,
       item.platform ?? null,
@@ -212,10 +257,36 @@ export function replaceSection(db, playerKey, section, items) {
       item.desafio ?? null, item.geral ?? null,
       item.post_slug ?? null,
       item.added_at ?? (priorRow ? priorRow.added_at : null) ?? today(),
+      item.cover ?? (priorRow ? priorRow.cover : null),
       item.hidden ?? (priorRow ? priorRow.hidden : 0)
     );
+    const carried = notesByName.get(item.name);
+    if (carried) {
+      carried.forEach((note, i) =>
+        insNote.run(Number(info.lastInsertRowid), note.note_date, note.body, note.pos ?? i)
+      );
+    }
   });
   return items.length;
+}
+
+export function loadNotes(db, itemId) {
+  if (!itemId) return [];
+  return db
+    .prepare(
+      "SELECT note_date, body, pos FROM backlog_notes WHERE item_id = ? ORDER BY note_date DESC, id DESC"
+    )
+    .all(itemId);
+}
+
+export function replaceNotes(db, itemId, notes) {
+  if (!itemId) return 0;
+  db.prepare("DELETE FROM backlog_notes WHERE item_id = ?").run(itemId);
+  const ins = db.prepare(
+    "INSERT INTO backlog_notes (item_id, note_date, body, pos) VALUES (?, ?, ?, ?)"
+  );
+  notes.forEach((note, i) => ins.run(itemId, note.date, note.body, note.pos ?? i));
+  return notes.length;
 }
 
 export function appendItems(db, playerKey, section, items) {
@@ -225,8 +296,8 @@ export function appendItems(db, playerKey, section, items) {
   const ins = db.prepare(
     `INSERT INTO backlog_items
        (player_key, section, pos, name, platform, genre, status, reason,
-        graf, som, gameplay, desafio, geral, post_slug, added_at, hidden)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+        graf, som, gameplay, desafio, geral, post_slug, added_at, cover, hidden)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
   );
   items.forEach((item, i) => {
     ins.run(
@@ -237,6 +308,7 @@ export function appendItems(db, playerKey, section, items) {
       item.graf ?? null, item.som ?? null, item.gameplay ?? null,
       item.desafio ?? null, item.geral ?? null, item.post_slug ?? null,
       item.added_at ?? today(),
+      item.cover ?? null,
       item.hidden ?? 0
     );
   });

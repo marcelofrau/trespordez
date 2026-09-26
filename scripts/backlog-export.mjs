@@ -20,13 +20,20 @@ function emitItems(items) {
   if (!items.length) return "[]";
   return items
     .map((item) => {
-      const entries = Object.entries(item);
+      const entries = Object.entries(item).filter(([key]) => key !== "notes");
       const first = entries.shift();
       const head = `  - ${first[0]}: ${yamlString(first[1])}`;
       const rest = entries
         .map(([key, value]) => `    ${key}: ${yamlString(value)}`)
         .join("\n");
-      return rest ? `${head}\n${rest}` : head;
+      const notes = Array.isArray(item.notes) && item.notes.length
+        ? "    notes:\n" +
+          item.notes
+            .map((n) => `      - date: ${yamlString(n.date)}\n        body: ${yamlString(n.body)}`)
+            .join("\n")
+        : "";
+      const tail = [rest, notes].filter(Boolean).join("\n");
+      return tail ? `${head}\n${tail}` : head;
     })
     .join("\n");
 }
@@ -46,6 +53,13 @@ function toYaml(sections) {
 
 export function playerSections(db, playerKey) {
   const sections = {};
+  const notesByItem = new Map();
+  for (const row of db
+    .prepare("SELECT item_id, note_date, body FROM backlog_notes ORDER BY note_date DESC, id DESC")
+    .all()) {
+    if (!notesByItem.has(row.item_id)) notesByItem.set(row.item_id, []);
+    notesByItem.get(row.item_id).push({ date: row.note_date, body: row.body });
+  }
   const stmt = db.prepare(
     `SELECT * FROM backlog_items WHERE player_key = ? AND section = ?
      ORDER BY pos ASC`
@@ -64,8 +78,11 @@ export function playerSections(db, playerKey) {
         for (const field of ["graf", "som", "gameplay", "desafio", "geral"])
           if (row[field] != null) item[field] = row[field];
         if (row.added_at != null) item.added_at = row.added_at;
+        if (row.cover != null) item.cover = row.cover;
         if (row.hidden) item.hidden = true;
         if (row.post_slug != null) item.post_slug = row.post_slug;
+        const notes = notesByItem.get(row.id);
+        if (notes && notes.length) item.notes = notes;
         return item;
       });
   }

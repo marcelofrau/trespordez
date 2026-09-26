@@ -45,6 +45,7 @@ Last updated: 2026-09-22.
 - Approved ReffPixels subset: `assets/images/ui/review/`; attribution in `docs/asset-credits.md`.
 - New site backdrop source was supplied by owner in `_library`; optimized copy is committed in `assets/images/site/`.
 - Galleries: `.post-gallery` + PhotoSwipe. Do not place long screenshot sequences as full-width images.
+- Backlog covers: `backlog_items.cover` in the SQLite, local paths under `assets/images/backlog/` (kebab-case) or absolute URLs. Always render through `_includes/cover-url.html`, which applies `relative_url` to local paths and passes absolute/protocol-relative URLs through untouched.
 
 ## Key Scripts
 
@@ -77,3 +78,10 @@ node scripts/sync-review-assets.mjs
 - Comments use Giscus light theme.
 - `indie` appears as visible badge and archive `/tag/indie/`.
 - Consoles and Emulators are separate navigation menus.
+- Backlog got a `cover` column (SQLite `backlog_items.cover`, editor field "Capa (URL)", master column "capa" showing `img`/`url`). Five queue/playing games point at `assets/images/backlog/`. Items whose `added_at` was only the import date (2026-09-23..25, 2068 rows) were normalized to `2023-01-01`.
+- Backlog page keeps its dark cards on purpose (owner preference, tried a light/brutalist conversion in 2026-09-26 and reverted it): dark gradient hero, dark player cards, dark feature cards ("Fila de espera em destaque"), dark "To sem ideia", dark "Jogando agora" panel. Light areas are the sections, the table and the filter bar. Only real contrast bugs were fixed: yellow `#ffcc00` text on white (`#8a6d00`), white text on yellow chips (`#000`), secondary grays `#999`/`#888` on white (`var(--muted)`/`#6b6b6b`) — but **not** inside the dark cards, where light grays (`#a9bac4`) are correct.
+- Covers are portrait 2:3, rendered in fixed portrait boxes with `object-fit: contain` (`.backlog-playing-media` 76x114, `.backlog-feature-cover` 72x108) so the whole art shows. `object-fit: cover` crops these badly.
+- "Jogando agora" lives inside the second card (the `#backlog-lista` section that holds "Fila de espera" + "Lista completa"), as a dark panel above them. The status badge sits in the text column, not over the art.
+- `_sass/_backlog.scss` had a second, stale `.backlog-playing` block (dead classes, old cyan palette) overriding the real one in the cascade — deleted; keep one definition per class.
+- Playing history per item: SQLite `backlog_notes` (`item_id`, `note_date`, `body`, `pos`). The editor has an inline "Histórico" textarea plus a "Notas…" window; both use one note per line, `AAAA-MM-DD | texto`, and a line without a date gets today. `parse_notes`/`load_notes`/`replace_notes`/`notes_count` in `backlog_editor.py` are covered by `--selftest`. Export emits a nested `notes:` list in `_data/backlog/*.yml`; the layout prints it in the right column of the playing card, newest first. `replaceSection` reattaches notes by item name because it regenerates every `item_id` of the section.
+- Review scores reach the backlog through `scripts/backlog-import-scores.mjs` (`--dry-run`, `--align` to also fix diverging values). Source of truth is the `scores` table, which mirrors the `.review-score` block in `_posts`; that block uses Portuguese labels in old posts and English ones in 2026+ posts, so the parser accepts both. Score chip colors are integer bands (9-10 green, 8 blue, 7 yellow, 6 orange, 0-5 red): `scoreCell` in `assets/js/backlog.js` floors the value to pick the class, so `8.5` renders as `score-8` with the text `8.5` — a `score-8.5` class matches no rule and the chip falls back to gray.

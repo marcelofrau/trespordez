@@ -30,9 +30,12 @@
   const scoreCell = (value) => {
     const v = Number(value);
     const valid = value != null && value !== "" && !Number.isNaN(v);
+    // a cor é por banda inteira (9-10, 8, 7, 6, 0-5); nota com casa decimal cai na
+    // banda do piso, senão a classe "score-8.5" não casa com nenhuma regra
+    const band = valid ? Math.min(10, Math.max(0, Math.floor(v))) : null;
     return h(
       "span",
-      { className: valid ? `backlog-score-chip score-${v}` : "backlog-score-chip backlog-score-empty" },
+      { className: valid ? `backlog-score-chip score-${band}` : "backlog-score-chip backlog-score-empty" },
       valid ? String(value) : "–"
     );
   };

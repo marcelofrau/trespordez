@@ -1,0 +1,11 @@
+{%- comment -%}
+Resolve uma URL de imagem vinda de dado (front matter, SQLite, YAML).
+Aceita caminho local (aplica relative_url) e URL absoluta/protocol-relative (usa como veio).
+Uso: <img src="{% include cover-url.html src=post.image %}">
+{%- endcomment -%}
+{%- assign _cover = include.src | default: "" | strip -%}
+{%- if _cover != "" -%}
+  {%- if _cover contains "://" or _cover contains "//" -%}{{ _cover }}
+  {%- else -%}{{ _cover | relative_url }}
+  {%- endif -%}
+{%- endif -%}

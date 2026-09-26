@@ -52,38 +52,6 @@ layout: default
         }}</span></button>
   </nav>
 
-  {% if playing_items.size > 0 %}
-  <section class="backlog-playing" aria-labelledby="backlog-playing-title">
-    <div class="backlog-playing-head">
-      <div>
-        <p class="backlog-playing-kicker"><i class="fa-solid fa-play"></i> Em andamento</p>
-        <h2 id="backlog-playing-title">Jogando agora</h2>
-        <p class="backlog-playing-note">O que está acontecendo na mesa de controle neste momento.</p>
-      </div>
-      <span class="backlog-playing-count">{{ playing_items.size }} em andamento</span>
-    </div>
-    <div class="backlog-playing-grid">
-      {% for item in playing_items %}
-      {% assign playing_icon = "fa-gamepad" %}
-      {% assign playing_platform = item.platform | default: '' | downcase %}
-      {% if playing_platform contains 'pc' %}{% assign playing_icon = "fa-keyboard" %}{% endif %}
-      <article class="backlog-playing-card">
-        <div class="backlog-playing-media">
-          {% if item.cover %}<img src="{{ item.cover | relative_url }}" alt="Capa de {{ item.name }}">{% else %}<span class="backlog-playing-icon"><i class="fa-solid {{ playing_icon }}" aria-hidden="true"></i></span>{% endif %}
-          <span class="backlog-playing-status"><i class="fa-solid fa-play" aria-hidden="true"></i> Jogando</span>
-        </div>
-        <div class="backlog-playing-copy">
-          <p class="backlog-playing-platform">{{ item.platform | default: "Plataforma a definir" }}</p>
-          <h3>{{ item.name }}</h3>
-          <p class="backlog-playing-mood">Começando agora</p>
-          {% if item.added_at %}<p class="backlog-playing-date"><i class="fa-regular fa-calendar-plus" aria-hidden="true"></i> Adicionado em {{ item.added_at | date: "%d/%m/%Y" }}</p>{% endif %}
-        </div>
-      </article>
-      {% endfor %}
-    </div>
-  </section>
-  {% endif %}
-
   {% if lista_size > 0 %}
 
   {% if visible_backlog.size > 0 %}
@@ -100,12 +68,12 @@ layout: default
   {% if shown contains item_name %}{% continue %}{% endif %}
   {% capture card %}
   <a class="backlog-feature-card has-review" href="{{ matched_post.url | relative_url }}">
-    {% if item.cover %}<img class="backlog-feature-cover" src="{{ item.cover | relative_url }}"
-      alt="Capa de {{ item.name }}">{% else %}<span class="backlog-feature-status"><i
+    {% if item.cover %}<img class="backlog-feature-cover" src="{% include cover-url.html src=item.cover %}"
+      alt="Capa de {{ item.name }}" loading="lazy">{% else %}<span class="backlog-feature-status"><i
         class="fa-solid {% assign pf = item.platform | default: '' | downcase %}{% if pf contains 'pc' %}fa-keyboard{% else %}fa-gamepad{% endif %}" aria-hidden="true"></i></span>{% endif %}
     <div class="backlog-feature-body">
-      <p class="backlog-feature-platform">{{ item.platform | default: "Plataforma a definir" }}</p>
-      <h3>{{ item.name }}</h3>
+      <p class="backlog-feature-platform" title="{{ item.platform | default: 'Plataforma a definir' }}">{{ item.platform | default: "Plataforma a definir" }}</p>
+      <h3 title="{{ item.name }}">{{ item.name }}</h3>
       <p class="backlog-feature-mood">Aguardando a vez</p>
     </div>
     <span class="backlog-feature-review"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
@@ -123,12 +91,12 @@ layout: default
   {% if shown contains item_name %}{% continue %}{% endif %}
   {% capture card %}
   <div class="backlog-feature-card">
-    {% if item.cover %}<img class="backlog-feature-cover" src="{{ item.cover | relative_url }}"
-      alt="Capa de {{ item.name }}">{% else %}<span class="backlog-feature-status"><i
+    {% if item.cover %}<img class="backlog-feature-cover" src="{% include cover-url.html src=item.cover %}"
+      alt="Capa de {{ item.name }}" loading="lazy">{% else %}<span class="backlog-feature-status"><i
         class="fa-solid {% assign pf = item.platform | default: '' | downcase %}{% if pf contains 'pc' %}fa-keyboard{% else %}fa-gamepad{% endif %}" aria-hidden="true"></i></span>{% endif %}
     <div class="backlog-feature-body">
-      <p class="backlog-feature-platform">{{ item.platform | default: "Plataforma a definir" }}</p>
-      <h3>{{ item.name }}</h3>
+      <p class="backlog-feature-platform" title="{{ item.platform | default: 'Plataforma a definir' }}">{{ item.platform | default: "Plataforma a definir" }}</p>
+      <h3 title="{{ item.name }}">{{ item.name }}</h3>
       <p class="backlog-feature-mood">Aguardando a vez</p>
     </div>
   </div>
@@ -142,6 +110,50 @@ layout: default
 
   <section class="backlog-section backlog-feature backlog-lista" id="backlog-lista" {% if first_list !='backlog-lista'
     %} hidden{% endif %}>
+    {% if playing_items.size > 0 %}
+    <section class="backlog-playing" aria-labelledby="backlog-playing-title">
+      <div class="backlog-playing-head">
+        <div>
+          <p class="backlog-playing-kicker"><i class="fa-solid fa-play" aria-hidden="true"></i> Em andamento</p>
+          <h2 id="backlog-playing-title">Jogando agora</h2>
+        </div>
+        <span class="backlog-playing-count">{{ playing_items.size }} em andamento</span>
+      </div>
+      <div class="backlog-playing-grid">
+        {% for item in playing_items %}
+        {% assign playing_icon = "fa-gamepad" %}
+        {% assign playing_platform = item.platform | default: '' | downcase %}
+        {% if playing_platform contains 'pc' %}{% assign playing_icon = "fa-keyboard" %}{% endif %}
+        {% assign playing_post = false %}
+        {% if item.post_slug %}{% assign playing_post = site.posts | where: "slug", item.post_slug | first %}{% endif %}
+        <article class="backlog-playing-card{% if item.notes %} has-notes{% endif %}">
+          <div class="backlog-playing-media">
+            {% if item.cover %}<img src="{% include cover-url.html src=item.cover %}" alt="Capa de {{ item.name }}" loading="lazy">{% else %}<span class="backlog-playing-icon"><i class="fa-solid {{ playing_icon }}" aria-hidden="true"></i></span>{% endif %}
+          </div>
+          <div class="backlog-playing-copy">
+            <p class="backlog-playing-platform"><span class="backlog-playing-platform-name" title="{{ item.platform | default: 'Plataforma a definir' }}">{{ item.platform | default: "Plataforma a definir" }}</span><span class="backlog-playing-status"><i class="fa-solid fa-play" aria-hidden="true"></i> Jogando</span></p>
+            <h3 title="{{ item.name }}">{% if playing_post %}<a href="{{ playing_post.url | relative_url }}">{{ item.name }}<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>{% else %}{{ item.name }}{% endif %}</h3>
+            {% if item.genre %}<p class="backlog-playing-mood">{{ item.genre }}</p>{% endif %}
+            {% if item.added_at %}<p class="backlog-playing-date"><i class="fa-regular fa-calendar-plus" aria-hidden="true"></i> Adicionado em {{ item.added_at | date: "%d/%m/%Y" }}</p>{% endif %}
+          </div>
+          {% if item.notes %}
+          <div class="backlog-playing-notes">
+            <p class="backlog-playing-notes-kicker"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i> Histórico</p>
+            <ul class="backlog-playing-notes-list">
+              {% for note in item.notes %}
+              <li>
+                <time datetime="{{ note.date }}">{{ note.date | date: "%d/%m/%Y" }}</time>
+                <span>{{ note.body | newline_to_br }}</span>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
     {% if visible_backlog.size > 0 %}
     <p class="eyebrow"><i class="fa-solid fa-hourglass-half"></i> Em espera</p>
     <h2>Fila de espera <small>em destaque</small></h2>
